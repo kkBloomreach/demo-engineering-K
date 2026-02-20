@@ -1,0 +1,81 @@
+{
+    "__COMMENT1": "campaign names must match values provided in the feed 'campaign' attribute, case sensitive", 
+    "saleFurniture": {
+            "startDate":    "06-07",
+            "dayCount":     7,
+            "priceDiscount":    34,
+            "productSelections": {
+                    "__COMMENT_SELECTIONS": "all selected products are finally collected together",
+                    "__COMMENT_SELECTION_EXCLUDE": "this is optional section",
+                    "view_EXAMPLE": "view_name",
+                    "include": {
+                        "categories": [
+                            {"q": "116715", "attribute": "brand", "value": "Pacific Goods" },
+                            {"q": "119555" }
+                        ],
+                        "search": [
+                            { "q": "chair", "attribute": "brand",    "value": "Pacific Goods" },
+                            { "q": "table"}
+                        ],
+                        "pids": [
+                            "69445",
+                            "74810",
+                            "78659",
+                            "84072",
+                            "13196"
+                        ]
+                    },
+                    "exclude": {
+                        "categories": [
+                            {"q": "116745" }
+                        ],
+                        "search": [
+                            { "q": "standing table"}
+                        ],
+                        "pids": [
+                            "85685",
+                            "94887"
+                        ]
+                    }
+            },
+            "__COMMENT_PROMOTION_TERMS": "optionally prepend 1 or more * characters (max 3) to indicate each term's importance",
+            "promotionTerms": [
+                    "Quentin", "Chesterfield", "**Sofa", "Oatmeal", "Woven Noelle", "Ottoman"
+            ]
+    },
+    "saleOutdoor": {
+            "startDate":    "05-09",
+            "dayCount":     9,
+            "priceDiscount":    51,
+            "productSelections": {
+                    "__COMMENT_SELECTIONS": "all selected products are finally collected together",
+                    "__COMMENT_SELECTION_EXCLUDE": "this is optional section",
+                    "view_EXAMPLE": "view_name",
+                    "include": {
+                        "categories": [
+                            { "q": "116725" }
+                        ],
+                        "search": [
+                            { "q": "lamp",        "attribute": "color",           "value": "yellow" },
+                            { "q": "outdoor rug", "attribute": "countryOfOrigin", "value": "Vietnam" }
+                        ],
+                        "pids": [
+                            "85913",
+                            "77769",
+                            "95326",
+                            "83905",
+                            "80603",
+                            "94871",
+                            "95323",
+                            "95324"
+                        ]
+                    }
+            },
+            "__COMMENT_PROMOTION_TERMS": "optionally prepend 1 or more * characters (max 3) to indicate each term's importance",
+            "promotionTerms": [
+                    "***Espresso", "All Weather", "Pinamar", 
+                    "Alicante Outdoor", "*Occasional Bench Cover"
+            ]
+    }
+}
+

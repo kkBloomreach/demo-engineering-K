@@ -1,0 +1,32 @@
+primary term	importance	refinements...
+lip tint	1	Lip stain  	Lip color  	Lip gloss  	Lip balm  	Lip paint  	Lip shade  	Lip cream  	Lip lacquer  	Lip pigment  	Lip hue  
+perfume	1	fragrance	scent	cologne	aroma	eau de toilette	body mist	essential oil	luxury perfume	designer scent	niche fragrance
+mascara	1	Waterproof mascara  	Volumizing mascara  	Lengthening mascara  	Curling mascara  	Lash mascara  	Black mascara  	Natural mascara  	Hypoallergenic mascara  	Smudge-proof mascara  	Mascara brush
+cosmetics	1	Beauty Products  	Skincare Essentials  	Makeup Kits  	Lip Gloss  	Hair Care  	Face Masks  	Nail Polish  	Eye Shadow  	Blush Palette  	Fragrance Oils  
+concealer	1	Foundation	Highlighter	Blush	Primer	Bronzer	Contour	Setting Spray	Face Powder	BB Cream	Tinted Moisturizer
+makeup	1	Beauty products	Skincare essentials	Cosmetic brands	Lipstick shades	Foundation types	Eye shadow	Blush palette	Mascara options	Primer base	Contour kit
+skin care	1	skincare routine  	facial care  	beauty tips  	skin health  	glowing skin  	face mask  	anti-aging  	clear skin  	natural skincare  	skin treatment  
+makeup blush	1	Face blush	Cheek tint	Blush palette	Cream blush	Powder blush	Blush stick	Rosy cheeks	Blush compact	Natural blush	Blush duo
+eyeliner	1	Liquid eyeliner  	Gel liner  	Winged eyeliner  	Waterproof liner  	Pencil eyeliner  	Smudge-proof liner  	Cat eye  	Eyeliner pen  	Kohl liner  	Glitter eyeliner  
+lip balm	1	Lip moisturizer	Lip treatment	Lip care	Lip butter	Lip gloss	Lip salve	Lip conditioner	Lip therapy	Lip ointment	Lip hydrator
+lip gloss	1	Lip balm  	Lipstick  	Lip shine  	Lip tint  	Lip color  	Lip plumper  	Lip stain  	Lip cream  	Lip oil  	Lip butter  
+cream	1	Whipped Cream	Heavy Cream	Cream Cheese	Ice Cream	Skin Cream	Face Cream	Hair Cream	Cream Sauce	Cream Pie	Cream Soup
+lip tint	1	Lip stain	Lip color	Lip gloss	Lip balm	Lip paint	Lip shade	Lip cream	Lip lacquer	Lip pigment	Lip hue
+lash lifting	1	Eyelash perm	Lash curl	Brow lift	Lash tint	Lash extension	Lash enhancement	Lash treatment	Lash boost	Lash care	Lash styling
+lipstick	1	Matte lipstick  	Lip color  	Lip gloss  	Lip stain  	Lip tint  	Lip balm  	Lip liner  	Liquid lipstick  	Velvet lipstick  	Lip plumper  
+eyelash curler	1	Lash Curler  	Eye Curler  	Curl Lashes  	Lash Tool  	Curl Enhancer  	Beauty Curler  	Lash Lift  	Curl Wand  	Eye Enhancer  	Lash Accessory  
+eye shadow	1	Eye makeup  	Shadow palette  	Makeup shades  	Color pigments  	Eye colors  	Shadow kit  	Makeup palette  	Eye pigments  	Shadow colors  	Makeup shadows  
+serum	1	face serum  	skin serum  	vitamin serum  	anti-aging serum  	hydrating serum  	brightening serum  	collagen serum  	retinol serum  	hyaluronic serum  	peptide serum
+moisturizer	1	hydrating cream  	skin lotion  	facial balm  	nourishing gel  	beauty serum  	face oil  	body butter  	soothing ointment  	daily hydrator  	replenishing mask  
+eye makeup	1	eye shadow	mascara tips	eyeliner styles	brow shaping	lash extensions	smokey eyes	makeup trends	glitter eyes	cat eye	natural look
+facial cream	1	face moisturizer  	skin lotion  	beauty cream  	anti-aging  	hydrating serum  	skin balm  	wrinkle cream  	night cream  	day cream  	skin cream
+lip plumper	1	Lip Enhancer	Plump Lips	Fuller Lips	Lip Volumizer	Lip Booster	Lip Amplifier	Lip Maximizer	Lip Filler	Lip Augmenter	Lip Thickener
+lip stain	1	Lip tint  	Lip color  	Lip paint  	Lip gloss  	Lip balm  	Lipstick  	Lip shade  	Lip lacquer  	Lip cream  	Lip dye  
+makeup brush	1	Beauty brush  	Cosmetic brush  	Foundation brush  	Blending brush  	Powder brush  	Contour brush  	Blush brush  	Highlight brush  	Eye brush  	Kabuki brush  
+sunscreen	1	sunblock	UV protection	sun cream	SPF lotion	skin shield	sun lotion	UV cream	sun gel	SPF cream	sun guard
+contouring	1	Face Sculpting	Makeup Shaping	Cheek Definition	Highlighting Techniques	Beauty Contouring	Facial Shading	Contour Makeup	Sculpting Tips	Makeup Contour	Shaping Makeup
+makeup foundation	1	liquid foundation  	foundation stick  	matte foundation  	dewy foundation  	full coverage  	foundation brush  	foundation sponge  	tinted moisturizer  	foundation primer  	mineral foundation  
+bronzer	1	contour powder  	face tanner  	sun glow  	cheek shimmer  	skin bronzing  	tan enhancer  	glow powder  	radiant tint  	warm blush  	golden dust
+primer	1	DNA guide  	Gene intro  	Genome basics  	RNA overview  	Biotech start  	Genetic intro  	Biology primer  	Cell guide  	Molecular intro  	Science basics  
+face mask	1	facial covering  	skin mask  	beauty mask  	face shield  	mask skincare  	face wrap  	mask treatment  	face protector  	mask therapy  	face veil  
+cleanser	1	Face wash  	Skin purifier  	Gentle cleanser  	Facial scrub  	Pore cleaner  	Makeup remover  	Deep clean  	Hydrating wash  	Acne treatment  	Oil control

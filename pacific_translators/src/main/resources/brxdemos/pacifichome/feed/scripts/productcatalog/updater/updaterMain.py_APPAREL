@@ -1,0 +1,238 @@
+# This 'updater' script expects its input to have been converted and 'massaged' for various earlier requests
+# (eg, change product brands)
+
+import logging
+import json
+import csv
+import importlib
+import os
+
+import jsonlFeedReader as jfr
+import jsonlWriter as jw
+import tabularFeedReader as tfr
+import tabularFeedBuilder as tfb
+import tabularFeedWriter as tfw
+import updaterConstants as uc
+from categorybuilder import CategoryBuilder
+
+class UpdateMain ():
+    def __init__ (self):
+        return
+
+    # actual feed updater object is instantiated for 'current-updater-version'
+    def instantiate_feed_updater (self):
+        feedUpdater = None
+        # first load the current_update_class and instantiate it
+        try:
+            current_update_module = importlib.import_module (uc.CURRENT_UPDATER_MODULE)
+            try:
+                update_task_class = getattr (current_update_module, uc.UPDATER_CLASS_NAME)
+                feedUpdater = update_task_class ()  # instantiate
+            except AttributeError:
+                logging.error ('Class does not exist: %s', uc.UPDATER_CLASS_NAME)
+                return None, None
+        except ImportError:
+            logging.error ('Module does not exist: %s', uc.CURRENT_UPDATER_MODULE)
+            return None, None
+        return feedUpdater
+
+    def loadSourceFeed (self):
+        srcFeedHandler = jfr.JsonlFeedReader ()
+        srcProducts = srcFeedHandler.readSourceFeed (uc.FILENAME_JSONL_SOURCE_FEED_IN) 
+        return srcProducts
+
+    def loadGenImageMap (self):
+        # @@ TEMP
+        gen_image_map = None
+        return gen_image_map
+
+    def load_category_map (self):
+        category_map = []
+        with open (uc.FILENAME_CATEGORY_MAP, 'r') as categorymap_file:
+            dict_reader = csv.DictReader (categorymap_file, delimiter='\t')
+            for row in dict_reader:
+                if (row ['Parent'] == None) or (row ['Parent'] == ''):  # blank src line
+                    continue
+
+                category_map.append (row)
+            categorymap_file.close ()
+        return category_map
+
+    def read_inject_av_map (self):
+        injected_av_map = []
+
+        if (os.path.exists (uc.FILENAME_INJECTED_AV_MAP_IN) == True):
+            with open (uc.FILENAME_INJECTED_AV_MAP_IN, 'r') as injected_av_map_file:
+                dict_reader = csv.DictReader (injected_av_map_file, delimiter='\t')
+                for row in dict_reader:
+                    injected_av_map.append (row)
+                injected_av_map_file.close ()
+        return injected_av_map
+
+    def performUpdates (self, feedUpdater, src_products, category_builder, inject_av_map, gen_image_map):
+        try:
+            feedUpdater.set_source_records (src_products)
+            feedUpdater.set_category_builder (category_builder)
+            feedUpdater.set_inject_av_map (inject_av_map)
+            feedUpdater.set_gen_image_map (None)    # @@@ TEMP
+            updatedProducts, updatedAttributeList = feedUpdater.perform_updates ()
+            return updatedProducts, updatedAttributeList
+        except Exception as e:
+            logging.error ('Error in processing source feed: %s', e)
+        return None, None
+
+    def performAdditionsIfAny (self, feedUpdater, updatedProducts, updatedAttributeList):
+        try:
+            feedUpdater.set_category_builder (category_builder)
+            updatedProducts, updatedAttributeList = feedUpdater.perform_additions (updatedProducts, updatedAttributeList)
+            return updatedProducts, updatedAttributeList
+        except Exception as e:
+            logging.error ('Error in processing source feed: %s', e)
+        return None, None
+
+    def prepare_injected_av_map (self, updatedProducts, category_builder):
+        injected_av_map = []
+        for record in updatedProducts:
+            injected_av_record = {}
+
+            for attrib in uc.INJECTED_AVMAP_ATTRIBUTES:
+                record_attribs = record ['value']['attributes']
+                if (attrib == 'pid'):
+                    injected_av_record ['pid'] = record_attribs ['pid']
+                elif (attrib == 'url'):
+                    injected_av_record ['url'] = record_attribs ['url']
+                elif (attrib == 'availability'):
+                    injected_av_record ['availability'] = record_attribs ['availability']
+                elif (attrib == 'price'):
+                    injected_av_record ['price'] = record_attribs ['price']
+                elif (attrib == 'gender'):
+                    injected_av_record ['gender'] = record_attribs ['gender']
+                elif (attrib == 'color'):
+                    injected_av_record ['color'] = record_attribs ['color']
+                elif (attrib == 'brand'):
+                    injected_av_record ['brand'] = record_attribs ['brand']
+                elif (attrib == 'material'):
+                    injected_av_record ['material'] = record_attribs ['material']
+                elif (attrib == 'collection'):
+                    injected_av_record ['collection'] = record_attribs ['collection']
+                elif (attrib == 'style'):
+                    injected_av_record ['style'] = record_attribs ['style']
+                elif (attrib == 'bread_crumb'):
+                    bread_crumb, bread_crumb_id = category_builder.construct_crumbs_and_crumbIds_from_category_path (record)
+                    injected_av_record ['bread_crumb'] = bread_crumb
+                elif (attrib == 'title'):
+                    injected_av_record ['title'] = record_attribs ['title']
+                else:
+                    logging.warning ('Unexpected attribute in injected_av_map: %s' % attrib)
+                    continue
+
+            # Following can be edited manually
+            injected_av_record ['edited_availability'] = injected_av_record ['availability']
+            injected_av_record ['edited_gender'] = injected_av_record ['gender']
+            injected_av_record ['edited_color'] = injected_av_record ['color']
+            injected_av_record ['edited_brand'] = injected_av_record ['brand']
+            injected_av_record ['edited_material'] = injected_av_record ['material']
+            injected_av_record ['edited_collection'] = injected_av_record ['collection']
+            injected_av_record ['edited_style'] = injected_av_record ['style']
+            injected_av_record ['edited_bread_crumb'] = injected_av_record ['bread_crumb']
+            injected_av_record ['edited_title'] = injected_av_record ['title']
+            injected_av_map.append (injected_av_record)
+
+        return injected_av_map
+
+
+    def generateTabulerFeed (self, updatedProducts, updatedAttributeList):
+        tabularFeedBuilder = tfb.TabularFeedBuilder ()
+        tabularFeedBuilder.setUpdatedProducts (updatedProducts, updatedAttributeList)
+        tabularRecords = tabularFeedBuilder.buildTabularFeed ()
+        return tabularRecords
+
+    def writeJsonlFeed (self, updatedProducts):
+        # full feed
+        feedWriter = jw.JsonlWriter ()
+        feedWriter.setProducts (updatedProducts)
+        feedWriter.write (uc.FILENAME_UPDATED_JSONL_FEED_OUT)
+        return
+ 
+    def writeAttributesToFile (self, attributeList):
+        # sort the list
+        attributeList.sort ()
+        savePath = uc.FILENAME_UPDATED_FEED_ATTRIBUTELIST_OUT
+        with open (savePath, 'w') as file_output:
+            for attrib in attributeList:
+                file_output.write ('%s\n' % attrib)
+            file_output.close ()
+        return
+
+    def writeTabularFeed (self, tabularRecords):
+        feedWriter = tfw.TabularFeedWriter ()
+        feedWriter.setTabularRecords (tabularRecords)
+        feedWriter.writeTSVFeed (uc.FILENAME_UPDATED_TSV_FEED_OUT)
+        return
+
+    def writeInjectedAVMap (self, injected_av_map):
+        output_path = uc.FILENAME_INJECTED_AVMAP_OUT
+        with open (output_path, 'w') as file_output:
+            tsvWriter = csv.writer (file_output, delimiter = '\t')
+
+            headerLine = injected_av_map [0].keys ()
+            tsvWriter.writerow (headerLine)
+
+            for row in injected_av_map:
+                tsvWriter.writerow (row.values())
+            file_output.close ()
+        return
+
+
+if __name__ == '__main__':
+    logging.basicConfig (level=logging.DEBUG)
+
+    updateDriver = UpdateMain ()
+
+    feedUpdater = updateDriver.instantiate_feed_updater ()
+    if (feedUpdater == None):
+        raise Exception ('Cannot instantiate feed updater')
+
+    # read feed file (jsonl)
+    sourceProducts = updateDriver.loadSourceFeed ()
+
+    # read inject av map
+    inject_av_map = updateDriver.read_inject_av_map ()
+
+    # read generated image map file (tsv)
+    gen_image_map = updateDriver.loadGenImageMap ()
+
+    # category map
+    category_map = updateDriver.load_category_map ()
+
+    # prepare category builder
+    category_builder = CategoryBuilder ()
+    category_builder.set_category_map (category_map)
+    category_builder.init_category_tree ()
+
+    # process the feed (ie, 'update')
+    updatedProducts, updatedAttributeList = updateDriver.performUpdates (feedUpdater, sourceProducts, category_builder, inject_av_map, gen_image_map)
+
+    if (updatedProducts != None) and (len (updatedProducts) > 0):
+        updateDriver.performAdditionsIfAny (feedUpdater, updatedProducts, updatedAttributeList)
+
+        # generate injected_av_map
+        injected_av_map = updateDriver.prepare_injected_av_map (updatedProducts, category_builder)
+
+        # build tabular feed, then save as .tsv and .csv    
+        tabularRecords = updateDriver.generateTabulerFeed (updatedProducts, updatedAttributeList)
+
+        updateDriver.writeJsonlFeed (updatedProducts)
+        updateDriver.writeAttributesToFile (updatedAttributeList)
+
+        # currently, tabular feed is created only for 'full' feed
+        updateDriver.writeTabularFeed (tabularRecords)
+
+        # write injected_av_map
+        updateDriver.writeInjectedAVMap (injected_av_map)
+
+        logging.info ('Updated catalog has %s products' % len (updatedProducts))
+
+    logging.info ("Finished ...")
+
+

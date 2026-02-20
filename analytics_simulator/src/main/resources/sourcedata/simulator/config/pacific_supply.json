@@ -1,0 +1,24 @@
+{
+    "DOMAIN": "pacific_supply",
+    "DEFAULT_TITLE": "PacificSupply",
+    "ACCOUNT_ID" : "6370",
+    "AUTH_KEY": "1vjobidilg5gcbpn",
+
+    "HOMEPAGE_URL": "https://pacific.bloomreach.com/supply",
+    "HOMEPAGE_TITLE": "PacificHome",
+    "SEARCH_PAGE_URL_PREFIX" : "https://pacific.bloomreach.com/supply/search?_sq=",
+    "SEARCH_PAGE_URL_PREFIX_NORMALIZED" : "https://pacific.bloomreach.com/supply/search/$QUERY?_sq=",
+    "PRODUCT_URL_PREFIX" : "https://pacific.bloomreach.com/supply/products/",
+    "CATEGORY_URL_PREFIX" : "https://pacific.bloomreach.com/supply/categories/",
+    "ATC_PAGE_URL" : "https://pacific.bloomreach.com/supply/cartpage",
+    "CONVERSION_PAGE_URL" : "https://pacific.bloomreach.com/supply/thankyou",
+
+    "PREPROCESSED_JSONL_FEED_PATH" : "./source/simulator/feed/pacific_supply/full_preprocessed_07072021_02162023.jsonl",
+
+    "SIMULATED_UID_TO_SEGMENT_MAP_PATH" : "./source/simulator/simdata/pacific_supply/UidMap.tsv",
+    "SEGMENTQUERY_TO_PID_MAP_PATH" : "./source/simulator/simdata/pacific_supply/SearchQueryToPidMap.tsv",
+    "SEGMENTCATEGORY_TO_PID_MAP_PATH" : "./source/simulator/simdata/pacific_supply/CategoryQueryToPidMap.tsv",
+    "REFURL_POOL_PATH" : "./source/simulator/simdata/pacific_supply/RefUrlPoolMap.tsv",
+    "REFINED_JOURNEY_MAP_PATH" : "./source/simulator/simdata/pacific_supply/RefinedJourneyMap.tsv",
+    "ZERO_RESULT_QUERY_MAP_PATH" : "./source/simulator/simdata/pacific_supply/ZeroResultQueryMap.tsv",
+}

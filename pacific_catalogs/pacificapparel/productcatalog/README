@@ -1,0 +1,49 @@
+# Background
+- multiple open-source product catalogs have been merged into a single "apparel"
+  catalog (see projects/fashioncatalog/scripts/mapper)
+- most images are from original catalogs but some have been created using openAI
+- That 'merged' catalog is now used as first 'input' to this updater process
+  (dated pa_en_full_04012024.jsonl, tsv)
+- previously generated catalog can be updated, including:
+    - add new products (along with their attributes, images, ...)
+    - remove specific products (using some criteria)
+    - add/remove attributes
+    - change specific attribute values
+
+Script structure:
+ - there is a main 'updaterMain.py' (and associated updaterConstants.py)
+ - there is a 'revision' specific updater (eg, revisionV8.py and associated revisionConstantsV8.py)
+   - revision updater class is derived from a "base" class (revisionBase.py)
+   - revision specific updates are handled in revision-specific script (eg, revisionV8.py)
+   - the revision specific class is loaded (instantiated) in updaterMain and actual revision occurs in that class
+    - this approach helps to keep different revisions isolated from each other
+
+ - a sub-directory 'data' in turn has 'input' and 'output'
+   - input has previous catalog (which is to be updated), along with category .tsv
+   - revision script writes its output to data/output
+
+ - an 'injected_av_map.tsv' is also created.
+    - it can be used by other people to change attribute values (eg, style)
+    - the script then reads this 'edited' av-map and adjusts attribute value as edited
+
+File naming convention
+ - output files are .jsonl catalog file, list of attributes in the catalog
+ - jsonl file name (example): pa_en_full_<date>.jsonl
+    - pa: 'pacificapparel'
+    - en: 'english'
+    - full: not-a-subset (subset could be used later to build catalogs in other languages)
+    - date: mmddyyyy (eg, 07102024) 
+
+Convenience files
+ - scripts to ingest and index generated catalog
+    - can be used to ingest/index in staging or prod
+ - these scripts are in data/output 
+    - keep_ingestbyapi_APPAREL.py
+    - keep_indexbyapi_APPAREL.py
+    - keep_ingestbyapi_FASHION.py
+    - keep_indexbyapi_FASHION.py
+
+    -- "FASHION" is internal test account to verify generated catalog is OK/not-OK/...
+
+
+

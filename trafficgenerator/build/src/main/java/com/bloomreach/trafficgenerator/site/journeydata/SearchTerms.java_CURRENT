@@ -1,0 +1,236 @@
+package com.bloomreach.trafficgenerator.site.journeydata;
+
+// Uid to segment map is generated ONCE and saved to local file
+// That generated map is loaded in this class + associated lookup methods
+import java.io.File;
+import java.io.IOException;
+import java.io.FileReader;
+import java.io.BufferedReader;
+import java.util.ArrayList;
+
+import com.bloomreach.trafficgenerator.GeneratorConstants;
+import com.bloomreach.trafficgenerator.MessageLogger;
+import com.bloomreach.trafficgenerator.site.journeydata.campaigns.CampaignRecord;
+
+public class SearchTerms {
+
+    private final static int MAX_SHUFFLE_COUNT = 5; // shuffle the terms list these many times
+
+    ArrayList <String> searchTerms;
+    CampaignRecord activeCampaignRecord;   // may be null
+
+    ArrayList <String> replicatedSearchTerms;   // star-terms replicated in this list
+    ArrayList <String> replicatedCampaignSearchTerms;   // star-terms replicated in this list
+    ArrayList <String> effectiveSearchTermList; // if in campaign mode, use campaign-search-list; otherwise default
+
+    public SearchTerms () {
+    }
+
+    public void setActiveCampaignRecord (CampaignRecord campaignRecord) {
+        activeCampaignRecord = campaignRecord;
+    }
+
+    // Load the predefined set of search terms
+    public void doLoad (String srcFilePath) throws Exception {
+        this.loadDefaultSearchTerms (srcFilePath);
+        if (this.activeCampaignRecord != null) {
+            this.loadCampaignSearchTerms ();
+            this.effectiveSearchTermList = this.replicatedCampaignSearchTerms;
+        } else {
+            this.effectiveSearchTermList = this.replicatedSearchTerms;
+        }
+        return;
+    }
+
+    // returns actual search terms, w/o star effect
+    public int getSearchTermsCount () {
+        return (this.searchTerms.size ()); 
+    }
+
+    // returns actual search terms, w/o star effect
+    // this is used to build startUrlPool containing searchUrls
+    public ArrayList<String> getAllSearchTerms () {
+        return this.searchTerms;
+    }
+
+    // uses replicatedSearchTerms list
+    public String selectSearchTermAtRandom () {
+        int randomIndex;
+        String selectedTerm;
+
+        randomIndex = (int) (Math.random () * effectiveSearchTermList.size());
+        selectedTerm = effectiveSearchTermList.get (randomIndex); 
+        return (selectedTerm);
+    }
+
+    // lookup searchTerm. If it happens to match the one in parameter, skip that
+    // uses replicatedSearchTerms list
+    public String selectRefinedSearchTermAtRandom (String priorSearchTerm) {
+        int randomIndex;
+        String selectedTerm;
+
+        randomIndex = (int) (Math.random () * this.effectiveSearchTermList.size());
+        selectedTerm = effectiveSearchTermList.get (randomIndex); 
+        if (priorSearchTerm.equals (selectedTerm)) {
+            // take the next searchTerm, round-robin
+            randomIndex = ((randomIndex + 1) % effectiveSearchTermList.size());
+            selectedTerm = effectiveSearchTermList.get (randomIndex); 
+        }
+        return (selectedTerm);
+    }
+
+    // load from searchTerms.tsv
+    private void loadDefaultSearchTerms (String srcFilePath) throws Exception { 
+        File srcFile = null;
+        FileReader srcReader = null;
+        BufferedReader srcBufferedReader = null;
+        String srcLine;
+        boolean headerLine;
+
+        this.searchTerms = new ArrayList <String> ();
+        this.replicatedSearchTerms = new ArrayList <String> ();
+
+        try {       
+            srcFile = new File (srcFilePath);
+            srcReader = new FileReader (srcFile);
+            srcBufferedReader = new BufferedReader (srcReader);
+
+            headerLine = true;
+            while ((srcLine = srcBufferedReader.readLine ()) != null) {
+                String[] tokens;
+
+                // skip header line
+                if (headerLine == true) {
+                    headerLine = false;
+                    continue;
+                }
+
+                if (srcLine.length () == 0) // blank line
+                    continue;
+
+                tokens = srcLine.split ("\t");
+                // expected tokens: search_term
+                if ((tokens != null) && (tokens.length == 1)) {
+                    // column 0: search term
+                    if ((tokens[0] != null) && (tokens[0].length() > 0)) {
+                        String inputTerm = tokens [0];
+                        int replicationCount = 0;
+                        String actualTerm;
+
+                        // look for 'star' terms (  eg, *sofa). Currently max 3 stars are supported
+                        if (inputTerm.startsWith ("***")) {
+                            replicationCount = 3 * GeneratorConstants.SEARCHTERM_STAR_MULTIPLIER;
+                            actualTerm = inputTerm.substring (3);
+                        }
+                        else if (inputTerm.startsWith ("**")) {
+                            replicationCount = 2 * GeneratorConstants.SEARCHTERM_STAR_MULTIPLIER;
+                            actualTerm = inputTerm.substring (2);
+                        }
+                        else if (inputTerm.startsWith ("*")) {
+                            replicationCount = 1 * GeneratorConstants.SEARCHTERM_STAR_MULTIPLIER;
+                            actualTerm = inputTerm.substring (1);
+                        }
+                        else {
+                            replicationCount = 0;
+                            actualTerm = inputTerm;
+                        }
+
+                        // first add the term to 'default' list, 
+                        this.searchTerms.add (actualTerm);
+                        this.replicatedSearchTerms.add (actualTerm);
+
+                        if (replicationCount > 0) {
+                            for (int i = 0; i < replicationCount; i++) {
+                                this.replicatedSearchTerms.add (actualTerm);
+                            }
+                        }
+
+                        // MessageLogger.logDebug ("Search term: " + actualTerm);
+                    }
+                }
+            }
+            srcReader.close ();
+            srcBufferedReader.close ();
+        } catch (Exception e) {
+            MessageLogger.logError ("Exception reading UiSegmentMap: " + e.getMessage ());
+        }
+
+        if (srcReader != null)
+        {
+            try {
+                srcReader.close ();
+            }
+            catch (Exception e)
+            {
+                MessageLogger.logError ("Src reader close exception: " + e.getMessage ());
+            }
+        }
+
+        // shuffle the replicated list
+        shuffleList (this.replicatedSearchTerms);
+    }
+
+    // load from campaigns info
+    private void loadCampaignSearchTerms () {
+        ArrayList<String> campaignSearchTerms;
+
+        campaignSearchTerms = activeCampaignRecord.getSearchTerms ();
+        this.replicatedCampaignSearchTerms = new ArrayList <String> ();
+
+        for (String inputTerm : campaignSearchTerms) {
+            int replicationCount = 0;
+            String actualTerm;
+
+            // look for 'star' terms (  eg, *sofa). Currently max 3 stars are supported
+            if (inputTerm.startsWith ("***")) {
+                replicationCount = 3 * GeneratorConstants.SEARCHTERM_STAR_MULTIPLIER;
+                actualTerm = inputTerm.substring (3);
+            }
+            else if (inputTerm.startsWith ("**")) {
+                replicationCount = 2 * GeneratorConstants.SEARCHTERM_STAR_MULTIPLIER;
+                actualTerm = inputTerm.substring (2);
+            }
+            else if (inputTerm.startsWith ("*")) {
+                replicationCount = 1 * GeneratorConstants.SEARCHTERM_STAR_MULTIPLIER;
+                actualTerm = inputTerm.substring (1);
+            }
+            else {
+                replicationCount = 0;
+                actualTerm = inputTerm;
+            }
+
+            this.replicatedCampaignSearchTerms.add (actualTerm);
+            if (replicationCount > 0) {
+                for (int i = 0; i < replicationCount; i++) {
+                    this.replicatedCampaignSearchTerms.add (actualTerm);
+                }
+            }
+
+            // MessageLogger.logDebug ("Campaign search term: " + actualTerm);
+        }
+
+        // shuffle the replicated list
+        shuffleList (this.replicatedCampaignSearchTerms);
+    }
+
+    private void shuffleList (ArrayList <String> listToShuffle) {
+        // now shuffle the term list so that star-terms are spread around in the list
+        int listSize = listToShuffle.size();
+        for (int shuffleCount = 0; shuffleCount < MAX_SHUFFLE_COUNT; shuffleCount++) {
+            for (int num = 0; num < listSize; num++) {
+                int indx1;
+                int indx2;
+                String temp;
+
+                indx1 = (int) (Math.random () * listSize);
+                indx2 = (int) (Math.random () * listSize);
+                if (indx1 != indx2) {
+                    temp = listToShuffle.get (indx1);
+                    listToShuffle.set (indx1, listToShuffle.get (indx2));
+                    listToShuffle.set (indx2, temp);
+                }
+            }
+        }
+
+    }
+}

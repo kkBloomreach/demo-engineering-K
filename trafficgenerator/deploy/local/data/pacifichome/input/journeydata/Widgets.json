@@ -1,0 +1,186 @@
+{
+    "widgets": {
+        "pathways": {
+            "__COMMENT_PATHWAYS": "catid/query optional. If not specified, picked up from url",
+            "category": [
+                {
+                    "WCODE": "PATHWAY_CATEGORY",
+                    "wid": "UNDEFINED",
+                    "cat_id": "UNDEFINED"
+                },
+    
+                {
+                    "WCODE": "PATHWAY_CATEGORY",
+                    "wid": "UNDEFINED",
+                    "cat_id": "UNDEFINED"
+                }
+            ],
+    
+            "keyword": [
+                {
+                    "WCODE": "PATHWAY_KEYWORD",
+                    "wid": "UNDEFINED",
+                    "query": "UNDEFINED"
+                },
+    
+                {
+                    "WCODE": "PATHWAY_KEYWORD",
+                    "wid": "UNDEFINED",
+                    "query": "UNDEFINED"
+                }
+            ]
+        },
+    
+        "recommendations": {
+            "__COMMENT_RECS": "reference: https://documentation.bloomreach.com/discovery/docs/recommendations",
+            "global": {
+                "bestseller": [
+                    {
+                        "WCODE": "RECO_GLOBAL_BESTSELLER",
+                        "wid": "4levxyj2"
+                    },
+                    {
+                        "WCODE": "RECO_GLOBAL_BESTSELLER",
+                        "wid": "UNDEFINED"
+                    }
+                ],
+    
+                "trending": [
+                    {
+                        "WCODE": "RECO_GLOBAL_TRENDING",
+                        "wid": "nj382em9"
+                    },
+                    {
+                        "WCODE": "RECO_GLOBAL_TRENDING",
+                        "wid": "UNDEFINED"
+                    }
+                ]
+            },
+    
+            "item": {
+                "__COMMENT_ITEMWIDGETS": "item id optional. If not specified, picked up from product page url",
+                "experience_driven": [
+                    {
+                        "WCODE": "RECO_ITEM_EXP",
+                        "wid": "dl4ykpl6",
+                        "item_id": "UNDEFINED"
+                    },
+                    {
+                        "WCODE": "RECO_ITEM_EXP",
+                        "wid": "UNDEFINED",
+                        "item_id": "UNDEFINED"
+                    }
+                ],
+    
+                "frequently_bought": [
+                    {
+                        "WCODE": "RECO_ITEM_FREQ_BOUGHT",
+                        "wid": "JD9YBD",
+                        "item_id": "UNDEFINED"
+                    },
+                    {
+                        "WCODE": "RECO_ITEM_FREQ_BOUGHT",
+                        "wid": "UNDEFINED",
+                        "item_id": "UNDEFINED"
+                    }
+                ],
+    
+                "frequently_viewed": [
+                    {
+                        "WCODE": "RECO_ITEM_FREQ_VIEWED",
+                        "wid": "UNDEFINED",
+                        "item_id": "UNDEFINED"
+                    },
+                    {
+                        "WCODE": "RECO_ITEM_FREQ_VIEWED",
+                        "wid": "n915myj7",
+                        "item_id": "UNDEFINED"
+                    }
+                ],
+    
+                "similar_products": [
+                    {
+                        "WCODE": "RECO_ITEM_SIMILAR",
+                        "wid": "09z7vwl7",
+                        "item_id": "UNDEFINED"
+                    },
+                    {
+                        "WCODE": "RECO_ITEM_SIMILAR",
+                        "wid": "UNDEFINED",
+                        "item_id": "UNDEFINED"
+                    }
+                ]
+            },
+    
+            "personalization": {
+                "past_purchase": [
+                    {
+                        "WCODE": "RECO_PERS_PAST_PURCHASE",
+                        "wid": "UNDEFINED"
+                    },
+                    {
+                        "WCODE": "RECO_PERS_PAST_PURCHASE",
+                        "wid": "UNDEFINED"
+                    }
+                ],
+    
+                "recently_viewed": [
+                    {
+                        "WCODE": "RECO_PERS_RECENTLY_VIEWED",
+                        "wid": "UNDEFINED"
+                    },
+                    {
+                        "WCODE": "RECO_PERS_RECENTLY_VIEWED",
+                        "wid": "nj3pnglr"
+                    }
+                ]
+            },
+    
+            "visual": {
+                "__COMMENT_VISWIDGETS": "Upload not supported. For Reco, item id optional. If not specified, picked up from product page url",
+                "upload": [
+                    {
+                        "WCODE": "RECO_VISUAL_UPLOAD",
+                        "wid": "UNDEFINED"
+                    },
+                    {
+                        "WCODE": "RECO_VISUAL_UPLOAD",
+                        "wid": "UNDEFINED"
+                    }
+                ],
+                "recommendation": [
+                    {
+                        "WCODE": "RECO_VISUAL_RECO",
+                        "wid": "dl48rdp9",
+                        "item_id": "UNDEFINED"
+                    },
+                    {
+                        "WCODE": "RECO_VISUAL_RECO",
+                        "wid": "UNDEFINED",
+                        "item_id": "UNDEFINED"
+                    }
+                ]
+            }
+        }
+    },
+    "pagemap": {
+        "homepage": [
+            "RECO_GLOBAL_BESTSELLER"
+        ],
+        "productpage": [
+            "RECO_ITEM_EXP",
+            "RECO_ITEM_SIMILAR"
+        ],
+        "categorypage": [
+            "PATHWAY_CATEGORY"
+        ],
+        "searchresultpage": [
+            "PATHWAY_KEYWORD"
+        ],
+        "contentpage": [],
+        "conversionpage": [],
+        "thematicpage": [],
+        "other": []    
+    }
+}
+

@@ -1,0 +1,111 @@
+{
+    "COMMENT1": "This json is used by analytics dataGenerator to generate data",
+    "COMMENT2": "that is then used by analytics simulator to generate pixel and api logs",
+
+    "account_id": 6370,
+    "auth_key": "1vjobidilg5gcbpn",
+    "domain_key": "pacific_supply",
+
+    "uidcount": 100,
+
+    "COMMENT_VIEWS": "List of views as defined in product catalog. Use NONE if no views",
+    "views": [
+        "ContractorCommercial",
+        "ContractorIndustrial",
+        "ContractorResidential",
+        "Fabrication",
+        "MaintenanceElectrical",
+        "MaintenanceIndustrial",
+        "OEM",
+        "Utility"
+    ],
+
+    "refUrls": {
+        "home": "/" 
+    },
+
+    "COMMENT_PRODUCT_QUERIES": "Some pids should not be included in generating simulation data",
+    "exclude_products": [
+            "00000000"
+        ],
+
+    "COMMENT_CATEGORY_QUERIES": "Category queries are generated internally using product feed",
+    "COMMENT_CATEGORY_EXCLUDES": "Exclude these categoryIds from generating simulation data",
+    "exclude_categories": [
+        "000"
+    ],
+    
+    "COMMENT_SEARCH_QUERIS": "Primary query and associated refined queries for that primary",
+    "search_queries": {
+        "drill": [
+            "jig",
+            "pole",
+            "cordless",
+            "titanium",
+            "chuck"
+        ],
+
+        "wire": [
+            "copper wire",
+            "ethernet",
+            "wallplate",
+            "connector",
+            "polypropylene" 
+        ],
+
+        "saw": [
+            "blade",
+            "jigsaw",
+            "circular",
+            "blade",
+            "teeth"
+        ],
+
+        "switch": [
+            "single pole",
+            "pole",
+            "power supply",
+            "circuit",
+            "nickel"
+        ],
+
+        "cable": [
+            "green",
+            "stripe",
+            "platinum",
+            "copper",
+            "digital"
+        ],
+
+        "motor": [
+            "rotary",
+            "manual",
+            "circuit breaker",
+            "servo",
+            "starter"
+        ]
+    },
+
+    "COMMENT_SEGMENTS": "DataGeneration process is same for RBS or RTCS segmentation type",
+    "segments": {
+        "Legrand": {
+            "fq": "Brand%3A%22Legrand%22"
+        },
+        "Allen-Bradley": {
+            "fq": "Brand%3A%22Allen-Bradley%22"
+        },
+        "SchneiderElectric": {
+            "fq": "Brand%3A%22Schneider%20Electric%22"
+        }
+    },
+
+    "COMMENT_ZERORESULTS": "queries that return zero results",
+    "zeroResultQueries": [
+        "nothing",
+	    "molibdenum"
+    ],
+
+    "COMMENT_FEED": "Relative path with respect to this .json file itself",
+    "feedFile": "../feed/pacific_supply/full_preprocessed_07072021_03162023.jsonl"
+}    
+

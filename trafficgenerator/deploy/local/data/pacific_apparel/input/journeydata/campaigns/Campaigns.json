@@ -1,0 +1,82 @@
+{
+    "__COMMENT1": "campaign names must match values provided in the feed 'campaign' attribute, case sensitive", 
+    "blackjeans": {
+            "startDate":    "12-14",
+            "dayCount":     7,
+            "priceDiscount":    34,
+            "productSelections": {
+                    "__COMMENT_SELECTIONS": "all selected products are finally collected together",
+                    "__COMMENT_SELECTION_EXCLUDE": "this is optional section",
+                    "view_EXAMPLE": "view_name",
+                    "include": {
+                        "categories": [
+                            {"q": "20200", "attribute": "brand", "value": "Pacific 25" },
+                            {"q": "10200" }
+                        ],
+                        "search": [
+                            { "q": "jeans", "attribute": "color",    "value": "black" },
+                            { "q": "black jeans"}
+                        ],
+                        "pids": [
+                            "103755",
+                            "103537"
+                        ]
+                    },
+                    "exclude": {
+                        "categories": [
+                            {"q": "21300" }
+                        ],
+                        "search": [
+                            { "q": "blue jeans"}
+                        ],
+                        "pids": [
+                            "103700"
+                        ]
+                    }
+            },
+            "__COMMENT_PROMOTION_TERMS": "optionally prepend 1 or more * characters (max 3) to indicate each term's importance",
+            "promotionTerms": [
+                    "Regular", "Bottomwear", "Mid rise", "Dark shade", "Cotton"
+            ]
+    },
+
+    "winter jackets": {
+            "startDate":    "11-01",
+            "dayCount":     15,
+            "priceDiscount":  23,
+            "productSelections": {
+                    "__COMMENT_SELECTIONS": "all selected products are finally collected together",
+                    "__COMMENT_SELECTION_EXCLUDE": "this is optional section",
+                    "view_EXAMPLE": "view_name",
+                    "include": {
+                        "categories": [
+                            {"q": "20300" },
+                            {"q": "10300" }
+                        ],
+                        "search": [
+                            { "q": "wool jackets" }
+                        ],
+                        "pids_NONE": [
+                            "103755",
+                            "103537"
+                        ]
+                    },
+                    "exclude": {
+                        "categories": [
+                            {"q": "20400" }
+                        ],
+                        "search": [
+                            { "q": "leather"}
+                        ],
+                        "pids": [
+                            "103700"
+                        ]
+                    }
+            },
+            "__COMMENT_PROMOTION_TERMS": "optionally prepend 1 or more * characters (max 3) to indicate each term's importance",
+            "promotionTerms": [
+                    "bomber jacket", "recycled"
+            ]
+    }
+}
+

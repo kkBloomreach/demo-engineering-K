@@ -1,0 +1,41 @@
+UserId	ViewId	User Segment	JourneyType	JourneyStart	stepStart	SessionNum	SessionType	Step	Query	StepResult
+tg1-7529-3440093-567812	None	High Value Customers	predefined	63677909	63677909	1	-	start_journey	home	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	63677909	63677919	2	pc2c	search_category	20500	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	63677909	63678919	2	pc2c	view_list	numFound = 12	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	63677909	63878919	2	pc2c	search_category	90300	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	63677909	63879919	2	pc2c	view_list	numFound = 208	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	63677909	64279919	2	pc2c	browse_pdp	110390	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	63677909	64339919	2	pc2c	add_to_cart	110390	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	63677909	64539919	2	pc2c	convert	basket = !i110390'nÉtincelle de Pacific Style wedding band'q1.0'p595.0, value = 595.000000, orderId = 2024_12_6_4508	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	63677909	64841919	2	gt	suggest_query	vi	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	63677909	64842919	2	gt	suggest_query_select_term	visor	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	63677909	64847919	2	gt	view_list	numFound = 1	StepSelectProductFromList, no acceptable product available in the product list
+tg1-7529-3440093-567812	None	High Value Customers	predefined	63677909	65048919	2	gt	exception_restart	-	StepSelectProductFromList, no acceptable product available in the product list
+tg1-7529-3440093-567812	None	High Value Customers	predefined	63677909	65051919	2	gc	suggest_query	min	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	63677909	65052919	2	gc	suggest_query_select_category	brg_dyn_crk0s27ib8	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	63677909	65057919	2	gc	view_list	numFound = 601	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	63677909	65457919	2	gc	browse_pdp	110739	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	63677909	65517919	2	gc	add_to_cart	110739	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	63677909	65717919	2	gc	convert	basket = !i110739'nFloral Print Puff Sleeve Short Dress'q1.0'p241.48, value = 241.470000, orderId = 2024_12_6_4832	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	63677909	66019919	2	ps2s	search_term	polo sweatshirt	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	63677909	66020919	2	ps2s	view_list	numFound = 37	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	63677909	66220919	2	ps2s	search_term	Polo fleece	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	63677909	66221919	2	ps2s	view_list	numFound = 79	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	63677909	66621919	2	ps2s	browse_pdp	110737	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	63677909	66681919	2	ps2s	add_to_cart	110737	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	63677909	66881919	2	ps2s	convert	basket = !i110737'nShort Sleeve Polo Tennis Dress'q2.0'p170.09, value = 340.180000, orderId = 2024_12_6_5239	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	66759300	66759300	1	-	start_journey	home	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	63677909	67183919	2	gc	suggest_query	be	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	63677909	67184919	2	gc	suggest_query_select_category	10500	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	63677909	67189919	2	gc	view_list	numFound = 416	StepSelectProductFromList, no acceptable product available in the product list
+tg1-7529-3440093-567812	None	High Value Customers	predefined	63677909	67390919	2	gc	exception_restart	-	StepSelectProductFromList, no acceptable product available in the product list
+tg1-7529-3440093-567812	None	High Value Customers	predefined	66759300	76759310	2	c2s	search_category	70000	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	66759300	76760310	2	c2s	view_list	numFound = 108	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	66759300	77160310	2	c2s	browse_pdp	101351	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	66759300	77220310	2	c2s	add_to_cart	101351	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	66759300	77420310	2	c2s	convert	basket = !i101351'nZX 1K Boost Shoes'q2.0'p110.0, value = 220.000000, orderId = 2024_12_6_5450	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	66759300	77720310	2	c2s	search_term	suit	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	66759300	77721310	2	c2s	view_list	numFound = 414	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	66759300	78121310	2	c2s	browse_pdp	110017	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	66759300	78181310	2	c2s	add_to_cart	110017	success
+tg1-7529-3440093-567812	None	High Value Customers	predefined	66759300	78381310	2	c2s	convert	basket = !i110017'nTAG 7 Men Navy Blue Regular Fit Single-Breasted Suit'q1.0'p133.99, value = 133.990000, orderId = 2024_12_6_5817	success

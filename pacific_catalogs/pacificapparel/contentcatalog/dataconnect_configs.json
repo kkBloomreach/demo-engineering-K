@@ -1,0 +1,87 @@
+{
+    "author": {
+        "data_type": "text",
+        "displayable": true,
+        "multi_valued": false,
+        "searchable": true
+    },
+    "body": {
+        "data_type": "text",
+        "displayable": false,
+        "multi_valued": false,
+        "searchable": true
+    },
+    "categories": {
+        "data_type": "text",
+        "displayable": true,
+        "multi_valued": true,
+        "searchable": false
+    },
+    "date": {
+        "data_type": "number",
+        "displayable": true,
+        "multi_valued": false,
+        "searchable": false
+    },
+    "image": {
+        "data_type": "text",
+        "displayable": true,
+        "multi_valued": false,
+        "searchable": false
+    },
+    "introduction": {
+        "data_type": "text",
+        "displayable": true,
+        "multi_valued": false,
+        "searchable": true
+    },
+    "primaryDocType": {
+        "data_type": "text",
+        "displayable": true,
+        "multi_valued": true,
+        "searchable": true
+    },
+    "tags": {
+        "data_type": "text",
+        "displayable": true,
+        "multi_valued": true,
+        "searchable": true
+    },
+    "title": {
+        "data_type": "text",
+        "displayable": true,
+        "multi_valued": false,
+        "searchable": true
+    },
+    "url": {
+        "data_type": "text",
+        "displayable": true,
+        "multi_valued": false,
+        "searchable": false
+    },
+    "votes": {
+        "data_type": "number",
+        "displayable": true,
+        "multi_valued": false,
+        "searchable": false
+    },
+    "xm_aggregated_descendants_text": {
+        "data_type": "text",
+        "displayable": true,
+        "multi_valued": false,
+        "searchable": true
+    },
+    "xm_primaryDocType": {
+        "data_type": "text",
+        "displayable": true,
+        "multi_valued": false,
+        "searchable": true
+    },
+    "xm_urls": {
+        "data_type": "text",
+        "displayable": true,
+        "multi_valued": true,
+        "searchable": true
+    }
+}
+

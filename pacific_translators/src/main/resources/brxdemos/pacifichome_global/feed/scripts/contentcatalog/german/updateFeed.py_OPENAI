@@ -1,0 +1,137 @@
+import logging
+import openai
+import time
+
+import jsonlFeedReader as jfr
+import updaterConstants as uc
+
+MAX_ATTEMPTS_TO_TRANSLATE = 5
+MTB_REATTEMPT = 5   # if openAI error, sleep N seconds then re-attempt
+
+class UpdateFeed ():
+    def __init__ (self):
+        self.src_contents_en = []
+        self.updated_contents_de = []
+
+    def setSourceContents (self, srcContents_en):
+        self.src_contents_en = srcContents_en
+
+    def performUpdates (self):
+        self._updateFeed ()
+        return self.updated_contents_de
+
+    def _updateFeed (self):
+        logging.info ("update feed")
+
+        for srcRecord in self.src_contents_en:
+            updatedRecord = srcRecord.copy ()
+
+            contentPath = srcRecord ['path']
+            logging.debug ('process contentPath = %s', contentPath)
+            contentAttribs = srcRecord ['value']['attributes']
+            for attrib, value in contentAttribs.items ():
+                logging.debug ('content attrib = %s', attrib)
+                if attrib == 'tags':
+                    self._translateTags (contentPath, attrib, value)
+                elif attrib in uc.CONTENT_ATTRIBUTES_TO_TRANSLATE:
+                    if value != None:
+                        translatedValue = self._translateText (contentPath, attrib, value)
+                        updatedRecord ['value']['attributes'][attrib] = translatedValue
+
+            # collect all updated contents
+            self.updated_contents_de.append (updatedRecord)
+
+        logging.info ("content + variants in updated feed count: %s", len (self.updated_contents_de))
+        return
+
+    # param 'value' is list
+    def _translateTags (self, contentPath, attrib, tagList):
+        for i, tag in enumerate (tagList):
+            translatedText = self._translateText (contentPath, attrib, tag)
+            tagList [i] = translatedText
+
+        return
+
+    def _translateText_DEV (self, contentPath, attrib, value):
+        return 'TR_' + str (value)
+
+    def _translateText (self, contentPath, attrib, srcText):
+        attempt = 0
+
+        # replace embedded \n, \r if any (apparently openAI has problems with those)
+        text = srcText.replace ('\n', '')
+
+        while (attempt < MAX_ATTEMPTS_TO_TRANSLATE):
+            try:
+                translation = self._translatePrompt (text) # translate chunks of MAX_TOKENS
+                return translation
+            except Exception as e:
+                logging.warn ('Translation openAI error. path = %s, attrib = %s, attempt = %s, error = %s' % (contentPath, attrib, attempt, e))
+                attempt = attempt + 1
+                time.sleep (MTB_REATTEMPT)
+                continue    # try again
+
+        # return text = TIMEOUT_ + text
+        retText = '%s_%s' % ('TIMEOUT', text)
+        return retText
+
+    # translate full prompt in sections of 150 tokens (openAI limit)
+    def _translatePrompt (self, srcText):
+        source_language = uc.SOURCE_CATALOG_LANGUAGE
+        target_language = uc.TARGET_CATALOG_LANGUAGE
+        openai.api_key = uc.OPENAI_KEY
+        MAX_OPENAI_TOKENS = 150 # number-of-tokens
+        MAX_STRING_LEN = 500 # corresponding string length (approximate, heuristic)
+
+        fullTranslation = ''
+        startIndx = 0
+        remLen = min (len (srcText), MAX_STRING_LEN)
+
+        while (remLen > 0):
+            logging.debug ('startIndx = %s, remLen: %s', startIndx, remLen)
+            logging.debug ('=== english: %s', srcText [startIndx:startIndx+remLen])
+            prompt = 'Translate the following %s text to %s: %s' % (source_language, target_language, srcText[startIndx:startIndx+remLen])
+            response = openai.ChatCompletion.create (
+                            model = 'gpt-3.5-turbo',
+                            messages = [
+                                        {'role': 'system', 'content': 'Your a helpful assistant' },
+                                        { 'role': 'user', 'content': prompt }
+                            ],
+                            max_tokens = MAX_OPENAI_TOKENS,
+                            n = 1,
+                            stop = None,
+                            temperature = 0.5
+                        )
+            logging.debug ('=== german %s', response.choices[0].message.content.strip())
+            fullTranslation = '%s%s' % (fullTranslation, response.choices [0].message.content.strip ())
+            startIndx = startIndx + remLen 
+            remLen = min (len (srcText [startIndx:]), MAX_STRING_LEN)
+        return fullTranslation
+
+if __name__ == '__main__':
+    logging.basicConfig (level = logging.DEBUG)
+    srcFeedReader = jfr.JsonlFeedReader ()
+    srcContents = srcFeedReader.readSourceFeed (uc.FILENAME_JSONL_SOURCE_FEED_EN_IN)
+
+    feedUpdater = UpdateFeed ()
+    feedUpdater.setSourceContents (srcContents) # english
+    updatedContents_de = feedUpdater.performUpdates ()
+    logging.debug ('Finish ...')
+
+'''
+        prompt = 'Translate the following %s text to %s: %s' % (source_language, target_language, text)
+        logging.debug (prompt)
+                response = openai.ChatCompletion.create (
+                    model = 'gpt-3.5-turbo',
+                    messages = [
+                                 {'role': 'system', 'content': 'Your a helpful assistant' },
+                                 { 'role': 'user', 'content': prompt }
+                               ],
+                    max_tokens = 150,
+                    n = 1,
+                    stop = None,
+                    temperature = 0.5
+                    )
+                translation = response.choices [0].message.content.strip ()
+
+'''

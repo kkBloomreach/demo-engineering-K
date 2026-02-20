@@ -1,0 +1,9 @@
+# revisionV5 specific constants
+# if start_date < NEWNESS, set 'is_new = true'
+NEWNESS_TIMEPERIOD_IN_DAYS = 30
+
+FRESHNESS_TIMEPERIOD_WEEK = 7   # days
+FRESHNESS_TIMEPERIOD_MONTH = 30
+FRESHNESS_TIMEPERIOD_QUARTER = 120
+
+

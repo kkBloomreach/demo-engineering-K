@@ -1,0 +1,152 @@
+{
+    "COMMENT1": "This json is used by analytics dataGenerator to generate data",
+    "COMMENT2": "that is then used by analytics simulator to generate pixel and api logs",
+
+    "account_id": 6413,
+    "auth_key": "bcvpynhij980k0y1",
+    "domain_key": "pacifichome",
+
+    "uidcount": 10,
+
+    "COMMENT_VIEWS": "List of views as defined in product catalog. Use NONE if no views",
+    "views": [
+        "NONE"
+    ],
+
+    "refUrls": {
+        "home": "/" 
+    },
+
+    "COMMENT_PRODUCT_QUERIES": "Some pids should not be included in generating simulation data",
+    "exclude_products": [
+            "P1-91806",
+            "P1-94901"
+        ],
+
+    "COMMENT_CATEGORY_QUERIES": "Category queries are generated internally using product feed",
+    "COMMENT_CATEGORY_EXCLUDES": "Exclude these categoryIds from generating simulation data",
+    "exclude_categories": [
+        "123",
+        "124",
+        "128",
+        "136",
+        "138",
+        "141",
+        "148",
+        "147",
+        "164",
+        "165",
+        "166",
+        "168",
+        "174",
+        "175",
+        "180",
+        "184",
+        "185",
+        "198",
+        "202",
+        "212",
+        "223",
+        "136",
+        "176",
+        "184",
+        "221",
+        "228",
+        "242",
+        "247",
+        "244",
+        "250",
+        "251",
+        "252",
+        "257",
+        "262",
+        "268",
+        "272",
+        "277",
+        "279",
+        "280",
+        "283",
+        "285",
+        "293",
+        "298",
+        "308",
+        "342",
+        "346"
+    ],
+    
+    "COMMENT_SEARCH_QUERIS": "Primary query and associated refined queries for that primary",
+    "search_queries": {
+            "Chair": [
+                "Wood Chair",
+                "Metal Chair",
+                "Dining Chair",
+                "Outdoor Chair",
+                "Antique Chair"
+            ],
+
+            "Sectionals": [
+                "Gray Sectionals",
+                "Sectional 4 Piece",
+                "Sectional 5 Piece",
+                "Outdoor Sectional",
+                "Outdoor Pillow"
+            ],
+
+            "Rugs": [
+                "Indoor Rug",
+                "WovenRug",
+                "Jute Rug",
+                "Cotton Rug",
+                "Area Rug"
+            ],
+
+            "Beds": [
+                "Linen",
+                "Metal Bed",
+                "Upholstered Bed",
+                "Valvet Bed",
+                "Sofa Pillow"
+            ],
+
+            "Lighting": [
+                "Outdoor Lighting",
+                "LED Lighting",
+                "Kitchen Lighting",
+                "Office Lighting",
+                "Pendulum Lighting"
+            ]
+    },
+
+    "COMMENT_SEGMENTS": "DataGeneration process is same for RBS or RTCS segmentation type",
+    "segments": {
+        "BUDGET": {
+            "fq": "price:[0%20TO%20150]"
+        },
+        "LUXURY": {
+            "fq": "price:[150%20TO%20*]"
+        } 
+    },
+
+    "COMMENT_ZERORESULTS": "queries that return zero results",
+    "zeroResultQueries": [
+        "engine oil",
+	    "furniture sliders",
+	    "cigarette",
+	    "carburator",
+	    "h2o",
+	    "gumboot",
+	    "firealarm",
+	    "co alarm",
+	    "redon detector",
+	    "inverter",
+	    "air conditioner",
+	    "monoxide alarm",
+	    "fire extinguisher",
+	    "selenium",
+	    "transformer"
+    ],
+
+    "COMMENT_FEED": "Relative path with respect to this .json file itself",
+    "feedFile": "../feed/pacifichome/full_feed_preprocessed_03312021_02142023.jsonl"
+}    
+

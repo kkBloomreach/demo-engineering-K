@@ -1,0 +1,52 @@
+{
+    "DOMAIN": "pacifichome",
+    "DEFAULT_TITLE": "PacificHome",
+    "ACCOUNT_ID" : "6413",
+    "AUTH_KEY": "bcvpynhij980k0y1",
+
+    "HOMEPAGE_URL": "https://pacific.bloomreach.com/home",
+    "HOMEPAGE_TITLE": "PacificHome",
+    "SEARCH_PAGE_URL_PREFIX" : "https://pacific.bloomreach.com/home/search?_sq=",
+    "SEARCH_PAGE_URL_PREFIX_NORMALIZED" : "https://pacific.bloomreach.com/home/search/$QUERY?_sq=",
+    "PRODUCT_URL_PREFIX" : "https://pacific.bloomreach.com/home/products/",
+    "CATEGORY_URL_PREFIX" : "https://pacific.bloomreach.com/home/categories/",
+    "ATC_PAGE_URL" : "https://pacific.bloomreach.com/home/cartpage",
+    "CONVERSION_PAGE_URL" : "https://pacific.bloomreach.com/home/thankyou",
+
+    "PREPROCESSED_XML_FEED_PATH" : "./source/simulator/feed/pacifichome/translated_feed.xml",
+    "PREPROCESSED_JSONL_FEED_PATH" : "./source/simulator/feed/pacifichome/full_feed_preprocessed_03312021_02142023.jsonl",
+
+    "SIMULATED_UID_TO_SEGMENT_MAP_PATH" : "./source/simulator/simdata/pacifichome/UidMap.tsv",
+    "SEGMENTQUERY_TO_PID_MAP_PATH" : "./source/simulator/simdata/pacifichome/SearchQueryToPidMap.tsv",
+    "SEGMENTCATEGORY_TO_PID_MAP_PATH" : "./source/simulator/simdata/pacifichome/CategoryQueryToPidMap.tsv",
+    "REFURL_POOL_PATH" : "./source/simulator/simdata/pacifichome/RefUrlPoolMap.tsv",
+    "REFINED_JOURNEY_MAP_PATH" : "./source/simulator/simdata/pacifichome/RefinedJourneyMap.tsv",
+    "ZERO_RESULT_QUERY_MAP_PATH" : "./source/simulator/simdata/pacifichome/ZeroResultQueryMap.tsv",
+
+    "RTCS": {
+        "SEGMENTATION_ID" : "63a1ede75322418784c619f1",
+        "BUDGET": {
+            "SEGMENT_ID" : "63a21063733ffea05e1a29f0",
+            "NOTE": "Product price range 0 to 150"
+        },
+        "LUXURY": {
+            "SEGMENT_ID" : "63a21063733ffea05e1a29ee",
+            "NOTE": "Product price range 150 to *"
+        }
+    },
+
+    "RBS": {
+        "CUSTOMER_PROFILE": {
+            "Menerallac": {
+                "NOTE": "Products with brand = menerallac"
+            },
+            "Dewalt": {
+                "NOTE": "Products with brand = Dewalt"
+            },
+            "Milwaukee": {
+                "NOTE": "Products with brand = Milwaukee"
+            }
+        }
+    }
+}
+

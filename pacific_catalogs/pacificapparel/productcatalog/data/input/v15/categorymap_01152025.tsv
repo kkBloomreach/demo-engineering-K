@@ -1,0 +1,72 @@
+Parent	L0Name	L1Name	L2Name	LeafId	product_size	product_fit	health_and_beauty_colors	notes
+-	men			10000				
+10000		tops		10100	"XS, XM, MD, LG, XL, XXL"	"Big/Tall, Regular, Slim"		
+10000		pants		10200	"XS, XM, MD, LG, XL, XXL"	"Big/Tall, Regular, Slim"		
+10000		activewear		10400	"XS, XM, MD, LG, XL, XXL"			
+10000		accessories		10500				
+10000		suits		10600				"can we rename this to suits, we don't need a coordinates for Men"
+10000		jewellery		10700				
+10000		shoes		10800	"7,8,9,10,11,12,13"	"Narrow, Regular, Wide"		
+10000		jeans		10900				
+								
+-	women			20000				
+20000		tops		20100	"XS, XM, MD, LG, XL, XXL"			
+20000		pants		20200	"XS, XM, MD, LG, XL, XXL"	"Tall, Regular, Petite"		
+20000		jackets		20300	"XS, XM, MD, LG, XL, XXL"	"Tall, Regular, Petite"		
+20000		activewear		20400	"XS, XM, MD, LG, XL, XXL"			
+20000		accessories		20500				
+20000		coordinates		20600				
+20000		jewellery		20700				
+20000		shoes		20800	"6,7,8,9,10"	"Narrow, Regular, Wide"		
+20000		jeans		20900	"XS, XM, MD, LG, XL, XXL"	"Tall, Regular, Petite"		
+20000		skirts		21000				
+20000		sweaters		21100				
+20000		dresses		21200				
+20000		shorts		21300				
+								
+-	kids			30000				
+30000		tops		30100				
+30000		pants		30200				
+30000		activewear		30300				
+30000		accessories		30400				
+								
+-	shoes			70000				
+70000		casual		70100				
+70000		dress		70200				
+70000		sneakers		70300				
+								
+-	handbags			80000				
+80000		purses		80100				
+80000		backpacks&totes		80200				
+								
+-	jewellery			90000				
+90000		watches		90100				
+90000		necklaces		90200	"short, medium, long"			
+90000		rings		90300	"4,5,6,7"			
+90000		bracelets		90400				
+90000		earrings		90500				
+								
+-	health & beauty			100000				
+100000		skincare		100100				
+100100			cleanser	100110				
+100100			exfoliator	100120				
+100100			moisturizer	100130				
+100100			serum	100140				
+100000		makeup		100200				
+100200			blush	100210			"pink, berry, peach"	
+100200			bronzer	100220			"neutral, light, medium, dark"	
+100200			concealer	100230			"neutral, light, medium, dark"	
+100200			contour	100240			"neutral, light, medium, dark"	
+100200			eye shadow	100250			"bronze, pink, champaign"	
+100200			eyeliner	100260			"black, brown, blue"	
+100200			foundation	100270			"light, medium, tan"	
+100200			highlighter	100280			"bronze, copper"	
+100200			lip gloss	100290			"clear, soft pink, berry"	
+100200			lip liner	1002A0			"pink, red, berry, brown"	
+100200			lipstick	1002B0			"red, pink, berry"	
+100200			makeup remover	1002C0				
+100200			mascara	1002D0			"black, brown"	
+100200			primer	1002E0			"clear, pink, peach"	
+								
+-	general			999999				
+999999	products			99999901				

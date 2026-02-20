@@ -1,0 +1,9 @@
+PacificHome feed original is in XML format. Need to convert that to 
+JSONL as required by dataconnect
+
+Aug15:
+ - Changed "availability" value to true/false (instead of "out of stock"/"in stock"/...)
+
+May17, 2023:
+ - Generate .tsv feed as well since it is needed to prepare "global" feed (german translation etc)
+

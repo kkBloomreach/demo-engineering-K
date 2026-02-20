@@ -1,0 +1,18 @@
+#!/bin/bash
+# Note - this script assumes english-feed-translator (translate.sh) has already been executed
+# in this same folder
+
+BRXDEMOS_SRC=/Users/kirankundargi/work/brxdemos_tmp/pacific/dev
+WORK_DIR=/Users/kirankundargi/tmp/brlab/test/pacifichome/feed
+
+# === NO CHANGES NEEDED BELOW THIS LINE ===
+
+# Copy germain_info.tsv
+cp $BRXDEMOS_SRC/src/main/resources/brxdemos/pacifichome/translate/feed/sourcedata/germaninfo_in.tsv $WORK_DIR/data/source
+
+BRXDEMOS_JARS=$BRXDEMOS_SRC/target/brxdemos-1.0-SNAPSHOT.jar
+CP=$BRXDEMOS_JARS:$CLASSPATH
+export CLASSPATH=$CP
+
+java com.bloomreach.brxdemos.pacifichome.translate.feed.GermanFeedGenerator ./data
+ 

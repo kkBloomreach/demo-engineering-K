@@ -1,0 +1,513 @@
+CatId	ProductCount	category_level_l0	category_level_l1	category_level_l2	category_level_l3	New category name/mapping	action	merge_target
+116715	-	Furniture						
+116796	-		Small Spaces Collection				delete	
+117897	-			Small Space Sofas & Daybeds			delete	
+117896	-			Small Space Storage			delete	
+117898	-			Small Space Office			delete	
+117895	-			Small Space Dining & Kitchen			delete	
+117900	-			Small Space Coffee & Side Tables			delete	
+117899	-			Small Space Seating and Benches			delete	
+117901	-			Small Space Bedroom			delete	
+116774	-		Bedroom Furniture					
+116778	-			Chaise and Daybeds				
+116780	-			Nightstands and Tables				
+116779	-			Bedroom Storage			delete	
+116777	-			Headboards			delete	
+116776	-			Beds				
+116775	-			Bedroom Furniture Collections			delete	
+116754	-		Living Room Furniture					
+116756	-			Sofas and Loveseats		Sofas and Sectionals	rename	
+116766	-			Cabinets and Shelving				
+116758	-			Chairs		Chairs and Benches	rename	
+116763	-			Benches and Ottomans		Chairs and Benches	merge	116758
+116765	-			TV Stands and Media Consoles			delete	
+116767	-			Accent Furniture			delete	
+120596	-			End and Side Tables		Living Room Tables	rename	
+116755	-			Living Room Collections			delete	
+116759	-			Coffee Tables		Living Room Tables	merge	120596
+120595	-			Console Tables		Living Room Tables	merge	120596
+116757	-			Sectionals		Sofas and Sectionals	merge	116756
+119205	-			Emmett Modular			delete	
+116745	-		Shop All Furniture				delete	
+117405	-		New Furniture				delete	
+116746	-		Dining Room Furniture					
+116749	-			Dining Chairs				
+116751	-			Barstools and Counter Stools			delete	
+116748	-			Dining Tables				
+116753	-			Kitchen Furniture				
+116752	-			Dining Storage and Bars			delete	
+116750	-			Dining Benches		Kitchen Furniture	merge	116753
+116747	-			Dining Room Collections			delete	
+116772	-			Shop by Room: Dining			delete	
+116768	-		Home Office Furniture					
+116769	-			Office Desks				
+116771	-			Bookcases				
+116783	-			Storage Carts			delete	
+116770	-			Office Chairs				
+116795	-		Farmhouse Collection				delete	
+116794	-		Industrial Collection				delete	
+116790	-		Bathroom Furniture				delete	
+116791	-		Entryway Furniture and Décor				delete	
+116784	-		Custom Furniture				delete	
+116785	-			Custom Headboards			delete	
+116786	-			Custom Beds			delete	
+116787	-			Custom Seating			delete	
+116788	-			Custom Living Room Collections			delete	
+116789	-			Custom Dining Room Collections			delete	
+117462	-		Artisan Furniture				delete	
+116793	-		Mid Century Furniture				delete	
+116731	-	Kitchen					delete	
+117079	-		Kitchen Tools				delete	
+117083	-			Cutting Boards			delete	
+117080	-			Tools and Gadgets			delete	
+117081	-			Novelty Ceramics			delete	
+117087	-			Cleaning Supplies			delete	
+117084	-			Cutlery			delete	
+117086	-			Compost and Trash Cans			delete	
+117085	-			Small Kitchen Appliances			delete	
+117082	-			Mixing Bowls			delete	
+117067	-		Shop All Kitchen				delete	
+117075	-		Baking				delete	
+117078	-			Mixing Bowls			delete	
+117077	-			Measuring Cups and Spoons			delete	
+117076	-			Bakeware			delete	
+117412	-		New Kitchen				delete	
+117088	-		Coffee and Tea Accessories				delete	
+117089	-			Coffee Makers			delete	
+117092	-			Teapots and Tea Kettles			delete	
+117090	-			Slow Brew			delete	
+117093	-			Tea Infusers			delete	
+117091	-			Carafes, Creamers and Sugar Bowls			delete	
+117068	-		Cooking				delete	
+117069	-			Cookware			delete	
+117071	-			Cookbooks			delete	
+117098	-		Storage				delete	
+117106	-		Outdoor BBQ and Grilling				delete	
+117094	-		Kitchen Linens				delete	
+117097	-			Pot Holders			delete	
+117096	-			Aprons			delete	
+117095	-			Kitchen Towels			delete	
+119735	-		Dinnerware				delete	
+117419	-	Sale					delete	
+117427	-		Kitchen				delete	
+117428	-		Food & Drink				delete	
+117431	-		Holidays				delete	
+117430	-		Gifts				delete	
+117424	-		Decor & Pillows				delete	
+117426	-		Dining				delete	
+117421	-		Outdoor				delete	
+117425	-		Bed & Bath				delete	
+117420	-		Furniture				delete	
+117429	-		Jewelry & Clothing				delete	
+119635	-		Rugs				delete	
+117423	-		Lighting				delete	
+116728	-	Decor & Pillows						
+116899	-		Wall Art and Décor					
+116900	-			Wall Art by Subject				
+116901	-				Abstract	Wall Art (L2)	merge	116900
+116903	-				Botanical & Floral		delete	
+116902	-				Animals & Birds		delete	
+116915	-				Landscape & Nature	Wall Art	merge	116900
+116916	-				Maps & Travel		delete	
+116917	-				Vintage Style		delete	
+116904	-				Coastal	Wall Art	merge	116900
+116926	-			Wall Art by Material			delete	
+116929	-				Photography		delete	
+116930	-				Giclee		delete	
+116928	-				Framed Print		delete	
+116927	-				Canvas Print		delete	
+116919	-			Wall Art by Room			delete	
+116920	-				Living Room		delete	
+116923	-				Home Office		delete	
+116921	-				Dining Room		delete	
+116924	-				Bedroom		delete	
+120676	-			Featured Artists			delete	
+116933	-			Mirrors				
+274	-			Wall Storage			delete	
+282	-				Chalkboards		delete	
+296	-				Hooks		delete	
+314	-				Shelves		delete	
+348	-				Cubbies & Organization		delete	
+118037	-			Wall Frames			delete	
+116939	-			Wall Candle Sconces			delete	
+117409	-		New Decor & Pillows				delete	
+116884	-		Shop All Décor and Pillows				delete	
+116958	-		Home Office				delete	
+116959	-			Desk Accessories			delete	
+116966	-			Stationery			delete	
+116965	-			Home Office Organization			delete	
+116967	-			Home Office Furniture			delete	
+119563	-		Curtains				delete	
+118665	-		Plants, Trees and Flowers				delete	
+118667	-			House Plants and Flowers			delete	
+118666	-			Planters and Terrariums			delete	
+118668	-			Faux Succulents, Botanicals and Flowers			delete	
+118670	-			Vases			delete	
+118669	-			Faux Potted Plants and Trees			delete	
+116940	-		Candles and Candle Holders				delete	
+116943	-			Candle Holders			delete	
+116941	-			Candles			delete	
+116942	-			Scented Candles			delete	
+116945	-			Lanterns			delete	
+116946	-			Home Scents			delete	
+119905	-		Decor Best Sellers				delete	
+116969	-		Hardware				delete	
+116970	-			Knobs and Pulls			delete	
+116971	-			Hooks			delete	
+116948	-		Decorative Accessories				delete	
+116955	-			Knobs and Wall Hooks			delete	
+116949	-			Decorative Accents			delete	
+117496	-			Artisan Gifts			delete	
+116950	-			Terrariums			delete	
+116954	-			Vases			delete	
+116952	-			Foliage and Floral			delete	
+116957	-			Frames			delete	
+116953	-			Plants			delete	
+116956	-			Clocks			delete	
+116947	-		Baskets					
+116885	-		Pillows and Cushions					
+116898	-			Papasan Chair Cushions		Cushions	rename	
+116896	-			Chair Cushions		Cushions	merge	116898
+116886	-			Throw Pillows		Pillows	rename	
+116888	-			Floor Pillows and Poufs		Pillows	merge	116886
+118695	-			Lumbar Pillows		Pillows	merge	116886
+116887	-			Velvet Pillows		Pillows	merge	116886
+116895	-			Throws & Blankets			delete	
+118696	-			Indoor/Outdoor Pillows			delete	
+116897	-			Outdoor Cushions and Pillows			delete	
+119295	-		Wall Storage				delete	
+119299	-			Chalkboards			delete	
+119298	-			Wall Hooks			delete	
+119297	-			Cubbies & Organization			delete	
+119296	-			Wall Shelves			delete	
+119736	-		Lighting					
+116973	-		Fur and Hide Décor				delete	
+119175	-		Wallpaper				delete	
+119176	-			Murals			delete	
+119445	-			Peel & Stick Tiles			delete	
+116729	-	Bed & Bath						
+116994	-		Cleaning and Laundry Essentials				delete	
+117410	-		New Bed and Bath				delete	
+116975	-		Shop All Bed & Bath				delete	
+116989	-		Bathroom Furniture					
+119906	-		Bed & Bath Best Sellers				delete	
+116987	-		Bath Rugs & Bath Mats				delete	
+116988	-		Bath Accessories				delete	
+116990	-		Bath & Body				delete	
+116992	-			Spa and Relaxation			delete	
+116991	-			Soaps and Lotions			delete	
+118065	-			Beauty Products			delete	
+116980	-		Bath Towel Collections				delete	
+116983	-			Hand Towels			delete	
+116984	-			Solid Towels			delete	
+116982	-			Bath Towels			delete	
+116985	-			Patterned Towels			delete	
+116986	-		Shower Curtains and Rings				delete	
+116976	-		Bedding Sets				delete	
+116979	-		Bedroom Furniture					
+116734	-	Gifts					delete	
+117268	-		Gifts by Recipient				delete	
+118291	-			Wine Lovers			delete	
+117274	-			Cocktail Enthusiasts			delete	
+117275	-			Hostesses			delete	
+118287	-			Nature Lovers			delete	
+118289	-			Coffee Lovers			delete	
+118288	-			Tea Lovers			delete	
+117269	-			Her			delete	
+117273	-			Foodies			delete	
+117276	-			Pet Lovers			delete	
+118290	-			Zen & Relaxation			delete	
+117270	-			Him			delete	
+118286	-			Home Decorators			delete	
+117277	-			Teachers			delete	
+117278	-			Coworkers			delete	
+117271	-			Kids			delete	
+117263	-		Gifts by Price				delete	
+117265	-			Gifts Under $25			delete	
+117264	-			Gifts Under $15			delete	
+117266	-			Gifts Under $50			delete	
+117416	-		New Gifts				delete	
+117415	-		Shop All Gifts				delete	
+117289	-		Gift Wrap and Stationery				delete	
+117295	-			Party Supplies			delete	
+117293	-			Create a Gift			delete	
+117294	-			Stationery, Journals, and Note Cards			delete	
+117292	-			Gift Trim			delete	
+117290	-			Decorative Paper and Gift Wrap			delete	
+117291	-			Gift Bags and Boxes			delete	
+117307	-		Gifts by Occasion				delete	
+117309	-			Wedding Gifts			delete	
+117308	-			Birthday Gifts			delete	
+117311	-			Housewarming Gifts			delete	
+117312	-			Thank You Gifts			delete	
+117299	-		Gift Baskets				delete	
+117303	-			Everyday Gourmet			delete	
+117301	-			Top Sellers			delete	
+117302	-			Holiday			delete	
+120435	-		Gifts Best Sellers				delete	
+117280	-		Toys and Games				delete	
+117287	-			Arts and Crafts			delete	
+117281	-			Toys			delete	
+117285	-			Kids Décor			delete	
+117282	-			Games and Puzzles			delete	
+117283	-			Kids Books			delete	
+118265	-			Science Toys			delete	
+117284	-			Plush Toys			delete	
+117286	-			Kids Bath Toys			delete	
+116730	-	Dining					delete	
+117046	-		Bar				delete	
+117050	-			Wine Accessories			delete	
+117048	-			Bar Tools & Accessories			delete	
+117049	-			Wine Racks			delete	
+117047	-			Bar Carts and Butler Trays			delete	
+117016	-		Shop All Dining				delete	
+117017	-		Dinnerware				delete	
+117025	-			Asian Dinnerware			delete	
+117022	-			Bowls			delete	
+117021	-			Chargers			delete	
+117019	-			Dinner Plates			delete	
+117018	-			Dinnerware Sets			delete	
+117020	-			Appetizer, Salad and Dessert Plates			delete	
+117023	-			Outdoor Dinnerware			delete	
+117024	-			Kids Dinnerware			delete	
+117033	-		Drinkware				delete	
+117043	-			Coffee Mugs and Teacups			delete	
+119065	-			Water Bottles			delete	
+117034	-			Glassware Sets			delete	
+117038	-			Barware			delete	
+117035	-			Wine Glasses			delete	
+117037	-			Everyday Drinkware			delete	
+117044	-			Pitchers and Drink Dispensers			delete	
+117045	-			Decanters			delete	
+117041	-			Champagne Flutes			delete	
+117036	-			Beer Glasses			delete	
+117040	-			Martini Glasses			delete	
+117042	-			Acrylic Glasses			delete	
+117026	-		Serveware				delete	
+117029	-			Specialty Serveware			delete	
+117027	-			Serving Bowls			delete	
+117031	-			Serving Platters			delete	
+117028	-			Serving Trays			delete	
+117030	-			Cake Stands and Carriers			delete	
+117032	-			Outdoor Serveware			delete	
+117066	-		Dining Furniture				delete	
+117051	-		Flatware				delete	
+117052	-			Flatware Sets			delete	
+117055	-			Reusable Chopsticks			delete	
+117053	-			Serving Utensils and Sets			delete	
+117054	-			Cutlery			delete	
+117065	-		Outdoor Dining and Entertaining				delete	
+117056	-		Table Linens				delete	
+117058	-			Tablecloths and Runners			delete	
+117057	-			Placemats and Napkins			delete	
+117059	-			Table Linen Collections			delete	
+117061	-			Napkin Rings			delete	
+117060	-			Buffet Napkins			delete	
+116725	-	Outdoor					delete	
+117406	-		New Outdoor				delete	
+116841	-		Outdoor Dining & Entertaining				delete	
+116815	-		Shop All Outdoor				delete	
+116816	-		Outdoor Furniture				delete	
+116828	-			Umbrellas and Stands			delete	
+116831	-			Hammocks and Stands			delete	
+116832	-			Fire Pits			delete	
+116825	-			Seating and Lounge Furniture			delete	
+116827	-			Outdoor Accents			delete	
+116818	-			Outdoor Dining Furniture			delete	
+116817	-			Outdoor Collections			delete	
+116829	-			Outdoor Wicker Furniture			delete	
+116830	-			Balcony Furniture			delete	
+116826	-			Adirondack Chairs			delete	
+119995	-			Coffee And Accent Tables			delete	
+116839	-			Mid Century Outdoor Furniture			delete	
+116833	-			Furniture Covers			delete	
+116851	-		Plants & Gardening Tools				delete	
+116853	-			Planters & Garden Tools			delete	
+116854	-			Planters			delete	
+116852	-			Outdoor Plants			delete	
+116855	-			Terrariums			delete	
+120145	-		Outdoor Best Sellers				delete	
+116857	-		Picnic Baskets & Tote Bags				delete	
+116859	-		Outdoor Food & Drink				delete	
+116846	-		Outdoor Décor				delete	
+116848	-			Outdoor Candles and Lanterns			delete	
+116847	-			Outdoor Decorative Accents			delete	
+116842	-		Outdoor Lighting				delete	
+116844	-			Lanterns			delete	
+116845	-			Candles			delete	
+116843	-			String Lights			delete	
+116858	-		BBQ & Grilling				delete	
+116840	-		Outdoor Rugs				delete	
+116834	-		Outdoor Cushions & Pillows				delete	
+117905	-			Adirondack Chair Cushions			delete	
+116836	-			Outdoor Chair Cushions			delete	
+118527	-			Outdoor Gusset Chair Cushions			delete	
+118526	-			Outdoor Chaise Lounge Cushions			delete	
+116835	-			Outdoor Throw Pillows			delete	
+116838	-			Slipcovers and Replacement Cushions			delete	
+116860	-		Outdoor Toys & Games				delete	
+116735	-	Holidays					delete	
+117316	-		Valentine's Day				delete	
+117418	-		New Holidays				delete	
+117417	-		Shop All Holidays				delete	
+117396	-		Mother's Day				delete	
+117825	-			Top Picks for Mom			delete	
+117833	-			Gift Wrap & Stationery			delete	
+117828	-			Decor & Gifts for the Home			delete	
+117830	-			Brunch Gift Ideas			delete	
+117832	-			Bath & Body Gifts			delete	
+117826	-			Clothing & Accessories Gifts			delete	
+120345	-			Fresh Flowers			delete	
+117330	-		Christmas Shop				delete	
+117352	-			Christmas Entertaining			delete	
+117353	-				Dinnerware		delete	
+117355	-				Table Linens		delete	
+117360	-			Christmas Baking			delete	
+117358	-			Christmas Food & Drink			delete	
+117361	-				Cookies and Cakes		delete	
+117365	-				Holiday Candy and Snacks		delete	
+117368	-				Wine and Beer		delete	
+117369	-			Gift Wrap			delete	
+119055	-			Christmas Advent Calendars			delete	
+117336	-			Christmas Decor			delete	
+117339	-				Candles and Candle Holders		delete	
+117340	-				Lights and Lanterns		delete	
+117347	-				Trim a Tree		delete	
+117338	-				Pillows and Throws		delete	
+117337	-				Christmas Home Decor		delete	
+117349	-				Wreaths and Garlands		delete	
+117345	-				Nutcrackers		delete	
+117346	-				Christmas Crackers		delete	
+117373	-			Stocking Stuffers			delete	
+117351	-			Stockings and Tree Skirts			delete	
+117331	-			Christmas Ornaments			delete	
+117370	-			Christmas Cards			delete	
+117395	-		Hanukkah				delete	
+117392	-		New Year's Essentials				delete	
+117394	-			Entertaining & Decorating			delete	
+117393	-			Food & Drink			delete	
+117402	-		Fourth of July				delete	
+117398	-		Cinco de Mayo				delete	
+117795	-		Americana				delete	
+117400	-		Passover				delete	
+117397	-		Oktoberfest				delete	
+117387	-		Thanksgiving				delete	
+117391	-			Food and Drink			delete	
+117388	-			Thanksgiving Essentials			delete	
+117390	-			Entertaining			delete	
+117389	-			Autumn Décor			delete	
+117375	-		Halloween				delete	
+117376	-			Halloween Décor			delete	
+117377	-			Halloween Lights			delete	
+117385	-			Classic Halloween			delete	
+117378	-			Halloween Candy			delete	
+117315	-		Lunar New Year				delete	
+117317	-		Mardi Gras				delete	
+117329	-		St. Patrick's Day				delete	
+117328	-		Father's Day				delete	
+117401	-		Thai New Year				delete	
+117318	-		Easter				delete	
+119555	-	Rugs						
+119588	-		New Rugs					
+119564	-		Large Area Rugs					
+119598	-		8' x 10' Area Rugs					
+119596	-		5' x 8' Area Rugs					
+119556	-		Area Rugs					
+119589	-		Shop All Rugs					
+119586	-		Indoor/Outdoor Rugs					
+119595	-		4' x 6' Area Rugs					
+119597	-		6' x 9' Area Rugs					
+119558	-		Kitchen Rugs					
+120666	-		3' x 5' Area Rugs					
+119907	-		Rugs Best Sellers					
+119585	-		Natural Fiber Rugs					
+119559	-		Floor Runners					
+119557	-		Kilim Rugs					
+119583	-		Wool Rugs					
+119582	-		Doormats					
+119561	-		One of a Kind Rugs					
+119587	-		Outdoor Rugs					
+116732	-	Food & Drink					delete	
+117229	-		Wine, Beer & Spirits				delete	
+117230	-			Wine			delete	
+117231	-			Beer			delete	
+117232	-			Spirits			delete	
+117107	-		Food				delete	
+117125	-			Pasta and Grains			delete	
+117109	-			Cookies and Cakes			delete	
+117108	-			Baking Products			delete	
+117138	-			Breakfast			delete	
+117119	-			Jams and Spreads			delete	
+117127	-			Soups			delete	
+117120	-			Spices and Seasonings			delete	
+117124	-			Meats, Fish and Cheese			delete	
+117126	-			Gluten-Free Food			delete	
+117121	-			Condiments and Sauces			delete	
+233	-		PacificHome's Own				delete	
+234	-			Snacks			delete	
+235	-			Entertaining			delete	
+241	-			Coffee, Tea and Cocoa			delete	
+317	-			Chocolate and Candy			delete	
+329	-			Herbs and Spices			delete	
+324	-			Soups			delete	
+336	-			Cookies and Wafers			delete	
+332	-			Jams and Spreads			delete	
+316	-			Pastas and Pasta Sauces			delete	
+328	-			Grains			delete	
+344	-			Sodas			delete	
+117139	-		Drink				delete	
+117140	-			Coffee			delete	
+117141	-			Tea			delete	
+117144	-			Drink Mixes and Syrups			delete	
+117143	-			Juice, Soda & Water			delete	
+117142	-			Cocoa			delete	
+117145	-			Single Serve Coffee			delete	
+120205	-		Food & Drink Best Sellers				delete	
+117233	-		Easy Entertaining				delete	
+117227	-		Gourmet Miniatures				delete	
+117234	-		Healthy Pantry				delete	
+117228	-		Gourmet Gift Sets				delete	
+116727	-	Lighting						
+116878	-		Lanterns				delete	
+116868	-		Shop All Lighting				delete	
+116872	-		Mix and Match Lighting				delete	
+116873	-		Accent Lighting				delete	
+116874	-			Accent Lamps			delete	
+116876	-			Decorative Lighting			delete	
+116875	-			Sconces			delete	
+116881	-		Hardware and Accessories				delete	
+116870	-		Floor Lamps					
+119845	-		Lighting Best Sellers				delete	
+116871	-		Table Lamps					
+116880	-		String Lights				delete	
+116869	-		Pendants & Chandeliers					
+116879	-		Outdoor Lighting				delete	
+116877	-		Task Lamps				delete	
+117408	-		New Lighting				delete	
+116733	-	Jewelry & Clothing					delete	
+117237	-		Necklaces				delete	
+117262	-		All Jewelry				delete	
+117236	-		Shop All Jewelry & Clothing				delete	
+117238	-		Earrings				delete	
+117240	-			Drop Earrings			delete	
+117241	-			Hoop Earrings			delete	
+117242	-			Stud Earrings			delete	
+120427	-		Jewelry & Clothing Best Sellers				delete	
+117247	-		Accessories				delete	
+117248	-			Bags and Totes			delete	
+117249	-			Hats			delete	
+120665	-			Face Masks			delete	
+117251	-			Cold Weather Accessories			delete	
+117252	-		Scarves and Shawls				delete	
+117253	-			Scarves			delete	
+117255	-			Shawls			delete	
+117261	-		Boho Collection				delete	
+117243	-		Women's Clothing				delete	
+117246	-			Pajamas and Robes			delete	
+117245	-			Women's Tops			delete	
+117244	-			Women's Dresses			delete	
+117260	-		Jewelry Display and Boxes				delete	
+117257	-		Jewelry Sets				delete	
+117258	-		Bracelets				delete	
+117414	-		New Jewelry & Clothing				delete	
+							delete	

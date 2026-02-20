@@ -1,0 +1,162 @@
+ORIGINAL_L0	ORIGINAL_L1	ORIGINAL_L0L1	ORIGINAL_CRUMBID	OPERATION	RENAMED_L0	RENAMED_L1	RENAMETO_L0L1	MOVETO_L0L1	DELETED_L0L1
+Adhesives, Chemicals & Lubricants		Adhesives, Chemicals & Lubricants	NA_100000000000	Rename	Adhesives & Chemicals		Adhesives & Chemicals		
+	Adhesives	Adhesives, Chemicals & Lubricants|Adhesives	NA_100100000000	Copy		Adhesives	Adhesives & Chemicals|Adhesives		
+	Chemicals	Adhesives, Chemicals & Lubricants|Chemicals	NA_100200000000	Rename		Specialty Chemicals	Adhesives & Chemicals|Specialty Chemicals		
+	Cleaning Supplies	Adhesives, Chemicals & Lubricants|Cleaning Supplies	NA_100300000000	Rename		Wipes and Sorbents	Adhesives & Chemicals|Wipes and Sorbents		
+	Oils & Lubricants	Adhesives, Chemicals & Lubricants|Oils & Lubricants	NA_100400000000	Rename		Lubricants	Adhesives & Chemicals|Lubricants		
+	Paints & Coating	Adhesives, Chemicals & Lubricants|Paints & Coating	NA_100500000000	Rename		Surface Protection	Adhesives & Chemicals|Surface Protection		
+	Tape & Pads	Adhesives, Chemicals & Lubricants|Tape & Pads	NA_100600000000	Move				Tools & Instruments|Tape & Pads	
+Boxes & Enclosures		Boxes & Enclosures	NA_150000000000	Rename	Electrical Enclosures & Boxes		Electrical Enclosures & Boxes		
+	Box Hardware & Accessories	Boxes & Enclosures|Box Hardware & Accessories	NA_150100000000	Rename		Box Hardware	Electrical Enclosures & Boxes|Box Hardware		
+	Boxes	Boxes & Enclosures|Boxes	NA_150200000000	Rename		Electrical Boxes	Electrical Enclosures & Boxes|Electrical Boxes		
+	Enclosures	Boxes & Enclosures|Enclosures	NA_150300000000	Rename		Electrical Enclosures	Electrical Enclosures & Boxes|Electrical Enclosures		
+Conduit, Fittings, Raceway & Strut		Conduit, Fittings, Raceway & Strut	NA_110000000000	Rename	Conduit, Fittings, & Raceway		Adhesives, Chemicals & Lubricants		
+	Cable Tray & Accessories	Conduit, Fittings, Raceway & Strut|Cable Tray & Accessories	NA_110100000000	Rename		Runway, Cable Tray, and Pathway	Conduit, Fittings, & Raceway|Runway, Cable Tray, and Pathway		
+	Clamps, Hangers & Supports	Conduit, Fittings, Raceway & Strut|Clamps, Hangers & Supports	NA_110200000000	Rename		Conduit Clamps, Hangers & Supports	Conduit, Fittings, & Raceway|Conduit Clamps, Hangers & Supports		
+	Conduit & Fittings	Conduit, Fittings, Raceway & Strut|Conduit & Fittings	NA_110300000000	Rename		Electrical Conduit & Fittings	Conduit, Fittings, & Raceway|Electrical Conduit & Fittings		
+	Raceway Systems	Conduit, Fittings, Raceway & Strut|Raceway Systems	NA_110400000000	Rename		Raceway 	Conduit, Fittings, & Raceway|Raceway 		
+	Strut & Accessories	Conduit, Fittings, Raceway & Strut|Strut & Accessories	NA_110500000000	Rename		Strut & Strut Fittings	Conduit, Fittings, & Raceway|Strut & Strut Fittings		
+	Wireways, Fittings & Accessories	Conduit, Fittings, Raceway & Strut|Wireways, Fittings & Accessories	NA_110600000000	Rename		Wireways & Wireway Fittings	Conduit, Fittings, & Raceway|Wireways & Wireway Fittings		
+	Wiring Ducts, Fittings & Accessories	Conduit, Fittings, Raceway & Strut|Wiring Ducts, Fittings & Accessories	NA_110700000000	Rename		Wiring Ducts & Duct Fittings	Conduit, Fittings, & Raceway|Wiring Ducts & Duct Fittings		
+Control & Automation		Control & Automation	NA_120000000000	Rename	Automation & Controls		Automation & Controls		
+	Alarms & Signaling	Control & Automation|Alarms & Signaling	NA_120100000000	Rename		Signal Lights & Alarms	Automation & Controls|Signal Lights & Alarms		
+	Automation Control Connectivity Devices	Control & Automation|Automation Control Connectivity Devices	NA_120200000000	Rename		Control System Connection Devices	Automation & Controls|Control System Connection Devices		
+	Contactors & Starters	Control & Automation|Contactors & Starters	NA_120300000000	Move				Automation & Controls|Motor Controls|Contactors & Starters	
+	Drive Accessories	Control & Automation|Drive Accessories	NA_120400000000	Copy		Drive Accessories	Automation & Controls|Drive Accessories		
+	Drives	Control & Automation|Drives	NA_120500000000	Copy		Drives	Automation & Controls|Drives		
+	Machine Safety	Control & Automation|Machine Safety	NA_120600000000	Delete		Safety Devices			Control & Automation|Machine Safety
+	Motor Controls & Accessories	Control & Automation|Motor Controls & Accessories	NA_120700000000	Rename		Motor Controls 	Automation & Controls|Motor Controls		
+	Pilot Devices	Control & Automation|Pilot Devices	NA_120900000000	Rename		Operators	Automation & Controls|Operators		
+	PLCs & HMI	Control & Automation|PLCs & HMI	NA_121000000000	Rename		PLCs & HMI Devices	Automation & Controls|PLCs & HMI Devices		
+	Relay & Timers	Control & Automation|Relay & Timers	NA_121100000000	Rename		Automation Relays & Timers	Automation & Controls|Automation Relays & Timers		
+	Sensors & Switches	Control & Automation|Sensors & Switches	NA_121200000000	Rename		Automation Sensors & Switches	Automation & Controls|Automation Sensors & Switches		
+	Signal Conditioners	Control & Automation|Signal Conditioners	NA_121400000000	Copy		Signal Conditioners	Automation & Controls|Signal Conditioners		
+	Terminal Blocks & Connectors	Control & Automation|Terminal Blocks & Connectors	NA_121300000000	Rename		Terminal Blocks, Wiring Systems & Connectors	Automation & Controls|Terminal Blocks, Wiring Systems & Connectors		
+Data & Communication		Data & Communication	NA_130000000000	Copy	Data & Communication		Data & Communication		
+	Audio & Video Systems	Data & Communication|Audio & Video Systems	NA_130100000000	Rename		A-V Systems	Data & Communication|A-V Systems		
+	Copper Connectivity	Data & Communication|Copper Connectivity	NA_130200000000	Rename		Copper Connectors and Panels	Data & Communication|Copper Connectors and Panels		
+	Faceplates & Boxes	Data & Communication|Faceplates & Boxes	NA_130300000000	Rename		Faceplates, Outlets, and Boxes	Data & Communication|Faceplates, Outlets, and Boxes		
+	Fiber Optic Connectivity	Data & Communication|Fiber Optic Connectivity	NA_130400000000	Rename		Fiber Optic Connectors and Panels	Data & Communication|Fiber Optic Connectors and Panels		
+	Networking Hardware	Data & Communication|Networking Hardware	NA_130500000000	Rename		Networking Devices	Data & Communication|Networking Devices		
+	Racks, Enclosures & Cable Management	Data & Communication|Racks, Enclosures & Cable Management	NA_130600000000	Rename		Network Cabinets, Cable Management, & Racks	Data & Communication|Network Cabinets, Cable Management, & Racks		
+	Security, Video & Surveillance	Data & Communication|Security, Video & Surveillance	NA_130700000000	Rename		Security & Surveillance	Data & Communication|Security & Surveillance		
+Electric Utility & Outside Plant Products		Electric Utility & Outside Plant Products	NA_140000000000	Rename	Utility & Plants		Utility & Plants		
+	Arrestors & Cutouts	Electric Utility & Outside Plant Products|Arrestors & Cutouts	NA_140100000000	Copy		Arrestors & Cutouts	Utility & Plants|Arrestors & Cutouts		
+	Automation & Protection	Electric Utility & Outside Plant Products|Automation & Protection	PS_113000000000	Delete		Automation & Protection			Electric Utility & Outside Plant Products|Automation & Protection
+	Rods & Ties	Electric Utility & Outside Plant Products|Rods & Ties	NA_140300000000	Rename		Poles & Supports	Utility & Plants|Poles & Supports		
+	Substation Products	Electric Utility & Outside Plant Products|Substation Products	NA_140400000000	Copy		Substation Products	Utility & Plants|Substation Products		
+	Utility Anchors	Electric Utility & Outside Plant Products|Utility Anchors	NA_140500000000	Rename		Anchors	Utility & Plants|Anchors		
+	Utility Connectors	Electric Utility & Outside Plant Products|Utility Connectors	NA_140600000000	Rename		Connectors	Utility & Plants|Connectors		
+	Utility Elbows	Electric Utility & Outside Plant Products|Utility Elbows	NA_140700000000	Rename		Elbows	Utility & Plants|Elbows		
+	Utility Hardware	Electric Utility & Outside Plant Products|Utility Hardware	NA_140900000000	Rename		Hardware	Utility & Plants|Hardware		
+	Utility Insulators	Electric Utility & Outside Plant Products|Utility Insulators	NA_141000000000	Rename		Insulators	Utility & Plants|Insulators		
+	Utility Poles & Supports	Electric Utility & Outside Plant Products|Utility Poles & Supports	NA_141100000000	Rename		Poles & Supports	Utility & Plants|Poles & Supports		
+	Utility Switches	Electric Utility & Outside Plant Products|Utility Switches	NA_141200000000	Rename		Switches	Utility & Plants|Switches		
+	Utility Tools	Electric Utility & Outside Plant Products|Utility Tools	NA_141300000000	Rename		Tools	Utility & Plants|Tools		
+Fasteners & Hardwares		Fasteners & Hardwares	NA_160000000000	Rename	Fasteners & Hardware		Fasteners & Hardware		
+	Assortment Kit	Fasteners & Hardwares|Assortment Kit	NA_160100000000	Rename		Fastener Assortments	Fasteners & Hardware|Fastener Assortments		
+	Chain, Cable, Rope & Accessories	Fasteners & Hardwares|Chain, Cable, Rope & Accessories	NA_160300000000	Rename		Cable, Chain & Rope	Fasteners & Hardware|Cable, Chain & Rope		
+	Fasteners	Fasteners & Hardwares|Fasteners	NA_160400000000	Copy		Fasteners	Fasteners & Hardware|Fasteners		
+	Gas Springs	Fasteners & Hardwares|Gas Springs	NA_160500000000	Delete					Fasteners & Hardwares|Gas Springs
+	Hardware	Fasteners & Hardwares|Hardware	NA_160600000000	Copy		Hardware	Fasteners & Hardware|Hardware		
+	Miscellaneous Fasteners	Fasteners & Hardwares|Miscellaneous Fasteners	NA_160800000000	Move				Fasteners & Hardware	
+	Power Transmission	Fasteners & Hardwares|Power Transmission	NA_161000000000	Move				Tools & Instruments|Storage & Material Handling|Sheaves & Pulleys	
+	PVF (Pipes, Valves, Fittings)	Fasteners & Hardwares|PVF (Pipes, Valves, Fittings)	NA_161100000000	Delete					Fasteners & Hardwares|PVF (Pipes, Valves, Fittings)
+Heat and Ventilation		Heat and Ventilation	NA_170000000000	Rename	Ventilation		Ventilation		
+	Air Circulators	Heat and Ventilation|Air Circulators	NA_170100000000	Copy		Air Circulators	Ventilation|Air Circulators		
+	Central Vacuum Systems	Heat and Ventilation|Central Vacuum Systems	NA_170300000000	Delete		Central Vacuum Systems			Heat and Ventilation|Central Vacuum Systems
+	Controls & Thermostats	Heat and Ventilation|Controls & Thermostats	NA_170400000000	Rename		Ventilation Controls & Thermostats	Ventilation|Ventilation Controls & Thermostats		
+	Ducting & Venting	Heat and Ventilation|Ducting & Venting	NA_170500000000	Rename		Roof Flashing	Ventilation|Roof Flashing		
+	Electric Heating	Heat and Ventilation|Electric Heating	NA_170600000000	Copy		Electric Heating	Ventilation|Electric Heating		
+	Exhaust & Ventilation	Heat and Ventilation|Exhaust & Ventilation	NA_170700000000	Rename		Exhaust Fans & Grills	Ventilation|Exhaust Fans & Grills		
+	Thermal Management	Heat and Ventilation|Thermal Management	NA_170800000000	Copy		Thermal Management	Ventilation|Thermal Management		
+Lighting		Lighting	NA_180000000000	Rename	Lighting		Lighting		
+	Ballasts, Starters & Capacitors	Lighting|Ballasts, Starters & Capacitors	NA_180100000000	Rename		Lighting Ballasts, Igniters, & Starters 	Lighting|Lighting Ballasts, Igniters, & Starters 		
+	Fixtures	Lighting|Fixtures	NA_180200000000	Rename		Light Fixtures	Lighting|Light Fixtures		
+	Flashlights & Multi-Location Lights	Lighting|Flashlights & Multi-Location Lights	NA_180300000000	Rename		Portable Lighting	Lighting|Portable Lighting		
+	Lamps	Lighting|Lamps	NA_180400000000	Copy		Lamps	Lighting|Lamps		
+	Lighting Controls & Accessories	Lighting|Lighting Controls & Accessories	NA_180500000000	Rename		Lighting Controls	Lighting|Lighting Controls		
+Office & Packaging Supplies		Office & Packaging Supplies	NA_190000000000	Move	Office & Packaging			Tools & Instruments|Office & Packaging	
+	Office Supplies	Office & Packaging Supplies|Office Supplies	NA_190200000000	Delete		Office Supplies			Office & Packaging Supplies|Office Supplies
+Power Distribution		Power Distribution	NA_200000000000	Copy	Power Distribution		Power Distribution		
+	Busway & Accessories	Power Distribution|Busway & Accessories	NA_200100000000	Rename		Busway, Bus Plugs & Busway Fittings	Power Distribution|Busway, Bus Plugs & Busway Fittings		
+	Circuit Breakers	Power Distribution|Circuit Breakers	NA_200200000000	Copy		Circuit Breakers	Power Distribution|Circuit Breakers		
+	Disconnect & Safety Switches	Power Distribution|Disconnect & Safety Switches	NA_200300000000	Rename		Safety Switches	Power Distribution|Safety Switches		
+	Fuses	Power Distribution|Fuses	NA_200400000000	Copy		Fuses	Power Distribution|Fuses		
+	Grounding & Bonding Products	Power Distribution|Grounding & Bonding Products	NA_200500000000	Rename		Busbars, Grounding & Bonding 	Power Distribution|Busbars, Grounding & Bonding 		
+	Load Centers	Power Distribution|Load Centers	NA_200600000000	Rename		Load Centers & Panelboards	Power Distribution|Load Centers & Panelboards		
+	Metering	Power Distribution|Metering	NA_200700000000	Rename		Meters	Power Distribution|Meters		
+	Panelboards	Power Distribution|Panelboards	NA_200800000000	Rename		Load Centers & Panelboards	Power Distribution|Load Centers & Panelboards		
+	Switchboard & Switchgear Accessories	Power Distribution|Switchboard & Switchgear Accessories	NA_200900000000	Rename		Switchboards	Power Distribution|Switchboards		
+	Temporary Power	Power Distribution|Temporary Power	NA_201100000000	Copy		Temporary Power	Power Distribution|Temporary Power		
+	Terminal Blocks, Taps & Strips	Power Distribution|Terminal Blocks, Taps & Strips	NA_201200000000	Rename		Terminal Blocks & Strips	Power Distribution|Terminal Blocks & Strips		
+	Transformers	Power Distribution|Transformers	NA_201300000000	Copy		Transformers	Power Distribution|Transformers		
+Power Sources & Motors		Power Sources & Motors	NA_210000000000	Copy	Power Sources & Motors		Power Sources & Motors		
+	Batteries & Chargers	Power Sources & Motors|Batteries & Chargers	NA_210100000000	Copy		Batteries & Chargers	Power Sources & Motors|Batteries & Chargers		
+	Generators & Accessories	Power Sources & Motors|Generators & Accessories	NA_210200000000	Rename		Generators 	Power Sources & Motors|Generators 		
+	Motors & Accessories	Power Sources & Motors|Motors & Accessories	NA_210300000000	Rename		Motors 	Power Sources & Motors|Motors 		
+	Power Supplies	Power Sources & Motors|Power Supplies	NA_210400000000	Copy		Power Supplies	Power Sources & Motors|Power Supplies		
+Safety Products		Safety Products	NA_220000000000	Rename	Safety		Safety		
+	Electrical Safety	Safety Products|Electrical Safety	NA_220100000000	Rename		Electrical Safety Equipment	Safety|Electrical Safety Equipment		
+	Fire Safety	Safety Products|Fire Safety	NA_220200000000	Rename		Fire Safety Equipment	Safety|Fire Safety Equipment		
+	First Aid & Wound Care	Safety Products|First Aid & Wound Care	NA_220300000000	Rename		First Aid 	Safety|First Aid 		
+	Lockout/Tagout	Safety Products|Lockout/Tagout	NA_220500000000	Rename		Lockout/Tagout Equipment	Safety|Lockout/Tagout Equipment		
+	Machine Safety	Safety Products|Machine Safety	NA_220600000000	Rename		Safety Matting	Safety|Safety Matting		
+	Personal Protective Equipment	Safety Products|Personal Protective Equipment	NA_220900000000	Copy		Personal Protective Equipment	Safety|Personal Protective Equipment		
+	Portable Coolers and Beverages	Safety Products|Portable Coolers and Beverages	NA_221000000000	Copy		Portable Coolers and Beverages	Safety|Portable Coolers and Beverages		
+	Safety Apparel	Safety Products|Safety Apparel	NA_221100000000	Move				Safety Products|Personal Protective Equipment|Protective Apparel	
+	Safety Signs & Labels	Safety Products|Safety Signs & Labels	NA_221300000000	Rename		Warning Signs & Labels	Safety|Warning Signs & Labels		
+	Safety Storage Cabinets & Containers	Safety Products|Safety Storage Cabinets & Containers	NA_221400000000	Delete		Safety Storage Cabinets & Containers			Safety Products|Safety Storage Cabinets & Containers
+	Spill Containment	Safety Products|Spill Containment	NA_221600000000	Rename		Spill Control	Safety|Spill Control		
+	Traffic Control Products	Safety Products|Traffic Control Products	NA_221800000000	Rename		Traffic Control 	Safety|Traffic Control 		
+	Vehicle Safety	Safety Products|Vehicle Safety	NA_221900000000	Rename		Vehicle Safety Equipment	Safety|Vehicle Safety Equipment		
+Solar Products		Solar Products	NA_230000000000	Copy	Solar Products		Solar Products		
+	Balance of Systems	Solar Products|Balance of Systems	NA_230100000000	Copy		Balance of Systems	Solar Products|Balance of Systems		
+	Inverters	Solar Products|Inverters	PS_111000000000	Copy		Inverters	Solar Products|Inverters		
+	Off Grid	Solar Products|Off Grid	PS_112000000000	Copy		Off Grid	Solar Products|Off Grid		
+	Racking	Solar Products|Racking	NA_230500000000	Copy		Racking	Solar Products|Racking		
+Tools & Instruments		Tools & Instruments	NA_250000000000	Copy	Tools & Instruments		Tools & Instruments		
+	Abrasives	Tools & Instruments|Abrasives	NA_250100000000	Rename		Coated & Bonded Abrasives	Tools & Instruments|Coated & Bonded Abrasives		
+	Brushes	Tools & Instruments|Brushes	NA_250200000000	Rename		Abrasive Brushes	Tools & Instruments|Abrasive Brushes		
+	Cleaning Tools	Tools & Instruments|Cleaning Tools	NA_250300000000	Rename		Vaccuums & Blowers	Tools & Instruments|Vaccuums & Blowers		
+	Fish Tapes & Conduit Tools	Tools & Instruments|Fish Tapes & Conduit Tools	NA_250700000000	Rename		Wire Pulling & Conduit Tools	Tools & Instruments|Wire Pulling & Conduit Tools		
+	Hand Tools	Tools & Instruments|Hand Tools	NA_250800000000	Copy		Hand Tools	Tools & Instruments|Hand Tools		
+	Inspection Equipment	Tools & Instruments|Inspection Equipment	NA_250900000000	Delete		Inspection Equipment			Tools & Instruments|Inspection Equipment
+	Ladders, Platforms and Scaffolding	Tools & Instruments|Ladders, Platforms and Scaffolding	NA_251000000000	Rename		Personell Elevation	Tools & Instruments|Personell Elevation		
+	Metal Forming Tools	Tools & Instruments|Metal Forming Tools	NA_251100000000	Copy		Metal Forming Tools	Tools & Instruments|Metal Forming Tools		
+	Power Tools & Attachments	Tools & Instruments|Power Tools & Attachments	NA_251500000000	Rename		Power Tools	Tools & Instruments|Power Tools		
+	Storage & Material Handling	Tools & Instruments|Storage & Material Handling	NA_251900000000	Rename		Material Handling & Storage	Tools & Instruments|Material Handling & Storage		
+	Testing Instruments	Tools & Instruments|Testing Instruments	NA_252000000000	Rename		Inspection & Testing Equipment	Tools & Instruments|Inspection & Testing Equipment		
+	Tool Kits & Reference Manuals	Tools & Instruments|Tool Kits & Reference Manuals	NA_252100000000	Rename		Tool Kits	Tools & Instruments|Tool Kits		
+	Workholding	Tools & Instruments|Workholding	NA_252500000000	Rename		Workholding	Tools & Instruments|Workholding		
+Welding & Soldering		Welding & Soldering	NA_260000000000	Rename	Welding		Welding		
+	Exothermic Welding	Welding & Soldering|Exothermic Welding	NA_260300000000	Rename		Exothermic	Welding|Exothermic		
+	Soldering	Welding & Soldering|Soldering	NA_261100000000	Delete		Soldering			Welding & Soldering|Soldering
+	Welding Accessories	Welding & Soldering|Welding Accessories	NA_261900000000	Rename		Accessories	Welding|Accessories		
+	Welding Consumables	Welding & Soldering|Welding Consumables	NA_262200000000	Rename		Consumables	Welding|Consumables		
+	Welding Helmets & Welding Protection	Welding & Soldering|Welding Helmets & Welding Protection	NA_262300000000	Rename		Helmets & Protection	Welding|Helmets & Protection		
+	Welding Supplies	Welding & Soldering|Welding Supplies	NA_262500000000	Move				Welding|Accessories|Welding Supplies	
+Wire Termination & Marking Supplies		Wire Termination & Marking Supplies	NA_270000000000	Rename	Connectors, Marking, & Termination		Connectors, Marking, & Termination		
+	Bundling & Securing	Wire Termination & Marking Supplies|Bundling & Securing	NA_270100000000	Rename		Wire Bundling	Connectors, Marking, & Termination|Wire Bundling		
+	Cold & Heat Shrink	Wire Termination & Marking Supplies|Cold & Heat Shrink	NA_270200000000	Rename		Cold & Heat Shrink Protection	Connectors, Marking, & Termination|Cold & Heat Shrink Protection		
+	Grounding Products	Wire Termination & Marking Supplies|Grounding Products	NA_270300000000	Rename		Grounding	Connectors, Marking, & Termination|Grounding		
+	Lugs & Connectors	Wire Termination & Marking Supplies|Lugs & Connectors	NA_270400000000	Copy		Lugs & Connectors	Connectors, Marking, & Termination|Lugs & Connectors		
+	Marking & Labeling	Wire Termination & Marking Supplies|Marking & Labeling	NA_270500000000	Copy		Marking & Labeling	Connectors, Marking, & Termination|Marking & Labeling		
+	Small Crimp & Wire Connectors	Wire Termination & Marking Supplies|Small Crimp & Wire Connectors	NA_270600000000	Copy		Small Crimp & Wire Connectors	Connectors, Marking, & Termination|Small Crimp & Wire Connectors		
+	Splicing & Terminating Kits	Wire Termination & Marking Supplies|Splicing & Terminating Kits	NA_270700000000	Rename		Splicing & Termination	Connectors, Marking, & Termination|Splicing & Termination		
+	Welded Connections	Wire Termination & Marking Supplies|Welded Connections	NA_270800000000	Rename		Welded Molds	Connectors, Marking, & Termination|Welded Molds		
+Wire, Cords & Cables		Wire, Cords & Cables	NA_280000000000	Rename	Cable, Cords, & Wire		Cable, Cords, & Wire		
+	Copper Building Wires & Cables	Wire, Cords & Cables|Copper Building Wires & Cables	NA_280200000000	Copy		Copper Building Wires & Cables	Cable, Cords, & Wire|Copper Building Wires & Cables		
+	DataComm & Low Voltage Cable	Wire, Cords & Cables|DataComm & Low Voltage Cable	NA_280300000000	Copy		DataComm & Low Voltage Cable	Cable, Cords, & Wire|DataComm & Low Voltage Cable		
+	Extension Cords, Cord Reels & Portable Boxes	Wire, Cords & Cables|Extension Cords, Cord Reels & Portable Boxes	NA_280400000000	Copy		Extension Cords, Cord Reels & Portable Boxes	Cable, Cords, & Wire|Extension Cords, Cord Reels & Portable Boxes		
+	Flexible & Portable Cords	Wire, Cords & Cables|Flexible & Portable Cords	NA_280500000000	Copy		Flexible & Portable Cords	Cable, Cords, & Wire|Flexible & Portable Cords		
+	Metal Clad & Armored Cables	Wire, Cords & Cables|Metal Clad & Armored Cables	NA_280700000000	Copy		Metal Clad & Armored Cables	Cable, Cords, & Wire|Metal Clad & Armored Cables		
+Wiring Devices & Wallplates		Wiring Devices & Wallplates	NA_240000000000	Rename	Receptacles, Combination Devices, & Wallplates		Receptacles, Combination Devices, & Wallplates		
+	Combination Devices	Wiring Devices & Wallplates|Combination Devices	NA_240100000000	Rename		Combination Switches	Receptacles, Combination Devices, & Wallplates|Combination Switches		
+	Daylighting Controls	Wiring Devices & Wallplates|Daylighting Controls	NA_240200000000	Copy		Daylighting Controls	Receptacles, Combination Devices, & Wallplates|Daylighting Controls		
+	Occupancy & Vacancy Sensors	Wiring Devices & Wallplates|Occupancy & Vacancy Sensors	NA_240300000000	Copy		Occupancy & Vacancy Sensors	Receptacles, Combination Devices, & Wallplates|Occupancy & Vacancy Sensors		
+	Plugs & Connectors	Wiring Devices & Wallplates|Plugs & Connectors	NA_240400000000	Copy		Plugs & Connectors	Receptacles, Combination Devices, & Wallplates|Plugs & Connectors		
+	Power Strips & Multi-Outlet Converters	Wiring Devices & Wallplates|Power Strips & Multi-Outlet Converters	NA_240500000000	Rename		Power Strips 	Receptacles, Combination Devices, & Wallplates|Power Strips 		
+	Receptacles	Wiring Devices & Wallplates|Receptacles	NA_240600000000	Copy		Receptacles	Receptacles, Combination Devices, & Wallplates|Receptacles		
+	Switches	Wiring Devices & Wallplates|Switches	NA_240700000000	Copy		Switches	Receptacles, Combination Devices, & Wallplates|Switches		
+	Wall & Switch Plates	Wiring Devices & Wallplates|Wall & Switch Plates	NA_240800000000	Rename		Switchplates & Wall Plates	Receptacles, Combination Devices, & Wallplates|Switchplates & Wall Plates		

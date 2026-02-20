@@ -1,0 +1,17 @@
+First run tabulatedGenerator to generate .tsv
+
+Then upload to google doc, use google translator, download translated to a .tsv
+
+Then run updaterMain to update english catalog to german
+    -- expects to read german-translated-tsv
+    -- python updaterMain
+
+That output needs to be manually editied/verified
+    -- manually edited file expected to be in JSON format
+        -- output of 'jq' has a missing '[]', ','-at-end-of-each-object, ...
+        -- therefore those need to be added in manually to make it a valid json
+
+NOTE: 
+    Currently we don't use openAI for translation (english-> german). Too many issues in the generated result
+    Instead, use google translator
+

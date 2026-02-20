@@ -1,0 +1,187 @@
+{
+    "widgets": {
+        "pathways": {
+            "__COMMENT_PATHWAYS": "catid/query optional. If not specified, picked up from url",
+            "category": [
+                {
+                    "WCODE": "PATHWAY_CATEGORY",
+                    "wid": "UNDEFINED",
+                    "cat_id": "UNDEFINED"
+                },
+    
+                {
+                    "WCODE": "PATHWAY_CATEGORY",
+                    "wid": "UNDEFINED",
+                    "cat_id": "UNDEFINED"
+                }
+            ],
+    
+            "keyword": [
+                {
+                    "WCODE": "PATHWAY_KEYWORD",
+                    "wid": "UNDEFINED",
+                    "query": "UNDEFINED"
+                },
+    
+                {
+                    "WCODE": "PATHWAY_KEYWORD",
+                    "wid": "UNDEFINED",
+                    "query": "UNDEFINED"
+                }
+            ]
+        },
+    
+        "recommendations": {
+            "__COMMENT_RECS": "reference: https://documentation.bloomreach.com/discovery/docs/recommendations",
+            "global": {
+                "bestseller": [
+                    {
+                        "WCODE": "RECO_GLOBAL_BESTSELLER",
+                        "wid": "n91kgy5j"
+                    },
+                    {
+                        "WCODE": "RECO_GLOBAL_BESTSELLER",
+                        "wid": "UNDEFINED"
+                    }
+                ],
+    
+                "trending": [
+                    {
+                        "WCODE": "RECO_GLOBAL_TRENDING",
+                        "wid": "79opr05j"
+                    },
+                    {
+                        "WCODE": "RECO_GLOBAL_TRENDING",
+                        "wid": "UNDEFINED"
+                    }
+                ]
+            },
+    
+            "item": {
+                "__COMMENT_ITEMWIDGETS": "item id optional. If not specified, picked up from product page url",
+                "experience_driven": [
+                    {
+                        "WCODE": "RECO_ITEM_EXP",
+                        "wid": "kjyr0vq9",
+                        "item_id": "UNDEFINED"
+                    },
+                    {
+                        "WCODE": "RECO_ITEM_EXP",
+                        "wid": "UNDEFINED",
+                        "item_id": "UNDEFINED"
+                    }
+                ],
+    
+                "frequently_bought": [
+                    {
+                        "WCODE": "RECO_ITEM_FREQ_BOUGHT",
+                        "wid": "nl52n14l",
+                        "item_id": "UNDEFINED"
+                    },
+                    {
+                        "WCODE": "RECO_ITEM_FREQ_BOUGHT",
+                        "wid": "UNDEFINED",
+                        "item_id": "UNDEFINED"
+                    }
+                ],
+    
+                "frequently_viewed": [
+                    {
+                        "WCODE": "RECO_ITEM_FREQ_VIEWED",
+                        "wid": "UNDEFINED",
+                        "item_id": "UNDEFINED"
+                    },
+                    {
+                        "WCODE": "RECO_ITEM_FREQ_VIEWED",
+                        "wid": "p9p1n6k9",
+                        "item_id": "UNDEFINED"
+                    }
+                ],
+    
+                "similar_products": [
+                    {
+                        "WCODE": "RECO_ITEM_SIMILAR",
+                        "wid": "2l7env79",
+                        "item_id": "UNDEFINED"
+                    },
+                    {
+                        "WCODE": "RECO_ITEM_SIMILAR",
+                        "wid": "UNDEFINED",
+                        "item_id": "UNDEFINED"
+                    }
+                ]
+            },
+    
+            "personalization": {
+                "past_purchase": [
+                    {
+                        "WCODE": "RECO_PERS_PAST_PURCHASE",
+                        "wid": "UNDEFINED"
+                    },
+                    {
+                        "WCODE": "RECO_PERS_PAST_PURCHASE",
+                        "wid": "UNDEFINED"
+                    }
+                ],
+    
+                "recently_viewed": [
+                    {
+                        "WCODE": "RECO_PERS_RECENTLY_VIEWED",
+                        "wid": "UNDEFINED"
+                    },
+                    {
+                        "WCODE": "RECO_PERS_RECENTLY_VIEWED",
+                        "wid": "6j8y7639"
+                    }
+                ]
+            },
+    
+            "visual": {
+                "__COMMENT_VISWIDGETS": "Upload not supported. For Reco, item id optional. If not specified, picked up from product page url",
+                "upload": [
+                    {
+                        "WCODE": "RECO_VISUAL_UPLOAD",
+                        "wid": "UNDEFINED"
+                    },
+                    {
+                        "WCODE": "RECO_VISUAL_UPLOAD",
+                        "wid": "UNDEFINED"
+                    }
+                ],
+                "recommendation": [
+                    {
+                        "WCODE": "RECO_VISUAL_RECO",
+                        "wid": "1jwrzgql",
+                        "item_id": "UNDEFINED"
+                    },
+                    {
+                        "WCODE": "RECO_VISUAL_RECO",
+                        "wid": "kjyrqx29",
+                        "item_id": "UNDEFINED"
+                    }
+                ]
+            }
+        }
+    },
+    "pagemap": {
+        "homepage": [
+            "RECO_GLOBAL_BESTSELLER",
+            "RECO_GLOBAL_TRENDING",
+            "RECO_PERS_RECENTLY_VIEWED"
+        ],
+        "productpage": [
+            "RECO_ITEM_EXP",
+            "RECO_ITEM_SIMILAR",
+            "RECO_ITEM_FREQ_BOUGHT",
+            "RECO_ITEM_FREQ_VIEWED",
+            "RECO_VISUAL_RECO"
+        ],
+        "categorypage": [],
+        "searchresultpage": [],
+        "contentpage": [],
+        "conversionpage": [],
+        "thematicpage": [],
+        "other": []    
+    }
+}
+

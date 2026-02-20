@@ -1,0 +1,75 @@
+{
+"request": {
+  "common": {
+    "account_id": 6413,
+    "auth_key": "bcvpynhij980k0y1",
+    "request_id": "1675905072134",
+    "user_agent": "python-requests/2.24.0",
+    "url": "http://localhost:3000/home/search?_sq=chair&page=1&_sfq=rating%3A%27rating4To5%27&_sfq=colors%3A%27black%27",
+    "ref_url": "http://localhost:3000/home/search?_sq=chair&page=1&_sfq=rating%3A%27rating4To5%27&_sfq=colors%3A%27black%27",
+    "cookie2": "uid=3887804411099:v=12.0:ts=1559140374393:hc=350:cdp_segments=",
+    "request_type": "SEARCH",
+    "debug": "false",
+    "callback": "",
+    "log_time": 1675905073323,
+    "m_cookies": {
+      "visit": {
+      },
+      "pref": {
+      }
+    },
+    "request_path": "/api/v1/core/throttled/",
+    "request_data_json": "",
+    "wt": "JSON",
+    "site_domain_key": "pacifichome",
+    "template_id": "",
+    "facet": false,
+    "experiment_buckets": {
+      "name": "default",
+      "bucket": "default__BR_CONTROL"
+    },
+    "catalog_name": ""
+  },
+  "search": {
+    "search_type": "CATEGORY",
+    "query": "116735",
+    "pagination": {
+      "start": 0,
+      "rows": 8
+    },
+    "fields": {
+      "name": "thumb_image_url",
+      "external_name": "thumb_image"
+    },
+    "wt": "",
+    "mm": "",
+    "facet_limit": 200,
+    "view": "",
+    "dfq": "",
+    "br_tags": ""
+  },
+  "widget": {
+  }
+},
+"response": {
+  "common": {
+    "response_id": "e7aacf19276943188aa805bd9bac7038",
+    "log_time": 1675905073378,
+    "num_results": 704
+  },
+  "search": {
+    "num_results": 704,
+    "products": {
+      "product_id": "69462",
+      "product_name": "Natural Stone and Gold Metal Margaux Laptop Table",
+      "sale_price": 150.83
+    }
+  },
+  "resp_metrics": {
+    "resp_status_code": 200,
+    "app_latency_in_ms": 44,
+    "json_response_byte_size": 2161
+  }
+}
+}
+

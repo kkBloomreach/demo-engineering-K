@@ -1,0 +1,89 @@
+{
+    "ACCOUNT": {
+        "DOMAIN": "pacifichome",
+        "ACCOUNT_ID" : "6413",
+        "AUTH_KEY": "bcvpynhij980k0y1",
+        "CATALOG_NAME": "pacifichome",
+        "DATACONNECT_ACCESS_KEY": "pacifichome-production-e00c7560-3253-4272-8304-40e0e0bfbc26",
+        "REGION": "US"
+    },
+
+    "URLS": {
+            "COMMENT_URLS": "All URLs prepended with SITE_CORE_URL value",
+            "SITE_CORE_URL": "https://pacific.bloomreach.com/home",
+            "HOMEPAGE_URL": "",
+            "SEARCH_PAGE_URL_PREFIX" : "/search?_sq=",
+            "CATEGORY_URL_PREFIX" : "/categories/",
+            "PRODUCT_URL_PATTERN" :  "/products/&[SKU]",
+            "ATC_PAGE_URL" :        "/cartpage",
+            "CONVERSION_PAGE_URL" : "/checkout",
+	        "POST_CONVERSION_PAGE_URL" : "/thankyou",
+            "OTHER_PAGE_URL": "/other"
+    },
+
+    "PRODUCT_CATALOG": {
+            "COMMENT_ORIGINAL_CATALOG_1": "Source feed that is altered to generate daily feed",
+            "COMMENT_ORIGINAL_CATALOG_2": "file should be in acctDir/feed/original",
+	        "COMMENT_ORIGINAL_CATALOG_PATH": "pacifichome V2 catalog, symbolically linked to common",
+            "ORIGINAL_CATALOG_PATH": "ph2_product_en_full_08142025.jsonl"
+    },
+
+    "VIEWS_EXAMPLE": [
+        "master",
+        "contractor",
+        "view2",
+        "view3"
+    ],
+
+    "COMMENT_PRODUCT_QUERIES": "Some pids should not be included in generating traffic",
+    "EXCLUDE_PRODUCTS": [
+        "P1-91806",
+        "P1-94901"
+    ],
+    
+    "COMMENT_CATEGORY_QUERIES": "Category queries are generated internally using product feed",
+    "COMMENT_CATEGORY_EXCLUDES": "Exclude these categoryIds to generate searchCategory ids",
+    "EXCLUDE_CATEGORIES_EXAMPLE": [
+                "123"
+    ],
+
+    "COMMENT_LOW_PERF_CATS_1": "Categories for which visitor exits their session more often than not",
+    "COMMENT_LOW_PERF_CATS_2": "thus causing analytics data that shows it is low-perf category",
+    "LOW_PERFORMANCE_CATEGORIES_EXAMPLE": [
+                "90100",
+                "21200"
+    ],
+
+    "COMMENT_SEGMENTATION": "Use either RTS or RBS style (if any), not both",
+    "RTS": {
+        "SEGMENTATION_ID" : "63a1ede75322418784c619f1",
+        "Low Value Customers": {
+            "SEGMENT_ID" : "63a21063733ffea05e1a29f0",
+            "NOTE": "Product price range 0 to 175"
+        },
+        "High Value Customers": {
+            "SEGMENT_ID" : "63a21063733ffea05e1a29ee",
+            "NOTE": "Product price range 175 to *"
+        }
+    },
+
+    "RBS_EXAMPLE": {
+        "CUSTOMER_PROFILES": [
+            "Menerallac",
+            "Dewalt",
+            "Milwaukee"
+        ]
+    },
+
+    "COMMENT_VISITOR_1": "(Optional) Define special visitor ID for which past-purchase data is automatically generated",
+    "COMMENT_VISITOR_2": "Visit days are days on which this visitor actually visits the site",
+    "COMMENT_VISITOR_3": "ID should be 13 digits",
+    "VISITOR": {
+        "SPECIAL_VISITOR_ID": "1112223334445",
+        "SPECIAL_VISIT_DAYS": [
+            7,
+            21
+        ]
+    }
+}
+

@@ -1,0 +1,21 @@
+#!/bin/bash
+
+BRXDEMOS_SRC=/Users/kirankundargi/work/brxdemos_tmp/pacific/dev
+WORK_DIR=/Users/kirankundargi/tmp/brlab/test/pacifichome/feed
+
+# === NO CHANGES NEEDED BELOW THIS LINE ===
+
+# Copy source feed zip and expand it in WORK dir
+mkdir -p $WORK_DIR/data $WORK_DIR/data/source $WORK_DIR/data/output
+cp $BRXDEMOS_SRC/src/main/resources/brxdemos/pacifichome/translate/feed/sourcedata/source_feed.zip $WORK_DIR/data/source
+unzip $WORK_DIR/data/source/source_feed.zip -d $WORK_DIR/data/source
+
+# copy categories.tsv. This is categories information associated with the source feed
+cp $BRXDEMOS_SRC/src/main/resources/brxdemos/pacifichome/translate/feed/sourcedata/categories.tsv $WORK_DIR/data/source
+
+BRXDEMOS_JARS=$BRXDEMOS_SRC/target/brxdemos-1.0-SNAPSHOT.jar
+CP=$BRXDEMOS_JARS:$CLASSPATH
+export CLASSPATH=$CP
+
+java com.bloomreach.brxdemos.pacifichome.translate.feed.FeedTranslator ./data
+ 

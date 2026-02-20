@@ -1,0 +1,74 @@
+# using jsonl feed as input, generate a tabular feed. It is then
+# writen out as .tsv and .csv
+
+import logging
+
+class TabularFeed ():
+
+    def __init__ (self):
+        self._updatedContents = None
+        self._updatedAttributeList = None
+        return
+
+    # updatedContents in jsonl format
+    def setUpdatedContents (self, updatedContents, updatedAttributeList): 
+        self._updatedContents = updatedContents
+        self._updatedAttributeList = updatedAttributeList
+
+    # generate tabular object comprising info for source content records
+    # returns list of those objects.
+    def buildTabularFeed (self):
+        # collect list of ALL attributes from ALL records 
+        # That will generate the 'header' line in tabular feed
+        _tabularMasterDict = {}
+        for attrib in self._updatedAttributeList:
+            _tabularMasterDict [attrib] = ''
+
+        # clone masterDict for each product and its variants
+        _tabularRecords = self._generateTabularRecords (_tabularMasterDict)
+        return _tabularRecords
+
+    # Note that total dict-entries equal (product-rec + #variant-records) for each product
+    def _generateTabularRecords (self, masterDict):
+        # list of _masterDict objects, containins source records 
+        _allTabularRecords = []
+
+        for _aUpdatedContent in self._updatedContents:
+            _tabularRecord = masterDict.copy ()
+
+            # record
+            _tabularRecord ['path'] = _aUpdatedContent ['path'] 
+            for aKey, value in _aUpdatedContent ['value']['attributes'].items ():
+                if (aKey == 'introduction') or (aKey == 'xm_aggregated_descendants_text') or (aKey == 'title'):
+                    value = value.replace ('\n', '')
+                _tabularRecord [aKey] = value
+            _allTabularRecords.append (_tabularRecord)
+
+        return _allTabularRecords
+ 
+if __name__ == '__main__':
+    _tabularFeed = TabularFeed ()
+    _tabularFeed.setUpdatedContents (None) 
+    _tabularFeed.buildTabularFeed ()
+    logging.debug ("finish")
+
+'''
+    def _collectAllAttributes (self):
+
+        for _aUpdatedContent in self._updatedContents:
+            _productAttribs = _aUpdatedContent ['value']['attributes']
+            for attrib in _productAttribs.keys ():
+                if (attrib in _masterDict) == False:
+                    _masterDict [attrib] = ''
+
+            if 'variants' in _aUpdatedContent and _aUpdatedContent ['variants']:
+                _variantList = _aUpdatedContent ['value']['variants']
+                for aVariant in _variantList:
+                    for aKey in aVariant ['attributes'].keys ():
+                        if (aKey in _masterDict) == False:
+                            _masterDict [aKey] = ''
+
+        logging.debug ('master keys: ' + str (_masterDict.keys()))
+        return _masterDict
+'''
+

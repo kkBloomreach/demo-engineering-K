@@ -1,0 +1,7 @@
+Content catalog is updated using content already in CMS (experience). That content
+is retrieved using experience's 'documente' API
+
+Previous content catalog was generated using an 'items.json' file that contained
+various attributes (eg, 'author', 'introduction', 'description', ...). Those
+attribute values are 'updated' using the data received in the above API response
+

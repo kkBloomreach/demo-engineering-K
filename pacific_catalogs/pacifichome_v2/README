@@ -1,0 +1,16 @@
+V2 of PacificHome PRODUCT catalog
+    - cleanup categories
+    - if product is no longer in any category, remove that product as well
+    - all pid, catids remain same as before
+
+NOTE:
+    - source catalog is from Clarity feed. 
+    - it already contains Mattress products
+    - also the food products have been removed from this catalog
+
+V2 of PacificHome CONTENT ENGLISH catalog
+    - as-is, copied from pacifichome content
+        - that in turn was created using CMS API to retrieve content files and generate jsonl formatted catalog
+    - copied from:
+/Users/kirankundargi/work/brx_demos/projects/demoEngineering/translators/demo-engineering-translators/src/main/resources/brxdemos/pacifichome/feed/scripts/contentcatalog/updater/data/output
+

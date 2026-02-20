@@ -1,0 +1,756 @@
+category_id	name	parent_category_id	breadcrumb	sequence	url	primary_category	
+116982	Bath Towels	116980	/116729/116980/116982	0	https://www.worldmarket.com/category/bed-bath/bath-towel-collections/bath-towels.do	true	
+116983	Hand Towels	116980	/116729/116980/116983	116983	https://www.worldmarket.com/category/bed-bath/bath-towel-collections/hand+towels.do	true	
+116984	Solid Towels	116980	/116729/116980/116984	116984	https://www.worldmarket.com/category/bed-bath/bath-towel-collections/solid+towels.do	true	
+116985	Patterned Towels	116980	/116729/116980/116985	116985	https://www.worldmarket.com/category/bed-bath/bath-towel-collections/patterned+towels.do	true	
+116986	Shower Curtains and Rings	116729	/116729/116986	2	https://www.worldmarket.com/category/bed-bath/shower-curtains-rings.do	true	
+116987	Bath Rugs & Bath Mats	116729	/116729/116987	0	https://www.worldmarket.com/category/bed-bath/rugs-bath-mats.do	true	
+116988	Bath Accessories	116729	/116729/116988	4	https://www.worldmarket.com/category/bed-bath/bath-accessories.do	true	
+116989	Bathroom Furniture	116729	/116729/116989	13	https://www.worldmarket.com/category/bed-bath/bathroom-furniture.do	true	
+116990	Bath & Body	116729	/116729/116990	3	https://www.worldmarket.com/category/bed-bath/skin-care.do	true	
+116991	Soaps and Lotions	116990	/116729/116990/116991	1	https://www.worldmarket.com/category/bed-bath/skin-care/soap-hand-cream-lotion.do	true	
+116992	Spa and Relaxation	116990	/116729/116990/116992	2	https://www.worldmarket.com/category/bed-bath/skin-care/bath-salts-bubble-bath.do	true	
+116993	Pajamas and Robes	116729	/116729/116993	14	https://www.worldmarket.com/category/bed-bath/robes.do	true	
+116994	Cleaning and Laundry Essentials	116729	/116729/116994	8	https://www.worldmarket.com/category/bed-bath/laundry-room-accessories.do	true	
+117015	Sunbrella&#xAE; Outdoor Cushions	116834	/116725/116834/117015	6	https://www.worldmarket.com/category/outdoor/cushions-pillows/sunbrella.do	false	
+117016	Shop All Dining	116730	/116730/117016	6	https://www.worldmarket.com/category/dining/all.do	true	
+117017	Dinnerware	116730	/116730/117017	0	https://www.worldmarket.com/category/dining/dinnerware.do	true	
+117018	Dinnerware Sets	117017	/116730/117017/117018	0	https://www.worldmarket.com/category/dining/dinnerware/collections.do	true	
+117019	Dinner Plates	117017	/116730/117017/117019	1	https://www.worldmarket.com/category/dining/dinnerware/dinner-plates.do	true	
+117020	Appetizer, Salad and Dessert Plates	117017	/116730/117017/117020	3	https://www.worldmarket.com/category/dining/dinnerware/appetizer-dessert-plates.do	true	
+117021	Chargers	117017	/116730/117017/117021	2	https://www.worldmarket.com/category/dining/dinnerware/chargers.do	true	
+117022	Bowls	117017	/116730/117017/117022	4	https://www.worldmarket.com/category/dining/dinnerware/bowls.do	true	
+117023	Outdoor Dinnerware	117017	/116730/117017/117023	5	https://www.worldmarket.com/category/dining/dinnerware/outdoor-dinnerware.do	true	
+117024	Kids Dinnerware	117017	/116730/117017/117024	6	https://www.worldmarket.com/category/dining/dinnerware/kids-dinnerware.do	true	
+117025	Asian Dinnerware	117017	/116730/117017/117025	7	https://www.worldmarket.com/category/dining/dinnerware/asian-entertaining.do	true	
+117026	Serveware	116730	/116730/117026	3	https://www.worldmarket.com/category/dining/serveware.do	true	
+117027	Serving Bowls	117026	/116730/117026/117027	0	https://www.worldmarket.com/category/dining/serveware/serving-bowls.do	true	
+117028	Serving Trays	117026	/116730/117026/117028	117028	https://www.worldmarket.com/category/dining/serveware/bar-serving-carts.do	true	
+117029	Specialty Serveware	117026	/116730/117026/117029	117029	https://www.worldmarket.com/category/dining/serveware/specialty.do	true	
+117030	Cake Stands and Carriers	117026	/116730/117026/117030	117030	https://www.worldmarket.com/category/dining/serveware/cake-stands-carriers.do	true	
+117031	Serving Platters	117026	/116730/117026/117031	117031	https://www.worldmarket.com/category/dining/serveware/serving-trays-platters.do	true	
+117032	Outdoor Serveware	117026	/116730/117026/117032	117032	https://www.worldmarket.com/category/dining/serveware/outdoor.do	true	
+117033	Drinkware	116730	/116730/117033	2	https://www.worldmarket.com/category/dining/drinkware.do	true	
+117034	Glassware Sets	117033	/116730/117033/117034	0	https://www.worldmarket.com/category/dining/drinkware/glassware-sets.do	true	
+117035	Wine Glasses	117033	/116730/117033/117035	117035	https://www.worldmarket.com/category/dining/drinkware/wine-glasses.do	true	
+117036	Beer Glasses	117033	/116730/117033/117036	117036	https://www.worldmarket.com/category/dining/drinkware/beer-glasses.do	true	
+117037	Everyday Drinkware	117033	/116730/117033/117037	117037	https://www.worldmarket.com/category/dining/drinkware/drinking-glasses.do	true	
+117038	Barware	117033	/116730/117033/117038	117038	https://www.worldmarket.com/category/dining/drinkware/cocktail-glasses-barware.do	true	
+117040	Martini Glasses	117033	/116730/117033/117040	117040	https://www.worldmarket.com/category/dining/drinkware/martini-glasses.do	true	
+117041	Champagne Flutes	117033	/116730/117033/117041	117041	https://www.worldmarket.com/category/dining/drinkware/champagne-flutes.do	true	
+117042	Acrylic Glasses	117033	/116730/117033/117042	117042	https://www.worldmarket.com/category/dining/drinkware/acrylic-glasses.do	true	
+117043	Coffee Mugs and Teacups	117033	/116730/117033/117043	117043	https://www.worldmarket.com/category/dining/drinkware/coffee-mugs-teacups.do	true	
+117044	Pitchers and Drink Dispensers	117033	/116730/117033/117044	117044	https://www.worldmarket.com/category/dining/drinkware/drink-dispensers-pitchers.do	true	
+117045	Decanters	117033	/116730/117033/117045	117045	https://www.worldmarket.com/category/dining/drinkware/wine-decanters.do	true	
+117046	Bar	116730	/116730/117046	7	https://www.worldmarket.com/category/dining/bar.do	true	
+117047	Bar Carts and Butler Trays	117046	/116730/117046/117047	0	https://www.worldmarket.com/category/dining/bar/bar-carts-butler-trays.do	true	
+117048	Bar Tools & Accessories	117046	/116730/117046/117048	117048	https://www.worldmarket.com/category/dining/bar/bar-accessories.do	true	
+117049	Wine Racks	117046	/116730/117046/117049	117049	https://www.worldmarket.com/category/dining/bar/wine-racks.do	true	
+117050	Wine Accessories	117046	/116730/117046/117050	117050	https://www.worldmarket.com/category/dining/bar/wine-accessories.do	true	
+117051	Flatware	116730	/116730/117051	5	https://www.worldmarket.com/category/dining/flatware.do	true	
+117052	Flatware Sets	117051	/116730/117051/117052	0	https://www.worldmarket.com/category/dining/flatware/flatware-sets.do	true	
+117053	Serving Utensils and Sets	117051	/116730/117051/117053	117053	https://www.worldmarket.com/category/dining/flatware/serving-utensils-sets.do	true	
+117054	Cutlery	117051	/116730/117051/117054	117054	https://www.worldmarket.com/category/dining/flatware/knives-cutlery.do	true	
+117055	Reusable Chopsticks	117051	/116730/117051/117055	117055	https://www.worldmarket.com/category/dining/flatware/reusable-chopsticks.do	true	
+117056	Table Linens	116730	/116730/117056	1	https://www.worldmarket.com/category/dining/table-linens.do	true	
+117057	Placemats and Napkins	117056	/116730/117056/117057	0	https://www.worldmarket.com/category/dining/table-linens/placemats-napkins.do	true	
+117058	Tablecloths and Runners	117056	/116730/117056/117058	1	https://www.worldmarket.com/category/dining/table-linens/tablecloths-runners.do	true	
+117059	Table Linen Collections	117056	/116730/117056/117059	4	https://www.worldmarket.com/category/dining/table-linens/table-linen-collections.do	true	
+117060	Buffet Napkins	117056	/116730/117056/117060	2	https://www.worldmarket.com/category/dining/table-linens/buffet-napkin.do	true	
+117061	Napkin Rings	117056	/116730/117056/117061	3	https://www.worldmarket.com/category/dining/table-linens/napkin-rings.do	true	
+117062	Aprons, Kitchen Towels and Pot Holders	117056	/116730/117056/117062	6	https://www.worldmarket.com/category/dining/table-linens/aprons-kitchen-towels-pot-holders.do	true	
+117063	Chair Cushions	117056	/116730/117056/117063	5	https://www.worldmarket.com/category/dining/table-linens/chair-cushions.do	true	
+117064	Entertaining Essentials	116730	/116730/117064	9	https://www.worldmarket.com/category/dining/entertaining-essentials.do	true	
+117065	Outdoor Dining and Entertaining	116730	/116730/117065	11	https://www.worldmarket.com/category/dining/outdoor.do	true	
+117066	Dining Furniture	116730	/116730/117066	10	https://www.worldmarket.com/category/dining/dining-furniture.do	true	
+117067	Shop All Kitchen	116731	/116731/117067	5	https://www.worldmarket.com/category/kitchen/all.do	true	
+117068	Cooking	116731	/116731/117068	6	https://www.worldmarket.com/category/kitchen/cooking.do	true	
+117069	Cookware	117068	/116731/117068/117069	0	https://www.worldmarket.com/category/kitchen/cooking/cookware.do	true	
+117071	Cookbooks	117068	/116731/117068/117071	117071	https://www.worldmarket.com/category/kitchen/cooking/cookbooks.do	true	
+117075	Baking	116731	/116731/117075	8	https://www.worldmarket.com/category/kitchen/baking.do	true	
+117076	Bakeware	117075	/116731/117075/117076	0	https://www.worldmarket.com/category/kitchen/baking/bakeware.do	true	
+117077	Measuring Cups and Spoons	117075	/116731/117075/117077	117077	https://www.worldmarket.com/category/kitchen/baking/measuring-cups-spoons.do	true	
+117078	Mixing Bowls	117075	/116731/117075/117078	117078	https://www.worldmarket.com/category/kitchen/baking/mixing-bowls.do	true	
+117079	Kitchen Tools	116731	/116731/117079	1	https://www.worldmarket.com/category/kitchen/kitchen-tools.do	true	
+117080	Tools and Gadgets	117079	/116731/117079/117080	0	https://www.worldmarket.com/category/kitchen/kitchen-tools/tools-gadgets.do	true	
+117081	Novelty Ceramics	117079	/116731/117079/117081	7	https://www.worldmarket.com/category/kitchen/kitchen-tools/novelty-ceramics.do	true	
+117082	Mixing Bowls	117079	/116731/117079/117082	2	https://www.worldmarket.com/category/kitchen/kitchen-tools/mixing-bowls.do	true	
+117083	Cutting Boards	117079	/116731/117079/117083	1	https://www.worldmarket.com/category/kitchen/kitchen-tools/cutting-boards.do	true	
+117084	Cutlery	117079	/116731/117079/117084	5	https://www.worldmarket.com/category/kitchen/kitchen-tools/cutlery.do	true	
+117085	Small Kitchen Appliances	117079	/116731/117079/117085	3	https://www.worldmarket.com/category/kitchen/kitchen-tools/small-kitchen-appliances.do	true	
+117086	Compost and Trash Cans	117079	/116731/117079/117086	6	https://www.worldmarket.com/category/kitchen/kitchen-tools/compost-trash-cans.do	true	
+117087	Cleaning Supplies	117079	/116731/117079/117087	4	https://www.worldmarket.com/category/kitchen/kitchen-tools/cleaning-supplies.do	true	
+117088	Coffee and Tea Accessories	116731	/116731/117088	7	https://www.worldmarket.com/category/kitchen/coffee-tea.do	true	
+117089	Coffee Makers	117088	/116731/117088/117089	0	https://www.worldmarket.com/category/kitchen/coffee-tea/coffee-makers.do	true	
+117090	Slow Brew	117088	/116731/117088/117090	2	https://www.worldmarket.com/category/kitchen/coffee-tea/slow-brew-coffee.do	true	
+117091	Carafes, Creamers and Sugar Bowls	117088	/116731/117088/117091	3	https://www.worldmarket.com/category/kitchen/coffee-tea/carafes-creamers-sugar-bowls.do	true	
+117092	Teapots and Tea Kettles	117088	/116731/117088/117092	1	https://www.worldmarket.com/category/kitchen/coffee-tea/teapots-tea-kettles.do	true	
+117093	Tea Infusers	117088	/116731/117088/117093	4	https://www.worldmarket.com/category/kitchen/coffee-tea/tea-infusers.do	true	
+117094	Kitchen Linens	116731	/116731/117094	4	https://www.worldmarket.com/category/kitchen/kitchen-linens.do	true	
+117095	Kitchen Towels	117094	/116731/117094/117095	0	https://www.worldmarket.com/category/kitchen/kitchen-linens/kitchen-towels.do	true	
+117096	Aprons	117094	/116731/117094/117096	117096	https://www.worldmarket.com/category/kitchen/kitchen-linens/aprons.do	true	
+117097	Pot Holders	117094	/116731/117094/117097	117097	https://www.worldmarket.com/category/kitchen/kitchen-linens/pot-holders.do	true	
+117098	Storage	116731	/116731/117098	2	https://www.worldmarket.com/category/kitchen/storage.do	true	
+117099	Storage Containers	117098	/116731/117098/117099	0	https://www.worldmarket.com/category/kitchen/storage/containers.do	true	
+117100	Spice Jars	117098	/116731/117098/117100	117100	https://www.worldmarket.com/category/kitchen/storage/spice-jars.do	true	
+117101	Salt and Pepper Shakers	117098	/116731/117098/117101	117101	https://www.worldmarket.com/category/kitchen/storage/salt-pepper-shakers.do	true	
+117102	Cookie Jars	117098	/116731/117098/117102	117102	https://www.worldmarket.com/category/kitchen/storage/cookie-jars.do	true	
+117103	Pot Racks	117098	/116731/117098/117103	117103	https://www.worldmarket.com/category/kitchen/storage/pot-racks.do	true	
+117104	Lunch Bags and Containers	117098	/116731/117098/117104	117104	https://www.worldmarket.com/category/kitchen/storage/lunch-bags-containers.do	true	
+117105	Dinnerware and Drinkware Storage	117098	/116731/117098/117105	117105	https://www.worldmarket.com/category/kitchen/storage/dinnerware-drinkware-storage.do	true	
+117106	Outdoor BBQ and Grilling	116731	/116731/117106	10	https://www.worldmarket.com/category/kitchen/outdoor-bbq-grilling.do	true	
+117107	Food	116732	/116732/117107	5	https://www.worldmarket.com/category/food-and-drink/food.do	true	
+117108	Baking Products	117107	/116732/117107/117108	9	https://www.worldmarket.com/category/food-and-drink/food/baking-products.do	true	
+117109	Cookies and Cakes	117107	/116732/117107/117109	6	https://www.worldmarket.com/category/food-and-drink/food/cookies-cakes.do	true	
+117110	Candy and Chocolate	117107	/116732/117107/117110	7	https://www.worldmarket.com/category/food-and-drink/food/candy-chocolate.do	true	
+117111	World Market Candy	117110	/116732/117107/117110/117111	0	https://www.worldmarket.com/category/food-and-drink/food/candy-chocolate/world-market-candy.do	true	
+117112	Chocolate Bars	117110	/116732/117107/117110/117112	117112	https://www.worldmarket.com/category/food-and-drink/food/candy-chocolate/chocolate-bars.do	true	
+117113	Licorice Candy	117110	/116732/117107/117110/117113	117113	https://www.worldmarket.com/category/food-and-drink/food/candy-chocolate/licorice.do	true	
+117114	Novelty Candy	117110	/116732/117107/117110/117114	117114	https://www.worldmarket.com/category/food-and-drink/food/candy-chocolate/novelty.do	true	
+117115	Gummy Candy	117110	/116732/117107/117110/117115	117115	https://www.worldmarket.com/category/food-and-drink/food/candy-chocolate/gummy-candy.do	true	
+117116	Ginger Candy	117110	/116732/117107/117110/117116	117116	https://www.worldmarket.com/category/food-and-drink/food/candy-chocolate/ginger-candy.do	true	
+117117	Marzipan	117110	/116732/117107/117110/117117	117117	https://www.worldmarket.com/category/food-and-drink/food/candy-chocolate/marzipan.do	true	
+117118	Gum and Mints	117110	/116732/117107/117110/117118	117118	https://www.worldmarket.com/category/food-and-drink/food/candy-chocolate/gum-mints.do	true	
+117119	Jams and Spreads	117107	/116732/117107/117119	12	https://www.worldmarket.com/category/food-and-drink/food/jams-spreads.do	true	
+117120	Spices and Seasonings	117107	/116732/117107/117120	11	https://www.worldmarket.com/category/food-and-drink/food/spices-seasonings.do	true	
+117121	Condiments and Sauces	117107	/116732/117107/117121	10	https://www.worldmarket.com/category/food-and-drink/food/condiments-sauces.do	true	
+117122	Oil and Vinegar	117121	/116732/117107/117121/117122	0	https://www.worldmarket.com/category/food-and-drink/food/condiments-sauces/oil-vinegar.do	true	
+117123	Hot Sauce	117121	/116732/117107/117121/117123	117123	https://www.worldmarket.com/category/food-and-drink/food/condiments-sauces/hot-sauce.do	true	
+117124	Meats, Fish and Cheese	117107	/116732/117107/117124	3	https://www.worldmarket.com/category/food-and-drink/food/meats-cheese.do	true	
+117125	Pasta and Grains	117107	/116732/117107/117125	1	https://www.worldmarket.com/category/food-and-drink/food/pasta-grains.do	true	
+117126	Gluten-Free Food	117107	/116732/117107/117126	8	https://www.worldmarket.com/category/food-and-drink/food/gluten-free.do	true	
+117127	Soups	117107	/116732/117107/117127	2	https://www.worldmarket.com/category/food-and-drink/food/soups.do	true	
+117128	Meals	117107	/116732/117107/117128	0	https://www.worldmarket.com/category/food-and-drink/food/meals.do	true	
+117129	Snacks	117107	/116732/117107/117129	4	https://www.worldmarket.com/category/food-and-drink/food/snacks.do	true	
+117130	Chips	117129	/116732/117107/117129/117130	0	https://www.worldmarket.com/category/food-and-drink/food/snacks/chips.do	true	
+117131	Pretzels	117129	/116732/117107/117129/117131	117131	https://www.worldmarket.com/category/food-and-drink/food/snacks/pretzels.do	true	
+117132	Jerky	117129	/116732/117107/117129/117132	117132	https://www.worldmarket.com/category/food-and-drink/food/snacks/jerky.do	true	
+117133	Dried Fruit	117129	/116732/117107/117129/117133	117133	https://www.worldmarket.com/category/food-and-drink/food/snacks/dried-fruit.do	true	
+117134	Nuts	117129	/116732/117107/117129/117134	117134	https://www.worldmarket.com/category/food-and-drink/food/snacks/nuts.do	true	
+117135	Popcorn	117129	/116732/117107/117129/117135	117135	https://www.worldmarket.com/category/food-and-drink/food/snacks/popcorn.do	true	
+117136	Crackers	117129	/116732/117107/117129/117136	117136	https://www.worldmarket.com/category/food-and-drink/food/snacks/crackers.do	true	
+117137	Dips and Salsa	117129	/116732/117107/117129/117137	117137	https://www.worldmarket.com/category/food-and-drink/food/snacks/dips-salsa.do	true	
+117138	Breakfast	117107	/116732/117107/117138	5	https://www.worldmarket.com/category/food-and-drink/food/breakfast.do	true	
+117139	Drink	116732	/116732/117139	6	https://www.worldmarket.com/category/food-and-drink/drink.do	true	
+117140	Coffee	117139	/116732/117139/117140	0	https://www.worldmarket.com/category/food-and-drink/drink/coffee.do	true	
+117141	Tea	117139	/116732/117139/117141	2	https://www.worldmarket.com/category/food-and-drink/drink/tea.do	true	
+117142	Cocoa	117139	/116732/117139/117142	3	https://www.worldmarket.com/category/food-and-drink/drink/cocoa.do	true	
+117143	Juice, Soda & Water	117139	/116732/117139/117143	4	https://www.worldmarket.com/category/food-and-drink/drink/juice-soda-water.do	true	
+117144	Drink Mixes and Syrups	117139	/116732/117139/117144	5	https://www.worldmarket.com/category/food-and-drink/drink/drink-mixes.do	true	
+117145	Single Serve Coffee	117139	/116732/117139/117145	1	https://www.worldmarket.com/category/food-and-drink/drink/single-serve-coffee.do	true	
+117146	Seasonal Food and Drink	116732	/116732/117146	0	https://www.worldmarket.com/category/food-and-drink/seasonal-food-drink.do	true	
+117147	International Favorites	116732	/116732/117147	3	https://www.worldmarket.com/category/food-and-drink/international-favorites.do	true	
+117148	British Isles	117147	/116732/117147/117148	0	https://www.worldmarket.com/category/food-and-drink/international-favorites/english-food.do	true	
+117149	Cuban	117147	/116732/117147/117149	117149	https://www.worldmarket.com/category/food-and-drink/international-favorites/cuban.do	false	
+117150	French	117147	/116732/117147/117150	117150	https://www.worldmarket.com/category/food-and-drink/international-favorites/french-food.do	true	
+117151	Italian	117147	/116732/117147/117151	117151	https://www.worldmarket.com/category/food-and-drink/international-favorites/italian-food.do	true	
+117152	German	117147	/116732/117147/117152	117152	https://www.worldmarket.com/category/food-and-drink/international-favorites/german-food.do	true	
+117153	Hawaiian	117147	/116732/117147/117153	117153	https://www.worldmarket.com/category/food-and-drink/international-favorites/hawaiian-food.do	true	
+117154	American Southern	117147	/116732/117147/117154	117154	https://www.worldmarket.com/category/food-and-drink/international-favorites/american-southern.do	true	
+117155	European	117147	/116732/117147/117155	117155	https://www.worldmarket.com/category/food-and-drink/international-favorites/european-food.do	true	
+117156	Eastern European	117147	/116732/117147/117156	117156	https://www.worldmarket.com/category/food-and-drink/international-favorites/eastern-european.do	true	
+117157	Scottish	117147	/116732/117147/117157	117157	https://www.worldmarket.com/category/food-and-drink/international-favorites/scottish.do	true	
+117158	Asian	117147	/116732/117147/117158	117158	https://www.worldmarket.com/category/food-and-drink/international-favorites/asian-food.do	true	
+117159	Japanese	117147	/116732/117147/117159	117159	https://www.worldmarket.com/category/food-and-drink/international-favorites/japanese-food.do	true	
+117160	Middle Eastern	117147	/116732/117147/117160	117160	https://www.worldmarket.com/category/food-and-drink/international-favorites/middle-eastern-food.do	true	
+117161	Australian	117147	/116732/117147/117161	117161	https://www.worldmarket.com/category/food-and-drink/international-favorites/australian-food.do	true	
+117162	Indian	117147	/116732/117147/117162	117162	https://www.worldmarket.com/category/food-and-drink/international-favorites/indian-food.do	true	
+117163	Iberian Peninsula	117147	/116732/117147/117163	117163	https://www.worldmarket.com/category/food-and-drink/international-favorites/iberian-peninsula.do	true	
+117164	Mexican	117147	/116732/117147/117164	117164	https://www.worldmarket.com/category/food-and-drink/international-favorites/mexican.do	true	
+117165	Shop by Brand	116732	/116732/117165	10	https://www.worldmarket.com/category/food-and-drink/shop-by-brand.do	true	
+117166	Biscoff	117165	/116732/117165/117166	0	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/biscoff.do	false	
+117168	Bundaberg	117165	/116732/117165/117168	117168	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/bundaberg.do	false	
+117169	Cadbury	117165	/116732/117165/117169	117169	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/cadbury.do	false	
+117170	Cafe Du Monde	117165	/116732/117165/117170	117170	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/cafe-du-monde.do	false	
+117171	Carr's	117165	/116732/117165/117171	117171	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/carrs.do	false	
+117173	Ghirardelli Chocolate	117165	/116732/117165/117173	117173	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/ghirardelli.do	false	
+117174	Haribo	117165	/116732/117165/117174	117174	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/haribo.do	false	
+117175	Heinz	117165	/116732/117165/117175	117175	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/heinz.do	false	
+117176	Hi Chew	117165	/116732/117165/117176	117176	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/hi-chew.do	false	
+117177	Illy Coffee	117165	/116732/117165/117177	117177	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/illy-coffee.do	false	
+117178	Jelly Belly	117165	/116732/117165/117178	117178	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/jelly-belly.do	false	
+117179	Kettle Chips	117165	/116732/117165/117179	117179	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/kettle-chips.do	false	
+117180	Kinder Chocolate	117165	/116732/117165/117180	117180	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/kinder.do	false	
+117182	Lindt Chocolate	117165	/116732/117165/117182	117182	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/lindt.do	false	
+117183	Lowell	117165	/116732/117165/117183	117183	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/lowell.do	false	
+117184	Mackays	117165	/116732/117165/117184	117184	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/mackays.do	false	
+117185	Maggi	117165	/116732/117165/117185	117185	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/Maggi.do	false	
+117186	Maltesers	117165	/116732/117165/117186	117186	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/maltesers.do	false	
+117187	Mcvities	117165	/116732/117165/117187	117187	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/mcvities.do	false	
+117189	Milka	117165	/116732/117165/117189	117189	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/milka.do	false	
+117190	Numi Tea	117165	/116732/117165/117190	117190	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/numi-tea.do	false	
+117191	Original New York Seltzer	117165	/116732/117165/117191	117191	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/new-york-seltzer.do	false	
+117192	Pop Rocks	117165	/116732/117165/117192	117192	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/pop-rocks.do	false	
+117193	Ramune	117165	/116732/117165/117193	117193	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/ramune.do	false	
+117194	Riegelein Chocolate	117165	/116732/117165/117194	117194	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/riegelein.do	false	
+117195	Ritter	117165	/116732/117165/117195	117195	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/ritter.do	false	
+117196	Sahale Snacks	117165	/116732/117165/117196	117196	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/sahale-snacks.do	false	
+117198	Tabasco	117165	/116732/117165/117198	117198	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/tabasco.do	false	
+117199	The Republic Of Tea	117165	/116732/117165/117199	117199	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/republic-of-tea.do	false	
+117200	Tim Tam	117165	/116732/117165/117200	117200	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/tim-tam.do	false	
+117201	Toblerone Chocolate	117165	/116732/117165/117201	117201	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/toblerone.do	false	
+117202	Torani Syrup	117165	/116732/117165/117202	117202	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/torani.do	false	
+117203	Twinings Tea	117165	/116732/117165/117203	117203	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/twinings-tea.do	false	
+117204	Utz	117165	/116732/117165/117204	117204	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/utz.do	false	
+117205	Vegemite	117165	/116732/117165/117205	117205	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/vegemite.do	false	
+117206	Walkers Shortbread	117165	/116732/117165/117206	117206	https://www.worldmarket.com/category/food-and-drink/shop-by-brand/walkers.do	false	
+117209	World Market's Own	116732	/116732/117209	8	https://www.worldmarket.com/category/food-and-drink/world-markets-own.do	true	
+117210	Entertaining	117209	/116732/117209/117210	0	https://www.worldmarket.com/category/food-and-drink/world-markets-own/entertaining.do	false	
+117211	Pastas and Pasta Sauces	117209	/116732/117209/117211	117211	https://www.worldmarket.com/category/food-and-drink/world-markets-own/pasta-sauces.do	false	
+117212	Soups	117209	/116732/117209/117212	117212	https://www.worldmarket.com/category/food-and-drink/world-markets-own/soups.do	false	
+117213	Jams and Spreads	117209	/116732/117209/117213	117213	https://www.worldmarket.com/category/food-and-drink/world-markets-own/jams-spreads.do	false	
+117214	Herbs and Spices	117209	/116732/117209/117214	117214	https://www.worldmarket.com/category/food-and-drink/world-markets-own/herbs-spices.do	false	
+117215	Coffee, Tea and Cocoa	117209	/116732/117209/117215	117215	https://www.worldmarket.com/category/food-and-drink/world-markets-own/coffee-tea-cocoa.do	false	
+117216	Sodas	117209	/116732/117209/117216	117216	https://www.worldmarket.com/category/food-and-drink/world-markets-own/sodas.do	false	
+117217	Chocolate and Candy	117209	/116732/117209/117217	117217	https://www.worldmarket.com/category/food-and-drink/world-markets-own/chocolate-candy.do	false	
+117218	Cookies and Wafers	117209	/116732/117209/117218	117218	https://www.worldmarket.com/category/food-and-drink/world-markets-own/cookies-wafers.do	false	
+117219	Snacks	117209	/116732/117209/117219	117219	https://www.worldmarket.com/category/food-and-drink/world-markets-own/snacks.do	false	
+117220	Oils and Vinegars	117209	/116732/117209/117220	117220	https://www.worldmarket.com/category/food-and-drink/world-markets-own/oil-vinegars.do	false	
+117227	Gourmet Miniatures	116732	/116732/117227	13	https://www.worldmarket.com/category/food-and-drink/gourmet-miniatures.do	true	
+117228	Gourmet Gift Sets	116732	/116732/117228	14	https://www.worldmarket.com/category/food-and-drink/gourmet-gift-sets.do	true	
+117229	Wine, Beer & Spirits	116732	/116732/117229	12	https://www.worldmarket.com/category/food-and-drink/wine-beer.do	true	
+117230	Wine	117229	/116732/117229/117230	0	https://www.worldmarket.com/category/food-and-drink/wine-beer/wine.do	true	
+117231	Beer	117229	/116732/117229/117231	117231	https://www.worldmarket.com/category/food-and-drink/wine-beer/beer.do	true	
+117232	Spirits	117229	/116732/117229/117232	117232	https://www.worldmarket.com/category/food-and-drink/wine-beer/spirits.do	true	
+117233	Easy Entertaining	116732	/116732/117233	9	https://www.worldmarket.com/category/food-and-drink/easy-entertaining.do	true	
+117234	Healthy Pantry	116732	/116732/117234	7	https://www.worldmarket.com/category/food-and-drink/healthy-eating.do	true	
+117235	Shop All Food & Drink	116732	/116732/117235	2	https://www.worldmarket.com/category/food-and-drink/all.do	true	
+117236	Shop All Jewelry & Clothing	116733	/116733/117236	2	https://www.worldmarket.com/category/jewelry-clothing/all.do	true	
+117237	Necklaces	116733	/116733/117237	8	https://www.worldmarket.com/category/jewelry-clothing/necklaces.do	true	
+116939	Wall Candle Sconces	116899	/116728/116899/116939	9	https://www.worldmarket.com/category/home-decor-pillows/wall-art-decor/candle-sconces.do	true	
+116940	Candles and Candle Holders	116728	/116728/116940	10	https://www.worldmarket.com/category/home-decor-pillows/candles-holders.do	true	
+116941	Candles	116940	/116728/116940/116941	1	https://www.worldmarket.com/category/home-decor-pillows/candles-holders/candles.do	true	
+116942	Scented Candles	116940	/116728/116940/116942	2	https://www.worldmarket.com/category/home-decor-pillows/candles-holders/filled-candles.do	true	
+116943	Candle Holders	116940	/116728/116940/116943	0	https://www.worldmarket.com/category/home-decor-pillows/candles-holders/plates-holders-sconces.do	true	
+116945	Lanterns	116940	/116728/116940/116945	3	https://www.worldmarket.com/category/home-decor-pillows/candles-holders/lanterns.do	true	
+116946	Home Scents	116940	/116728/116940/116946	4	https://www.worldmarket.com/category/home-decor-pillows/candles-holders/incense-potpourri.do	true	
+116947	Baskets	116728	/116728/116947	6	https://www.worldmarket.com/category/home-decor-pillows/baskets.do	true	
+116948	Decorative Accessories	116728	/116728/116948	3	https://www.worldmarket.com/category/home-decor-pillows/decorative-accessories.do	true	
+116949	Decorative Accents	116948	/116728/116948/116949	0	https://www.worldmarket.com/category/home-decor-pillows/decorative-accessories/accents.do	true	
+116950	Terrariums	116948	/116728/116948/116950	5	https://www.worldmarket.com/category/home-decor-pillows/decorative-accessories/terrariums.do	true	
+116952	Foliage and Floral	116948	/116728/116948/116952	6	https://www.worldmarket.com/category/home-decor-pillows/decorative-accessories/foliage-floral.do	false	
+116953	Plants	116948	/116728/116948/116953	7	https://www.worldmarket.com/category/home-decor-pillows/decorative-accessories/plants.do	false	
+116954	Vases	116948	/116728/116948/116954	4	https://www.worldmarket.com/category/home-decor-pillows/decorative-accessories/vases.do	true	
+116955	Knobs and Wall Hooks	116948	/116728/116948/116955	8	https://www.worldmarket.com/category/home-decor-pillows/decorative-accessories/knobs-wall-hooks.do	true	
+116956	Clocks	116948	/116728/116948/116956	3	https://www.worldmarket.com/category/home-decor-pillows/decorative-accessories/clocks.do	true	
+116957	Frames	116948	/116728/116948/116957	1	https://www.worldmarket.com/category/home-decor-pillows/decorative-accessories/picture-frames.do	true	
+116958	Home Office	116728	/116728/116958	9	https://www.worldmarket.com/category/home-decor-pillows/home-office.do	true	
+116959	Desk Accessories	116958	/116728/116958/116959	0	https://www.worldmarket.com/category/home-decor-pillows/home-office/desk-accessories.do	true	
+116965	Home Office Organization	116958	/116728/116958/116965	116965	https://www.worldmarket.com/category/home-decor-pillows/home-office/organization.do	true	
+116966	Stationery	116958	/116728/116958/116966	116966	https://www.worldmarket.com/category/home-decor-pillows/home-office/stationery-notes-journals.do	true	
+116967	Home Office Furniture	116958	/116728/116958/116967	116967	https://www.worldmarket.com/category/home-decor-pillows/home-office/home%2Boffice%2Bfurniture.do	true	
+116968	Task Lamps	116958	/116728/116958/116968	116968	https://www.worldmarket.com/category/home-decor-pillows/home-office/desk-lamps.do	true	
+116969	Hardware	116728	/116728/116969	14	https://www.worldmarket.com/category/home-decor-pillows/hardware.do	true	
+116970	Knobs and Pulls	116969	/116728/116969/116970	0	https://www.worldmarket.com/category/home-decor-pillows/hardware/drawer-knobs-pulls.do	true	
+116971	Hooks	116969	/116728/116969/116971	116971	https://www.worldmarket.com/category/home-decor-pillows/hardware/wall-hooks.do	true	
+116973	Fur and Hide Décor	116728	/116728/116973	15	https://www.worldmarket.com/category/home-decor-pillows/fur-faux-hide.do	true	
+116975	Shop All Bed & Bath	116729	/116729/116975	9	https://www.worldmarket.com/category/bed-bath/all.do	true	
+116976	Bedding Sets	116729	/116729/116976	5	https://www.worldmarket.com/category/bed-bath/bedding-collections.do	true	
+116979	Bedroom Furniture	116729	/116729/116979	12	https://www.worldmarket.com/category/bed-bath/bedroom-furniture.do	true	
+116980	Bath Towel Collections	116729	/116729/116980	1	https://www.worldmarket.com/category/bed-bath/bath-towel-collections.do	true	
+116828	Umbrellas and Stands	116816	/116725/116816/116828	6	https://www.worldmarket.com/category/outdoor/furniture/umbrellas.do	true	
+116829	Outdoor Wicker Furniture	116816	/116725/116816/116829	7	https://www.worldmarket.com/category/outdoor/furniture/wicker.do	true	
+116830	Balcony Furniture	116816	/116725/116816/116830	9	https://www.worldmarket.com/category/outdoor/furniture/balcony.do	true	
+116831	Hammocks and Stands	116816	/116725/116816/116831	10	https://www.worldmarket.com/category/outdoor/furniture/hammocks.do	true	
+116832	Fire Pits	116816	/116725/116816/116832	11	https://www.worldmarket.com/category/outdoor/furniture/fire-pits.do	true	
+116833	Furniture Covers	116816	/116725/116816/116833	5	https://www.worldmarket.com/category/outdoor/furniture/covers.do	true	
+116834	Outdoor Cushions & Pillows	116725	/116725/116834	1	https://www.worldmarket.com/category/outdoor/cushions-pillows.do	true	
+116835	Outdoor Throw Pillows	116834	/116725/116834/116835	0	https://www.worldmarket.com/category/outdoor/cushions-pillows/throw-pillows.do	true	
+116836	Outdoor Chair Cushions	116834	/116725/116834/116836	1	https://www.worldmarket.com/category/outdoor/cushions-pillows/chair.do	true	
+116838	Slipcovers and Replacement Cushions	116834	/116725/116834/116838	7	https://www.worldmarket.com/category/outdoor/cushions-pillows/slipcovers.do	true	
+116839	Mid Century Outdoor Furniture	116816	/116725/116816/116839	8	https://www.worldmarket.com/category/outdoor/furniture/mid-century.do	true	
+116840	Outdoor Rugs	116725	/116725/116840	2	https://www.worldmarket.com/category/outdoor/rugs.do	true	
+116841	Outdoor Dining & Entertaining	116725	/116725/116841	8	https://www.worldmarket.com/category/outdoor/dining.do	true	
+116842	Outdoor Lighting	116725	/116725/116842	9	https://www.worldmarket.com/category/outdoor/lighting.do	true	
+116843	String Lights	116842	/116725/116842/116843	0	https://www.worldmarket.com/category/outdoor/lighting/string-lights.do	true	
+116844	Lanterns	116842	/116725/116842/116844	116844	https://www.worldmarket.com/category/outdoor/lighting/lanterns.do	true	
+116845	Candles	116842	/116725/116842/116845	116845	https://www.worldmarket.com/category/outdoor/lighting/candles.do	true	
+116846	Outdoor Décor	116725	/116725/116846	6	https://www.worldmarket.com/category/outdoor/decor.do	true	
+116847	Outdoor Decorative Accents	116846	/116725/116846/116847	0	https://www.worldmarket.com/category/outdoor/decor/decorative-accents.do	true	
+116848	Outdoor Candles and Lanterns	116846	/116725/116846/116848	116848	https://www.worldmarket.com/category/outdoor/decor/candles.do	true	
+116851	Plants & Gardening Tools	116725	/116725/116851	3	https://www.worldmarket.com/category/outdoor/plants-gardening.do	true	
+116852	Outdoor Plants	116851	/116725/116851/116852	2	https://www.worldmarket.com/category/outdoor/plants-gardening/plants.do	true	
+116850	Wind Chimes	116846	/116725/116846/116850	116850	https://www.worldmarket.com/category/outdoor/decor/wind-chimes.do	false	
+116853	Planters & Garden Tools	116851	/116725/116851/116853	1	https://www.worldmarket.com/category/outdoor/plants-gardening/garden-tools.do	true	
+116854	Planters	116851	/116725/116851/116854	0	https://www.worldmarket.com/category/outdoor/plants-gardening/planters.do	false	
+116855	Terrariums	116851	/116725/116851/116855	3	https://www.worldmarket.com/category/outdoor/plants-gardening/terrariums.do	true	
+116856	Wreaths	116851	/116725/116851/116856	4	https://www.worldmarket.com/category/outdoor/plants-gardening/wreaths.do	true	
+116857	Picnic Baskets & Tote Bags	116725	/116725/116857	11	https://www.worldmarket.com/category/outdoor/picnic-baskets.do	true	
+116858	BBQ & Grilling	116725	/116725/116858	10	https://www.worldmarket.com/category/outdoor/bbq.do	true	
+116859	Outdoor Food & Drink	116725	/116725/116859	12	https://www.worldmarket.com/category/outdoor/food-and-drink.do	true	
+116860	Outdoor Toys & Games	116725	/116725/116860	13	https://www.worldmarket.com/category/outdoor/kites-games.do	true	
+116868	Shop All Lighting	116727	/116727/116868	5	https://www.worldmarket.com/category/lighting/all.do	true	
+116869	Pendants & Chandeliers	116727	/116727/116869	0	https://www.worldmarket.com/category/lighting/pendants-chandeliers.do	true	
+116870	Floor Lamps	116727	/116727/116870	2	https://www.worldmarket.com/category/lighting/floor-lamps.do	true	
+116895	Throws & Blankets	116885	/116728/116885/116895	0	https://www.worldmarket.com/category/home-decor-pillows/pillows/throws-blankets.do	true	
+116896	Chair Cushions	116885	/116728/116885/116896	3	https://www.worldmarket.com/category/home-decor-pillows/pillows/chair-cushions.do	true	
+116897	Outdoor Cushions and Pillows	116885	/116728/116885/116897	8	https://www.worldmarket.com/category/home-decor-pillows/pillows/outdoor-cushions.do	true	
+116898	Papasan Chair Cushions	116885	/116728/116885/116898	7	https://www.worldmarket.com/category/home-decor-pillows/pillows/papasan-chair-cushions-frames.do	true	
+116899	Wall Art and Décor	116728	/116728/116899	0	https://www.worldmarket.com/category/home-decor-pillows/wall-art-decor.do	true	
+116900	Wall Art by Subject	116899	/116728/116899/116900	3	https://www.worldmarket.com/category/home-decor-pillows/wall-art-decor/wall-art.do	true	
+116901	Abstract	116900	/116728/116899/116900/116901	0	https://www.worldmarket.com/category/home-decor-pillows/wall-art-decor/wall-art/abstract.do	true	
+116902	Animals & Birds	116900	/116728/116899/116900/116902	116902	https://www.worldmarket.com/category/home-decor-pillows/wall-art-decor/wall-art/animals-birds.do	true	
+116903	Botanical & Floral	116900	/116728/116899/116900/116903	116903	https://www.worldmarket.com/category/home-decor-pillows/wall-art-decor/wall-art/botanical-floral.do	true	
+116904	Coastal	116900	/116728/116899/116900/116904	116904	https://www.worldmarket.com/category/home-decor-pillows/wall-art-decor/wall-art/coastal.do	true	
+116915	Landscape & Nature	116900	/116728/116899/116900/116915	116915	https://www.worldmarket.com/category/home-decor-pillows/wall-art-decor/wall-art/landscape-nature.do	true	
+116916	Maps & Travel	116900	/116728/116899/116900/116916	116916	https://www.worldmarket.com/category/home-decor-pillows/wall-art-decor/wall-art/maps-travel.do	true	
+116917	Vintage Style	116900	/116728/116899/116900/116917	116917	https://www.worldmarket.com/category/home-decor-pillows/wall-art-decor/wall-art/vintage.do	true	
+116919	Wall Art by Room	116899	/116728/116899/116919	4	https://www.worldmarket.com/category/home-decor-pillows/wall-art-decor/art-by-room.do	true	
+116871	Table Lamps	116727	/116727/116871	3	https://www.worldmarket.com/category/lighting/table-lamps.do	true	
+116872	Mix and Match Lighting	116727	/116727/116872	4	https://www.worldmarket.com/category/lighting/mix-match-lamps.do	true	
+116873	Accent Lighting	116727	/116727/116873	6	https://www.worldmarket.com/category/lighting/accent-lamps.do	true	
+116874	Accent Lamps	116873	/116727/116873/116874	0	https://www.worldmarket.com/category/lighting/accent-lamps/accent-lamps.do	true	
+116875	Sconces	116873	/116727/116873/116875	116875	https://www.worldmarket.com/category/lighting/accent-lamps/sconces.do	true	
+116876	Decorative Lighting	116873	/116727/116873/116876	116876	https://www.worldmarket.com/category/lighting/accent-lamps/decorative-lighting.do	true	
+116877	Task Lamps	116727	/116727/116877	7	https://www.worldmarket.com/category/lighting/task-lamps.do	true	
+116878	Lanterns	116727	/116727/116878	10	https://www.worldmarket.com/category/lighting/lanterns.do	true	
+116879	Outdoor Lighting	116727	/116727/116879	8	https://www.worldmarket.com/category/lighting/outdoor-lighting.do	true	
+116880	String Lights	116727	/116727/116880	9	https://www.worldmarket.com/category/lighting/string-lights.do	true	
+116881	Hardware and Accessories	116727	/116727/116881	12	https://www.worldmarket.com/category/lighting/hardware-accessories.do	true	
+116882	Candles & Candle Holders	116727	/116727/116882	13	https://www.worldmarket.com/category/lighting/candles.do	true	
+116884	Shop All Décor and Pillows	116728	/116728/116884	7	https://www.worldmarket.com/category/home-decor-pillows/all.do	true	
+116885	Pillows and Throws	116728	/116728/116885	2	https://www.worldmarket.com/category/home-decor-pillows/pillows.do	true	
+116886	Throw Pillows	116885	/116728/116885/116886	1	https://www.worldmarket.com/category/home-decor-pillows/pillows/throw-pillows.do	true	
+116887	Velvet Pillows	116885	/116728/116885/116887	4	https://www.worldmarket.com/category/home-decor-pillows/pillows/velvet-pillows.do	true	
+116888	Floor Pillows and Poufs	116885	/116728/116885/116888	5	https://www.worldmarket.com/category/home-decor-pillows/pillows/floor-pillows-poufs.do	true	
+116715	Furniture		/116715	1	https://www.worldmarket.com/category/furniture.do	true	
+116725	Outdoor		/116725	2	https://www.worldmarket.com/category/outdoor.do	true	
+116727	Lighting		/116727	4	https://www.worldmarket.com/category/lighting.do	true	
+116728	Decor & Pillows		/116728	5	https://www.worldmarket.com/category/home-decor-pillows.do	true	
+116729	Bed & Bath		/116729	6	https://www.worldmarket.com/category/bed-bath.do	true	
+116730	Dining		/116730	7	https://www.worldmarket.com/category/dining.do	true	
+116731	Kitchen		/116731	8	https://www.worldmarket.com/category/kitchen.do	true	
+116732	Food & Drink		/116732	9	https://www.worldmarket.com/category/food-and-drink.do	true	
+116733	Jewelry & Clothing		/116733	10	https://www.worldmarket.com/category/jewelry-clothing.do	true	
+116734	Gifts		/116734	11	https://www.worldmarket.com/category/gifts.do	true	
+116735	Holidays		/116735	12	https://www.worldmarket.com/category/holiday.do	true	
+116745	Shop All Furniture	116715	/116715/116745	16	https://www.worldmarket.com/category/furniture/all.do	true	
+116746	Dining Room Furniture	116715	/116715/116746	1	https://www.worldmarket.com/category/furniture/dining-room.do	true	
+116747	Dining Room Collections	116746	/116715/116746/116747	3	https://www.worldmarket.com/category/furniture/dining-room/dining-room-sets.do	true	
+116748	Dining Tables	116746	/116715/116746/116748	1	https://www.worldmarket.com/category/furniture/dining-room/dining-tables.do	true	
+116776	Beds	116774	/116715/116774/116776	1	https://www.worldmarket.com/category/furniture/bedroom/beds.do	true	
+116749	Dining Chairs	116746	/116715/116746/116749	0	https://www.worldmarket.com/category/furniture/dining-room/dining-chairs.do	true	
+116750	Dining Benches	116746	/116715/116746/116750	6	https://www.worldmarket.com/category/furniture/dining-room/dining-benches.do	true	
+116751	Barstools and Counter Stools	116746	/116715/116746/116751	2	https://www.worldmarket.com/category/furniture/dining-room/stools.do	true	
+116752	Dining Storage and Bars	116746	/116715/116746/116752	5	https://www.worldmarket.com/category/furniture/dining-room/wine-storage.do	true	
+116753	Kitchen Furniture	116746	/116715/116746/116753	4	https://www.worldmarket.com/category/furniture/dining-room/kitchen-storage.do	true	
+116754	Living Room Furniture	116715	/116715/116754	0	https://www.worldmarket.com/category/furniture/living-room.do	true	
+116755	Living Room Collections	116754	/116715/116754/116755	12	https://www.worldmarket.com/category/furniture/living-room/living-room-collections.do	true	
+116756	Sofas and Loveseats	116754	/116715/116754/116756	1	https://www.worldmarket.com/category/furniture/living-room/sofas.do	true	
+116757	Sectionals	116754	/116715/116754/116757	2	https://www.worldmarket.com/category/furniture/living-room/sectionals.do	true	
+116758	Chairs	116754	/116715/116754/116758	0	https://www.worldmarket.com/category/furniture/living-room/chairs.do	true	
+116759	Coffee Tables	116754	/116715/116754/116759	3	https://www.worldmarket.com/category/furniture/living-room/coffee-tables.do	true	
+116761	Floor Pillows and Poufs	116754	/116715/116754/116761	7	https://www.worldmarket.com/category/furniture/living-room/poufs.do	false	
+116763	Benches and Ottomans	116754	/116715/116754/116763	8	https://www.worldmarket.com/category/furniture/living-room/benches.do	true	
+116764	Chaise and Daybeds	116754	/116715/116754/116764	11	https://www.worldmarket.com/category/furniture/living-room/chaise-daybeds.do	true	
+116765	TV Stands and Media Consoles	116754	/116715/116754/116765	5	https://www.worldmarket.com/category/furniture/living-room/media-furniture.do	true	
+116766	Cabinets and Shelving	116754	/116715/116754/116766	9	https://www.worldmarket.com/category/furniture/living-room/cabinets-shelving.do	true	
+116767	Accent Furniture	116754	/116715/116754/116767	10	https://www.worldmarket.com/category/furniture/living-room/accent-furniture.do	true	
+116768	Home Office Furniture	116715	/116715/116768	2	https://www.worldmarket.com/category/furniture/home-office.do	true	
+116769	Office Desks	116768	/116715/116768/116769	0	https://www.worldmarket.com/category/furniture/home-office/office-desks.do	true	
+116770	Office Chairs	116768	/116715/116768/116770	116770	https://www.worldmarket.com/category/furniture/home-office/office-chairs.do	true	
+116771	Bookcases	116768	/116715/116768/116771	116771	https://www.worldmarket.com/category/furniture/home-office/bookcases.do	true	
+116772	Shop by Room: Dining	116746	/116715/116746/116772	7	https://www.worldmarket.com/category/furniture/dining-room/shop-the-room-dining.do	true	
+116773	Shop by Room: Living	116754	/116715/116754/116773	13	https://www.worldmarket.com/category/furniture/living-room/shop-the-room-living.do	true	
+116774	Bedroom Furniture	116715	/116715/116774	4	https://www.worldmarket.com/category/furniture/bedroom.do	true	
+116775	Bedroom Furniture Collections	116774	/116715/116774/116775	0	https://www.worldmarket.com/category/furniture/bedroom/bedroom-furniture-collections.do	false	
+116777	Headboards	116774	/116715/116774/116777	3	https://www.worldmarket.com/category/furniture/bedroom/headboards.do	true	
+116778	Chaise and Daybeds	116774	/116715/116774/116778	4	https://www.worldmarket.com/category/furniture/bedroom/chaise-daybeds.do	true	
+116779	Bedroom Storage	116774	/116715/116774/116779	5	https://www.worldmarket.com/category/furniture/bedroom/dressers.do	true	
+116780	Nightstands and Tables	116774	/116715/116774/116780	2	https://www.worldmarket.com/category/furniture/bedroom/nightstands-tables.do	true	
+116782	Shop by Room: Bedroom	116774	/116715/116774/116782	7	https://www.worldmarket.com/category/furniture/bedroom/shop-the-room.do	true	
+116783	Storage Carts	116768	/116715/116768/116783	116783	https://www.worldmarket.com/category/furniture/home-office/storage-carts.do	true	
+116784	Custom Furniture	116715	/116715/116784	12	https://www.worldmarket.com/category/furniture/custom-furniture.do	true	
+116785	Custom Headboards	116784	/116715/116784/116785	0	https://www.worldmarket.com/category/furniture/custom-furniture/bedroom-headboards.do	true	
+116786	Custom Beds	116784	/116715/116784/116786	116786	https://www.worldmarket.com/category/furniture/custom-furniture/upholstered-bed-frames.do	true	
+116787	Custom Seating	116784	/116715/116784/116787	116787	https://www.worldmarket.com/category/furniture/custom-furniture/seating-benches-ottomans.do	true	
+116788	Custom Living Room Collections	116784	/116715/116784/116788	116788	https://www.worldmarket.com/category/furniture/custom-furniture/custom-living-room-collections.do	true	
+116789	Custom Dining Room Collections	116784	/116715/116784/116789	116789	https://www.worldmarket.com/category/furniture/custom-furniture/custom-dining-room-chairs.do	true	
+116790	Bathroom Furniture	116715	/116715/116790	13	https://www.worldmarket.com/category/furniture/bathroom.do	true	
+116791	Entryway Furniture and Décor	116715	/116715/116791	5	https://www.worldmarket.com/category/furniture/entryway.do	true	
+116792	Outdoor Furniture	116715	/116715/116792	14	https://www.worldmarket.com/category/furniture/outdoor-patio.do	true	
+116793	Mid Century Furniture	116715	/116715/116793	9	https://www.worldmarket.com/category/furniture/mid-century-collection.do	true	
+116794	Industrial Collection	116715	/116715/116794	10	https://www.worldmarket.com/category/furniture/industrial-collection.do	true	
+116815	Shop All Outdoor	116725	/116725/116815	5	https://www.worldmarket.com/category/outdoor/all.do	true	
+116816	Outdoor Furniture	116725	/116725/116816	0	https://www.worldmarket.com/category/outdoor/furniture.do	true	
+116817	Outdoor Collections	116816	/116725/116816/116817	0	https://www.worldmarket.com/category/outdoor/furniture/outdoor-collections.do	true	
+116818	Outdoor Dining Furniture	116816	/116725/116816/116818	2	https://www.worldmarket.com/category/outdoor/furniture/dining.do	true	
+116825	Seating and Lounge Furniture	116816	/116725/116816/116825	1	https://www.worldmarket.com/category/outdoor/furniture/seating.do	true	
+116826	Adirondack Chairs	116816	/116725/116816/116826	4	https://www.worldmarket.com/category/outdoor/furniture/adirondack-chairs.do	true	
+116827	Outdoor Accents	116816	/116725/116816/116827	12	https://www.worldmarket.com/category/outdoor/furniture/accent.do	true	
+116795	Farmhouse Collection	116715	/116715/116795	11	https://www.worldmarket.com/category/furniture/farmhouse.do	true	
+116796	Small Spaces Collection	116715	/116715/116796	3	https://www.worldmarket.com/category/furniture/small-spaces.do	true	
+118435	Umbrellas & Frames	116828	/116725/116816/116828/118435	0	https://www.worldmarket.com/category/outdoor/furniture/umbrellas/umbrellas-frames.do	true	
+118437	Umbrella Stands	116828	/116725/116816/116828/118437	118437	https://www.worldmarket.com/category/outdoor/furniture/umbrellas/stands.do	true	
+119175	Wallpaper	116728	/116728/119175	13	https://www.worldmarket.com/category/home-decor-pillows/wallpaper.do	true	
+119176	Murals	119175	/116728/119175/119176	0	https://www.worldmarket.com/category/home-decor-pillows/wallpaper/murals.do	true	
+119295	Wall Storage	116728	/116728/119295	8	https://www.worldmarket.com/category/home-decor-pillows/wall-storage.do	true	
+119296	Wall Shelves	119295	/116728/119295/119296	0	https://www.worldmarket.com/category/home-decor-pillows/wall-storage/wall-shelves.do	true	
+119297	Cubbies & Organization	119295	/116728/119295/119297	119297	https://www.worldmarket.com/category/home-decor-pillows/wall-storage/cubbies-organization.do	true	
+119298	Wall Hooks	119295	/116728/119295/119298	119298	https://www.worldmarket.com/category/home-decor-pillows/wall-storage/wall-hooks.do	true	
+119299	Chalkboards	119295	/116728/119295/119299	119299	https://www.worldmarket.com/category/home-decor-pillows/wall-storage/chalkboards.do	true	
+119837	Furniture Best Sellers	116715	/116715/119837	6	https://www.worldmarket.com/category/furniture/best-sellers.do	true	
+120425	Kitchen Best Sellers	116731	/116731/120425	3	https://www.worldmarket.com/category/kitchen/best-sellers.do	true	
+120426	Dining Best Sellers	116730	/116730/120426	4	https://www.worldmarket.com/category/dining/best-sellers.do	true	
+120427	Jewelry & Clothing Best Sellers	116733	/116733/120427	4	https://www.worldmarket.com/category/jewelry-clothing/best-sellers.do	true	
+120595	Console Tables	116754	/116715/116754/120595	6	https://www.worldmarket.com/category/furniture/living-room/console-tables.do	true	
+120596	End and Side Tables	116754	/116715/116754/120596	4	https://www.worldmarket.com/category/furniture/living-room/end-tables.do	true	
+120678	Dan Houston	120676	/116728/116899/120676/120678	120678	https://www.worldmarket.com/category/home-decor-pillows/wall-art-decor/featured-artists/dan-houston.do	true	
+117795	Americana	116735	/116735/117795	5	https://www.worldmarket.com/category/holiday/americana.do	false	
+117925	Indoor Furniture Clearance	117419	/117419/117925	16	https://www.worldmarket.com/category/sale/furniture-blowout.do	false	
+118945	Nightmare Before Christmas	117375	/116735/117375/118945	10	https://www.worldmarket.com/category/holiday/halloween/nightmare-before-christmas.do	false	
+120679	Nikki Chu	120676	/116728/116899/120676/120679	120679	https://www.worldmarket.com/category/home-decor-pillows/wall-art-decor/featured-artists/nikki-chu.do	true	
+120680	Synthia SAINT JAMES	120676	/116728/116899/120676/120680	120680	https://www.worldmarket.com/category/home-decor-pillows/wall-art-decor/featured-artists/synthia-saint-james.do	true	
+117238	Earrings	116733	/116733/117238	1	https://www.worldmarket.com/category/jewelry-clothing/earrings.do	true	
+116920	Living Room	116919	/116728/116899/116919/116920	0	https://www.worldmarket.com/category/home-decor-pillows/wall-art-decor/art-by-room/living-room.do	true	
+116921	Dining Room	116919	/116728/116899/116919/116921	116921	https://www.worldmarket.com/category/home-decor-pillows/wall-art-decor/art-by-room/dining-room.do	true	
+116923	Home Office	116919	/116728/116899/116919/116923	116923	https://www.worldmarket.com/category/home-decor-pillows/wall-art-decor/art-by-room/home-office.do	true	
+116924	Bedroom	116919	/116728/116899/116919/116924	116924	https://www.worldmarket.com/category/home-decor-pillows/wall-art-decor/art-by-room/bedroom.do	true	
+116926	Wall Art by Material	116899	/116728/116899/116926	5	https://www.worldmarket.com/category/home-decor-pillows/wall-art-decor/by-material.do	true	
+116927	Canvas Print	116926	/116728/116899/116926/116927	0	https://www.worldmarket.com/category/home-decor-pillows/wall-art-decor/by-material/canvas.do	true	
+116928	Framed Print	116926	/116728/116899/116926/116928	116928	https://www.worldmarket.com/category/home-decor-pillows/wall-art-decor/by-material/framed.do	true	
+116929	Photography	116926	/116728/116899/116926/116929	116929	https://www.worldmarket.com/category/home-decor-pillows/wall-art-decor/by-material/photography.do	true	
+116930	Giclee	116926	/116728/116899/116926/116930	116930	https://www.worldmarket.com/category/home-decor-pillows/wall-art-decor/by-material/giclee.do	true	
+116931	Wall Art Under $100	116899	/116728/116899/116931	6	https://www.worldmarket.com/category/home-decor-pillows/wall-art-decor/under-100.do	true	
+116932	Wall Décor	116899	/116728/116899/116932	1	https://www.worldmarket.com/category/home-decor-pillows/wall-art-decor/wall-decor.do	true	
+116933	Mirrors	116899	/116728/116899/116933	2	https://www.worldmarket.com/category/home-decor-pillows/wall-art-decor/mirrors.do	true	
+116935	Cubbies & Organization	116934	/116728/116899/116934/116935	0	https://www.worldmarket.com/category/home-decor-pillows/wall-art-decor/wall-storage/cubbies-organization.do	false	
+119582	Doormats	119555	/119555/119582	13	https://www.worldmarket.com/category/rugs/doormats.do	true	
+119583	Wool Rugs	119555	/119555/119583	16	https://www.worldmarket.com/category/rugs/wool-rugs.do	true	
+119065	Water Bottles	117033	/116730/117033/119065	119065	https://www.worldmarket.com/category/dining/drinkware/water-bottles.do	true	
+119585	Natural Fiber Rugs	119555	/119555/119585	11	https://www.worldmarket.com/category/rugs/natural-fiber.do	true	
+119586	Indoor/Outdoor Rugs	119555	/119555/119586	10	https://www.worldmarket.com/category/rugs/indoor-outdoor.do	true	
+119587	Outdoor Rugs	119555	/119555/119587	18	https://www.worldmarket.com/category/rugs/outdoor-rugs.do	true	
+119588	New Rugs	119555	/119555/119588	15	https://www.worldmarket.com/category/rugs/new.do	true	
+119589	Shop All Rugs	119555	/119555/119589	1	https://www.worldmarket.com/category/rugs/all.do	true	
+119595	4' x 6' Area Rugs	119555	/119555/119595	8	https://www.worldmarket.com/category/rugs/4-x-6-area-rugs.do	true	
+119596	5' x 8' Area Rugs	119555	/119555/119596	3	https://www.worldmarket.com/category/rugs/5-x-8-area-rugs.do	true	
+119597	6' x 9' Area Rugs	119555	/119555/119597	7	https://www.worldmarket.com/category/rugs/6-x-9-area-rugs.do	true	
+119598	8' x 10' Area Rugs	119555	/119555/119598	0	https://www.worldmarket.com/category/rugs/8-x-10-area-rugs.do	true	
+120345	Fresh Flowers	117396	/116735/117396/120345	1	https://www.worldmarket.com/category/holiday/mothers-day-gifts/fresh-flowers.do	false	
+117755	Cool Shades	117715	/116725/116816/117715/117755	117755	https://www.worldmarket.com/category/outdoor/furniture/shop-the-room/shades.do	false	
+117756	Kantha Layered	116782	/116715/116774/116782/117756	117756	https://www.worldmarket.com/category/furniture/bedroom/shop-the-room/kantha.do	false	
+117757	Organic Contemporary	116772	/116715/116746/116772/117757	1	https://www.worldmarket.com/category/furniture/dining-room/shop-the-room-dining/organic.do	false	
+117758	Natural Classic	116772	/116715/116746/116772/117758	0	https://www.worldmarket.com/category/furniture/dining-room/shop-the-room-dining/classic.do	false	
+117759	Summer Gatherings	117715	/116725/116816/117715/117759	117759	https://www.worldmarket.com/category/outdoor/furniture/shop-the-room/summer.do	false	
+119635	Rugs	117419	/117419/119635	4	https://www.worldmarket.com/category/sale/rugs.do	true	
+119905	Decor Best Sellers	116728	/116728/119905	4	https://www.worldmarket.com/category/home-decor-pillows/best-sellers.do	true	
+119906	Bed & Bath Best Sellers	116729	/116729/119906	6	https://www.worldmarket.com/category/bed-bath/best-sellers.do	true	
+119907	Rugs Best Sellers	119555	/119555/119907	5	https://www.worldmarket.com/category/rugs/best-sellers.do	true	
+120205	Food & Drink Best Sellers	116732	/116732/120205	1	https://www.worldmarket.com/category/food-and-drink/best-sellers.do	true	
+120675	Gifts That Give Back	116734	/116734/120675	11	https://www.worldmarket.com/category/gifts/gifts-that-give-back.do	true	
+120676	Featured Artists	116899	/116728/116899/120676	0	https://www.worldmarket.com/category/home-decor-pillows/wall-art-decor/featured-artists.do	true	
+120677	Omar Escalante	120676	/116728/116899/120676/120677	0	https://www.worldmarket.com/category/home-decor-pillows/wall-art-decor/featured-artists/omar-escalante.do	true	
+118765	Kai	118725	/116731/118725/118765	16	https://www.worldmarket.com/category/kitchen/shop-by-brand/kai.do	false	
+118825	Member Deals	117419	/117419/118825	14	https://www.worldmarket.com/category/sale/member-deals.do	true	
+117703	Black Friday	117330	/116735/117330/117703	11	https://www.worldmarket.com/category/holiday/christmas/black-friday.do	false	
+119205	Emmett Modular	116754	/116715/116754/119205	14	https://www.worldmarket.com/category/furniture/living-room/emmett-modular.do	false	
+119445	Peel & Stick Tiles	119175	/116728/119175/119445	119445	https://www.worldmarket.com/category/home-decor-pillows/wallpaper/peel-stick-tiles.do	false	
+120055	Sodastream	118725	/116731/118725/120055	32	https://www.worldmarket.com/category/kitchen/shop-by-brand/sodastream.do	false	
+120056	Mepal	118725	/116731/118725/120056	24	https://www.worldmarket.com/category/kitchen/shop-by-brand/mepal.do	false	
+120057	Madesmart	118725	/116731/118725/120057	22	https://www.worldmarket.com/category/kitchen/shop-by-brand/madesmart.do	false	
+120058	Beekman 1802	118725	/116731/118725/120058	0	https://www.worldmarket.com/category/kitchen/shop-by-brand/beekman-1802.do	false	
+120059	Full Circle	118725	/116731/118725/120059	11	https://www.worldmarket.com/category/kitchen/shop-by-brand/full-circle-cleaning.do	false	
+120060	Umbra	118725	/116731/118725/120060	33	https://www.worldmarket.com/category/kitchen/shop-by-brand/umbra.do	false	
+120061	Instant Pot	118725	/116731/118725/120061	14	https://www.worldmarket.com/category/kitchen/shop-by-brand/instant-pot.do	true	
+120062	Rebel Green	118725	/116731/118725/120062	29	https://www.worldmarket.com/category/kitchen/shop-by-brand/rebel-green.do	false	
+120063	Wusthof	118725	/116731/118725/120063	37	https://www.worldmarket.com/category/kitchen/shop-by-brand/wusthof.do	true	
+117715	Shop the Room: Outdoor	116816	/116725/116816/117715	13	https://www.worldmarket.com/category/outdoor/furniture/shop-the-room.do	true	
+117716	Acacia Casual	117715	/116725/116816/117715/117716	0	https://www.worldmarket.com/category/outdoor/furniture/shop-the-room/acacia.do	false	
+118265	Science Toys	117280	/116734/117280/118265	1	https://www.worldmarket.com/category/gifts/toys-and-games/science.do	true	
+118665	Plants, Trees and Flowers	116728	/116728/118665	5	https://www.worldmarket.com/category/home-decor-pillows/plant-shop.do	true	
+118666	Planters and Terrariums	118665	/116728/118665/118666	0	https://www.worldmarket.com/category/home-decor-pillows/plant-shop/planters-terrariums.do	true	
+118667	House Plants and Flowers	118665	/116728/118665/118667	3	https://www.worldmarket.com/category/home-decor-pillows/plant-shop/house-plants.do	true	
+118668	Faux Succulents, Botanicals and Flowers	118665	/116728/118665/118668	1	https://www.worldmarket.com/category/home-decor-pillows/plant-shop/faux-succulents-botanicals-flowers.do	true	
+118669	Faux Potted Plants and Trees	118665	/116728/118665/118669	2	https://www.worldmarket.com/category/home-decor-pillows/plant-shop/faux-potted-trees.do	true	
+118670	Vases	118665	/116728/118665/118670	4	https://www.worldmarket.com/category/home-decor-pillows/plant-shop/vases.do	true	
+118526	Outdoor Chaise Lounge Cushions	116834	/116725/116834/118526	5	https://www.worldmarket.com/category/outdoor/cushions-pillows/chaise-lounge.do	true	
+118527	Outdoor Gusset Chair Cushions	116834	/116725/116834/118527	2	https://www.worldmarket.com/category/outdoor/cushions-pillows/gusset.do	true	
+119085	HGTV Magazine Gifts	116734	/116734/119085	15	https://www.worldmarket.com/category/gifts/hgtv-magazine-gifts.do	false	
+120435	Gifts Best Sellers	116734	/116734/120435	1	https://www.worldmarket.com/category/gifts/best-sellers.do	true	
+119425	Clearance	117419	/117419/119425	0	https://www.worldmarket.com/category/sale/clearance.do	false	
+119426	Furniture	119425	/117419/119425/119426	1	https://www.worldmarket.com/category/sale/clearance/furniture.do	false	
+119427	Rugs	119425	/117419/119425/119427	2	https://www.worldmarket.com/category/sale/clearance/rugs.do	false	
+119428	Lighting	119425	/117419/119425/119428	3	https://www.worldmarket.com/category/sale/clearance/Lighting.do	false	
+119429	Decor & Pillows	119425	/117419/119425/119429	4	https://www.worldmarket.com/category/sale/clearance/decor-pillows.do	false	
+119430	Bed & Bath	119425	/117419/119425/119430	5	https://www.worldmarket.com/category/sale/clearance/bed-bath.do	false	
+119431	Dining	119425	/117419/119425/119431	6	https://www.worldmarket.com/category/sale/clearance/dining.do	false	
+119432	Kitchen	119425	/117419/119425/119432	7	https://www.worldmarket.com/category/sale/clearance/kitchen.do	false	
+119555	Rugs		/119555	3	https://www.worldmarket.com/category/rugs.do	true	
+119556	Area Rugs	119555	/119555/119556	6	https://www.worldmarket.com/category/rugs/area-rugs.do	true	
+119557	Kilim Rugs	119555	/119555/119557	17	https://www.worldmarket.com/category/rugs/kilim.do	true	
+119558	Kitchen Rugs	119555	/119555/119558	12	https://www.worldmarket.com/category/rugs/kitchen-rugs.do	true	
+119559	Floor Runners	119555	/119555/119559	4	https://www.worldmarket.com/category/rugs/floor-runners.do	true	
+119561	One of a Kind Rugs	119555	/119555/119561	14	https://www.worldmarket.com/category/rugs/one-of-a-kind-rugs.do	true	
+119563	Curtains	116728	/116728/119563	12	https://www.worldmarket.com/category/home-decor-pillows/curtains.do	true	
+119564	Large Area Rugs	119555	/119555/119564	2	https://www.worldmarket.com/category/rugs/extended-sizes.do	true	
+119865	Always A Deal - Furniture	119287	/119287/119865	0	https://www.worldmarket.com/category/always-a-deal/furniture.do	true	
+119866	Always A Deal - Rugs	119287	/119287/119866	1	https://www.worldmarket.com/category/always-a-deal/rugs.do	true	
+119867	Always A Deal - Decor & Lighting	119287	/119287/119867	2	https://www.worldmarket.com/category/always-a-deal/decor-and-lighting.do	true	
+119868	Always A Deal - Throw Pillows	119287	/119287/119868	3	https://www.worldmarket.com/category/always-a-deal/throw-pillows.do	true	
+119869	Always A Deal - Kitchen & Dinnerware	119287	/119287/119869	4	https://www.worldmarket.com/category/always-a-deal/kitchen-and-dinnerware.do	true	
+119871	Always A Deal - Placemats & Napkins	119287	/119287/119871	6	https://www.worldmarket.com/category/always-a-deal/placemats-and-napkins.do	true	
+119872	Always A Deal - Beverages	119287	/119287/119872	8	https://www.worldmarket.com/category/always-a-deal/beverages.do	true	
+119874	Always A Deal - Bed & Bath	119287	/119287/119874	7	https://www.worldmarket.com/category/always-a-deal/bed-and-bath.do	true	
+117815	Shop by Room: Home Office	116768	/116715/116768/117815	117815	https://www.worldmarket.com/category/furniture/home-office/shop-by-room-office.do	true	
+117895	Small Space Dining & Kitchen	116796	/116715/116796/117895	3	https://www.worldmarket.com/category/furniture/small-spaces/dining-kitchen.do	true	
+117896	Small Space Storage	116796	/116715/116796/117896	2	https://www.worldmarket.com/category/furniture/small-spaces/storage.do	true	
+117897	Small Space Sofas & Daybeds	116796	/116715/116796/117897	4	https://www.worldmarket.com/category/furniture/small-spaces/sofas-daybeds.do	true	
+117898	Small Space Office	116796	/116715/116796/117898	5	https://www.worldmarket.com/category/furniture/small-spaces/office.do	true	
+117899	Small Space Seating and Benches	116796	/116715/116796/117899	0	https://www.worldmarket.com/category/furniture/small-spaces/seating-benches.do	true	
+117900	Small Space Coffee & Side Tables	116796	/116715/116796/117900	1	https://www.worldmarket.com/category/furniture/small-spaces/coffee-side-tables.do	true	
+117901	Small Space Bedroom	116796	/116715/116796/117901	6	https://www.worldmarket.com/category/furniture/small-spaces/bedroom.do	true	
+117905	Adirondack Chair Cushions	116834	/116725/116834/117905	3	https://www.worldmarket.com/category/outdoor/cushions-pillows/adirondack.do	true	
+120145	Outdoor Best Sellers	116725	/116725/120145	4	https://www.worldmarket.com/category/outdoor/best-sellers.do	true	
+117409	New Decor & Pillows	116728	/116728/117409	11	https://www.worldmarket.com/category/home-decor-pillows/new.do	true	
+117398	Cinco de Mayo	116735	/116735/117398	16	https://www.worldmarket.com/category/holiday/cinco-de-mayo.do	false	
+117399	Cyber Monday	116735	/116735/117399	8	https://www.worldmarket.com/category/holiday/cyber-monday.do	false	
+117410	New Bed and Bath	116729	/116729/117410	10	https://www.worldmarket.com/category/bed-bath/new.do	true	
+117400	Passover	116735	/116735/117400	13	https://www.worldmarket.com/category/holiday/passover.do	false	
+117401	Thai New Year	116735	/116735/117401	14	https://www.worldmarket.com/category/holiday/thai-new-year.do	false	
+117402	Fourth of July	116735	/116735/117402	19	https://www.worldmarket.com/category/holiday/fourth-of-july.do	false	
+117405	New Furniture	116715	/116715/117405	8	https://www.worldmarket.com/category/furniture/new.do	true	
+117411	New Dining	116730	/116730/117411	8	https://www.worldmarket.com/category/dining/new.do	true	
+117406	New Outdoor	116725	/116725/117406	7	https://www.worldmarket.com/category/outdoor/new.do	true	
+117408	New Lighting	116727	/116727/117408	11	https://www.worldmarket.com/category/lighting/new.do	true	
+117412	New Kitchen	116731	/116731/117412	9	https://www.worldmarket.com/category/kitchen/new.do	true	
+117413	New Food & Drink	116732	/116732/117413	4	https://www.worldmarket.com/category/food-and-drink/new.do	true	
+118037	Wall Frames	116899	/116728/116899/118037	7	https://www.worldmarket.com/category/home-decor-pillows/wall-art-decor/frames.do	true	
+118695	Lumbar Pillows	116885	/116728/116885/118695	2	https://www.worldmarket.com/category/home-decor-pillows/pillows/lumbar.do	true	
+118696	Indoor/Outdoor Pillows	116885	/116728/116885/118696	6	https://www.worldmarket.com/category/home-decor-pillows/pillows/indoor-outdoor.do	true	
+118725	Shop by Brand	116731	/116731/118725	11	https://www.worldmarket.com/category/kitchen/shop-by-brand.do	true	
+118726	Bodum	118725	/116731/118725/118726	1	https://www.worldmarket.com/category/kitchen/shop-by-brand/bodum.do	false	
+118727	Boska	118725	/116731/118725/118727	2	https://www.worldmarket.com/category/kitchen/shop-by-brand/boska.do	false	
+118729	Charcoal Companion	118725	/116731/118725/118729	4	https://www.worldmarket.com/category/kitchen/shop-by-brand/charcoal-companion.do	false	
+118735	Chef'n	118725	/116731/118725/118735	5	https://www.worldmarket.com/category/kitchen/shop-by-brand/chefn.do	false	
+118736	Chemex	118725	/116731/118725/118736	6	https://www.worldmarket.com/category/kitchen/shop-by-brand/chemex.do	false	
+118738	Enclume	118725	/116731/118725/118738	9	https://www.worldmarket.com/category/kitchen/shop-by-brand/enclume.do	false	
+118739	Epicurean	118725	/116731/118725/118739	10	https://www.worldmarket.com/category/kitchen/shop-by-brand/epicurean.do	false	
+118740	GreenPan	118725	/116731/118725/118740	12	https://www.worldmarket.com/category/kitchen/shop-by-brand/greenpan.do	false	
+118742	Joseph Joseph	118725	/116731/118725/118742	15	https://www.worldmarket.com/category/kitchen/shop-by-brand/joseph-joseph.do	false	
+118745	Lodge Cast Iron	118725	/116731/118725/118745	21	https://www.worldmarket.com/category/kitchen/shop-by-brand/lodge-cast-iron.do	false	
+118746	Mason Cash	118725	/116731/118725/118746	23	https://www.worldmarket.com/category/kitchen/shop-by-brand/mason-cash.do	false	
+117825	Top Picks for Mom	117396	/116735/117396/117825	0	https://www.worldmarket.com/category/holiday/mothers-day-gifts/top-picks.do	true	
+117826	Clothing & Accessories Gifts	117396	/116735/117396/117826	4	https://www.worldmarket.com/category/holiday/mothers-day-gifts/jewelry-clothing.do	true	
+117827	Bag & Tote Gifts	117396	/116735/117396/117827	7	https://www.worldmarket.com/category/holiday/mothers-day-gifts/bags-totes.do	false	
+117828	Decor & Gifts for the Home	117396	/116735/117396/117828	5	https://www.worldmarket.com/category/holiday/mothers-day-gifts/decor.do	true	
+118748	Picnic Time	118725	/116731/118725/118748	26	https://www.worldmarket.com/category/kitchen/shop-by-brand/picnic-time.do	false	
+117829	Cooking & Baking Gifts	117396	/116735/117396/117829	8	https://www.worldmarket.com/category/holiday/mothers-day-gifts/cooking-baking.do	false	
+117830	Brunch Gift Ideas	117396	/116735/117396/117830	2	https://www.worldmarket.com/category/holiday/mothers-day-gifts/brunch.do	true	
+117831	Outdoor Furniture Gifts for Mother’s Day	117396	/116735/117396/117831	9	https://www.worldmarket.com/category/holiday/mothers-day-gifts/outdoor.do	false	
+117832	Bath & Body Gifts	117396	/116735/117396/117832	3	https://www.worldmarket.com/category/holiday/mothers-day-gifts/bath-body.do	true	
+117833	Gift Wrap & Stationery	117396	/116735/117396/117833	6	https://www.worldmarket.com/category/holiday/mothers-day-gifts/gift-wrap.do	true	
+118749	Polder	118725	/116731/118725/118749	27	https://www.worldmarket.com/category/kitchen/shop-by-brand/polder.do	false	
+118752	Shun	118725	/116731/118725/118752	30	https://www.worldmarket.com/category/kitchen/shop-by-brand/shun-knives.do	false	
+118754	Victorinox	118725	/116731/118725/118754	35	https://www.worldmarket.com/category/kitchen/shop-by-brand/victorinox.do	false	
+118755	Weck	118725	/116731/118725/118755	36	https://www.worldmarket.com/category/kitchen/shop-by-brand/weck.do	false	
+118756	Zwilling J.A. Henckels	118725	/116731/118725/118756	38	https://www.worldmarket.com/category/kitchen/shop-by-brand/zwilling-henckels-knives.do	false	
+118757	Zyliss	118725	/116731/118725/118757	39	https://www.worldmarket.com/category/kitchen/shop-by-brand/zyliss.do	false	
+118975	Sackcloth & Ashes	116734	/116734/118975	12	https://www.worldmarket.com/category/gifts/sackcloth-and-ashes.do	false	
+119287	Always A Deal		/119287	13	https://www.worldmarket.com/category/always-a-deal.do	true	
+119735	Dinnerware	116731	/116731/119735	0	https://www.worldmarket.com/category/kitchen/dinnerware.do	true	
+119736	Lighting	116728	/116728/119736	1	https://www.worldmarket.com/category/home-decor-pillows/lighting.do	true	
+119845	Lighting Best Sellers	116727	/116727/119845	1	https://www.worldmarket.com/category/lighting/best-sellers.do	true	
+120585	Kilner	118725	/116731/118725/120585	17	https://www.worldmarket.com/category/kitchen/shop-by-brand/Kilner.do	true	
+117431	Holidays	117419	/117419/117431	13	https://www.worldmarket.com/category/sale/holidays.do	true	
+117414	New Jewelry & Clothing	116733	/116733/117414	5	https://www.worldmarket.com/category/jewelry-clothing/new.do	true	
+117415	Shop All Gifts	116734	/116734/117415	2	https://www.worldmarket.com/category/gifts/all.do	true	
+117416	New Gifts	116734	/116734/117416	3	https://www.worldmarket.com/category/gifts/new.do	true	
+117417	Shop All Holidays	116735	/116735/117417	7	https://www.worldmarket.com/category/holiday/all.do	true	
+117418	New Holidays	116735	/116735/117418	6	https://www.worldmarket.com/category/holiday/new.do	true	
+117419	Sale		/117419	14	https://www.worldmarket.com/category/sale.do	true	
+117420	Furniture	117419	/117419/117420	2	https://www.worldmarket.com/category/sale/furniture.do	true	
+117421	Outdoor	117419	/117419/117421	3	https://www.worldmarket.com/category/sale/outdoor.do	true	
+117422	Rugs & Curtains	117419	/117419/117422	15	https://www.worldmarket.com/category/sale/rugs-curtains.do	false	
+117423	Lighting	117419	/117419/117423	5	https://www.worldmarket.com/category/sale/lighting.do	true	
+117424	Decor & Pillows	117419	/117419/117424	6	https://www.worldmarket.com/category/sale/home-decor-pillows.do	true	
+117425	Bed & Bath	117419	/117419/117425	7	https://www.worldmarket.com/category/sale/bed-bath.do	true	
+117426	Dining	117419	/117419/117426	8	https://www.worldmarket.com/category/sale/dining.do	true	
+117427	Kitchen	117419	/117419/117427	9	https://www.worldmarket.com/category/sale/kitchen.do	true	
+117428	Food & Drink	117419	/117419/117428	10	https://www.worldmarket.com/category/sale/food-drink.do	true	
+117429	Jewelry & Clothing	117419	/117419/117429	11	https://www.worldmarket.com/category/sale/jewelry-clothing.do	true	
+117430	Gifts	117419	/117419/117430	12	https://www.worldmarket.com/category/sale/gifts-accessories.do	true	
+117462	Artisan Furniture	116715	/116715/117462	7	https://www.worldmarket.com/category/furniture/artisan-furniture.do	true	
+117463	BBQ Sauce	117121	/116732/117107/117121/117463	117463	https://www.worldmarket.com/category/food-and-drink/food/condiments-sauces/bbq-sauce.do	true	
+117464	Simmer Sauces	117121	/116732/117107/117121/117464	117464	https://www.worldmarket.com/category/food-and-drink/food/condiments-sauces/simmer-sauce.do	true	
+117465	Pasta Sauces	117121	/116732/117107/117121/117465	117465	https://www.worldmarket.com/category/food-and-drink/food/condiments-sauces/pasta-sauces.do	true	
+117466	Spacious & Rustic	116772	/116715/116746/116772/117466	2	https://www.worldmarket.com/category/furniture/dining-room/shop-the-room-dining/rustic.do	false	
+117467	Canteen Cozy	116772	/116715/116746/116772/117467	3	https://www.worldmarket.com/category/furniture/dining-room/shop-the-room-dining/canteen.do	false	
+117468	Modern Infusion	116772	/116715/116746/116772/117468	4	https://www.worldmarket.com/category/furniture/dining-room/shop-the-room-dining/modern.do	false	
+117469	Traditional Farmhouse	116772	/116715/116746/116772/117469	5	https://www.worldmarket.com/category/furniture/dining-room/shop-the-room-dining/traditional-farmhouse.do	false	
+117470	Everyday Heirloom	116772	/116715/116746/116772/117470	6	https://www.worldmarket.com/category/furniture/dining-room/shop-the-room-dining/heirloom.do	false	
+117472	French Countryside	116772	/116715/116746/116772/117472	7	https://www.worldmarket.com/category/furniture/dining-room/shop-the-room-dining/french-countryside.do	false	
+117473	Urban Loft	116772	/116715/116746/116772/117473	8	https://www.worldmarket.com/category/furniture/dining-room/shop-the-room-dining/urban-loft.do	false	
+117474	Farmhouse Chic	116772	/116715/116746/116772/117474	9	https://www.worldmarket.com/category/furniture/dining-room/shop-the-room-dining/farmhouse.do	false	
+117475	Mid-Century Modern	116772	/116715/116746/116772/117475	10	https://www.worldmarket.com/category/furniture/dining-room/shop-the-room-dining/mid-century.do	false	
+117476	Eclectic Dining	116772	/116715/116746/116772/117476	11	https://www.worldmarket.com/category/furniture/dining-room/shop-the-room-dining/eclectic.do	false	
+117477	Traditional	116772	/116715/116746/116772/117477	12	https://www.worldmarket.com/category/furniture/dining-room/shop-the-room-dining/traditional.do	false	
+117479	Eclectic Transitional	116772	/116715/116746/116772/117479	13	https://www.worldmarket.com/category/furniture/dining-room/shop-the-room-dining/eclectic-transitional.do	false	
+117480	Rustic Simplicity	116772	/116715/116746/116772/117480	14	https://www.worldmarket.com/category/furniture/dining-room/shop-the-room-dining/rustic-simplicity.do	false	
+117481	Mid-Century Inspired	116772	/116715/116746/116772/117481	15	https://www.worldmarket.com/category/furniture/dining-room/shop-the-room-dining/mid-century-inspired.do	false	
+117482	Modern Eclectic	116772	/116715/116746/116772/117482	16	https://www.worldmarket.com/category/furniture/dining-room/shop-the-room-dining/modern-eclectic.do	false	
+117483	Blush of Nature	116773	/116715/116754/116773/117483	0	https://www.worldmarket.com/category/furniture/living-room/shop-the-room-living/blush-of-nature.do	false	
+117484	Textured Neutrals	116773	/116715/116754/116773/117484	117484	https://www.worldmarket.com/category/furniture/living-room/shop-the-room-living/textured-neutrals.do	false	
+117485	Modern Eclectic	116773	/116715/116754/116773/117485	117485	https://www.worldmarket.com/category/furniture/living-room/shop-the-room-living/modern-eclectic.do	false	
+117486	Rustic Cottage	116782	/116715/116774/116782/117486	0	https://www.worldmarket.com/category/furniture/bedroom/shop-the-room/rustic.do	false	
+117487	Farmhouse Comfort	116782	/116715/116774/116782/117487	117487	https://www.worldmarket.com/category/furniture/bedroom/shop-the-room/farmhouse.do	false	
+117488	Shop the Room	116715	/116715/117488	15	https://www.worldmarket.com/category/furniture/shop-the-room.do	true	
+117496	Artisan Gifts	116948	/116728/116948/117496	2	https://www.worldmarket.com/category/home-decor-pillows/decorative-accessories/handmade-artisan-gifts.do	true	
+117497	White Wine	117230	/116732/117229/117230/117497	0	https://www.worldmarket.com/category/food-and-drink/wine-beer/wine/white.do	true	
+117498	Red Wine	117230	/116732/117229/117230/117498	117498	https://www.worldmarket.com/category/food-and-drink/wine-beer/wine/red.do	true	
+117499	Rosé	117230	/116732/117229/117230/117499	117499	https://www.worldmarket.com/category/food-and-drink/wine-beer/wine/rose.do	true	
+117500	Sparkling Wine	117230	/116732/117229/117230/117500	117500	https://www.worldmarket.com/category/food-and-drink/wine-beer/wine/sparkling.do	true	
+117505	Gift Cards	116734	/116734/117505	13	https://www.worldmarket.com/category/gifts/gift-cards.do	true	
+117765	Desert Inspiration	116772	/116715/116746/116772/117765	117765	https://www.worldmarket.com/category/furniture/dining-room/shop-the-room-dining/desert.do	false	
+117766	Rustic Flare	116772	/116715/116746/116772/117766	117766	https://www.worldmarket.com/category/furniture/dining-room/shop-the-room-dining/rustic-flare.do	false	
+117767	Modern Versatile	116773	/116715/116754/116773/117767	117767	https://www.worldmarket.com/category/furniture/living-room/shop-the-room-living/versatile.do	false	
+117768	Color Block Comfy	117715	/116725/116816/117715/117768	117768	https://www.worldmarket.com/category/outdoor/furniture/shop-the-room/color-block.do	false	
+117769	Chunky & Bold	117715	/116725/116816/117715/117769	117769	https://www.worldmarket.com/category/outdoor/furniture/shop-the-room/bold.do	false	
+117770	Tropic Sun Light	117715	/116725/116816/117715/117770	117770	https://www.worldmarket.com/category/outdoor/furniture/shop-the-room/tropic.do	false	
+118065	Beauty Products	116990	/116729/116990/118065	0	https://www.worldmarket.com/category/bed-bath/skin-care/beauty-products.do	true	
+118286	Home Decorators	117268	/116734/117268/118286	9	https://www.worldmarket.com/category/gifts/gifts-by-recipient/home-decor.do	true	
+118287	Nature Lovers	117268	/116734/117268/118287	10	https://www.worldmarket.com/category/gifts/gifts-by-recipient/nature-lover.do	true	
+118288	Tea Lovers	117268	/116734/117268/118288	11	https://www.worldmarket.com/category/gifts/gifts-by-recipient/tea-gifts.do	true	
+118289	Coffee Lovers	117268	/116734/117268/118289	12	https://www.worldmarket.com/category/gifts/gifts-by-recipient/coffee-gifts.do	true	
+118290	Zen & Relaxation	117268	/116734/117268/118290	14	https://www.worldmarket.com/category/gifts/gifts-by-recipient/zen-gifts.do	true	
+118291	Wine Lovers	117268	/116734/117268/118291	13	https://www.worldmarket.com/category/gifts/gifts-by-recipient/wine-gifts.do	true	
+119055	Christmas Advent Calendars	117330	/116735/117330/119055	2	https://www.worldmarket.com/category/holiday/christmas/advent-calendars.do	true	
+119165	Duralex	118725	/116731/118725/119165	8	https://www.worldmarket.com/category/kitchen/shop-by-brand/duralex.do	false	
+119166	Lekue	118725	/116731/118725/119166	20	https://www.worldmarket.com/category/kitchen/shop-by-brand/lekue.do	false	
+119935	Gifts	119425	/117419/119425/119935	10	https://www.worldmarket.com/category/sale/clearance/gifts.do	false	
+119995	Coffee And Accent Tables	116816	/116725/116816/119995	3	https://www.worldmarket.com/category/outdoor/furniture/coffee-tables.do	true	
+120325	Daily Deals	117419	/117419/120325	1	https://www.worldmarket.com/category/sale/daily-deals.do	false	
+120465	Food & Drink	119425	/117419/119425/120465	8	https://www.worldmarket.com/category/sale/clearance/food-drink.do	false	
+120466	Jewelry & Clothing	119425	/117419/119425/120466	9	https://www.worldmarket.com/category/sale/clearance/jewelry-clothing.do	false	
+120467	Outdoor	119425	/117419/119425/120467	0	https://www.worldmarket.com/category/sale/clearance/outdoor.do	false	
+120535	USA Pan	118725	/116731/118725/120535	34	https://www.worldmarket.com/category/kitchen/shop-by-brand/usa-pan.do	true	
+120665	Face Masks	117247	/116733/117247/120665	0	https://www.worldmarket.com/category/jewelry-clothing/accessories/face-masks.do	true	
+120666	3' x 5' Area Rugs	119555	/119555/120666	9	https://www.worldmarket.com/category/rugs/3-x-5-area-rugs.do	true	
+117240	Drop Earrings	117238	/116733/117238/117240	117240	https://www.worldmarket.com/category/jewelry-clothing/earrings/drop-earrings.do	true	
+117241	Hoop Earrings	117238	/116733/117238/117241	117241	https://www.worldmarket.com/category/jewelry-clothing/earrings/hoop-earrings.do	true	
+117242	Stud Earrings	117238	/116733/117238/117242	117242	https://www.worldmarket.com/category/jewelry-clothing/earrings/studs.do	true	
+117243	Women's Clothing	116733	/116733/117243	0	https://www.worldmarket.com/category/jewelry-clothing/womens-clothing.do	true	
+117244	Women's Dresses	117243	/116733/117243/117244	0	https://www.worldmarket.com/category/jewelry-clothing/womens-clothing/dresses.do	true	
+117245	Women's Tops	117243	/116733/117243/117245	117245	https://www.worldmarket.com/category/jewelry-clothing/womens-clothing/womens-tops.do	true	
+117246	Pajamas and Robes	117243	/116733/117243/117246	117246	https://www.worldmarket.com/category/jewelry-clothing/womens-clothing/pajamas-and-robes.do	true	
+117247	Accessories	116733	/116733/117247	3	https://www.worldmarket.com/category/jewelry-clothing/accessories.do	true	
+117248	Bags and Totes	117247	/116733/117247/117248	1	https://www.worldmarket.com/category/jewelry-clothing/accessories/bags-and-totes.do	true	
+117249	Hats	117247	/116733/117247/117249	2	https://www.worldmarket.com/category/jewelry-clothing/accessories/hats.do	true	
+117250	Hair Accessories	117247	/116733/117247/117250	3	https://www.worldmarket.com/category/jewelry-clothing/accessories/hair-accessories.do	false	
+117251	Cold Weather Accessories	117247	/116733/117247/117251	4	https://www.worldmarket.com/category/jewelry-clothing/accessories/cold-weather-accessories.do	false	
+117252	Scarves and Shawls	116733	/116733/117252	7	https://www.worldmarket.com/category/jewelry-clothing/scarves-shawls.do	true	
+117253	Scarves	117252	/116733/117252/117253	0	https://www.worldmarket.com/category/jewelry-clothing/scarves-shawls/scarves.do	false	
+117254	Infinity Scarves	117252	/116733/117252/117254	117254	https://www.worldmarket.com/category/jewelry-clothing/scarves-shawls/infinity-scarves.do	false	
+117255	Shawls	117252	/116733/117252/117255	117255	https://www.worldmarket.com/category/jewelry-clothing/scarves-shawls/shawls.do	false	
+117270	Him	117268	/116734/117268/117270	1	https://www.worldmarket.com/category/gifts/gifts-by-recipient/for-him.do	true	
+117256	Pashmina Style Shawls	117252	/116733/117252/117256	117256	https://www.worldmarket.com/category/jewelry-clothing/scarves-shawls/pashminas.do	false	
+117257	Jewelry Sets	116733	/116733/117257	13	https://www.worldmarket.com/category/jewelry-clothing/jewelry-sets.do	true	
+117258	Bracelets	116733	/116733/117258	12	https://www.worldmarket.com/category/jewelry-clothing/bracelets.do	true	
+117271	Kids	117268	/116734/117268/117271	2	https://www.worldmarket.com/category/gifts/gifts-by-recipient/for-kids.do	true	
+117273	Foodies	117268	/116734/117268/117273	4	https://www.worldmarket.com/category/gifts/gifts-by-recipient/the-gourmet.do	true	
+117274	Cocktail Enthusiasts	117268	/116734/117268/117274	5	https://www.worldmarket.com/category/gifts/gifts-by-recipient/cocktail-enthusiast.do	true	
+117275	Hostesses	117268	/116734/117268/117275	3	https://www.worldmarket.com/category/gifts/gifts-by-recipient/the-host.do	true	
+117276	Pet Lovers	117268	/116734/117268/117276	6	https://www.worldmarket.com/category/gifts/gifts-by-recipient/for-pets.do	true	
+117277	Teachers	117268	/116734/117268/117277	7	https://www.worldmarket.com/category/gifts/gifts-by-recipient/teacher.do	true	
+117278	Coworkers	117268	/116734/117268/117278	8	https://www.worldmarket.com/category/gifts/gifts-by-recipient/coworker.do	true	
+117280	Toys and Games	116734	/116734/117280	0	https://www.worldmarket.com/category/gifts/toys-and-games.do	true	
+117281	Toys	117280	/116734/117280/117281	2	https://www.worldmarket.com/category/gifts/toys-and-games/toys.do	true	
+117282	Games and Puzzles	117280	/116734/117280/117282	0	https://www.worldmarket.com/category/gifts/toys-and-games/games-puzzles.do	true	
+117283	Kids Books	117280	/116734/117280/117283	3	https://www.worldmarket.com/category/gifts/toys-and-games/little-golden-books-kids.do	true	
+117284	Plush Toys	117280	/116734/117280/117284	5	https://www.worldmarket.com/category/gifts/toys-and-games/kids-plush-toys.do	true	
+117285	Kids Décor	117280	/116734/117280/117285	6	https://www.worldmarket.com/category/gifts/toys-and-games/kids-decor.do	false	
+117286	Kids Bath Toys	117280	/116734/117280/117286	7	https://www.worldmarket.com/category/gifts/toys-and-games/kids-bath-toys.do	false	
+117287	Arts and Crafts	117280	/116734/117280/117287	4	https://www.worldmarket.com/category/gifts/toys-and-games/kids-arts-crafts.do	true	
+117260	Jewelry Display and Boxes	116733	/116733/117260	11	https://www.worldmarket.com/category/jewelry-clothing/jewelry-display-boxes.do	true	
+117261	Boho Collection	116733	/116733/117261	6	https://www.worldmarket.com/category/jewelry-clothing/boho-collection.do	true	
+117262	All Jewelry	116733	/116733/117262	9	https://www.worldmarket.com/category/jewelry-clothing/shop-all-jewelry.do	true	
+117263	Gifts by Price	116734	/116734/117263	10	https://www.worldmarket.com/category/gifts/gifts-by-price.do	true	
+117264	Gifts Under $15	117263	/116734/117263/117264	0	https://www.worldmarket.com/category/gifts/gifts-by-price/under-15.do	true	
+117265	Gifts Under $25	117263	/116734/117263/117265	117265	https://www.worldmarket.com/category/gifts/gifts-by-price/under-25.do	true	
+117288	Kites and Outdoor Toys	117280	/116734/117280/117288	8	https://www.worldmarket.com/category/gifts/toys-and-games/kites-outdoor-toys.do	false	
+117266	Gifts Under $50	117263	/116734/117263/117266	117266	https://www.worldmarket.com/category/gifts/gifts-by-price/under-50.do	true	
+117268	Gifts by Recipient	116734	/116734/117268	8	https://www.worldmarket.com/category/gifts/gifts-by-recipient.do	true	
+117269	Her	117268	/116734/117268/117269	0	https://www.worldmarket.com/category/gifts/gifts-by-recipient/for-her.do	true	
+117289	Gift Wrap and Stationery	116734	/116734/117289	7	https://www.worldmarket.com/category/gifts/gift-wrap.do	true	
+117290	Decorative Paper and Gift Wrap	117289	/116734/117289/117290	0	https://www.worldmarket.com/category/gifts/gift-wrap/decorative-paper-gift-wrap.do	true	
+117291	Gift Bags and Boxes	117289	/116734/117289/117291	117291	https://www.worldmarket.com/category/gifts/gift-wrap/gift-bags-boxes.do	true	
+117292	Gift Trim	117289	/116734/117289/117292	117292	https://www.worldmarket.com/category/gifts/gift-wrap/gift-trim.do	true	
+117293	Create a Gift	117289	/116734/117289/117293	117293	https://www.worldmarket.com/category/gifts/gift-wrap/create-a-gift.do	true	
+117294	Stationery, Journals, and Note Cards	117289	/116734/117289/117294	117294	https://www.worldmarket.com/category/gifts/gift-wrap/stationery.do	true	
+117295	Party Supplies	117289	/116734/117289/117295	117295	https://www.worldmarket.com/category/gifts/gift-wrap/party-supplies.do	true	
+117297	White Elephant Gifts	116734	/116734/117297	5	https://www.worldmarket.com/category/gifts/white-elephant-gifts.do	true	
+117298	How to Throw a White Elephant Party	116734	/116734/117298	14	https://www.worldmarket.com/category/gifts/white-elephant-rules.do	false	
+117299	Gift Baskets	116734	/116734/117299	9	https://www.worldmarket.com/category/gifts/gift-baskets.do	true	
+117301	Top Sellers	117299	/116734/117299/117301	0	https://www.worldmarket.com/category/gifts/gift-baskets/top-sellers.do	true	
+117302	Holiday	117299	/116734/117299/117302	1	https://www.worldmarket.com/category/gifts/gift-baskets/holiday.do	false	
+117303	Everyday Gourmet	117299	/116734/117299/117303	2	https://www.worldmarket.com/category/gifts/gift-baskets/everyday-gourmet.do	true	
+117306	Gift Sets	116734	/116734/117306	6	https://www.worldmarket.com/category/gifts/gift-sets.do	true	
+117307	Gifts by Occasion	116734	/116734/117307	4	https://www.worldmarket.com/category/gifts/gift-by-occasion.do	true	
+117308	Birthday Gifts	117307	/116734/117307/117308	0	https://www.worldmarket.com/category/gifts/gift-by-occasion/birthday%2Bgifts.do	true	
+117309	Wedding Gifts	117307	/116734/117307/117309	1	https://www.worldmarket.com/category/gifts/gift-by-occasion/wedding-gifts.do	true	
+117318	Easter	116735	/116735/117318	15	https://www.worldmarket.com/category/holiday/easter.do	false	
+117319	Easter Baskets	117318	/116735/117318/117319	1	https://www.worldmarket.com/category/holiday/easter/easter-baskets.do	false	
+117320	Easter Candy	117318	/116735/117318/117320	3	https://www.worldmarket.com/category/holiday/easter/easter-candy.do	false	
+117321	Easter Basket Fillers and Toys	117318	/116735/117318/117321	2	https://www.worldmarket.com/category/holiday/easter/easter-basket-fillers-and-toys.do	false	
+117322	Easter Grass and Gift Wrap	117318	/116735/117318/117322	4	https://www.worldmarket.com/category/holiday/easter/easter%2Bgrass%2Band%2Bgift%2Bwrap.do	false	
+117323	Easter Decor	117318	/116735/117318/117323	0	https://www.worldmarket.com/category/holiday/easter/decorating-home.do	false	
+117324	Easter Entertaining	117318	/116735/117318/117324	5	https://www.worldmarket.com/category/holiday/easter/entertaining-kitchen.do	false	
+117325	Nestler	117318	/116735/117318/117325	8	https://www.worldmarket.com/category/holiday/easter/nestler.do	false	
+117326	Easter Brunch	117318	/116735/117318/117326	7	https://www.worldmarket.com/category/holiday/easter/easter-brunch.do	false	
+117327	Easter Baking	117318	/116735/117318/117327	6	https://www.worldmarket.com/category/holiday/easter/easter-baking.do	false	
+117328	Father's Day	116735	/116735/117328	18	https://www.worldmarket.com/category/holiday/fathers-day.do	false	
+117329	St. Patrick's Day	116735	/116735/117329	12	https://www.worldmarket.com/category/holiday/st-patricks-day.do	false	
+117311	Housewarming Gifts	117307	/116734/117307/117311	2	https://www.worldmarket.com/category/gifts/gift-by-occasion/housewarming-gifts.do	true	
+117312	Thank You Gifts	117307	/116734/117307/117312	3	https://www.worldmarket.com/category/gifts/gift-by-occasion/thank-you-gifts.do	true	
+117315	Lunar New Year	116735	/116735/117315	10	https://www.worldmarket.com/category/holiday/chinese-new-year.do	false	
+117316	Valentine's Day	116735	/116735/117316	9	https://www.worldmarket.com/category/holiday/valentines-day.do	false	
+117330	Christmas Shop	116735	/116735/117330	2	https://www.worldmarket.com/category/holiday/christmas.do	true	
+117331	Christmas Ornaments	117330	/116735/117330/117331	4	https://www.worldmarket.com/category/holiday/christmas/ornaments.do	true	
+117332	Retro Ornaments	117331	/116735/117330/117331/117332	0	https://www.worldmarket.com/category/holiday/christmas/ornaments/retro.do	true	
+117333	Classic Ornaments	117331	/116735/117330/117331/117333	117333	https://www.worldmarket.com/category/holiday/christmas/ornaments/classic.do	true	
+117335	Rustic Ornaments	117331	/116735/117330/117331/117335	117335	https://www.worldmarket.com/category/holiday/christmas/ornaments/rustic.do	true	
+117336	Christmas Decor	117330	/116735/117330/117336	0	https://www.worldmarket.com/category/holiday/christmas/holiday-decor.do	true	
+117337	Christmas Home Decor	117336	/116735/117330/117336/117337	1	https://www.worldmarket.com/category/holiday/christmas/holiday-decor/decorative-accessories.do	true	
+117338	Pillows and Throws	117336	/116735/117330/117336/117338	2	https://www.worldmarket.com/category/holiday/christmas/holiday-decor/pillows-throws.do	true	
+117339	Candles and Candle Holders	117336	/116735/117330/117336/117339	4	https://www.worldmarket.com/category/holiday/christmas/holiday-decor/candles.do	true	
+117340	Lights and Lanterns	117336	/116735/117330/117336/117340	7	https://www.worldmarket.com/category/holiday/christmas/holiday-decor/lights-lanterns.do	true	
+117317	Mardi Gras	116735	/116735/117317	11	https://www.worldmarket.com/category/holiday/mardi-gras.do	false	
+117384	Creepy Collection	117375	/116735/117375/117384	8	https://www.worldmarket.com/category/holiday/halloween/creepy-collection.do	false	
+117385	Classic Halloween	117375	/116735/117375/117385	6	https://www.worldmarket.com/category/holiday/halloween/classic-halloween.do	false	
+117345	Nutcrackers	117336	/116735/117330/117336/117345	5	https://www.worldmarket.com/category/holiday/christmas/holiday-decor/nutcrackers.do	true	
+117346	Christmas Crackers	117336	/116735/117330/117336/117346	3	https://www.worldmarket.com/category/holiday/christmas/holiday-decor/christmas-crackers.do	true	
+117347	Trim a Tree	117336	/116735/117330/117336/117347	6	https://www.worldmarket.com/category/holiday/christmas/holiday-decor/trim-a-tree.do	true	
+117349	Wreaths and Garlands	117336	/116735/117330/117336/117349	0	https://www.worldmarket.com/category/holiday/christmas/holiday-decor/wreaths-garlands.do	true	
+117351	Stockings and Tree Skirts	117330	/116735/117330/117351	5	https://www.worldmarket.com/category/holiday/christmas/stockings-tree-skirts.do	true	
+117352	Christmas Entertaining	117330	/116735/117330/117352	7	https://www.worldmarket.com/category/holiday/christmas/holiday-entertaining.do	true	
+117353	Dinnerware	117352	/116735/117330/117352/117353	0	https://www.worldmarket.com/category/holiday/christmas/holiday-entertaining/dinnerware.do	true	
+117355	Table Linens	117352	/116735/117330/117352/117355	117355	https://www.worldmarket.com/category/holiday/christmas/holiday-entertaining/table-linens.do	true	
+117358	Christmas Food & Drink	117330	/116735/117330/117358	3	https://www.worldmarket.com/category/holiday/christmas/food-and-drink.do	true	
+117360	Christmas Baking	117330	/116735/117330/117360	6	https://www.worldmarket.com/category/holiday/christmas/baking-central.do	true	
+117361	Cookies and Cakes	117358	/116735/117330/117358/117361	1	https://www.worldmarket.com/category/holiday/christmas/food-and-drink/cookies-and-cakes.do	true	
+117365	Holiday Candy and Snacks	117358	/116735/117330/117358/117365	0	https://www.worldmarket.com/category/holiday/christmas/food-and-drink/candy-and-snacks.do	true	
+117368	Wine and Beer	117358	/116735/117330/117358/117368	2	https://www.worldmarket.com/category/holiday/christmas/food-and-drink/wine-and-beer.do	true	
+117369	Gift Wrap	117330	/116735/117330/117369	10	https://www.worldmarket.com/category/holiday/christmas/gift-wrap.do	true	
+117370	Christmas Cards	117330	/116735/117330/117370	8	https://www.worldmarket.com/category/holiday/christmas/holiday-cards.do	true	
+117373	Stocking Stuffers	117330	/116735/117330/117373	1	https://www.worldmarket.com/category/holiday/christmas/stocking-stuffers.do	true	
+117374	Christmas Toys	117330	/116735/117330/117374	9	https://www.worldmarket.com/category/holiday/christmas/holiday-toys.do	true	
+117375	Halloween	116735	/116735/117375	0	https://www.worldmarket.com/category/holiday/halloween.do	false	
+117376	Halloween Décor	117375	/116735/117375/117376	0	https://www.worldmarket.com/category/holiday/halloween/decor.do	true	
+117377	Halloween Lights	117375	/116735/117375/117377	2	https://www.worldmarket.com/category/holiday/halloween/lighting.do	false	
+117378	Halloween Candy	117375	/116735/117375/117378	1	https://www.worldmarket.com/category/holiday/halloween/halloween-candy.do	true	
+117387	Thanksgiving	116735	/116735/117387	1	https://www.worldmarket.com/category/holiday/thanksgiving.do	true	
+117388	Thanksgiving Essentials	117387	/116735/117387/117388	2	https://www.worldmarket.com/category/holiday/thanksgiving/cooking-prep.do	true	
+117389	Autumn Décor	117387	/116735/117387/117389	0	https://www.worldmarket.com/category/holiday/thanksgiving/decor.do	true	
+117390	Entertaining	117387	/116735/117387/117390	1	https://www.worldmarket.com/category/holiday/thanksgiving/entertaining.do	true	
+117379	Halloween Entertaining	117375	/116735/117375/117379	3	https://www.worldmarket.com/category/holiday/halloween/entertaining.do	false	
+117380	Tricks and Treats	117375	/116735/117375/117380	4	https://www.worldmarket.com/category/holiday/halloween/halloween-tricks-treats.do	false	
+117381	Halloween Baking	117375	/116735/117375/117381	5	https://www.worldmarket.com/category/holiday/halloween/baking.do	false	
+117382	Los Muertos Collection	117375	/116735/117375/117382	9	https://www.worldmarket.com/category/holiday/halloween/los-muertos.do	false	
+117391	Food and Drink	117387	/116735/117387/117391	3	https://www.worldmarket.com/category/holiday/thanksgiving/food-and-drink.do	true	
+117392	New Year's Essentials	116735	/116735/117392	4	https://www.worldmarket.com/category/holiday/new-years-eve.do	true	
+117393	Food & Drink	117392	/116735/117392/117393	1	https://www.worldmarket.com/category/holiday/new-years-eve/food-drink.do	true	
+117394	Entertaining & Decorating	117392	/116735/117392/117394	0	https://www.worldmarket.com/category/holiday/new-years-eve/entertaining-decor.do	true	
+117395	Hanukkah	116735	/116735/117395	3	https://www.worldmarket.com/category/holiday/hanukkah.do	true	
+117396	Mother's Day	116735	/116735/117396	17	https://www.worldmarket.com/category/holiday/mothers-day-gifts.do	false	
+117397	Oktoberfest	116735	/116735/117397	20	https://www.worldmarket.com/category/holiday/oktoberfest.do	false	
+117383	Skull Collection	117375	/116735/117375/117383	7	https://www.worldmarket.com/category/holiday/halloween/skull-collection.do	false	

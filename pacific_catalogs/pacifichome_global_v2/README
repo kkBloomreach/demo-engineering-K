@@ -1,0 +1,20 @@
+PacificGlobal V2 English
+ - product catalog
+    - copied from PH2
+    - adjust url
+    - copied from:
+/Users/kirankundargi/work/brx_demos/projects/demoEngineering/demo-engineering-catalogs/pacifichome_v2/productcatalog 
+
+ - content catalog
+    - copied as is from ph2 content. It in turn uses CMS apis to load actual contents
+    - and map image urls to refer to pacific-saas instead of unsplash.com
+/Users/kirankundargi/work/brx_demos/projects/demoEngineering/demo-engineering-catalogs/pacifichome_v2/contentcatalog/data/output
+
+PacificGlobal V2  German
+ - product catalog
+    - 'intelligently' combined previous pacifichome_global german + ph2 english
+    
+ - content catalog
+    - use CMS APIs to load actual content files, convert to .jsonl format
+    - map image urls to refer to pacific-saas instead of unsplash.com
+

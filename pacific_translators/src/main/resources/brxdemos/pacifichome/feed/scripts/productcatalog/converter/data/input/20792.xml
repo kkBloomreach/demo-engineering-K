@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<feed>
+  <products>
+    <product>
+      <pid>20792</pid>
+      <skuid>98248</skuid>
+      <int_pid>118255</int_pid>
+      <int_skuid>100609</int_skuid>
+      <title>Nicolas Feuillatte Brut Champagne</title>
+      <mpn>20792</mpn>
+      <launch_date>2017-09-12T00:00:00.000-07:00</launch_date>
+      <is_new>F</is_new>
+      <keywords>beverage,wine,alcohol ,alcoholic beverage,drinks,cocktails,spirits,wine accessories,prosecco,sparkling,french wine,pinot noir,pinot meunier,chardonnay,champagne,cava,bubbly</keywords>
+      <description>Elegant and balanced, this French Champagne sparkles with juicy flavors of crème de cassis and Honeycrisp apple, while subtle hints of honey and smoke add depth and complexity. A rich, bright aperitif, this versatile bubbly is a go-to celebration in a bottle, perfect for toasting big festive gatherings and small cozy moments.</description>
+      <brand/>
+      <product_type>Champagne &amp; Sparkling Wine</product_type>
+      <url>https://pacifichome.bloomreach.com/products/20792</url>
+      <large_image>https://pacific-demo-data.bloomreach.cloud/home/images/20792_XXX_v1.tif</large_image>
+      <thumb_image>https://pacific-demo-data.bloomreach.cloud/home/images/20792_XXX_v1.tif</thumb_image>
+      <price>30.51</price>
+      <sale_price>19.83</sale_price>
+      <promotion/>
+      <availability>Out of stock</availability>
+      <condition>new</condition>
+      <colorFamily/>
+      <sizeFamily/>
+      <material/>
+      <pattern/>
+      <searchable>true</searchable>
+      <inStoreOnly>true</inStoreOnly>
+      <OnlineOnly>false</OnlineOnly>
+      <countryOfOrigin/>
+      <producttag/>
+      <solrInStock>false</solrInStock>
+      <subject/>
+      <ageRestriction>21 And Older</ageRestriction>
+      <collection/>
+      <cuisine/>
+      <dietaryConsideration/>
+      <finish/>
+      <flavor/>
+      <shape/>
+      <typeOfFabric/>
+      <typeOfFiber/>
+      <typeOfMetal/>
+      <typeOfWood/>
+      <wineAppellations/>
+      <wineVarietals>Champagne</wineVarietals>
+      <bread_crumb>Food &amp; Drink&gt;International Favorites&gt;French|Food &amp; Drink&gt;Wine, Beer &amp; Spirits&gt;Wine&gt;Sparkling Wine|Marketing Groups&gt;2019 Wk 23 Buy 6 Wine Sale|Marketing Groups&gt;2019 Wk 6 Buy 4 Wine Sale|Marketing Groups&gt;2018 Wk 48 Half Case Sale|Marketing Groups&gt;2019 Wk 28 Buy 4 Wine Sale|Marketing Groups&gt;WINE-CA&gt;BOPUS WINE CA|Food &amp; Drink&gt;Wine, Beer &amp; Spirits&gt;Wine|Food &amp; Drink&gt;Shop All Food &amp; Drink</bread_crumb>
+      <bread_crumb_id>116732&gt;117147&gt;117150|116732&gt;117229&gt;117230&gt;117500|123&gt;160|123&gt;157|123&gt;158|123&gt;161|123&gt;159&gt;163|116732&gt;117229&gt;117230|116732&gt;117235</bread_crumb_id>
+      <shipping_info/>
+      <num_reviews>5</num_reviews>
+      <rating>4.6</rating>
+      <sku_large_image>https://pacific-demo-data.bloomreach.cloud/home/images/20792_XXX_v1.tif</sku_large_image>
+      <sku_thumb_image>https://pacific-demo-data.bloomreach.cloud/home/images/20792_XXX_v1.tif</sku_thumb_image>
+      <sale_price_range_min>41.99</sale_price_range_min>
+      <sale_price_range_max>41.99</sale_price_range_max>
+      <shipping_weight>0.0</shipping_weight>
+      <collection_id/>
+      <entityType>product</entityType>
+      <bestSeller>0</bestSeller>
+      <style/>
+      <productStatus>Sale</productStatus>
+      <pickUpInStore>false</pickUpInStore>
+      <shipToStore>false</shipToStore>
+      <spuf>Pick Up Today|Available for Store Pick Up</spuf>
+      <onSale>false</onSale>
+      <sts_stores_available/>
+    </product>
+  </products>
+</feed>

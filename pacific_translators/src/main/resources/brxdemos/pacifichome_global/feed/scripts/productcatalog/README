@@ -1,0 +1,20 @@
+Generate product and content catalogs for pacifichome_global
+
+productcatalog:
+ - english
+    - subset created when generating pacifichome 'full' product catalog
+    - copy that as-is
+ - german
+    - translate the english subset to german(de) using openAI
+
+contentcatalog:
+ - english
+    - subset created when generating pacifichome 'full' content catalog
+    - copy that as-is
+ - german
+    - translate the english subset to german(de) using openAI
+
+Version log:
+ Oct 20, 2023:
+    - version 0.1 -- first version
+

@@ -1,0 +1,16 @@
+stepId (June 25)	from	input	result	total	browse_pdp	view_list	search_term	search_cat	sugg_req	sug_select_none	sug_select_term	sug_select_cat	sug_select_prod	atc	conv	start_url	select_pid_from_view_list	invalid data	exit
+0	browse_pdp	search_api_response suggest_api_response	pid_details	100	0	0	5	5	5	0	5	5	5	65	0	0	0	0	5
+1	view_list	search_api_response cat_api_response	none	100	0	0	10	5	5	0	5	5	5	0	0	0	60	0	5
+2	search_term	none (term selected in step) term (selected from suggest)	search_api_response	100	0	95	0	0	0	0	0	0	0	0	0	0	0	0	5
+3	search_cat	none (catid selected in step) catId (selected from suggest)	cat_api_response	100	0	95	0	0	0	0	0	0	0	0	0	0	0	0	5
+4	sugg_req	none	sugg_api_response	100	0	0	0	0	0	10	30	15	45	0	0	0	0	0	0
+5	sug_select_none	sugg_api_response	none	100	0	0	30	30	30	0	0	0	0	0	0	0	0	0	10
+6	sug_select_term	sugg_api_response	search_api_response	100	0	100	0	0	0	0	0	0	0	0	0	0	0	0	0
+7	sug_select_cat	sugg_api_response	cat_api_response	100	0	100	0	0	0	0	0	0	0	0	0	0	0	0	0
+8	sug_select_prod	sugg_api_response	pid_details	100	0	0	10	10	0	5	10	10	0	50	0	0	0	0	5
+9	atc	pid_details	none internally update cart	100	0	0	5	5	5	0	5	0	0	0	75	0	0	0	5
+10	convert	cart	none	100	0	0	5	5	5	5	5	0	0	0	0	0	0	0	75
+11	start_url	none	none	100	0	0	15	10	20	5	20	10	15	0	0	0	0	0	5
+12	select_pid_from_view_list	pid_details_list	pid_details	100	100	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+13	invalid data	none	none	100	0	0	0	0	0	0	0	0	0	0	0	75	0	0	25
+14	exit	none	none	100	0	0	0	0	0	0	0	0	0	0	0	0	0	0	100
