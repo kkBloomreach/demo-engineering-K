@@ -1,4 +1,14 @@
 {
     "java.configuration.updateBuildConfiguration": "interactive",
-     "window.title": "TrafficGenerator"
+    "window.title": "TrafficGenerator",
+     
+    "editor.inlineSuggest.enabled": false,
+    "editor.wordBasedSuggestions": "off",
+    "editor.quickSuggestions": {
+        "other": false,
+        "comments": false,
+        "strings": false
+    },
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.suggestOnTriggerCharacters": false
 }

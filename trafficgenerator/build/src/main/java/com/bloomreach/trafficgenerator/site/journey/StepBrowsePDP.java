@@ -81,12 +81,14 @@ public class StepBrowsePDP extends StepBase {
         BuildProductPagePixel pixelBuilder;
         int buildStatus;
         String url;
-
+        
         // prepare a product page pixelLog template
         pixelData = pixelTemplates.loadPixelTemplate (userRecord.getDeviceType());
 
         // update template
-        url = productDetails.getUrl (); // if productdetail is from suggestAPI response, it will have br_psugg....
+        // if productdetail is from suggestAPI response, it will have br_psugg....
+        // url will have "___" since FeedAlterator sets it as <pid>___<skuid>
+        url = productDetails.getUrl (); 
         if (url == null)    // really, this should not happen...
             url = BuildProductPagePixel.getProductPageUrl (productDetails.getPid (), productDetails.getSkuid());
 
