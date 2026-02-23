@@ -5,11 +5,12 @@ import java.io.*;
 import javax.net.ssl.HttpsURLConnection;
 
 import org.json.JSONObject;
+import com.bloomreach.trafficgenerator.GeneratorConstants;
 
 public class TestFeedIndexer {
 
     private final static String DC_ENDPOINT_STAGING = "https://api-staging.connect.bloomreach.com/dataconnect/api/v1";
-    private final static String REALM = "staging";
+    private final static String REALM = GeneratorConstants.REALM_STAGING;   // "staging" or "production"
     private final static String ACCOUNT_ID = "6475";
     private final static String CATALOG_NAME = "pacific_supply_mindcurv";
     private final static String DC_ACCESS_KEY = "pacific_supply_mindcurv-staging-814bfe11-bfcc-4138-b7ea-d01a81462fe2";

@@ -45,7 +45,7 @@ public class GeneratorConstants {
     public final static String REGION_US = "US";
     public final static String REGION_EU = "EU";
     public final static String REALM_STAGING = "staging";
-    public final static String REALM_PROD = "prod";
+    public final static String REALM_PROD = "production"; // "prod" changed to "production" in V3
 
     public final static String PIXEL_API_ENDPOINT_US = "https://p.brsrvr.com/pix.gif";
     public final static String PIXEL_API_ENDPOINT_EU = "https://p-eu.brsrvr.com/pix.gif";
@@ -60,8 +60,9 @@ public class GeneratorConstants {
     public final static String DISCOVERY_WIDGET_API_ENDPOINT_STAGING = "https://pathways-staging.dxpapi.com/api/v2/widgets/"; // end slash reqd
 
     // feed index
-    public final static String DATACONNECT_API_ENDPOINT_STAGING = "https://api-staging.connect.bloomreach.com/dataconnect/api/v1";
-    public final static String DATACONNECT_API_ENDPOINT_PROD = "https://api.connect.bloomreach.com/dataconnect/api/v1";
+    // public final static String DATACONNECT_API_ENDPOINT_STAGING = "https://api-staging.connect.bloomreach.com/dataconnect/api/v1";
+    // public final static String DATACONNECT_API_ENDPOINT_PROD = "https://api.connect.bloomreach.com/dataconnect/api/v1";
+    public final static String DATACONNECT_API_ENDPOINT_V3 = "https://discovery.bloomreach.com/dataconnect/api/v3";
 
     // traffic states/types/...
     public final static int TRAFFIC_STATE_LOW = 1;

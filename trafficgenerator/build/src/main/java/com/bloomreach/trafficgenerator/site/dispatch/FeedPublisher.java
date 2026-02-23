@@ -32,18 +32,13 @@ public class FeedPublisher {
         String bearerStr;
 
         MessageLogger.logDebug (String.format ("feed file path = %s, realm = %s", feedFilePath, realm));
-        if (realm.equals (GeneratorConstants.REALM_STAGING) == true)
-            dcEndpoint = GeneratorConstants.DATACONNECT_API_ENDPOINT_STAGING;
-        else if (realm.equals (GeneratorConstants.REALM_PROD) ==  true)
-            dcEndpoint = GeneratorConstants.DATACONNECT_API_ENDPOINT_PROD;
-        else
-            throw new Exception ("Feed indexer, incorrect realm");
+        dcEndpoint = GeneratorConstants.DATACONNECT_API_ENDPOINT_V3;
 
         // create once
         bearerStr = String.format ("%s %s", "Bearer", SiteConfig.getAccountConfigParam ("DATACONNECT_ACCESS_KEY"));
 
         try {
-            jobId = ingestFeed (feedFilePath, dcEndpoint, bearerStr);
+            jobId = ingestFeed (feedFilePath, dcEndpoint, realm, bearerStr);
             MessageLogger.logDebug (String.format ("Ingest jobId = %s", jobId));
         } catch (Exception e) {
             MessageLogger.logError (String.format ("Feed ingestion unsuccessful: %s", e.getMessage()));
@@ -51,7 +46,7 @@ public class FeedPublisher {
         }
 
         try {
-            waitStatus = waitForCompletion (jobId, dcEndpoint, bearerStr);
+            waitStatus = waitForCompletion (jobId, dcEndpoint, realm, bearerStr);
             if (waitStatus != DATACONNECT_OPERATION_SUCCESS) 
                 throw new Exception ("Feed ingest status unsuccessful: " + waitStatus);
         } catch (Exception e) {
@@ -60,7 +55,7 @@ public class FeedPublisher {
         }
 
         try {
-            jobId = indexFeed (dcEndpoint, bearerStr);
+            jobId = indexFeed (dcEndpoint, realm, bearerStr);
             MessageLogger.logDebug (String.format ("Index jobId = %s", jobId));
         } catch (Exception e) {
             MessageLogger.logError (String.format ("Feed index unsuccessful: %s", e.getMessage()));
@@ -68,7 +63,7 @@ public class FeedPublisher {
         }
 
         try {
-            waitStatus = waitForCompletion (jobId, dcEndpoint, bearerStr);
+            waitStatus = waitForCompletion (jobId, dcEndpoint, realm, bearerStr);
             if (waitStatus != DATACONNECT_OPERATION_SUCCESS) 
                 throw new Exception ("Feed ingest status unsuccessful: " + waitStatus);
         } catch (Exception e) {
@@ -77,7 +72,7 @@ public class FeedPublisher {
         }
     }
 
-    private String ingestFeed (String feedFilePath, String dcEndpoint, String bearerStr) throws Exception {
+    private String ingestFeed (String feedFilePath, String dcEndpoint, String realm, String bearerStr) throws Exception {
         HttpsURLConnection conn;
         String outputFeedStr;
         String jobId;
@@ -109,9 +104,10 @@ public class FeedPublisher {
             String serverUrlStr;
             URL serverUrl;
 
-            serverUrlStr = String.format ("%s/accounts/%s/catalogs/%s/products", dcEndpoint,
-                                                                             SiteConfig.getAccountConfigParam ("ACCOUNT_ID"),
-                                                                             SiteConfig.getAccountConfigParam ("CATALOG_NAME"));
+            serverUrlStr = String.format ("%s/accounts/%s/catalogs/%s/environments/%s/records", dcEndpoint,
+                                                                             SiteConfig.getAccountConfigParam ("ACCOUNT_NAME"),
+                                                                             SiteConfig.getAccountConfigParam ("CATALOG_NAME"),
+                                                                             realm);
             serverUrl = new URL (serverUrlStr);
             conn = (HttpsURLConnection) serverUrl.openConnection ();
             conn.setRequestMethod ("PUT");
@@ -142,6 +138,7 @@ public class FeedPublisher {
             int responseCode;
             StringBuffer receivedBuf;
             JSONObject receivedJson;
+            JSONObject receivedJsonData;
 
             MessageLogger.logDebug ("ingest waiting for response");
             responseCode = conn.getResponseCode ();
@@ -160,7 +157,8 @@ public class FeedPublisher {
             }
 
             receivedJson = new JSONObject (new String (receivedBuf));
-            jobId = (String) receivedJson.get ("jobId"); 
+            receivedJsonData = receivedJson.getJSONObject ("data");
+            jobId = (String) receivedJsonData.get ("job_id"); 
         }
 
         conn.disconnect ();
@@ -168,13 +166,13 @@ public class FeedPublisher {
         return jobId;
     }
 
-    private int waitForCompletion (String jobId, String dcEndpoint, String bearerStr) throws Exception {
+    private int waitForCompletion (String jobId, String dcEndpoint, String realm, String bearerStr) throws Exception {
         int opStat;
 
         do {
             try {
                 Thread.currentThread().sleep (MTB_CHECKSTATUS);
-                opStat = checkJobStatus (jobId, dcEndpoint, bearerStr);
+                opStat = checkJobStatus (jobId, dcEndpoint, realm, bearerStr);
             } catch (InterruptedException ie) {
                 opStat = WAIT_INTERRUPTED;
                 break;
@@ -184,7 +182,7 @@ public class FeedPublisher {
         return opStat;
     }
          
-    private int checkJobStatus (String jobId, String dcEndpoint, String bearerStr) throws Exception {
+    private int checkJobStatus (String jobId, String dcEndpoint, String realm, String bearerStr) throws Exception {
         HttpsURLConnection conn;
         int opStat;
 
@@ -192,7 +190,10 @@ public class FeedPublisher {
             String serverUrlStr;
             URL serverUrl;
 
-            serverUrlStr = String.format ("%s/jobs/%s", dcEndpoint, jobId);
+            serverUrlStr = String.format ("%s/accounts/%s/catalogs/%s/environments/%s/jobs/%s", dcEndpoint, 
+                                                                            SiteConfig.getAccountConfigParam ("ACCOUNT_NAME"),
+                                                                            SiteConfig.getAccountConfigParam ("CATALOG_NAME"),
+                                                                            realm, jobId);
 
             serverUrl = new URL (serverUrlStr);
             conn = (HttpsURLConnection) serverUrl.openConnection ();
@@ -210,6 +211,8 @@ public class FeedPublisher {
             int responseCode;
             StringBuffer receivedBuf;
             JSONObject receivedJson;
+            JSONObject receivedJsonData;
+            JSONObject receivedJsonDataJob;
             String status;
 
             MessageLogger.logDebug ("waiting for checkstatus response...");
@@ -228,9 +231,11 @@ public class FeedPublisher {
             }
 
             receivedJson = new JSONObject (new String (receivedBuf));
-            status = (String) receivedJson.get ("status"); 
+            receivedJsonData = receivedJson.getJSONObject ("data");
+            receivedJsonDataJob = receivedJsonData.getJSONObject ("job"); 
+            status = (String) receivedJsonDataJob.get ("status"); 
             switch (status) {
-                case "creating":
+                case "creating": // 'creating': doesn't exist in V3 ???
                 case "queued":
                 case "running":
                     opStat = DATACONNECT_OPERATION_CONTINUE_WAIT;
@@ -252,11 +257,11 @@ public class FeedPublisher {
         }
 
         conn.disconnect ();
-        MessageLogger.logDebug ("done checkJobStatus"); 
+        MessageLogger.logDebug ("\t -- done checkJobStatus"); 
         return opStat;
     }
 
-    private String indexFeed (String dcEndpoint, String bearerStr) throws Exception {
+    private String indexFeed (String dcEndpoint, String realm, String bearerStr) throws Exception {
         HttpsURLConnection conn;
         String jobId;
 
@@ -266,9 +271,10 @@ public class FeedPublisher {
             String serverUrlStr;
             URL serverUrl;
 
-            serverUrlStr = String.format ("%s/accounts/%s/catalogs/%s/indexes", dcEndpoint,
-                                                                             SiteConfig.getAccountConfigParam ("ACCOUNT_ID"),
-                                                                             SiteConfig.getAccountConfigParam ("CATALOG_NAME"));
+            serverUrlStr = String.format ("%s/accounts/%s/catalogs/%s/environments/%s/indexes", dcEndpoint,
+                                                                             SiteConfig.getAccountConfigParam ("ACCOUNT_NAME"),
+                                                                             SiteConfig.getAccountConfigParam ("CATALOG_NAME"),
+                                                                             realm);
             serverUrl = new URL (serverUrlStr);
             conn = (HttpsURLConnection) serverUrl.openConnection ();
             conn.setRequestMethod ("POST");
@@ -286,6 +292,7 @@ public class FeedPublisher {
             int responseCode;
             StringBuffer receivedBuf;
             JSONObject receivedJson;
+            JSONObject receivedJsonData;
 
             MessageLogger.logDebug ("waiting for index response...");
             responseCode = conn.getResponseCode ();
@@ -304,7 +311,8 @@ public class FeedPublisher {
             }
 
             receivedJson = new JSONObject (new String (receivedBuf));
-            jobId = (String) receivedJson.get ("jobId"); 
+            receivedJsonData = receivedJson.getJSONObject ("data");
+            jobId = (String) receivedJsonData.get ("job_id"); 
         }
 
         return jobId;

@@ -161,9 +161,10 @@ package com.bloomreach.trafficgenerator;
 // 2.3.7.1:  code cleanup after customjourney unit tests
 // 2.3.7.2:  RandomJourney -> customJourney, exit session entirely
 // 2.3.7.3:  Add variant_id (aka sku_id) in log file (for variant-slicing feature debug)
+// 2.3.8.0:  Changed dataconnect API endpoint to their version V3
 
 public class GeneratorVersion {
-    public final static String VERSION = "2.3.7.3-X"; // Make sure to also change pom.xml->"version"
+    public final static String VERSION = "2.3.8.0-X"; // Make sure to also change pom.xml->"version"
 
     private GeneratorVersion () {
     }

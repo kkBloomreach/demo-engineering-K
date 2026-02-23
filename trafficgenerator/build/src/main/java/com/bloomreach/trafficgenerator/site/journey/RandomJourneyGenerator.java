@@ -248,7 +248,7 @@ public class RandomJourneyGenerator {
                     stepResult = stepsHandler.handleStepSuggestQuery (stepResult, userRecord, logTime, stepLog);
                     logTime = stepResult.getEndTime ();
                     if (! (stepResult instanceof StepResultInvalidData)) {
-                        // next, log for step-info = 'select-prod'
+                        // next, log for step-info = 'select-product'
                         stepLog = newSessionLog.addStepLog (stepInfo.getStepId (), logTime);
                         stepLog.setUserSegment (userRecord.getSegment());
                         stepResult = stepsHandler.handleStepSuggestSelectProduct (stepResult, userRecord, logTime, stepLog);

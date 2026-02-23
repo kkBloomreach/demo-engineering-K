@@ -48,13 +48,19 @@ class ReindexerMain ():
                 continue
 
             if (account_config ['CATALOG_TYPE'] == 'product'):
+                logging.info ('Reindexing product catalog for account_name: %s' % account_config ["BR_ACCOUNT_NAME"])
                 ingest_and_indexer = ProductReindexer (account_config, self._command_line)
                 if (ingest_and_indexer.reingest_and_index () == False):
-                    logging.info ('Product reindex for account failed: %s' % account_config ["BR_ACCOUNT_NAME"])
+                    logging.info ('Product reindex for account_name failed: %s' % account_config ["BR_ACCOUNT_NAME"])
+                else:
+                    logging.info ('Catalog reindex successful for account_name : %s' % account_config ["BR_ACCOUNT_NAME"])
             elif (account_config ['CATALOG_TYPE'] == 'content'):
+                logging.info ('Reindexing content catalog for account_name: %s' % account_config ["BR_ACCOUNT_NAME"])
                 ingest_and_indexer = ContentReindexer (account_config, self._command_line)
                 if (ingest_and_indexer.reingest_and_index () == False):
-                    logging.info ('Content reindex for account failed: %s' % account_config ["BR_ACCOUNT_NAME"])
+                    logging.info ('Content reindex for account_name failed: %s' % account_config ["BR_ACCOUNT_NAME"])
+                else:
+                    logging.info ('Catalog reindex successful for account_name : %s' % account_config ["BR_ACCOUNT_NAME"])
             else:
                 logging.error ('Unknown catalog_type for account: %s' % account_config ["BR_ACCOUNT_NAME"])
         return True
