@@ -1,7 +1,8 @@
 # module_name and class_name. Currently, both are same names except the first-letter-case
 ## FEED --- FULL (and SMALL for debugging) -- expected to be already converted
 
-CATALOG_TO_CONVERT = "PacificHome" # OR PacificApparel
+#CATALOG_TO_CONVERT = "PacificHome" # OR PacificApparel
+CATALOG_TO_CONVERT = "PUMA"
 
 # -------------------
 if CATALOG_TO_CONVERT == "PacificHome":
@@ -36,6 +37,20 @@ elif CATALOG_TO_CONVERT == 'PacificApparel':
 
     PRODUCT_URL_PREFIX = 'https://pacific.bloomreach.com/apparel/products/'
 
+elif CATALOG_TO_CONVERT == "PUMA":
+    ''' 
+    ######### PUMA #######
+    '''
+
+    FILENAME_JSONL_SOURCE_FEED_IN = './data/input/puma/puma_en.jsonl'
+    #FILENAME_JSONL_SOURCE_FEED_IN = './data/input/puma/puma_en_10.jsonl'
+
+    FILENAME_UPDATED_CSV_FEED_OUT = './data/output/puma/puma_en_02242026.csv'
+
+    # JSONL created for debugging
+    FILENAME_UPDATED_JSONL_FEED_OUT = './data/output/puma/puma_en_02242026.jsonl'
+
+    PRODUCT_URL_PREFIX_UNUSED = 'https://eu.puma.com/de/en/pd/'
 else:
     print ('@@@ UNKNOWN CATALOG TO CONVERT: %s\n' % CATALOG_TO_CONVERT)
 

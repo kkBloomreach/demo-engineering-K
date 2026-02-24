@@ -101,14 +101,16 @@ class ConvertMain ():
         # if engagement=specific category_level attribs don't exist, collect them
         if 'category_level_1' not in discovery_record ['value']['attributes']:
             # collect from discovery-record. The 'category_paths' from engagement_record may have been deleted already
-            category_levels = self._collect_category_levels (discovery_record)
-            for i in range (0, cc.MAX_CATEGORY_LEVELS):
-                level_name = ''
-                if (i < len (category_levels)) and (category_levels [i]):
-                    level_name = category_levels [i]
-                attrib_name = '%s%s' % (cc.PREAMBLE_ATTRIB_NAME_CATEGORY_LEVEL, i+1)
-                engagement_record ['value']['attributes'][attrib_name] = level_name
-
+            if 'category_paths' in discovery_record ['value']['attributes']:
+                category_levels = self._collect_category_levels (discovery_record)
+                for i in range (0, cc.MAX_CATEGORY_LEVELS):
+                    level_name = ''
+                    if (i < len (category_levels)) and (category_levels [i]):
+                        level_name = category_levels [i]
+                    attrib_name = '%s%s' % (cc.PREAMBLE_ATTRIB_NAME_CATEGORY_LEVEL, i+1)
+                    engagement_record ['value']['attributes'][attrib_name] = level_name
+            else:
+                logging.warning ('No category_paths in source feed')
         return engagement_record
 
     # given 'src' attrib name, see if it has 'special-op' associated
