@@ -2,6 +2,7 @@ package com.bloomreach.trafficgenerator.site.build.pixelparams;
 
 import com.bloomreach.trafficgenerator.GeneratorConstants;
 import com.bloomreach.trafficgenerator.site.user.*;
+import com.bloomreach.trafficgenerator.site.config.SiteConfig;
 import com.bloomreach.trafficgenerator.site.journeydata.templates.*;
 
 public class BuildSuggestEventPixel extends BuildPixelBase  {
@@ -50,6 +51,8 @@ public class BuildSuggestEventPixel extends BuildPixelBase  {
                 pageType = PixelBRData.PAGE_TYPE_PRODUCT;
             else if (refUrl.indexOf ("categories") > 0)
                 pageType = PixelBRData.PAGE_TYPE_CATEGORY;
+            else if (refUrl.indexOf (SiteConfig.getUrlConfigParam ("SEARCH_PAGE_URL_PREFIX")) > 0)
+                pageType = PixelBRData.PAGE_TYPE_SEARCH;
             else
                 pageType = PixelBRData.PAGE_TYPE_HOME;
             pixelData.setParam (PixelBRData.PARAMNAME_PAGE_TYPE, pageType);
