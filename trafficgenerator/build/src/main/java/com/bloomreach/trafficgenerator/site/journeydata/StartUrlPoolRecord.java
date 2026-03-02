@@ -1,14 +1,16 @@
 package com.bloomreach.trafficgenerator.site.journeydata;
 
+import java.util.ArrayList;
+
 // class to hold startUrl record
 public class StartUrlPoolRecord {
         String urlType; // 'product', 'category', 'search', 'home', 'other', 'thematic?'
         String id;  // productId/catId/searchTerm/... - depending on urlType
-        String[] views; 
+        ArrayList<String> views; 
         String url;
 
         // type = product, category, home
-        public StartUrlPoolRecord (String type, String id, String[] views, String url) {
+        public StartUrlPoolRecord (String type, String id, ArrayList<String> views, String url) {
             this.urlType = type;
             this.id = id;
             this.url = url;
@@ -27,7 +29,7 @@ public class StartUrlPoolRecord {
             return this.url;
         }
 
-        public String[] getViews () {
+        public ArrayList<String> getViews () {
             return this.views;
         }
 }

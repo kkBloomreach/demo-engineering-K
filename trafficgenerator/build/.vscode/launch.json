@@ -10,7 +10,7 @@
             "request": "launch",
             "mainClass": "com.bloomreach.trafficgenerator.Generator",
             "projectName": "trafficgenerator",
-            "args": " -d /Users/kirankundargi/tmp/brlab/test/trafficgenerator/data -a demo_stuller -r staging -e dev -t true -p false -l debug"    
+            "args": " -d /Users/kirankundargi/tmp/brlab/test/trafficgenerator/data -a pacificsupply -r staging -e dev -t true -p false -l debug"    
         }
     
     ]

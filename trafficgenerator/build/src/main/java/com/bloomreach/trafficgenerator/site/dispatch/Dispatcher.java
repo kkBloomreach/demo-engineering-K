@@ -533,11 +533,24 @@ public class Dispatcher {
                 if (variantsArray.length () > 0) {
                     JSONObject selVariant;
                     int randomIndx;
+                    Double skuPrice = null;
+                    Double skuSalePrice = null;
 
+                    // select one of the variants at random
                     randomIndx = (int) (Math.random () * variantsArray.length());
                     selVariant = variantsArray.getJSONObject (randomIndx);
                     skuid = (String) selVariant.get ("skuid");
+                    if (selVariant.has ("sku_price"))
+                        skuPrice = selVariant.getDouble ("sku_price");
+                    if (selVariant.has ("sku_sale_price"))
+                        skuSalePrice = selVariant.getDouble ("sku_sale_price");
+
                     searchApiResponseDoc.setSkuid (skuid);
+                    // set product-level price, sale_price = selected variant's price, sale_price
+                    if (skuPrice != null)
+                        searchApiResponseDoc.setPrice (skuPrice);
+                    if (skuSalePrice != null)
+                        searchApiResponseDoc.setSalePrice (skuSalePrice);
                 }
             }
             searchApiResponseDoc.setSkuid (skuid); // may be null

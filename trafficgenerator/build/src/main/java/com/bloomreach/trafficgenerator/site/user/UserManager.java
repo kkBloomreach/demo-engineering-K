@@ -144,6 +144,9 @@ public class UserManager {
     }
 
     // view
+    // Ideally, 'view' should be set when a visitor is created (in visitor package)
+    // However, the list of views is available only in SiteConfig. Therefore
+    // we 'cheat' by setting a possible view after a visitor arrives into a site
     private String getUserView (String visitorId) {
         ArrayList <String> views;
         String userView = "NONE";   // default

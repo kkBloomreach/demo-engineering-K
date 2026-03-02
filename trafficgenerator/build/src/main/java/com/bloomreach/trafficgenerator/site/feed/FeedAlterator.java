@@ -9,7 +9,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 
-import org.apache.logging.log4j.message.Message;
 import org.json.JSONObject;
 
 import com.bloomreach.trafficgenerator.GeneratorConstants;
@@ -187,8 +186,8 @@ public class FeedAlterator {
 
         outputValueJson = outputProductJson.getJSONObject (KEY_NAME_VALUE);
         outputAttribsJson = outputValueJson.getJSONObject (KEY_NAME_ATTRIBUTES);
-
-        if (outputValueJson.has (KEY_NAME_PID)) {
+       
+        if (outputAttribsJson.has (KEY_NAME_PID)) {
             pid = outputAttribsJson.getString (KEY_NAME_PID);
         } else {
             String path;
@@ -212,10 +211,9 @@ public class FeedAlterator {
         // change productUrl to match site's domain. The original feed has
         // url = default_domain which needs to change as per this site
         // This is done irrespective of campaign-or-no-campaign
-        if (outputAttribsJson.has (KEY_NAME_SKUID))
-            skuid = outputAttribsJson.getString (KEY_NAME_SKUID);
-        else
-            skuid = null;
+        // Bloomreach SPA requires product-page url to have "<pid>___"
+        // Therefore, we build it as <pid>___<pid>
+        skuid = pid;
         url = BuildProductPagePixel.getProductPageUrl (pid, skuid);
         outputAttribsJson.put (KEY_NAME_URL, url);
 

@@ -6,6 +6,7 @@ import java.util.Iterator;
 import java.util.ArrayList;
 
 import org.json.JSONObject;
+import org.json.JSONArray;
 
 import com.bloomreach.trafficgenerator.MessageLogger;
 
@@ -18,7 +19,7 @@ public class ProductJsonlFeed extends ProductFeed {
     private final static String KEY_NAME_SALE_PRICE = "sale_price";
     private final static String KEY_NAME_TITLE = "title";
     private final static String KEY_NAME_AVAILABILITY = "availability";
-    private final static String KEY_NAME_VIEWS = "view_id"; // attrib name in PacificSupply feed
+    private final static String KEY_NAME_VIEWS = "views"; // attrib name in PacificSupply feed
     private final static String KEY_NAME_URL = "url"; // attrib name in PacificSupply feed
     private final static String KEY_NAME_CATEGORY_PATHS = "category_paths";
 
@@ -59,6 +60,7 @@ public class ProductJsonlFeed extends ProductFeed {
         return (parsedFeedRecordList);
     }
 
+    // parse single product source record
     private FeedRecord parseSourceRecord (JSONObject sourceRecordJson) throws Exception {
         FeedRecord feedRecord;
         JSONObject valueJson;
@@ -92,12 +94,20 @@ public class ProductJsonlFeed extends ProductFeed {
         feedRecord.setProductName ((String) attributesJson.get (KEY_NAME_TITLE));
         feedRecord.setAvailability ((boolean) attributesJson.getBoolean (KEY_NAME_AVAILABILITY));
         feedRecord.setUrl ((String) attributesJson.get (KEY_NAME_URL));
-        if (attributesJson.has (KEY_NAME_VIEWS)) 
-            feedRecord.setViews ((String) attributesJson.get (KEY_NAME_VIEWS));
+        if (valueJson.has (KEY_NAME_VIEWS)) {
+            JSONObject viewsJson;
+            Iterator<String> viewIds;
+            ArrayList<String> views;
 
+            viewsJson = valueJson.getJSONObject (KEY_NAME_VIEWS);
+            viewIds = viewsJson.keys ();
+            views = new ArrayList <String>();
+            while (viewIds.hasNext())
+                views.add ((String) viewIds.next());
+            feedRecord.setViews (views);
+        }
         price = (double) attributesJson.getDouble (KEY_NAME_PRICE);
         feedRecord.setProductPrice (Double.toString (price));
-
         if (attributesJson.has (KEY_NAME_SALE_PRICE)) {
             double salePrice;
 
@@ -108,10 +118,11 @@ public class ProductJsonlFeed extends ProductFeed {
         // default skuId == pid
         feedRecord.setProductSkuId (pid);
         // if product has skus, just take the first
+        // it is used to build default PDP url
         if (variantsJson != null) {
-            Iterator <String> productSkus = variantsJson.keys ();
-            if (productSkus.hasNext ()) {
-                feedRecord.setProductSkuId ((String) (productSkus.next ()));
+            Iterator <String> productVariants = variantsJson.keys ();
+            if (productVariants.hasNext ()) {
+                feedRecord.setProductSkuId ((String) (productVariants.next ())); // variant_id same as sku_id
             }
         }
 

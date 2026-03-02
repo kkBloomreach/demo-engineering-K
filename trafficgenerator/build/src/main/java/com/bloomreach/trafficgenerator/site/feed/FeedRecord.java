@@ -1,5 +1,8 @@
+// we collect only some necessary attributes from actual product record
+// in this internal 'feedRecord' object
 package com.bloomreach.trafficgenerator.site.feed;
 
+import java.util.ArrayList;
 public class FeedRecord {
 
         String productId = "";
@@ -8,7 +11,7 @@ public class FeedRecord {
         String productSalePrice = "";
         String productSkuId = "";
         boolean availability = false;
-        String views[] = null;
+        ArrayList<String> views = null;
         String url = null;
 
         public FeedRecord () {
@@ -35,8 +38,8 @@ public class FeedRecord {
         }
 
         // param is comma-separated list of views
-        public void setViews (String views) {
-            this.views = views.split ("|"); // used in PacificSupply feed
+        public void setViews (ArrayList<String> views) {
+            this.views = views; // used in PacificSupply feed
         }
 
         public String getProductName () {
@@ -75,7 +78,7 @@ public class FeedRecord {
             return this.url;
         }
 
-        public String[] getViews () {
+        public ArrayList<String> getViews () {
             return this.views;
         }
 

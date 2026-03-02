@@ -163,13 +163,12 @@ package com.bloomreach.trafficgenerator;
 // 2.3.7.3:  Add variant_id (aka sku_id) in log file (for variant-slicing feature debug)
 // 2.3.8.0:  Changed dataconnect API endpoint to their version V3
 // 2.3.8.1:  added check for refurl == search for suggest and search events
+// 2.3.8.2:  fix feed parser code for catalogs with views
+// 2.3.8.3:  support views (as needed by pacific_supply)
 
 public class GeneratorVersion {
-    public final static String VERSION = "2.3.8.1-X"; // Make sure to also change pom.xml->"version"
+    public final static String VERSION = "2.3.8.3-X"; // Make sure to also change pom.xml->"version"
 
     private GeneratorVersion () {
     }
 }
-
-
-

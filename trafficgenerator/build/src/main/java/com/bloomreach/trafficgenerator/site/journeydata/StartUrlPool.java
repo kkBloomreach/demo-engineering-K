@@ -46,7 +46,7 @@ public class StartUrlPool {
         ArrayList<FeedRecord> availableProducts;
         StartUrlPoolRecord record;
         ArrayList <CategoryInfo> allCategories;
-        String[] blankViews = {"NONE"};
+        ArrayList<String> blankViews = null;
 
         // not added to startUrlPool
         homepageStartUrlPoolRecord = new StartUrlPoolRecord (URL_TYPE_HOME, null, blankViews,
