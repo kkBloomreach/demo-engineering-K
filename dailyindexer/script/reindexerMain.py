@@ -20,7 +20,7 @@ from contentreindexer import ContentReindexer
 class ReindexerMain ():
 
     def __init__ (self, command_line):
-        logging.info ('Reindexer V3.0') # changed to support dataconnect v3
+        logging.info ('Reindexer V3.1') # changed to support dataconnect v3
         self._command_line = command_line
         return
 
