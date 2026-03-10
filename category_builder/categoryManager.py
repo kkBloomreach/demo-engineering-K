@@ -2,10 +2,10 @@ import logging
 import jsonlines
 from bigtree import Node, find, preorder_iter, tree_to_dict, shift_nodes
 
-# FILENAME_JSONL_SOURCE_FEED_IN = './data/input/ph2_product_en_full_12222025_10.jsonl'
-# FILENAME_TSV_CATEGORYTREE_OUT = './data/output/ph2_product_en_category_tree_122222025.tsv'
-FILENAME_JSONL_SOURCE_FEED_IN = './data/input/ps_product_en_full_02122025.jsonl'
-FILENAME_TSV_CATEGORYTREE_OUT = './data/output/ps_product_en_category_tree_02122025.tsv'
+FILENAME_JSONL_SOURCE_FEED_IN = './data/input/ph2_product_en_full_12222025_10.jsonl'
+FILENAME_TSV_CATEGORYTREE_OUT = './data/output/ph2_product_en_category_tree_122222025.tsv'
+#FILENAME_JSONL_SOURCE_FEED_IN = './data/input/ps_product_en_full_02122025.jsonl'
+#FILENAME_TSV_CATEGORYTREE_OUT = './data/output/ps_product_en_category_tree_02122025.tsv'
 
 CATEGORY_STATUS_KEEP = 0
 
@@ -37,7 +37,9 @@ class CategoryManager ():
             for branch in category_paths:
                 parent_node = self._root
                 tab_count = 0
-                for leaf in branch:
+                #for leaf in branch:
+                for node_num in range (0, len(branch)):
+                    leaf = branch [node_num]
                     if (full_path == None):
                         full_path = leaf ['name']
                     else:
@@ -58,7 +60,20 @@ class CategoryManager ():
                         tsv_line = '%s  %s' % (tsv_line, leaf ['name'])
 
                         leaf_node = Node (node_name, catid = leaf ['id'], tsv_line = tsv_line, parent = parent_node, full_path = full_path, status = cat_status)
-                    parent_node = leaf_node
+                        if node_num == len (branch) - 1:
+                            leaf_node.set_attrs (attrs = {'pidcount': 1}) # set only if this is last-node in the branch
+                        else:
+                            leaf_node.set_attrs (attrs = {'pidcount': 0})
+                    else:
+                        if node_num == len (branch) - 1:
+                            pidcount = leaf_node.get_attr ('pidcount')
+                            pidcount = pidcount + 1
+                            leaf_node.set_attrs (attrs = {'pidcount': pidcount})
+                        # else keep pidcount as-is
+
+                    # @@@
+                    logging.debug ('pidcount = %s' % leaf_node.get_attr ('pidcount'))
+                    parent_node = leaf_node # child -> parent, continue traversing
                     tab_count = tab_count + 1
         # self._root.show (attr_list = ['catid'])
         return self._root
@@ -87,7 +102,11 @@ class CategoryManager ():
             for full_path_key, node_data in tree_dict.items ():
                 if node_data ['catid'] == '0':
                     continue
-                tsv_line = '%s\t%s\n' % (node_data ['catid'], node_data ['tsv_line'])
+
+                pidcount = node_data ['pidcount']
+                if pidcount == 0:
+                    pidcount = ' '
+                tsv_line = '%s\t%s\t%s\n' % (node_data ['catid'], pidcount, node_data ['tsv_line'])
                 outputfile.write (tsv_line)
             outputfile.flush ()
             outputfile.close ()
