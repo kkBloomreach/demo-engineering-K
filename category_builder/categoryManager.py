@@ -2,10 +2,12 @@ import logging
 import jsonlines
 from bigtree import Node, find, preorder_iter, tree_to_dict, shift_nodes
 
-FILENAME_JSONL_SOURCE_FEED_IN = './data/input/ph2_product_en_full_12222025_10.jsonl'
-FILENAME_TSV_CATEGORYTREE_OUT = './data/output/ph2_product_en_category_tree_122222025.tsv'
-#FILENAME_JSONL_SOURCE_FEED_IN = './data/input/ps_product_en_full_02122025.jsonl'
-#FILENAME_TSV_CATEGORYTREE_OUT = './data/output/ps_product_en_category_tree_02122025.tsv'
+#FILENAME_JSONL_SOURCE_FEED_IN = './data/input/ph2_product_en_full_12222025_10.jsonl'
+#FILENAME_TSV_CATEGORYTREE_OUT = './data/output/ph2_product_en_category_tree_122222025.tsv'
+FILENAME_JSONL_SOURCE_FEED_IN = './data/input/ps_product_en_full_02122025.jsonl'
+FILENAME_TSV_CATEGORYTREE_OUT = './data/output/ps_product_en_category_tree_02122025.tsv'
+#FILENAME_JSONL_SOURCE_FEED_IN = './data/input/ph2_product_en_full_03112026.jsonl'
+#FILENAME_TSV_CATEGORYTREE_OUT = './data/output/ph2_product_en_category_tree_03112026.tsv'
 
 CATEGORY_STATUS_KEEP = 0
 
@@ -97,7 +99,7 @@ class CategoryManager ():
     def write_tsv (self, outputfile):
         tree_dict = tree_to_dict (self._root, all_attrs = True)
         with open (outputfile, 'w') as outputfile:
-            header_line = '%s\t%s...\n' % ('CatId', 'category_levels L0, L1, ...')
+            header_line = '%s\t%s\t%s...\n' % ('catId', 'pid_count', 'category_levels L0, L1, ...')
             outputfile.write (header_line)
             for full_path_key, node_data in tree_dict.items ():
                 if node_data ['catid'] == '0':
