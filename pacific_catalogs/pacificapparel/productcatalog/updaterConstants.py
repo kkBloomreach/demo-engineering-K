@@ -1,19 +1,19 @@
 # module_name and class_name. Currently, both are same names except the first-letter-case
-REVISION_UPDATER_MODULE = 'revisionV35'
-REVISION_CLASS_NAME = 'RevisionV35'
+REVISION_UPDATER_MODULE = 'revisionV36'
+REVISION_CLASS_NAME = 'RevisionV36'
 
 ## FEED --- FULL (and SMALL for debugging) -- expected to be already available
-FILENAME_JSONL_SOURCE_FEED_IN = './data/input/pa_en_full_01152026.jsonl'
-#FILENAME_JSONL_SOURCE_FEED_IN = './data/input/pa_en_full_01152026_10.jsonl'
+FILENAME_JSONL_SOURCE_FEED_IN = './data/input/pa_en_full_01162026.jsonl'
+#FILENAME_JSONL_SOURCE_FEED_IN = './data/input/pa_en_full_01162026_10.jsonl'
 
-FILENAME_UPDATED_JSONL_FEED_OUT = './data/output/pa_en_full_01162026.jsonl'
-FILENAME_UPDATED_DATAHUB_JSONL_FEED_OUT = './data/output/pa_en_full_datahub_01162026.jsonl'
-FILENAME_UPDATED_TSV_FEED_OUT = './data/output/pa_en_full_01162026.tsv'
-FILENAME_UPDATED_FEED_ATTRIBUTELIST_OUT = './data/output/pa_en_full_01162026_attributes.txt'
-FILENAME_INJECTED_AVMAP_OUT = './data/output/injected_avmap_01162026.tsv'
+FILENAME_UPDATED_JSONL_FEED_OUT = './data/output/pa_en_full_03252026.jsonl'
+FILENAME_UPDATED_DATAHUB_JSONL_FEED_OUT = './data/output/pa_en_full_datahub_03252026.jsonl'
+FILENAME_UPDATED_TSV_FEED_OUT = './data/output/pa_en_full_03252026.tsv'
+FILENAME_UPDATED_FEED_ATTRIBUTELIST_OUT = './data/output/pa_en_full_03252026_attributes.txt'
+FILENAME_INJECTED_AVMAP_OUT = './data/output/injected_avmap_03252026.tsv'
 
 # Injected av-map path (initially generated when different catalogs merged. later edited manually)
-FILENAME_INJECTED_AV_MAP_IN = './data/input/injected_avmap_01162026_edited.tsv'
+FILENAME_INJECTED_AV_MAP_IN = './data/input/injected_avmap_03242026_edited.tsv'
 INJECTED_AVMAP_ATTRIBUTES = [
     'pid',
     'url',

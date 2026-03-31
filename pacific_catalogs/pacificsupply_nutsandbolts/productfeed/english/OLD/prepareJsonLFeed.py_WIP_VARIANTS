@@ -1,0 +1,118 @@
+# Convert .tsv feed file to jsonl and .json
+import logging
+import csv
+import json
+
+FILENAME_SRC_FEED ='./data/sample_nutsandbolt_feed_20210111.tsv'
+# smaller feed for debugging
+# FILENAME_SRC_FEED ='./data/sample_nutsandbolt_feed_20210111_10.tsv'
+# output files
+FILENAME_JSONL_FEED_OUTPUT = './data/sample_nutsandbold_feed_20210111.jsonl'
+FILENAME_JSON_FEED_OUTPUT = './data/sample_nutsandbold_feed_20210111.json'
+
+# Although we define these parent-delimiters, NutsAndBolt does not have
+# products in multiple categories. Therefore there is no product that
+# has such as parent-delimiter
+CRUMBS_PARENTVALUE_DELIMITER = ';'
+CRUMBSID_PARENTVALUE_DELIMITER = ';'
+CRUMBS_VALUE_DELIMITER = '|'
+CRUMBSID_VALUE_DELIMITER = '|'
+
+
+# src crumb: A>B>C|X>Y, crumbsId: 10>20>30|50>60
+# return category_paths as expected by dataConnect
+def constructCategoryPaths (totalCrumbs, totalCrumbsId):
+    # 'outer' list
+    category_paths = []
+
+    # individual 'paths' within totalcrumb
+    crumbPaths = totalCrumbs.split (CRUMBS_PARENTVALUE_DELIMITER)
+    crumbIdPaths = totalCrumbs.split (CRUMBSID_PARENTVALUE_DELIMITER)
+    if (len (crumbPaths) == len (crumbIdPaths)):
+        crumbPathMembers = crumbPaths.split (CRUMBS_VALUE_DELIMITER) 
+        crumbIdPathMembers = crumbPaths.split (CRUMBS_VALUE_DELIMITER) 
+        if (len (crumbPathMembers) == len (crumbIdPathMembers)):
+            # 'inner' list, one for each path
+            category_single_path = []
+            for i in range (0, len (crumbPathMembers)):
+                # 'inner' list contains individual dict-objects {id, name}, one for each pathMember
+                category_single_path.append ({'id': crumbIdPathMembers [i],
+                                              'name': crumbPathMembers [i]})
+        category_paths.append (category_single_path)
+
+    return category_paths
+
+# return outputRecord dict for a product
+def processProductRecord (srcRecord):
+    return {}
+
+# return outputVariant dict for variant 
+def processVariantRecord (srcRecord):
+
+def processSrcRecords (srcRecords):
+    # sort using 'pid' -- need to identify 'product' versus 'variant'
+    sortedSrcRecords = sorted (srcRecords, key = lambda row: row ['pid'])
+
+    prevPid = None
+    productVariants = {} 
+    for srcRecord in sortedSrcRecords:
+        if (prevPid == None):
+            # first record in entire catalog; productVariants object will be empty...
+            outputProductRecord = processProductRecord (srcRecord)
+            prevPid = record ['pid']
+            productVariants = {} 
+        elif (prevPid == record ['pid']):
+            outputVariantRecord = processVariantRecord (srcRecord)
+            if 'variants' in outputProductRecord:
+                outputProductRecord ['variants'][srcRecord [
+            outputProductRecord ['variants'] = productVariants
+        else:
+            # if we have accumulated variants for previous product, add to that outputRecord
+            if (len (productVariants.keys()) > 0):
+            productVariants = {} 
+            outputRecord = processProductRecord (srcRecord)
+            prevPid = record ['pid']
+
+
+ and (record ['pid'] != prevPid
+def writeJsonOutput (srcRecords):
+    localSavePath = FILENAME_JSON_FEED_OUTPUT
+    with open (localSavePath, 'w') as file_output:
+        jsonString = json.dumps (srcRecords)
+        file_output.write ('%s\n' % jsonString)
+
+
+def writeJsonLOutput (srcRecords):
+    localSavePath = FILENAME_JSONL_FEED_OUTPUT
+    with open (localSavePath, 'w') as file_output:
+        for i in range (0, len (srcRecords)):
+            jsonLString = json.dumps (srcRecords [i])
+            file_output.write ('%s\n' % jsonLString)
+
+
+def readSourceFeed ():
+    file_obj = open (FILENAME_SRC_FEED, 'r')
+    dict_reader = csv.DictReader (file_obj, delimiter='\t')
+
+    src_feed_records = []
+    for row in dict_reader:
+        src_feed_records.append (row)
+
+    return src_feed_records
+
+def doInits ():
+    logging.basicConfig (level=logging.INFO)
+
+if __name__ == "__main__":
+    doInits ()
+
+    # read source catIds
+    src_feed_records = readSourceFeed () 
+
+    # write jsonl output
+    writeJsonLOutput (src_feed_records)
+
+    # write json output
+    writeJsonOutput (src_feed_records)
+
+

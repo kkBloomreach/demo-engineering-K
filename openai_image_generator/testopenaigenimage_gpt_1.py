@@ -7,14 +7,11 @@ import openai
 import base64
 
 OLD_OPENAI_KEY = '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'
-OPENAI_KEY = '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'
+OPENAPI_KEY = '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'
 
 OPENAI_MODEL = 'gpt-image-1.5'
 HTTP_STATUS_OK = 200
 
-PROMPT_HEADER_OLD = """
-Generate a premium, high-resolution product image for a retail store. The product should be the sole focal point, presented against a clean, white backdrop that eliminates distractions and reinforces a modern, upscale aesthetic. Lighting should be soft. Do not include any text or labels in the image. The image must feel refined and editorial—ideal for showcasing the product on a high-end retail website so that shoppers will be enticed to purchase.
-"""
 PROMPT_HEADER = """
 Create a premium, high‑resolution product image for a luxury retail clothing website. The image should showcase a single apparel item on a fashion model with crisp detail, refined lighting, and a clean, modern presentation suitable for high‑end ecommerce brands like Neiman Marcus or Nordstrom. Use a neutral, elegant background that enhances the product without distraction. The style should feel sophisticated, upscale, and consistent with luxury fashion photography. No text, logos, or additional props should appear in the image—only the model wearing the item displayed clearly and attractively.
 """

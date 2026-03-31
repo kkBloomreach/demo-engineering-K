@@ -1,4 +1,4 @@
-# revisionV34 specific constants
+# revisionV35 specific constants
 
 # OPENAI to genereate images
 OPENAI_KEY = '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'

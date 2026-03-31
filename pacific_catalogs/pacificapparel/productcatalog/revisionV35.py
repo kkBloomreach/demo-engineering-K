@@ -26,7 +26,6 @@ class RevisionV35 (RevisionBase) :
         #if (inject_av_record == None):
         #    logging.debug ('No inject attrib_value record for pid: %s', pid)
 
-        # change image only if product is in 'jewellery' categories
         updated_record = self._perform_update_internal (record, inject_av_record)
         return updated_record
 

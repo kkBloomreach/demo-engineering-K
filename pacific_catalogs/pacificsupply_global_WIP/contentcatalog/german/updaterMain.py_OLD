@@ -1,0 +1,82 @@
+import logging
+import json
+import csv
+
+import jsonlFeedReader as jfr
+import updateFeed as uf
+import updaterConstants as uc
+import jsonlWriter as jw
+
+class UpdateMain ():
+    def __inits__ (self):
+        return
+
+    def loadSourceFeed (self):
+        srcFeedHandler = jfr.JsonlFeedReader ()
+        # jsonl formated, converted from .xml and post-processed (see converter scripts)
+        srcContents = srcFeedHandler.readSourceFeed (uc.FILENAME_JSONL_SOURCE_FEED_EN_IN) 
+        return srcContents
+
+    def updateSourceFeed (self, srcContents):
+        try:
+            feedUpdater = uf.UpdateFeed ()
+            feedUpdater.setSourceContents (srcContents)
+            updatedContents = feedUpdater.performUpdates ()
+            return updatedContents
+        except Exception as e:
+            logging.error ('Error in processing source feed: %s', e)
+        return None
+
+    def writeJsonlFeed (self, updatedContents):
+        # full feed
+        feedWriter = jw.JsonlWriter ()
+        feedWriter.setContents (updatedContents)
+        feedWriter.write (uc.FILENAME_UPDATED_JSONL_FEED_DE_OUT)
+
+        return
+ 
+
+if __name__ == '__main__':
+    logging.basicConfig (level=logging.DEBUG)
+
+    updateDriver = UpdateMain ()
+
+    # read feed file (jsonl)
+    sourceContents = updateDriver.loadSourceFeed ()
+
+    # process the feed (ie, 'update')
+    updatedContents = updateDriver.updateSourceFeed (sourceContents)
+
+    updateDriver.writeJsonlFeed (updatedContents)
+
+    logging.info ("Finished ...")
+
+
+'''
+import tabularFeed as tf
+import tabularFeedWriter as tfw
+    def generateTabulerFeed_UNUSED (self, updatedContents):
+        tabularFeedBuilder = tf.TabularFeed ()
+        tabularFeedBuilder.setUpdatedContents (updatedContents)
+        tabularRecords = tabularFeedBuilder.buildTabularFeed ()
+        return tabularRecords
+
+    def writeTabularFeed (self, tabularRecords):
+        feedWriter = tfw.TabularFeedWriter ()
+        feedWriter.setTabularRecords (tabularRecords)
+        feedWriter.writeTSVFeed (uc.FILENAME_UPDATED_TSV_FEED_DE_OUT)
+        feedWriter.writeCSVFeed (uc.FILENAME_UPDATED_CSV_FEED_DE_OUT)
+        return
+ 
+    # build tabular feed, then save as .tsv and .csv
+    # tabular feed not generated for Content feed
+    # tabularRecords = updateDriver.generateTabulerFeed (updatedContents)
+
+    # currently, tabular feed is created only for 'full' feed
+    # tabular feed not generated for Content feed
+    # updateDriver.writeTabularFeed (tabularRecords)
+
+'''
+
+
+
