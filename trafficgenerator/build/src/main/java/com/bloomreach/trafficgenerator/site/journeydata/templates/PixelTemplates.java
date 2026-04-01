@@ -59,7 +59,7 @@ public class PixelTemplates {
             templateKV.put ("ptype",           "?event");
             templateKV.put ("sid",             "?undefined");
             templateKV.put ("domain",          "?bloomreach.com");
-            templateKV.put ("version",         "15.0");
+            templateKV.put ("version",         "17.0");
             templateKV.put ("prod_id",         "?4826567");
             templateKV.put ("uid",             "?4416934103635");
             templateKV.put ("test_data",       "?true");

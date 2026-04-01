@@ -8,6 +8,7 @@ public class ProductDetails {
     private double salePrice;
     private String title;
     private String skuid;
+    private String style;
 
     public ProductDetails () {
     }
@@ -58,6 +59,14 @@ public class ProductDetails {
 
     public String getSkuid () {
         return this.skuid;
+    }
+
+    public void setStyle (String style) {
+        this.style = style;
+    }
+
+    public String getStyle () {
+        return this.style;
     }
 }
 

@@ -41,8 +41,9 @@ public class ApiBRData {
     public final static String PARAMNAME_WIDGET_SKU = "sku"; // sku for product item
 
     public final static String SEGMENT_CUSTOMER_PROFILE = "customer_profile";
-    // fllist must include all attribs used in building API responseDoc (see Dispatcher.java)
-    public final static String DEFAULT_FL_LIST = "pid,price,title,sale_price,url,sku_thumb_image,skuid,sku_price,sku_sale_price";
+    // fl_list must include all attribs used in building API responseDoc (see Dispatcher.java)
+    // 'style' needed for PacificApparel only
+    public final static String DEFAULT_FL_LIST = "pid,price,title,sale_price,url,sku_thumb_image,skuid,sku_price,sku_sale_price,style";
     public final static String MAX_ROWS = "120";  // rows in API response; start is 0 by default
     public final static String SEARCH_TYPE_CATEGORY  = "category";
     public final static String SEARCH_TYPE_KEYWORD = "keyword";

@@ -426,6 +426,7 @@ public class StepsHandler {
         SearchTermWithRefinements selectedTerm;
 
         selectedTerm = this.searchTerms.selectSearchTermAtRandom (prevStepResult.getUrl());
+
         stepResult = handleStepSearchTerm (prevStepResult,
                                            userRecord,
                                            logTime,
@@ -886,6 +887,7 @@ public class StepsHandler {
 
         productDetails.setTitle (feedRecord.getProductName ());
         productDetails.setSkuid (feedRecord.getProductSkuId ());
+        productDetails.setStyle (feedRecord.getProductStyle()); // may be null or blank
         return productDetails;
     }
 

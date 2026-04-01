@@ -13,6 +13,7 @@ public class FeedRecord {
         boolean availability = false;
         ArrayList<String> views = null;
         String url = null;
+        String productStyle = null; // currently available only in PacificApparel catalog
 
         public FeedRecord () {
         }
@@ -80,6 +81,14 @@ public class FeedRecord {
 
         public ArrayList<String> getViews () {
             return this.views;
+        }
+
+        public void setProductStyle (String style) {
+            this.productStyle = style;
+        }
+
+        public String getProductStyle () {
+            return this.productStyle; // may be null or blank
         }
 
 }

@@ -8,6 +8,7 @@ public class SearchApiResponseDoc {
     private double salePrice;
     private String title;
     private String skuid;   // one of the many sku's selected at random
+    private String style = null;   // currently only in PacificApparel catalog- needed for RTS segmentation
 
     public SearchApiResponseDoc () {
     }
@@ -36,6 +37,10 @@ public class SearchApiResponseDoc {
         this.skuid = skuid;
     }
 
+    public void setStyle (String style) {
+        this.style = style;
+    }
+
     public String getPid () {
         return this.pid;
     } 
@@ -58,5 +63,9 @@ public class SearchApiResponseDoc {
 
     public String getSkuid () {
         return this.skuid;
-    } 
+    }
+    
+    public String getStyle () {
+        return this.style;
+    }
 }

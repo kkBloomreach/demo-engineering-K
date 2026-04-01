@@ -397,6 +397,7 @@ public class WidgetHandler {
     }
 
     // in order to add selected product to cart
+    // don't need to include productStyle here because it has no impact on add-to-cart
     private ProductDetails constructProductDetails (SearchApiResponseDoc selectedResponseDoc) {
         ProductDetails productDetails;
 

@@ -22,6 +22,7 @@ public class ProductJsonlFeed extends ProductFeed {
     private final static String KEY_NAME_VIEWS = "views"; // attrib name in PacificSupply feed
     private final static String KEY_NAME_URL = "url"; // attrib name in PacificSupply feed
     private final static String KEY_NAME_CATEGORY_PATHS = "category_paths";
+    private final static String KEY_NAME_STYLE = "style"; // attrib name in PacificApparel
 
     // override base class method
     // filepath to jsonl feed
@@ -94,6 +95,9 @@ public class ProductJsonlFeed extends ProductFeed {
         feedRecord.setProductName ((String) attributesJson.get (KEY_NAME_TITLE));
         feedRecord.setAvailability ((boolean) attributesJson.getBoolean (KEY_NAME_AVAILABILITY));
         feedRecord.setUrl ((String) attributesJson.get (KEY_NAME_URL));
+        if (attributesJson.has (KEY_NAME_STYLE)) {
+            feedRecord.setProductStyle ((String) attributesJson.get (KEY_NAME_STYLE));
+        }
         if (valueJson.has (KEY_NAME_VIEWS)) {
             JSONObject viewsJson;
             Iterator<String> viewIds;

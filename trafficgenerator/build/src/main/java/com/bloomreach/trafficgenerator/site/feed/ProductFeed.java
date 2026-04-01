@@ -61,6 +61,17 @@ public abstract class ProductFeed {
         return (null);
     }
 
+    public String lookupProductStyle (String pid) {
+        if ((parsedFeedRecordList != null) && (parsedFeedRecordList.size() > 0)) {
+            for (FeedRecord aRecord : parsedFeedRecordList) {
+                if (aRecord.getProductId ().equals (pid) == true)
+                    return (aRecord.getProductStyle ()); // may be null or blank 
+            }
+        }
+
+        return (null);
+    }
+
     public FeedRecord lookupProductRecord (String pid) {
         if ((parsedFeedRecordList != null) && (parsedFeedRecordList.size() > 0)) {
             for (FeedRecord aRecord : parsedFeedRecordList) {

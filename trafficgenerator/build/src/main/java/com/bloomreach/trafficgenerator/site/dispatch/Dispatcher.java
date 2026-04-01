@@ -526,6 +526,9 @@ public class Dispatcher {
             searchApiResponseDoc.setSalePrice(receivedDoc.getDouble ("sale_price"));
             searchApiResponseDoc.setUrl (receivedDoc.getString ("url"));
             searchApiResponseDoc.setTitle (receivedDoc.getString ("title"));
+            if (receivedDoc.has ("style")) 
+                searchApiResponseDoc.setStyle (receivedDoc.getString ("style"));
+            
             if (receivedDoc.has ("variants")) {
                 JSONArray variantsArray;
 

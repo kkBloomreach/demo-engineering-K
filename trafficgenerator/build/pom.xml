@@ -6,7 +6,7 @@
 
   <groupId>com.bloomreach.trafficgenerator</groupId>
   <artifactId>trafficgenerator</artifactId>
-  <version>2.3.8.3-X-SNAPSHOT</version>
+  <version>2.4.0.0-X-SNAPSHOT</version>
 
   <name>trafficgenerator</name>
   <url>http://trafficgenerator.bloomreach.com</url>

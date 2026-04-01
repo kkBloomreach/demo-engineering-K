@@ -158,6 +158,7 @@ public class StepSuggestSelectProduct extends StepBase {
             ProductDetails productDetails;
             String skuid;
             Double productPrice;
+            String productStyle;
 
             // suggest api -> by default, suggested product info does not include product's sku (if any)
             // Therefore use feed record to get its sku. It may be null if product has no skus
@@ -172,6 +173,10 @@ public class StepSuggestSelectProduct extends StepBase {
                 productPrice = 0.02;
             }
 
+            // by default suggest-product-info does not have product's 'style' (currently available in PacificApparel catalog )
+            // get it from productFeed if it is available
+            productStyle = productFeed.lookupProductStyle (suggestProductInfo.getPid());
+
             productDetails = new ProductDetails ();
             productDetails.setPid (suggestProductInfo.getPid ());
             productDetails.setUrl (suggestProductInfo.getUrl ());   // will have a _br_psugg_ added in the url
@@ -179,6 +184,7 @@ public class StepSuggestSelectProduct extends StepBase {
             productDetails.setSalePrice (suggestProductInfo.getSalePrice ());
             productDetails.setSkuid (skuid);
             productDetails.setPrice (productPrice);
+            productDetails.setStyle (productStyle);
 
             productDetailsList.add (productDetails);
         }

@@ -72,6 +72,7 @@ public class StepViewList extends StepBase {
             pidDetails.setSalePrice (responseDoc.getSalePrice ());
             pidDetails.setTitle (responseDoc.getTitle ());
             pidDetails.setSkuid (responseDoc.getSkuid ());
+            pidDetails.setStyle (responseDoc.getStyle());
 
             productList.add (pidDetails);
         }

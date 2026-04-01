@@ -271,7 +271,7 @@ public abstract class BuildApiBase {
     private String generateCookieString (String visitorId, String segment, String timeValue) {
         String cookie2;
 
-        cookie2 = "uid=" + visitorId + ":v=12.0:ts=" + timeValue + ":hc=1";
+        cookie2 = "uid=" + visitorId + ":v=17.0:ts=" + timeValue + ":hc=1";
 
         // If this acct uses RTS segments then....
         if (segment != null) {
