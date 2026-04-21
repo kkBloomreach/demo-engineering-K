@@ -49,7 +49,6 @@ class RevisionV0 (RevisionBase) :
         return True
 
     # override base class method
-    # This update class does not do any update to previous records except url
     def _perform_record_update (self, record):
         pid = record ['value']['attributes']['pid']
         # inject_av_record = super()._lookup_inject_av_record (pid)
@@ -63,6 +62,8 @@ class RevisionV0 (RevisionBase) :
         return updated_products
  
     # INTERNAL METHODS
+    # if pid not in selected cat, drop it from output catalog
+    # If it is, adjust the url
     def _perform_update_internal (self, record):
         # check if product is to be deleted
         pid = record ['value']['attributes']['pid']
@@ -83,36 +84,3 @@ if __name__ == '__main__':
     rv = RevisionV0 ()
     logging.info ('RevisionV0 Finish...')
 
-'''
-        default_price, default_sale_price = self._lookup_default_price_and_sale_price (record)
-        updated_record ['value']['attributes']['price'] = default_price
-        updated_record ['value']['attributes']['sale_price'] = default_sale_price
-        # del 'views' attribute
-        if 'views' in updated_record ['value']:
-            del updated_record ['value']['views']
-
-    # pick the first 'view' object and use that to return price, sale_price
-    def _lookup_default_price_and_sale_price (self, record):
-        default_price = 0.0
-        default_sale_price = 0.0
-
-        # if product has no associated views (ie, part of only 'master' view)
-        if 'price' in record ['value']['attributes']:
-            default_price = record ['value']['attributes']['price']
-        if 'sale_price' in record ['value']['attributes']:
-            default_sale_price =  record ['value']['attributes']['sale_price']
-
-        if 'views' in record ['value']:
-            for view_name, view_object in record ['value']['views'].items ():
-                if 'price' in view_object ['attributes']:
-                    default_price = view_object ['attributes']['price']
-                if 'sale_price' in view_object ['attributes']:
-                    default_sale_price = view_object ['attributes']['sale_price']
-                if default_price != 0.0:
-                    if default_sale_price == 0.0:
-                        default_sale_price = default_price
-                    return default_price, default_sale_price
-        logging.warning ('Cannot find default price, sale_price for pid: %s' % record ['value']['attributes']['pid'])
-        return (default_price, default_sale_price)
-
-'''

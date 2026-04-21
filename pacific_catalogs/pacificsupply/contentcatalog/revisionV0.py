@@ -1,5 +1,7 @@
 # V0 changes
 # -- initial content catalog generation
+#    -- adjust specific attribute values to match the ones already in Experience (aka Content) site (eg, author, data, url, ...)
+# -- inject PDF content files into earlier content catalog
 
 import logging
 import random
@@ -14,12 +16,10 @@ import revisionConstantsV0 as rcv0
 import jsonlFeedReader as jfr
 
 class RevisionV0 (RevisionBase) :
-
-    _pdf_source_records = None # content records for .pdf files
-
     def __init__ (self):
         logging.info ('Perform update, version v0')
         super().__init__ ()
+        self._pdf_source_records = None # content records for .pdf files
         return
 
     def _initialize (self, documents_api_response, inject_av_map):
@@ -44,7 +44,7 @@ class RevisionV0 (RevisionBase) :
         discovery_record ["op"] = "add"
         discovery_record ["path"] = '%s/%s' % ('/items', cms_record ['id'])
 
-        # document attributes
+        # adjust specific document attributes (eg, author, date, ...)
         for attrib in uc.CONTENT_ATTRIBUTES_TO_EXTRACT:
             cmsAttribValue = self._getCMSAttribValue (cms_record, attrib)
             if (cmsAttribValue != None):
@@ -57,7 +57,7 @@ class RevisionV0 (RevisionBase) :
                 logging.warning ('Cannot find CMS attribute value for: %s' % attrib)
                 discovery_record ['value']['attributes'][attrib] = ''
 
-            # availability
+            # availability -- always set to True
             discovery_record ['value']['attributes']['availability'] = True
         return discovery_record 
 
@@ -143,6 +143,7 @@ class RevisionV0 (RevisionBase) :
         return None
 
 if __name__ == '__main__':
+    logging.basicConfig (level = logging.DEBUG)
     rv = RevisionV0 ()
 
 

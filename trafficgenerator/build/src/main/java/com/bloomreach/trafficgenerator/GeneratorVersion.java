@@ -166,9 +166,10 @@ package com.bloomreach.trafficgenerator;
 // 2.3.8.2:  fix feed parser code for catalogs with views
 // 2.3.8.3:  support views (as needed by pacific_supply)
 // 2.4.0.0:  added RTS support using dynamic attribute 'style'
+// 2.4.0.1:  set pixel event version = 17 (from 15)
 
 public class GeneratorVersion {
-    public final static String VERSION = "2.4.0.0-X"; // Make sure to also change pom.xml->"version"
+    public final static String VERSION = "2.4.0.1-X"; // Make sure to also change pom.xml->"version"
 
     private GeneratorVersion () {
     }

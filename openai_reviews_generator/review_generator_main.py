@@ -10,10 +10,18 @@ import time
 import copy
 from pydantic import BaseModel, Field
 
-SOURCE_CATALOG_JSONL_IN = './data/input/pacific_apparel/pa_en_full_03252026.jsonl'
+# PacificApparel
+#SOURCE_CATALOG_JSONL_IN = './data/input/pacific_apparel/pa_en_full_03252026.jsonl'
 #SOURCE_CATALOG_JSONL_IN = './data/input/pacific_apparel/pa_en_full_03262026_2.jsonl'
-REVIEWS_OUTPUT_CSV_DEBUG_OUT = './data/output/pacific_apparel/pa_en_full_debug_03262026_2.csv'
-REVIEWS_OUTPUT_CSV_OUT = './data/output/pacific_apparel/pa_en_full_03262026_2.csv'
+#REVIEWS_OUTPUT_CSV_DEBUG_OUT = './data/output/pacific_apparel/pa_en_full_reviews_debug_03262026_2.csv'
+#REVIEWS_OUTPUT_CSV_OUT = './data/output/pacific_apparel/pa_en_full_reviews_03262026_2.csv'
+
+# PacificHome
+SOURCE_CATALOG_JSONL_IN = './data/input/pacifichome/ph2_product_en_full_03112026.jsonl'
+#SOURCE_CATALOG_JSONL_IN = './data/input/pacifichome/ph2_product_en_full_03112026_2.jsonl'
+REVIEWS_OUTPUT_CSV_DEBUG_OUT = './data/output/pacifichome/ph2_product_en_full_reviews_debug_04032026_2.csv'
+REVIEWS_OUTPUT_CSV_OUT = './data/output/pacifichome/ph2_product_en_full_reviews_04032026_2.csv'
+
 
 OPENAI_KEY = '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'
 OPENAI_MODEL = 'gpt-5.1'

@@ -1,6 +1,5 @@
 # Use CMS api calls to collect content-files already deployed in CMS. 
 # Then build discovery catalog using those records
-
 import logging
 import json
 import csv
@@ -36,24 +35,20 @@ class UpdateMain ():
             return None, None
         return revision_handler
 
-    # use Experience CMS document API. Called twice with different apiEndpoints 
-    # to get 'regular' documents and pdf's
+    # use Experience CMS document API. to get 'regular' documents on the site
     def getSiteApiResponse (self, apiEndpoint):
         FILENAME_APIRESPONSE = 'apiresponse_tmp.json' # used only within this method
         documentsApiResp = None
-
         callstat = subprocess.call ([ "curl", "-o", FILENAME_APIRESPONSE, apiEndpoint])
         if os.path.exists (FILENAME_APIRESPONSE):
             with open (FILENAME_APIRESPONSE, 'r') as f:
                 documentsApiResp = json.loads (f.read ())
                 f.close ()
-
             # TEMP commented out
             # os.remove (FILENAME_APIRESPONSE)
 
         if documentsApiResp == None:
             logging.error ('cannot get contents from site: %s', apiEndpoint)
-
         return documentsApiResp
 
     # previously created inject_av_map and then potentially manually edited
@@ -186,10 +181,10 @@ if __name__ == '__main__':
  
     logging.info ("Finished ...")
 
+
 '''
+    =============
     # NOTE: Pdf's api response does not contain info such as title,.. Therefore not used
     # also read pdf documents
     pdfs_api_response = updateDriver.getSiteApiResponse (uc.SITE_CONTENT_PDFS_API_ENDPOINT)
-
-
 '''

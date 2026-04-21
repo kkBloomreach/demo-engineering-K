@@ -1,6 +1,6 @@
 # V0 changes
 # -- VersionV0 - start from PacificSupply GLOBAL English catalog
-#   - remove views
+#   - remove views --- adjust default product price/sale-price
 #   - reduce original attributes to a small subset
 
 import logging
