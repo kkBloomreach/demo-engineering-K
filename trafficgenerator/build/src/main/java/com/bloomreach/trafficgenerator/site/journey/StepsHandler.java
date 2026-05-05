@@ -19,6 +19,8 @@ import com.bloomreach.trafficgenerator.site.journeydata.StartUrlPool;
 import com.bloomreach.trafficgenerator.site.journeydata.StartUrlPoolRecord;
 import com.bloomreach.trafficgenerator.site.journeydata.SuggestTerms;
 import com.bloomreach.trafficgenerator.site.journeydata.ZeroResultSearchTerms;
+import com.bloomreach.trafficgenerator.site.journeydata.CuratedSearchTerms;
+import com.bloomreach.trafficgenerator.site.journeydata.CuratedSearchTermDetails;
 import com.bloomreach.trafficgenerator.site.journeydata.campaigns.CampaignRecord;
 import com.bloomreach.trafficgenerator.site.journeydata.customjourney.CustomJourney;
 import com.bloomreach.trafficgenerator.site.journeydata.customjourney.LPCCustomJourneyData;
@@ -49,6 +51,9 @@ public class StepsHandler {
 
     // searchCategories
     SearchCategories searchCategories;
+
+    // curated search terms
+    CuratedSearchTerms curatedSearchTerms;
 
     // templates for product / atc / conversion pixels
     PixelTemplates pixelTemplates;
@@ -123,6 +128,10 @@ public class StepsHandler {
 
     public void setSearchCategories (SearchCategories searchCategories) {
         this.searchCategories = searchCategories;
+    }
+
+    public void setCuratedSearchTerms (CuratedSearchTerms curatedSearchTerms) {
+        this.curatedSearchTerms = curatedSearchTerms;
     }
 
     public void setStartUrlPool (StartUrlPool startUrlPool) {
@@ -205,7 +214,7 @@ public class StepsHandler {
                 FeedRecord feedRecord;
 
                 // NOTE: handleStepBrowsePDP does not make a Discovery api call. All necessary
-                // info is already availabe in productDetails object
+                // info is already available in productDetails object
 
                 pid = startUrlPoolRecord.getId ();  // pid
                 feedRecord = this.productFeed.lookupProductRecord (pid);
@@ -213,7 +222,6 @@ public class StepsHandler {
                     ProductDetails productDetails;
 
                     productDetails = translateFeedRecordToProductDetails (feedRecord);    //internal utility method
-
                     stepResult = handleStepBrowsePDP (prevStepResult,
                                                       userRecord,
                                                       logTime,
@@ -426,12 +434,29 @@ public class StepsHandler {
         SearchTermWithRefinements selectedTerm;
 
         selectedTerm = this.searchTerms.selectSearchTermAtRandom (prevStepResult.getUrl());
-
         stepResult = handleStepSearchTerm (prevStepResult,
                                            userRecord,
                                            logTime,
                                            stepLog,
                                            selectedTerm.getPrimary());
+        return stepResult;
+    }
+
+    // this method is called for CuratedSearchTerm and when search-term is NOT already known 
+    public StepResult handleStepCuratedSearchTerm (StepResult prevStepResult,
+                                                   UserRecord userRecord,
+                                                   long logTime,
+                                                   StepLog stepLog) throws Exception {
+        StepResult stepResult = null;
+        CuratedSearchTermDetails selectedTerm;
+
+        selectedTerm = this.curatedSearchTerms.selectSearchTermAtRandom (prevStepResult.getUrl());
+
+        stepResult = handleStepSearchTerm (prevStepResult,
+                                           userRecord,
+                                           logTime,
+                                           stepLog,
+                                           selectedTerm.getInitialQuery ());
         return stepResult;
     }
 

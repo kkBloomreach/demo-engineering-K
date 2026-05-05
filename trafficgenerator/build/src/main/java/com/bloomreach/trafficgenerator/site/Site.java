@@ -36,6 +36,7 @@ public class Site {
     private PixelCountLog pixelCountLog;
     private ApiCountLog apiCountLog;
     private SiteVisitorMonitor siteVisitorMonitor;  // control number of active visitors in the site
+    private boolean curatedJourney = false; // if true, apply curatedJourney for ALL visitors to this site. Flag set via commandline option
 
     private int debugTotalVisitors = 0;
 
@@ -56,7 +57,7 @@ public class Site {
     }
 
     // param 'siteRootDir' in turn has sub folders (eg, 'config')
-    public void init (String realm, boolean testData, boolean pixelDebug) throws Exception {
+    public void init (String realm, boolean testData, boolean pixelDebug, boolean curatedJourney) throws Exception {
         // Read site-specific-config 
         if (this.siteRootDir.exists () == false) {
             throw new Exception ("Cannot find siteRoot = " + this.siteRootDir.getPath());
@@ -65,6 +66,9 @@ public class Site {
         if (initSiteData (realm, testData, pixelDebug) == false) {
             throw new Exception ("Init site failed, rootDir = " + this.siteRootDir.getPath());
         }
+
+        // if curatedJourney, ALL visitors to this site use 'curatedJourneyGenerator'
+        this.curatedJourney = curatedJourney;
     }
 
     public String getSpecialVisitorId () {
@@ -85,6 +89,7 @@ public class Site {
         this.listenerThread.setDailyLog (this.dailyLog);
         this.listenerThread.setSpecialVisitorId (SiteConfig.getSpecialVisitorId ());    //may be null
         this.listenerThread.setVisitorSignal (this.visitorSignal);
+        this.listenerThread.setCuratedJourney (this.curatedJourney);
         this.listenerThread.start ();
     }
 
@@ -222,6 +227,16 @@ public class Site {
         } catch (Exception e) {
             MessageLogger.logError ("SearchCatgeries exception: " + e.getMessage ());
             return false;
+        }
+
+        CuratedSearchTerms curatedSearchTerms = new CuratedSearchTerms ();
+        try {
+            File curatedSearchTermsFile;
+
+            curatedSearchTermsFile = new File (this.siteRootDir, GeneratorConstants.INPUT_CURATED_SEARCH_TERMS_PATH);
+            curatedSearchTerms.doLoad (curatedSearchTermsFile.getPath());
+        } catch (Exception e) {
+            MessageLogger.logError ("CuratedSearchTerms exception: " + e.getMessage());
         }
 
         // startUrl pool - loads from productFeed and categoryCollector
@@ -437,6 +452,7 @@ public class Site {
             journeyBuilder.setSearchCategories (searchCategories);
             journeyBuilder.setSuggestTerms (suggestTerms);
             journeyBuilder.setZeroResultSearchTerms (zeroResultSearchTerms);
+            journeyBuilder.setCuratedSearchTerms (curatedSearchTerms);
             journeyBuilder.setProductSelector (productSelector);
             journeyBuilder.setWidgetHandler (widgetHandler);
             journeyBuilder.setOrderIdGenerator (orderIdGenerator);
@@ -529,6 +545,7 @@ public class Site {
         private JourneyBuilder journeyBuilder;
         private String specialVisitorId;
         private SiteVisitorMonitor siteVisitorMonitor;
+        private boolean curatedJourney;
 
         VisitorListenerThread () {
             setDaemon (true);
@@ -556,6 +573,10 @@ public class Site {
 
         public void setSpecialVisitorId (String specialVisitorId) {
             this.specialVisitorId = specialVisitorId;
+        }
+
+        public void setCuratedJourney (boolean curatedJourney) {
+            this.curatedJourney = curatedJourney;
         }
 
         public void run () {
@@ -597,7 +618,8 @@ public class Site {
                 visitorHandlerThread.setUserRecord (userRecord);
                 visitorHandlerThread.setUserArrivalTime (visitor.getArrivalTime ());
                 visitorHandlerThread.setUserLog (userLog); 
-                visitorHandlerThread.setSpecialVisitorId (this.specialVisitorId); 
+                visitorHandlerThread.setSpecialVisitorId (this.specialVisitorId);
+                visitorHandlerThread.setCuratedJourney (this.curatedJourney); 
                 visitorHandlerThread.start ();
                 this.siteVisitorMonitor.enterVisitor (userRecord.getUserId());
                 // for quick check of daily visitor count

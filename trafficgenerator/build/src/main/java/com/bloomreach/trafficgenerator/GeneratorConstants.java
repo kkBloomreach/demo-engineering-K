@@ -24,6 +24,7 @@ public class GeneratorConstants {
     public final static String INPUT_TRAFFICSTEPS_PATH= "./input/journeydata/trafficsteps.tsv";
     public final static String INPUT_WIDGET_CONFIGS_PATH= "./input/journeydata/Widgets.json";
     public final static String INPUT_CUSTOM_JOURNEY_CONFIGS_PATH = "./input/journeydata/customjourney/CustomJourney.json";
+    public final static String INPUT_CURATED_SEARCH_TERMS_PATH = "./input/journeydata/CuratedSearchTerms.tsv";
 
     // account specific outputs, created in <acctDir>
     public final static String OUTPUT_DAILYLOG_DIR = "./output";

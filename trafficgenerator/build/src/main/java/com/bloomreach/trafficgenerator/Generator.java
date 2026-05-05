@@ -99,6 +99,7 @@ public class Generator {
         String realm;
         boolean testData;
         boolean pixelDebug;
+        boolean curatedJourney;
 
         rootDirPath = commandLine.getDataDirPath ();  // provided in command line as "-d <arg>"
         accountName = commandLine.getAccountName ().trim();
@@ -106,9 +107,10 @@ public class Generator {
         realm = commandLine.getRealm();
         testData = commandLine.isTestData ();
         pixelDebug = commandLine.isPixelDebug ();
+        curatedJourney = commandLine.isCuratedJourney ();
 
         // init generators own variables etc for this account
-        if (initGeneratorData (rootDirPath, accountName, envType, realm, testData, pixelDebug) == false) {
+        if (initGeneratorData (rootDirPath, accountName, envType, realm, testData, pixelDebug, curatedJourney) == false) {
             MessageLogger.logError ("Generator init unsuccessful");
             throw new Exception ("Generator init unsuccessful");
         }
@@ -174,7 +176,8 @@ public class Generator {
                                        String envType,
                                        String realm,
                                        boolean testData,
-                                       boolean pixelDebug) throws Exception {
+                                       boolean pixelDebug,
+                                       boolean curatedJourney) throws Exception {
 
         this.calendar = new GregorianCalendar ();    // single calendar for visitor, site
         this.calendar.set (GregorianCalendar.HOUR, 0); // midnight, 0:0:1 (hr:min:sec)
@@ -210,7 +213,7 @@ public class Generator {
             this.site.setRootDir (siteRootDir);
             this.site.setCalendar (this.calendar);
             this.site.setVisitorSignal (this.visitorSignal);
-            this.site.init (realm, testData, pixelDebug);
+            this.site.init (realm, testData, pixelDebug, curatedJourney);
         } catch (Exception e) {
             MessageLogger.logError ("Site exception: " + e.getMessage ());
             this.site = null;

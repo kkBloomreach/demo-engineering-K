@@ -14,6 +14,7 @@ import com.bloomreach.trafficgenerator.site.journeydata.TrafficSteps;
 import com.bloomreach.trafficgenerator.site.journeydata.ZeroResultSearchTerms;
 import com.bloomreach.trafficgenerator.site.journeydata.campaigns.CampaignRecord;
 import com.bloomreach.trafficgenerator.site.journeydata.customjourney.CustomJourney;
+import com.bloomreach.trafficgenerator.site.journeydata.CuratedSearchTerms;
 import com.bloomreach.trafficgenerator.site.journeydata.templates.ApiTemplates;
 import com.bloomreach.trafficgenerator.site.journeydata.templates.PixelTemplates;
 import com.bloomreach.trafficgenerator.site.journeylogs.ApiCountLog;
@@ -51,6 +52,9 @@ public class JourneyBuilder {
 
     // search categories
     private SearchCategories searchCategories;
+
+    // curated search terms
+    private CuratedSearchTerms curatedSearchTerms;
 
     // templates for product / atc / conversion pixels
     private PixelTemplates pixelTemplates;
@@ -116,6 +120,11 @@ public class JourneyBuilder {
 
     public void setSearchCategories (SearchCategories searchCategories) {
         this.searchCategories = searchCategories;
+    }
+
+    // curated-terms needed only for CuratedJourney
+    public void setCuratedSearchTerms (CuratedSearchTerms curatedSearchTerms) {
+        this.curatedSearchTerms = curatedSearchTerms;
     }
 
     public void setStartUrlPool (StartUrlPool startUrlPool) {
@@ -208,6 +217,23 @@ public class JourneyBuilder {
         return randomJourneyGenerator;
     }
 
+    public CuratedJourneyGenerator buildCuratedJourneyGenerator () {
+        CuratedJourneyGenerator curatedJourneyGenerator;
+        StepsHandler stepsHandler;
+
+        stepsHandler = prepareStepsHandler ();
+ 
+        // prepare predefinedJourneyGenerator
+        curatedJourneyGenerator = new CuratedJourneyGenerator ();
+        curatedJourneyGenerator.setCuratedSearchTerms (curatedSearchTerms);
+        curatedJourneyGenerator.setZeroResultSearchTerms (zeroResultSearchTerms);
+        curatedJourneyGenerator.setSearchCategories (searchCategories);
+        curatedJourneyGenerator.setStepsHandler (stepsHandler);
+
+        curatedJourneyGenerator.init (); // init curatedJourneyGenerator
+        return curatedJourneyGenerator;
+    }
+
     private StepsHandler prepareStepsHandler () {
         StepsHandler stepsHandler;
 
@@ -223,6 +249,7 @@ public class JourneyBuilder {
         stepsHandler.setSuggestTerms (suggestTerms);
         stepsHandler.setZeroResultSearchTerms (zeroResultSearchTerms);
         stepsHandler.setSearchCategories (searchCategories);
+        stepsHandler.setCuratedSearchTerms (curatedSearchTerms);
         stepsHandler.setApiTemplates (apiTemplates);
         stepsHandler.setDispatcher (dispatcher);
         stepsHandler.setActiveCampaignRecord (activeCampaignRecord);

@@ -1,7 +1,0 @@
-We have a "SMALL" and "LARGE" sourcelog zip files. 
-The large one is quite large (~30GB+). Therefore mainly to do a quick test, use
-the SMALL one. Then use the LARGE for the full pixel translation
-
-Both (large and small) are currently on the backup drive in 
-<backup_drive>/brxdemos_tmp/pacifichome/sourcepixels/worldmarket/
-

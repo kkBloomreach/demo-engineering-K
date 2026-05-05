@@ -246,6 +246,7 @@ public class SearchTerms {
         shuffleList (this.replicatedCampaignSearchTermsWithRefinements);
     }
 
+    // we could use Collections.shuffle() method instead
     private void shuffleList (ArrayList <SearchTermWithRefinements> listToShuffle) {
         // now shuffle the term list so that star-terms are spread around in the list
         int listSize = listToShuffle.size();

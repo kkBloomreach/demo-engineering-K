@@ -1,3 +1,5 @@
-Add .pdf's to content catalog
+Download content files using CMS APIs
+ -- response does not include pdf's`
+ -- then add .pdf's to the above content catalog
 
 

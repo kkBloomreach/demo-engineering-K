@@ -1,0 +1,14 @@
+Important notes:
+
+  pacificsupply - global - English catalog 
+    - it contains a subset of the 'full' catalog (~350 products)
+       - products selected using pre-defined list-of-categories
+       - then added selected pids (~280) so that 'numeric-precision' feature 'works'
+    - remove views
+    - include only a subset of attributes
+
+  pacificsupply - global - German catalog
+    - use global-english catalog (.tsv)
+    - use google translate to translate specific fields (title, description, category names, ...)
+    - download translated .tsv, convert to .jsonl to index in BR
+ 

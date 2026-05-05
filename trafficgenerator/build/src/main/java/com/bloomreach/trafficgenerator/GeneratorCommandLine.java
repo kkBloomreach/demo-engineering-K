@@ -1,7 +1,6 @@
 package com.bloomreach.trafficgenerator;
 
 import java.io.File;
-import com.bloomreach.trafficgenerator.GeneratorConstants;
 
 public class GeneratorCommandLine {
 
@@ -12,6 +11,7 @@ public class GeneratorCommandLine {
     private boolean testData = true;  //default
     private String envType = EnvironmentConfig.ENV_TYPE_DEV;    // default
     private boolean pixelDebug = false; // use 'debug=true' in pixel api (for event mgr)
+    private boolean curatedJourney = false; // search-queries are pre-curated using LLM. This is for 1:1PZN(V2)
 
     public GeneratorCommandLine () {
     }
@@ -72,6 +72,9 @@ public class GeneratorCommandLine {
                     return false;
                 }
                 i = i + 2;
+            } else if (args [i].trim().equals ("-c") == true) {
+                curatedJourney = true;
+                i = i + 1;
             } else {
                 showHelp ();
                 return false;
@@ -126,6 +129,10 @@ public class GeneratorCommandLine {
 
     public String getEnvType () {
         return envType;
+    }
+
+    public boolean isCuratedJourney () {
+        return curatedJourney;
     }
        
     private void showHelp () {
