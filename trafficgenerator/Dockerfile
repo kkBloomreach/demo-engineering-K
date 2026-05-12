@@ -4,15 +4,12 @@ WORKDIR /trafficgenerator
 # copy jars
 COPY ./build/target/*.jar /trafficgenerator/lib/
 COPY ./build/other_jars/*.jar /trafficgenerator/lib/
-COPY ./check_image.sh .
-
-# copy run scripts (eg, deployrun_release.sh) -- not needed when trafficGenerator is run using 'docker run'
-# COPY ./deploy/cloud/scripts/*.sh /trafficgenerator
 
 # java class path. Docker will export these
-ENV CLASSPATH="/trafficgenerator/lib/trafficgenerator-2.3.7.3-X-SNAPSHOT.jar:/trafficgenerator/lib/log4j-api-2.17.1.jar:/trafficgenerator/lib/json-20220320.jar:/trafficgenerator/lib/log4j-core-2.17.1.jar"
+# NOTE: trafficgenerator-release.jar must be soft-linked to the actual release version (eg, -2.3.7.2.jar)
+ENV CLASSPATH="/trafficgenerator/lib/trafficgenerator-release.jar:/trafficgenerator/lib/log4j-api-2.17.1.jar:/trafficgenerator/lib/json-20220320.jar:/trafficgenerator/lib/log4j-core-2.17.1.jar"
 
-# ./data must have been mounted before running docker run...
+# Options provided by trafficgenerator 
 # '-a' == account/site name
 # '-d' == data dir path
 # '-l' == message level (info/debug/warn/error)
@@ -20,13 +17,12 @@ ENV CLASSPATH="/trafficgenerator/lib/trafficgenerator-2.3.7.3-X-SNAPSHOT.jar:/tr
 # '-t' == testData (true | false) (for pixel) (default true)
 # '-e' == env type ('dev' | 'qa' | 'release') (default dev)
 # '-p' == pixelDebug (true | false) (for pixel debug via Event manager) (default false)
+# '-c' == use curated_searchterms (defined in journeydata/CuratedSearchterms.tsv - this file must exist)
 
-### -- default staging
-#ENTRYPOINT ["java", "com.bloomreach.trafficgenerator.Generator", "-d", "./data", "-r", "staging", "-e", "dev", "-t", "true", "-p", "false", "-l", "debug"]
+# NOTE: mount ./data via docker run command. It in turn contains individual sandbox_* configs etc
+### -- default end: prod
+ENTRYPOINT ["java", "com.bloomreach.trafficgenerator.Generator", "-d", "./data", "-r", "production", "-e", "release", "-t", "false", "-p", "false", "-l", "warn"]
 
-### -- default prod
-ENTRYPOINT ["java", "com.bloomreach.trafficgenerator.Generator", "-d", "./data", "-r", "prod", "-e", "release", "-t", "false", "-p", "false", "-l", "warn"]
-
-# default 'app'. Must be overridden via command line argument
+# default 'app'. The '-a' option must be overridden via command line argument
 CMD ["-a", "UNDEFINED"]
 

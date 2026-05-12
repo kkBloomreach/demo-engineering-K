@@ -168,9 +168,10 @@ package com.bloomreach.trafficgenerator;
 // 2.4.0.0:  added RTS support using dynamic attribute 'style'
 // 2.4.0.1:  set pixel event version = 17 (from 15)
 // 2.5.0.0:  use CuratedJourney where search-queries have been generated using LLM (for 1:1PZN(V2))
+// 2.5.0.1:  added sanity check for curated journey (curatedSearchTerms must exist for curatedJourney)
 
 public class GeneratorVersion {
-    public final static String VERSION = "2.5.0.0-X"; // Make sure to also change pom.xml->"version"
+    public final static String VERSION = "2.5.0.1-X"; // Make sure to also change pom.xml->"version"
 
     private GeneratorVersion () {
     }

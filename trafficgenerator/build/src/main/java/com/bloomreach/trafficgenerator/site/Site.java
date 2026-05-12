@@ -37,6 +37,7 @@ public class Site {
     private ApiCountLog apiCountLog;
     private SiteVisitorMonitor siteVisitorMonitor;  // control number of active visitors in the site
     private boolean curatedJourney = false; // if true, apply curatedJourney for ALL visitors to this site. Flag set via commandline option
+    private CuratedSearchTerms curatedSearchTerms = null; // used to validate curatedJourney during open() method
 
     private int debugTotalVisitors = 0;
 
@@ -90,6 +91,13 @@ public class Site {
         this.listenerThread.setSpecialVisitorId (SiteConfig.getSpecialVisitorId ());    //may be null
         this.listenerThread.setVisitorSignal (this.visitorSignal);
         this.listenerThread.setCuratedJourney (this.curatedJourney);
+
+        // internal validation for curatedJourney
+        // curatedSearchTerms are loaded from curatedSearchTerms.tsv during site.init() method (see below)
+        if ((this.curatedJourney == true) && (this.curatedSearchTerms == null)) {
+            MessageLogger.logWarning ("CuratedJourney cannot be used without CuratedSearchTerms");
+            this.curatedJourney = false;
+        }
         this.listenerThread.start ();
     }
 
@@ -235,6 +243,9 @@ public class Site {
 
             curatedSearchTermsFile = new File (this.siteRootDir, GeneratorConstants.INPUT_CURATED_SEARCH_TERMS_PATH);
             curatedSearchTerms.doLoad (curatedSearchTermsFile.getPath());
+
+            // also save at class level for internal sanity-check in open() method (see above)
+            this.curatedSearchTerms = curatedSearchTerms;
         } catch (Exception e) {
             MessageLogger.logError ("CuratedSearchTerms exception: " + e.getMessage());
         }
