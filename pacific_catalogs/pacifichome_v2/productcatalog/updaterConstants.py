@@ -8,8 +8,10 @@ FILENAME_JSONL_SOURCE_FEED_IN = './data/input/ph2_product_en_full_01142026.jsonl
 
 FILENAME_UPDATED_JSONL_FEED_OUT = './data/output/ph2_product_en_full_03112026.jsonl'
 FILENAME_UPDATED_DATAHUB_JSONL_FEED_OUT = './data/output/ph2_product_en_full_datahub_03112026.jsonl'
-FILENAME_UPDATED_TSV_FEED_OUT = './data/output/ph2_product_en_full_03112026.tsv'
-FILENAME_UPDATED_FEED_ATTRIBUTELIST_OUT = './data/output/ph2_product_en_full_03112026.txt'
+FILENAME_UPDATED_ENGAGEMENT_TSV_FEED_OUT = './data/output/ph2_product_en_full_engagement_03112026.tsv'
+FILENAME_UPDATED_DATACONNECT_TSV_FEED_OUT = './data/output/ph2_product_en_full_dataconnect_03112026.tsv'
+FILENAME_UPDATED_FEED_ATTRIBUTELIST_OUT = './data/output/ph2_product_en_full_03112026_attributes.txt'
+FILENAME_UPDATED_FEED_ENGAGEMENT_ATTRIBUTELIST_OUT = './data/output/ph2_product_en_full_engagement_03112026.txt'
 FILENAME_INJECTED_AVMAP_OUT = './data/output/injected_avmap_03112026.tsv'
 
 # Injected av-map path (initially generated when different catalogs merged. later edited manually)

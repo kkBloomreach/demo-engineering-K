@@ -8,28 +8,24 @@ FILENAME_JSONL_SOURCE_FEED_IN = './data/input/pa_en_full_01162026.jsonl'
 
 FILENAME_UPDATED_JSONL_FEED_OUT = './data/output/pa_en_full_03252026.jsonl'
 FILENAME_UPDATED_DATAHUB_JSONL_FEED_OUT = './data/output/pa_en_full_datahub_03252026.jsonl'
-FILENAME_UPDATED_TSV_FEED_OUT = './data/output/pa_en_full_03252026.tsv'
+FILENAME_UPDATED_ENGAGEMENT_TSV_FEED_OUT = './data/output/pa_en_full_engagement_03252026.tsv'
+FILENAME_UPDATED_DATACONNECT_TSV_FEED_OUT = './data/output/pa_en_full_dataconnect_03252026.tsv'
 FILENAME_UPDATED_FEED_ATTRIBUTELIST_OUT = './data/output/pa_en_full_03252026_attributes.txt'
+FILENAME_UPDATED_FEED_ENGAGEMENT_ATTRIBUTELIST_OUT = './data/output/pa_en_full_03252026_engagement_attributes.txt'
 FILENAME_INJECTED_AVMAP_OUT = './data/output/injected_avmap_03252026.tsv'
 
 # Injected av-map path (initially generated when different catalogs merged. later edited manually)
 FILENAME_INJECTED_AV_MAP_IN = './data/input/injected_avmap_03242026_edited.tsv'
-INJECTED_AVMAP_ATTRIBUTES = [
-    'pid',
-    'url',
-    'availability',
-    'price',
-    'gender',
-    'color',
-    'brand',
-    'material',
-    'collection',
-    'style',
-    'title',
-    'description',
-    'stock_level',  # added in V5
-    'special_offer',
-    'season'   
+INJECTED_AVMAP_EXCLUDED_ATTRIBUTES = [
+    'category_paths',
+    'default_sku',
+    'large_image',
+    'product_brand',
+    'product_length',
+    'product_size',
+    'sku_on_sale'
+    'swatch_image',
+    'thumb_image'
 ]
 
 # category tree map

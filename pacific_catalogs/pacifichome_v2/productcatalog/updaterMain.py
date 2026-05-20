@@ -2,7 +2,6 @@
 # (eg, change product brands)
 
 import logging
-import json
 import csv
 import importlib
 import os
@@ -65,11 +64,13 @@ class UpdateMain ():
             revision_handler.set_source_records (src_products)
             revision_handler.set_category_manager (category_manager)
             revision_handler.set_inject_av_map (inject_av_map)
-            updatedProducts, updatedProducts_datahub, updatedAttributeList = revision_handler.perform_revision ()
-            return updatedProducts, updatedProducts_datahub, updatedAttributeList
+            # updatedProducts, updatedProducts_datahub, updatedAttributeList = revision_handler.perform_revision ()
+            # return updatedProducts, updatedProducts_datahub, updatedAttributeList
+            updatedProducts, updatedProducts_datahub, updatedAttributeList, updatedProducts_engagement, updatedAttributeList_engagement  = revision_handler.perform_revision ()
+            return updatedProducts, updatedProducts_datahub, updatedAttributeList, updatedProducts_engagement, updatedAttributeList_engagement
         except Exception as e:
             logging.error ('Error in processing source feed: %s', e)
-        return None, None, None
+        return None, None, None, None, None
 
     def prepare_injected_av_map (self, updated_records, updated_attribute_list):
         injected_av_map = []
@@ -94,16 +95,18 @@ class UpdateMain ():
             injected_av_map.append (injected_av_record_with_editable)
         return injected_av_map
 
+    # params may be dataconnect_catalog or engagement_catalog
     def generateTabulerFeed (self, updatedProducts, updatedAttributeList):
         tabularFeedBuilder = tfb.TabularFeedBuilder ()
         tabularFeedBuilder.setUpdatedProducts (updatedProducts, updatedAttributeList)
         tabularRecords = tabularFeedBuilder.buildTabularFeed ()
         return tabularRecords
 
-    def writeJsonlFeed (self, updatedProducts, format = 'dataconnect'):
+    # product_catalog can be dataConnect format OR datahub
+    def writeJsonlFeed (self, product_catalog, format = 'dataconnect'):
         # full feed
         feedWriter = jw.JsonlWriter ()
-        feedWriter.setProducts (updatedProducts)
+        feedWriter.setProducts (product_catalog)
         if format == 'dataconnect':
             feedWriter.write (uc.FILENAME_UPDATED_JSONL_FEED_OUT)
         elif format == 'datahub':
@@ -122,10 +125,14 @@ class UpdateMain ():
             file_output.close ()
         return
 
-    def writeTabularFeed (self, tabularRecords):
+    # tabular records for engagement have slightly different set of attributes
+    def writeTabularFeed (self, tabularRecords, target = 'dataconnect'):
         feedWriter = tfw.TabularFeedWriter ()
         feedWriter.setTabularRecords (tabularRecords)
-        feedWriter.writeTSVFeed (uc.FILENAME_UPDATED_TSV_FEED_OUT)
+        if target == 'dataconnect':
+            feedWriter.writeTSVFeed (uc.FILENAME_UPDATED_DATACONNECT_TSV_FEED_OUT)
+        else:
+            feedWriter.writeTSVFeed (uc.FILENAME_UPDATED_ENGAGEMENT_TSV_FEED_OUT)
         return
 
     def writeInjectedAVMap (self, injected_av_map):
@@ -161,13 +168,17 @@ if __name__ == '__main__':
     category_manager = updateDriver.build_category_tree (sourceProducts)
 
     # process the feed (ie, 'update')
-    updatedProducts, updatedProducts_datahub, updatedAttributeList = updateDriver.perform_revision (revision_handler, sourceProducts, category_manager, inject_av_map)
+    updatedProducts, updatedProducts_datahub, updatedAttributeList, updatedProducts_engagement, updatedAttributeList_engagement  = updateDriver.perform_revision (revision_handler, sourceProducts, category_manager, inject_av_map)
 
     if (updatedProducts != None) and (len (updatedProducts) > 0):
         injected_av_map = updateDriver.prepare_injected_av_map (updatedProducts, updatedAttributeList)
 
         # build tabular feed, then save as .tsv and .csv    
+        # Note: tsv, csv formatted output generated using dataConnect style catalog (not dataHub format)
         tabularRecords = updateDriver.generateTabulerFeed (updatedProducts, updatedAttributeList)
+
+        # engagement tabular records, save as .csv
+        tabularRecords_engagement = updateDriver.generateTabulerFeed (updatedProducts_engagement, updatedAttributeList_engagement)
 
         updateDriver.writeJsonlFeed (updatedProducts)   # dataconnect format
         updateDriver.writeJsonlFeed (updatedProducts_datahub, format = 'datahub') 
@@ -175,6 +186,9 @@ if __name__ == '__main__':
 
         # currently, tabular feed is created only for 'full' feed
         updateDriver.writeTabularFeed (tabularRecords)
+
+        # tabular feed (engagement)
+        updateDriver.writeTabularFeed (tabularRecords_engagement, target = "engagement")
 
         # write injected_av_map
         updateDriver.writeInjectedAVMap (injected_av_map)
