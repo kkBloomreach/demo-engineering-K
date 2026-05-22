@@ -1,9 +1,9 @@
 PacificGlobal V2 English
  - product catalog
     - copied from PH2
-    - adjust url
-    - copied from:
-/Users/kirankundargi/work/brx_demos/projects/demoEngineering/demo-engineering-catalogs/pacifichome_v2/productcatalog 
+        - copied from:
+         /Users/kirankundargi/work/brx_demos/projects/demoEngineering/demo-engineering-catalogs/pacifichome_v2/productcatalog 
+    - adjust product url
 
  - content catalog
     - copied as is from ph2 content. It in turn uses CMS apis to load actual contents
@@ -13,7 +13,11 @@ PacificGlobal V2 English
 PacificGlobal V2  German
  - product catalog
     - 'intelligently' combined previous pacifichome_global german + ph2 english
-    
+    - 'previously translated' catalog file:
+      - after google-translation, it was manually-edited to correct a few details.
+      - hence the '_me_' in the file name
+        ph_product_de_subset_12202023_me_processed.jsonl
+ 
  - content catalog
     - use CMS APIs to load actual content files, convert to .jsonl format
     - map image urls to refer to pacific-saas instead of unsplash.com

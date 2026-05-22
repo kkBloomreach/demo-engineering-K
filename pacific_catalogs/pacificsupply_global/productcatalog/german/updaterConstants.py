@@ -1,6 +1,6 @@
 # module_name and class_name. Currently, both are same names except the first-letter-case
-REVISION_UPDATER_MODULE = 'revisionV0'
-REVISION_CLASS_NAME = 'RevisionV0'
+REVISION_UPDATER_MODULE = 'revision'
+REVISION_CLASS_NAME = 'Revision'
 
 ## FEED --- FULL (and SMALL for debugging) -- expected to be already available
 FILENAME_PSG_ENGLISH_JSONL_SOURCE_FEED_IN = './data/input/psg_product_en_subset_04292026.jsonl'

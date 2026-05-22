@@ -1,9 +1,17 @@
 # base class for actual 'revision update' task to be performed
 import logging
+import os
+from dotenv import dotenv_values
 
 class RevisionBase ():
 
     def __init__ (self):
+        self._env_configs = None
+        if os.path.exists (".env"):
+            self._env_configs = dotenv_values (".env")
+        if self._env_configs == None:
+            logging.warning ('Cannot find environment configuration')
+
         self._source_records = None
         self._category_manager = None
         self._inject_av_map = None

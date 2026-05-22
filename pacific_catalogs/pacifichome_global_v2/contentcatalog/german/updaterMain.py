@@ -1,6 +1,3 @@
-# This 'updater' script expects its input to have been converted and 'massaged' for various earlier requests
-# (eg, change product brands)
-
 import logging
 import json
 import csv

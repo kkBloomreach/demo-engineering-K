@@ -3,7 +3,7 @@ import csv
 import json
 import requests
 
-import revisionConstantsV0 as rcv0
+import revisionConstants as rc
 
 class ExecAPICall ():
     def __init__ (self):
@@ -22,13 +22,13 @@ class ExecAPICall ():
     def _execCommand (self, qTerm, catId):
 	    responseJson = None
 	    try:
-	        brsmAPIParams = rcv0.BRSM_CATAPI_PARAMS.copy ()
+	        brsmAPIParams = rc.BRSM_CATAPI_PARAMS.copy ()
 	
 	        # add specific catId to get response for
 	        brsmAPIParams ['q'] = qTerm 
 	        brsmAPIParams ['fq'] = 'category:"' + catId + '"'
 	
-	        response = requests.get ( rcv0.BRSM_CATAPI_ENDPOINT,
+	        response = requests.get ( rc.BRSM_CATAPI_ENDPOINT,
 	                                  params = brsmAPIParams)
 	        logging.debug ("response status: " + str(response.status_code))
 	        if (response.status_code == 200):

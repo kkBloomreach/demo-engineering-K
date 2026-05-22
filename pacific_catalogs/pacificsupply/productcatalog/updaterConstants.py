@@ -1,6 +1,6 @@
 # module_name and class_name. Currently, both are same names except the first-letter-case
-REVISION_UPDATER_MODULE = 'revisionV0'
-REVISION_CLASS_NAME = 'RevisionV0'
+REVISION_UPDATER_MODULE = 'revision'
+REVISION_CLASS_NAME = 'Revision'
 
 ## FEED --- FULL (and SMALL for debugging) -- expected to be already available
 FILENAME_JSONL_SOURCE_FEED_IN = './data/input/ps_product_en_full_11012023.jsonl'
@@ -8,7 +8,7 @@ FILENAME_JSONL_SOURCE_FEED_IN = './data/input/ps_product_en_full_11012023.jsonl'
 
 FILENAME_UPDATED_JSONL_FEED_OUT = './data/output/ps_product_en_full_02122025.jsonl'
 FILENAME_UPDATED_TSV_FEED_OUT = './data/output/ps_product_en_full_02122025.tsv'
-FILENAME_UPDATED_FEED_ATTRIBUTELIST_OUT = './data/output/ps_product_en_full_02122025.txt'
+FILENAME_UPDATED_FEED_ATTRIBUTELIST_OUT = './data/output/ps_product_en_full_02122025_attributes.txt'
 FILENAME_INJECTED_AVMAP_OUT = './data/output/injected_avmap_02122025.tsv'
 
 # Injected av-map path (initially generated when different catalogs merged. later edited manually)
