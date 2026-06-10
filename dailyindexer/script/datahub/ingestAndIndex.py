@@ -70,8 +70,8 @@ class IngestAndIndex ():
             got_status = self._checkAPIStatusOnce (job_id, account_config)
             if got_status != None:
                 if  ((got_status == rc.VALID_API_STATUS_SUCCESS) or  \
-                     (job_status == rc.VALID_API_STATUS_FAILED) or \
-                     (job_status == rc.VALID_API_STATUS_KILLED)):
+                     (got_status == rc.VALID_API_STATUS_FAILED) or \
+                     (got_status == rc.VALID_API_STATUS_KILLED)):
                     break
 
             # wait a little and then check api status again
