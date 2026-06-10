@@ -3,6 +3,7 @@ import json
 import csv
 import importlib
 import os
+import sys
 
 import jsonlFeedReader as jfr
 import jsonlWriter as jw
@@ -132,8 +133,17 @@ class UpdateMain ():
 if __name__ == '__main__':
     logging.basicConfig (level=logging.DEBUG)
 
-    updateDriver = UpdateMain ()
+    # IMPORTANT: Show warning that running this script will generate
+    # a slightly different catalog with slightly different
+    # set of products. This is because this script executes discovery API
+    # call and collect products from that response. This exec call 
+    # can return different set of products at different times
+    ok_to_continue = input ('Warning -- This script execution will result in a different set of products. Enter OK to continue/No to exit: ')
+    if ok_to_continue.lower() != 'ok':
+        logging.info ('>>> Exit')
+        sys.exit (0)
 
+    updateDriver = UpdateMain ()
     revision_handler = updateDriver.instantiate_revision_handler ()
     if (revision_handler == None):
         raise Exception ('Cannot instantiate revision handler')

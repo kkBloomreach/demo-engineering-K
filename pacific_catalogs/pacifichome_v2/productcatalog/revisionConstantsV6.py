@@ -1,1 +1,0 @@
-# constants for revisionV6

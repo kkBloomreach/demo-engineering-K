@@ -1,6 +1,6 @@
 # module_name and class_name. Currently, both are same names except the first-letter-case
-REVISION_UPDATER_MODULE = 'revisionV0'
-REVISION_CLASS_NAME = 'RevisionV0'
+REVISION_UPDATER_MODULE = 'revision'
+REVISION_CLASS_NAME = 'Revision'
 
 SITE_CONTENT_DOCUMENTS_API_ENDPOINT = 'https://pacific-saas.bloomreach.io/delivery/site/v2/documents?folder=/supply/articles&limit=60'
 

@@ -1,6 +1,6 @@
 # module_name and class_name. Currently, both are same names except the first-letter-case
-REVISION_UPDATER_MODULE = 'revisionV1'
-REVISION_CLASS_NAME = 'RevisionV1'
+REVISION_UPDATER_MODULE = 'revision'
+REVISION_CLASS_NAME = 'Revision'
 
 ## FEED --- FULL (and SMALL for debugging) -- expected to be already available
 FILENAME_PH2_ENGLISH_JSONL_SOURCE_FEED_IN = './data/input/ph2_product_en_full_10092025.jsonl'

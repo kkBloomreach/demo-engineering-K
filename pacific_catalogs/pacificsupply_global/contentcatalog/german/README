@@ -1,0 +1,6 @@
+steps to generate german-content catalog for dataconnect:
+    - read documents from CMS (using CMS API)
+    - for each 'current' content-item-in-discovery-catalog:
+        - update specific attributes (eg, url, image, ...)
+      save-to-jsonl
+

@@ -7,8 +7,11 @@
 # -- Also generate engagement-compatible .tsv
 
 import logging
+import os
 import traceback
 import copy
+from dotenv import dotenv_values
+
 import engagementConstants as ec
 
 class RevisionBase ():
@@ -17,6 +20,11 @@ class RevisionBase ():
     _inject_av_map = None
 
     def __init__ (self):
+        self._env_configs = None
+        if os.path.exists (".env"):
+            self._env_configs = dotenv_values (".env")
+        if self._env_configs == None:
+            logging.warning ('Cannot find environment configuration')
         return
 
     def set_source_records (self, source_records):

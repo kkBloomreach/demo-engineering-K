@@ -1,8 +1,6 @@
 import logging
 from bigtree import Node, find, preorder_iter, tree_to_dict, shift_nodes
 
-import revisionConstantsV0 as rcv0
-
 class CategoryManager ():
 
     ACTION_KEEP = 'keep'

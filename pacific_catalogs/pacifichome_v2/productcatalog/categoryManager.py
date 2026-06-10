@@ -2,8 +2,6 @@ import logging
 import jsonlines
 from bigtree import Node, find, preorder_iter, tree_to_dict, shift_nodes
 
-import revisionConstantsV0 as rcv0
-
 class CategoryManager ():
 
     _root = None

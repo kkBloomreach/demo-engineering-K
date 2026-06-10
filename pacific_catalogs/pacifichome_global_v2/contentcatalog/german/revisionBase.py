@@ -48,7 +48,7 @@ class RevisionBase ():
     def _initialize (self, api_response, inject_av_map ):
         return True
 
-    def _perform_record_update (self, record):
+    def _perform_record_update (self, cms_record):
         raise Exception ('Record update method must be implemented in derived class')
         return
 

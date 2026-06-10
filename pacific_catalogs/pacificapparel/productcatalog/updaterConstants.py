@@ -1,6 +1,6 @@
 # module_name and class_name. Currently, both are same names except the first-letter-case
-REVISION_UPDATER_MODULE = 'revisionV36'
-REVISION_CLASS_NAME = 'RevisionV36'
+REVISION_UPDATER_MODULE = 'revision'
+REVISION_CLASS_NAME = 'Revision'
 
 ## FEED --- FULL (and SMALL for debugging) -- expected to be already available
 FILENAME_JSONL_SOURCE_FEED_IN = './data/input/pa_en_full_01162026.jsonl'
