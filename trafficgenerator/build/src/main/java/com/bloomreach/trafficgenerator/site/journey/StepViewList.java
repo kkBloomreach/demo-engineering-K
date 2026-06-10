@@ -3,7 +3,7 @@ package com.bloomreach.trafficgenerator.site.journey;
 import java.util.ArrayList;
 
 import com.bloomreach.trafficgenerator.site.user.UserRecord;
-import com.bloomreach.trafficgenerator.site.dispatch.*;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.useraccess.*;
 import com.bloomreach.trafficgenerator.GeneratorConstants;
 import com.bloomreach.trafficgenerator.MessageLogger;
 

@@ -50,7 +50,7 @@ public class GeneratorConstants {
 
     public final static String PIXEL_API_ENDPOINT_US = "https://p.brsrvr.com/pix.gif";
     public final static String PIXEL_API_ENDPOINT_EU = "https://p-eu.brsrvr.com/pix.gif";
-    // debugger api endpoints are now same as live. To debug events, include &debug=true in API call
+    // pixel debugger api endpoints are now same as live. To debug events, include &debug=true in API call
     public final static String PIXEL_DEBUGGER_API_ENDPOINT_US = "https://p.brsrvr.com/pix.gif";
     public final static String PIXEL_DEBUGGER_API_ENDPOINT_EU = "https://p-eu.brsrvr.com/pix.gif";
     public final static String DISCOVERY_SEARCH_API_ENDPOINT_STAGING = "https://staging-core.dxpapi.com/api/v1/core/"; // end slash reqd
@@ -61,8 +61,6 @@ public class GeneratorConstants {
     public final static String DISCOVERY_WIDGET_API_ENDPOINT_STAGING = "https://pathways-staging.dxpapi.com/api/v2/widgets/"; // end slash reqd
 
     // feed index
-    // public final static String DATACONNECT_API_ENDPOINT_STAGING = "https://api-staging.connect.bloomreach.com/dataconnect/api/v1";
-    // public final static String DATACONNECT_API_ENDPOINT_PROD = "https://api.connect.bloomreach.com/dataconnect/api/v1";
     public final static String DATACONNECT_API_ENDPOINT_V3 = "https://discovery.bloomreach.com/dataconnect/api/v3";
 
     // traffic states/types/...
@@ -81,10 +79,10 @@ public class GeneratorConstants {
     // concurrent users -> too many concurrent threads (collectively among all sites), which can cause the VM to crash
     public final static int MAX_CONCURRENT_SITE_VISITORS_ALLOWED = (int) (MAX_VISITORS_HIGH_TRAFFIC_PER_TIMESLICE * 0.25);
 
-    // SOME 13 digits === 10*12; value must be numeric
-    public final static String VISITOR_ID_TEMPLATE = "5600000000000";  // prev = 5678123411118
+    // SOME 13 digits === 10*12; value must be numeric since we use it to generate 'user-id' from this visitor-id
+    public final static String VISITOR_ID_TEMPLATE = "5600000000000";
 
-    // single visitor may execute multiple sessions in a single visit
+    // each visitor may execute multiple sessions in a single visit
     public final static int MAX_SESSIONS_PER_VISITOR = 5;
 
     // in Predefined journey, max ATC percentage (ie, % of sessions where visitor actually does an ATC)
@@ -205,16 +203,4 @@ public class GeneratorConstants {
     public final static String OPENAPI_MODEL = "gpt-4o";
 }
 
-/****
-    // Special USER_ID (shared with SPA) to implement past-purchase widget support in SPA
-    public final static String SPECIAL_VISITOR_ID = "1112223334445";
-
-    // on these days, the "special" visitor UID is generated in slice#0
-    public final static int SPECIAL_VISITOR_DAY_1 = 7;
-    public final static int SPECIAL_VISITOR_DAY_2 = 24;
-
-    // Some URL used as 'ref' url in start page
-    // public final static String DEFAULT_REF_URL_AT_START = "https://www.bloomreach.com";
-
-****/
 

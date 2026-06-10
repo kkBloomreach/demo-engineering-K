@@ -1,16 +1,19 @@
 {
+    "GENERAL_NOTE_1": "Support both dataconnect and datahub.",
+    "GENERAL_NOTE_2": "However, SOME parameters are needed only for dataconnect and some other only for datahub",
     "accounts": [
         {
-            "INDEX_MODE": "dataconnect",
-            "COMMENT_6475": "pacific_supply_mindcurv TEST account ",
-            "BR_ACCOUNT_NUMBER": "6475",
-            "BR_ACCOUNT_NAME": "pacific_supply_mindcurv",
-            "BR_CATALOG_NAME": "pacific_supply_mindcurv",
-            "BR_API_AUTHORIZATION_KEY_STAGING": "pacific_supply_mindcurv-staging-814bfe11-bfcc-4138-b7ea-d01a81462fe2",
-            "BR_API_AUTHORIZATION_KEY_PROD": "pacific_supply_mindcurv-production-e5fa60ca-4d6e-456d-ba1a-9efe8dacc7e7",
+            "INDEX_MODE": "datahub",
+            "COMMENT_DATAHUB_INDEX_2": "Assumes destination etc are already configured via datahub dashboard",
+            "BR_ACCOUNT_NUMBER": "8192",
+            "BR_ACCOUNT_NAME": "br_dev_sandbox01",
+            "WORKSPACE_ID": "f11d72ff-2eb9-430f-9174-44832de81723",
+            "API_TOKEN_NAME": "xu48b30jbua15u6nvp6ej19deum0pv4aqdljdvocmzm0ztrckqfurksw9f6htu01",
+            "API_TOKEN_SECRET": "wij9no1y5tkw7rtml2w1pkviqnewbp1c6d0m8ax9hfy1u4a73wnbckxvyp6mu16r",
+            "COLLECTION_NAME": "sandbox_01_pacific_apparel_en_us",
             "CATALOG_TYPE": "product",
-            "CATALOG_FILE_JSONL": "ph_product_en_full_10232023.jsonl",
-            "PRODUCT_URL_PREAMBLE": "https://pacific.bloomreach.com/home/products/",
+            "CATALOG_FILE_JSONL":  "pa_en_full_datahub_03252026.jsonl",
+            "PRODUCT_URL_PREAMBLE": "https://br-dev-sandbox01.bloomreach.com/br-dev-recs/products/",
             "IGNORE": "NO"
         }
     ],
@@ -492,7 +495,7 @@
             "CATALOG_TYPE": "product",
             "CATALOG_FILE_JSONL":  "ph2_product_en_full_datahub_12222025.jsonl",
             "PRODUCT_URL_PREAMBLE": "https://sandbox-product03.bloomreach.com/home/products/",
-            "IGNORE": "NO"
+            "IGNORE": "YES"
         }
     ],
 
@@ -514,8 +517,11 @@
 
     "COMMENT_DATAHUB_1": "Following parameters used for indexing via Datahub/onePlatform",
     "COMMENT_DATAHUB_2": "Destination staging/prod is configured via datahub dashboard",
-    "BR_DATAHUB_INDEX_API_ENDPOINT": "https://eu3-api.eng.bloomreach.com/api/cde/v1/workspaces/%s/item-collections/%s/item-types/product/records",
-    "BR_DATAHUB_CHECKSTATUS_API_ENDPOINT_PROD": "https://eu3-api.eng.bloomreach.com/api/cde/v1/workspaces/%s/jobs/%s"
+    "BR_DATAHUB_INDEX_API_ENDPOINT_EU3": "https://eu3-api.eng.bloomreach.com/api/cde/v1/workspaces/%s/item-collections/%s/item-types/product/records",
+    "BR_DATAHUB_CHECKSTATUS_API_ENDPOINT_PROD_EU3": "https://eu3-api.eng.bloomreach.com/api/cde/v1/workspaces/%s/jobs/%s",
+
+    "BR_DATAHUB_INDEX_API_ENDPOINT": "https://us3-api.eng.bloomreach.com/api/cde/v1/workspaces/%s/item-collections/%s/item-types/product/records",
+    "BR_DATAHUB_CHECKSTATUS_API_ENDPOINT_PROD": "https://us3-api.eng.bloomreach.com/api/cde/v1/workspaces/%s/jobs/%s"
 
 }
 

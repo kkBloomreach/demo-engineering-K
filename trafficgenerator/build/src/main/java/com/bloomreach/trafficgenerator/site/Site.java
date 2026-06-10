@@ -14,7 +14,7 @@ import com.bloomreach.trafficgenerator.site.journeydata.customjourney.*;
 import com.bloomreach.trafficgenerator.site.feed.*;
 import com.bloomreach.trafficgenerator.site.build.pixelparams.*;
 import com.bloomreach.trafficgenerator.site.journeylogs.*;
-import com.bloomreach.trafficgenerator.site.dispatch.*;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.useraccess.*;
 import com.bloomreach.trafficgenerator.site.config.*;
 import com.bloomreach.trafficgenerator.site.journey.*;
 import com.bloomreach.trafficgenerator.site.user.*;
@@ -119,11 +119,18 @@ public class Site {
     }
 
     // use siteConfig params to load site data. 
+    // if catalog is obtained via preIndexed (ie, already-indexed-data obtained via discovery API calls):
+    //  -- feed is not-altered AND not-reindexed here
+    //  -- campaigns are not supported because the catalog will be indexed by third-party using their own data
+    //  -- views are not supported because discovery API calls do not include product view list
+
     // IMPORTANT - sequence of init's is important due to cross-dependencies
     private boolean initSiteData (String realm, boolean testData, boolean pixelDebug) throws Exception {
         File configFile = null;
         SiteConfig siteConfig = null;
         CampaignRecord activeCampaignRecord = null;
+        String catalogSource;
+        ProductFeed productFeed = null;
 
         // loads config.json file and creates a static object in SiteConfig class
         siteConfig = new SiteConfig ();
@@ -132,47 +139,72 @@ public class Site {
             throw new Exception ("Cannot find siteConfig");
         }
 
-        // campaigns map - need to do this before alterFeed since campaign, if any,
-        // will require price/sale-price changes
-        CampaignsConfig campaignsConfig = new CampaignsConfig ();
-        try {
-            File campaignsConfigFile;
+        // check catalogSource (localFile OR preIndexed)
+        catalogSource = SiteConfig.getProductCatalogConfigParam ("CATALOG_SOURCE"); // LocalFile or PreIndexed
+        if ((catalogSource == null) || (catalogSource.length () == 0)) 
+            catalogSource = "LocalFile";    // default = LocalFile
 
-            campaignsConfig.setRealm (realm);   // set this before load since realm is used to make API calls
-            campaignsConfigFile = new File (this.siteRootDir, GeneratorConstants.INPUT_CAMPAIGNS_CONFIG_PATH);
-            if (campaignsConfigFile.exists ()) {
-                if (campaignsConfig.load (campaignsConfigFile.getPath()) == false) {
-                    MessageLogger.logError ("campaigns load failed");
-                    return false;
+        if (catalogSource.toLowerCase().equals ("localfile")) {
+            // campaigns map - need to do this before alterFeed since campaign, if any,
+            // will require price/sale-price changes
+            CampaignsConfig campaignsConfig = new CampaignsConfig ();
+            try {
+                File campaignsConfigFile;
+    
+                campaignsConfig.setRealm (realm);   // set this before load since realm is used to make API calls
+                campaignsConfigFile = new File (this.siteRootDir, GeneratorConstants.INPUT_CAMPAIGNS_CONFIG_PATH);
+                if (campaignsConfigFile.exists ()) {
+                    if (campaignsConfig.load (campaignsConfigFile.getPath()) == false) {
+                        MessageLogger.logError ("campaigns load failed");
+                        return false;
+                    }
+                    // see if we are 'in a campaign'
+                    activeCampaignRecord = detectActiveCampaignIfAny (campaignsConfig);
                 }
-                // see if we are 'in a campaign'
-                activeCampaignRecord = detectActiveCampaignIfAny (campaignsConfig);
+            } catch (Exception e) {
+                MessageLogger.logError ("campaigns map exception: " + e.getMessage ());
+                return false;
             }
-        } catch (Exception e) {
-            MessageLogger.logError ("campaigns map exception: " + e.getMessage ());
-            return false;
-        }
+    
+            // alter feed as per siteConfig and campaigns map (if any). Then index (aka publish) it.
+            try {
+                alterAndPublishFeed (realm, activeCampaignRecord);
+            } catch (Exception e) {
+                e.printStackTrace ();
+                MessageLogger.logFatal ("Exception in feed alteration: " + e);
+                return false;
+            }
+    
+            // productFeed - needed to pick up product's price for conversion pixel
+            // IMPORTANT - Do this after alterAndPublishFeed because product price 
+            // might have been changed during alter-process due to active campaign if any
+            productFeed = new DailyProductFeed ();
+            try {
+                File productFeedDir;
+                File productFeedFile;
+                productFeedDir = new File (this.siteRootDir, GeneratorConstants.INPUT_DAILY_FEED_DIR);
+                productFeedFile = new File (productFeedDir, GeneratorConstants.INPUT_DAILY_JSONL_FEED_FILE_NAME);
+                productFeed.load (productFeedFile.getPath());
+            } catch (Exception e) {
+                e.printStackTrace ();   // stacktrace helps to detect possible catalog file errors
+                MessageLogger.logError ("ProductFeed exception: " + e.getMessage ());
+                return false;
+            }
+            // END catalogSource == LocalFile
+        } else if (catalogSource.toLowerCase().equals ("preindexed")) {
+            ProductPreIndexedFeed preIndexedProductFeed;
 
-        // alter feed as per siteConfig and campaigns map (if any). 
-        try {
-            alterFeed (realm, activeCampaignRecord);
-        } catch (Exception e) {
-            e.printStackTrace ();
-            MessageLogger.logFatal ("Exception in feed alteration: " + e);
-            return false;
-        }
-
-        // productFeed - needed to pick up product's price for conversion pixel
-        // IMPORTANT - Do this after alterFeed
-        ProductFeed productFeed = new DailyProductFeed ();
-        try {
-            File productFeedDir;
-            File productFeedFile;
-            productFeedDir = new File (this.siteRootDir, GeneratorConstants.INPUT_DAILY_FEED_DIR);
-            productFeedFile = new File (productFeedDir, GeneratorConstants.INPUT_DAILY_JSONL_FEED_FILE_NAME);
-            productFeed.load (productFeedFile.getPath());
-        } catch (Exception e) {
-            MessageLogger.logError ("ProductFeed exception: " + e.getMessage ());
+            preIndexedProductFeed = new ProductPreIndexedFeed ();
+            preIndexedProductFeed.setRealm (realm);
+            try {
+                preIndexedProductFeed.load (SiteConfig.getAccountConfigParam ("DOMAIN"));
+                productFeed = preIndexedProductFeed;    // set for later reference from other classes
+            } catch (Exception e) {
+                MessageLogger.logError ("PreIndexed ProductFeed exception: " + e.getMessage ());
+                return false;
+            }
+        } else {
+            MessageLogger.logError ("Unknown catalog source type: " + catalogSource);
             return false;
         }
 
@@ -229,7 +261,7 @@ public class Site {
         SearchCategories searchCategories = new SearchCategories ();
         try {
             searchCategories.setCategoryCollector (categoryCollector);
-            searchCategories.setExcludeCategoryIds (siteConfig.getExcludeCategoryIds());
+            searchCategories.setExcludeCategoryIds (SiteConfig.getExcludeCategoryIds());
             searchCategories.doLoad ();
 
         } catch (Exception e) {
@@ -237,18 +269,23 @@ public class Site {
             return false;
         }
 
+        // curated search terms needed only for curated journey
         CuratedSearchTerms curatedSearchTerms = new CuratedSearchTerms ();
         try {
             File curatedSearchTermsFile;
 
             curatedSearchTermsFile = new File (this.siteRootDir, GeneratorConstants.INPUT_CURATED_SEARCH_TERMS_PATH);
-            curatedSearchTerms.doLoad (curatedSearchTermsFile.getPath());
+            if (curatedSearchTermsFile.exists()) {
+                curatedSearchTerms.doLoad (curatedSearchTermsFile.getPath());
 
-            // also save at class level for internal sanity-check in open() method (see above)
-            this.curatedSearchTerms = curatedSearchTerms;
+                // also save at class level for internal sanity-check in open() method (see above)
+                this.curatedSearchTerms = curatedSearchTerms;
+            } else 
+                this.curatedSearchTerms = null; 
         } catch (Exception e) {
             MessageLogger.logError ("CuratedSearchTerms exception: " + e.getMessage());
         }
+            
 
         // startUrl pool - loads from productFeed and categoryCollector
         StartUrlPool startUrlPool = new StartUrlPool ();
@@ -330,16 +367,16 @@ public class Site {
                                   this.calendar.get (GregorianCalendar.MONTH)+1,
                                   this.calendar.get (GregorianCalendar.DAY_OF_MONTH));
 
-        // network dispatcher
-        Dispatcher dispatcher = new Dispatcher ();
+        // network DiscoveryUserAccess
+        DiscoveryUserAccess DiscoveryUserAccess = new DiscoveryUserAccess ();
         try {
-            dispatcher.setRealm (realm);
-            dispatcher.setRegion (SiteConfig.getAccountConfigParam ("REGION"));
-            dispatcher.setPixelDebug (pixelDebug);
-            dispatcher.setExcludeProducts (siteConfig.getExcludeProducts ());
-            dispatcher.init ();
+            DiscoveryUserAccess.setRealm (realm);
+            DiscoveryUserAccess.setRegion (SiteConfig.getAccountConfigParam ("REGION"));
+            DiscoveryUserAccess.setPixelDebug (pixelDebug);
+            DiscoveryUserAccess.setExcludeProducts (SiteConfig.getExcludeProducts ());
+            DiscoveryUserAccess.init ();
         } catch (Exception e) {
-            MessageLogger.logError ("Dispatcher exception: " + e.getMessage ());
+            MessageLogger.logError ("DiscoveryUserAccess exception: " + e.getMessage ());
             return false;
         }
 
@@ -467,7 +504,7 @@ public class Site {
             journeyBuilder.setProductSelector (productSelector);
             journeyBuilder.setWidgetHandler (widgetHandler);
             journeyBuilder.setOrderIdGenerator (orderIdGenerator);
-            journeyBuilder.setDispatcher (dispatcher);
+            journeyBuilder.setDispatcher (DiscoveryUserAccess);
             journeyBuilder.setPixelTemplates (pixelTemplates);
             journeyBuilder.setApiTemplates (apiTemplates);
             journeyBuilder.setTrafficSteps (trafficSteps);
@@ -530,7 +567,7 @@ public class Site {
         return activeCampaignRecord;    // may be null
     }
 
-    private void alterFeed (String realm, CampaignRecord activeCampaignRecord) throws Exception {
+    private void alterAndPublishFeed (String realm, CampaignRecord activeCampaignRecord) throws Exception {
         String envType;
 
         // if we have a dataConnect API key, first alter the feed as needed and then index it
@@ -543,7 +580,7 @@ public class Site {
 
             feedAlterator = new FeedAlterator ();
             feedAlterator.setCampaignRecord (activeCampaignRecord); // param may be null
-            feedAlterator.alterFeed (this.siteRootDir.getPath(), realm);
+            feedAlterator.alterAndPublishFeed (this.siteRootDir.getPath(), realm);
         }
     }
 

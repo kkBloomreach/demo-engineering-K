@@ -3,8 +3,8 @@ package com.bloomreach.trafficgenerator.site.journey;
 import java.util.ArrayList;
 
 import com.bloomreach.trafficgenerator.site.user.UserRecord;
-import com.bloomreach.trafficgenerator.site.dispatch.Dispatcher;
-import com.bloomreach.trafficgenerator.site.dispatch.SuggestProductInfo;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.useraccess.DiscoveryUserAccess;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.useraccess.SuggestProductInfo;
 import com.bloomreach.trafficgenerator.site.build.pixelparams.*;
 import com.bloomreach.trafficgenerator.site.journeydata.campaigns.CampaignRecord;
 import com.bloomreach.trafficgenerator.site.journeydata.templates.*;
@@ -28,7 +28,7 @@ public class StepSuggestSelectProduct extends StepBase {
                                   CampaignRecord activeCampaignRecord,
                                   PixelTemplates pixelTemplates,
                                   ApiTemplates apiTemplates,
-                                  Dispatcher dispatcher,
+                                  DiscoveryUserAccess DiscoveryUserAccess,
                                   ProductFeed productFeed,
                                   ProductSelector productSelector,
                                   boolean testData) throws Exception {
@@ -71,7 +71,7 @@ public class StepSuggestSelectProduct extends StepBase {
         handleStepInternal (prevStepResult, userRecord, logTime, 
                             selectedAqTerm, selectedProdDetails,
                             activeCampaignRecord,
-                            pixelTemplates, apiTemplates, dispatcher, testData);
+                            pixelTemplates, apiTemplates, DiscoveryUserAccess, testData);
 
 
         thisStepResult = new StepResultProductDetails ();
@@ -92,7 +92,7 @@ public class StepSuggestSelectProduct extends StepBase {
                                                   CampaignRecord activeCampaignRecord,
                                                   PixelTemplates pixelTemplates,
                                                   ApiTemplates apiTemplates,
-                                                  Dispatcher dispatcher,
+                                                  DiscoveryUserAccess DiscoveryUserAccess,
                                                   boolean testData) throws Exception {
         PixelBRData suggestEventPixelData;
 
@@ -108,7 +108,7 @@ public class StepSuggestSelectProduct extends StepBase {
         if (suggestEventPixelData == null) {
             MessageLogger.logWarning ("Failed to build suggest event pixel");
         } else {
-            dispatcher.dispatchPixel (suggestEventPixelData);
+            DiscoveryUserAccess.dispatchPixel (suggestEventPixelData);
         }
 
         // NOTE: Actual product-page-pixel is not triggered in this class. The BrowsePDP class

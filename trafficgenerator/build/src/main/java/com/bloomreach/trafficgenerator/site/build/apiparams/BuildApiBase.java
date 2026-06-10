@@ -185,7 +185,7 @@ public abstract class BuildApiBase {
                                     String flList, 
                                     String segment) {
         try {
-            apiData.setParam (ApiBRData.PARAMNAME_REQUEST_TYPE, "search");
+            apiData.setParam (ApiBRData.PARAMNAME_REQUEST_TYPE, ApiBRData.REQUEST_TYPE_SEARCH);
             apiData.setParam (ApiBRData.PARAMNAME_SEARCH_TYPE, searchType); // keyword or category
             apiData.setParam (ApiBRData.PARAMNAME_Q, query);
             apiData.setParam (ApiBRData.PARAMNAME_URL, url);
@@ -231,7 +231,7 @@ public abstract class BuildApiBase {
                                            String refUrl, 
                                            String aqTerm, 
                                            String flList ) {
-        apiData.setParam (ApiBRData.PARAMNAME_REQUEST_TYPE, "suggest");
+        apiData.setParam (ApiBRData.PARAMNAME_REQUEST_TYPE, ApiBRData.REQUEST_TYPE_SUGGEST);
         apiData.setParam (ApiBRData.PARAMNAME_Q, aqTerm);
         apiData.setParam (ApiBRData.PARAMNAME_URL, url);
         apiData.setParam (ApiBRData.PARAMNAME_REF_URL, refUrl);

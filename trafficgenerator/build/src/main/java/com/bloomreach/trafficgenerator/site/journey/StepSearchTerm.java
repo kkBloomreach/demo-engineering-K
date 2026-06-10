@@ -3,9 +3,9 @@ package com.bloomreach.trafficgenerator.site.journey;
 import java.util.ArrayList;
 
 import com.bloomreach.trafficgenerator.site.user.UserRecord;
-import com.bloomreach.trafficgenerator.site.dispatch.Dispatcher;
-import com.bloomreach.trafficgenerator.site.dispatch.SearchApiResponse;
-import com.bloomreach.trafficgenerator.site.dispatch.SearchApiResponseDoc;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.useraccess.DiscoveryUserAccess;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.useraccess.SearchApiResponse;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.useraccess.SearchApiResponseDoc;
 import com.bloomreach.trafficgenerator.site.build.pixelparams.*;
 import com.bloomreach.trafficgenerator.site.build.apiparams.*;
 import com.bloomreach.trafficgenerator.site.journeydata.campaigns.CampaignRecord;
@@ -25,7 +25,7 @@ public class StepSearchTerm extends StepBase {
                                   CampaignRecord activeCampaignRecord,
                                   PixelTemplates pixelTemplates,
                                   ApiTemplates apiTemplates,
-                                  Dispatcher dispatcher,
+                                  DiscoveryUserAccess DiscoveryUserAccess,
                                   boolean testData) throws Exception {
 
         StepResultSearchResponse thisStepResult;
@@ -46,7 +46,7 @@ public class StepSearchTerm extends StepBase {
 
         searchApiResponse = handleStepInternal (prevStepResult, userRecord, logTime, selectedTerm,
                                                 activeCampaignRecord,
-                                                pixelTemplates, apiTemplates, dispatcher, testData);
+                                                pixelTemplates, apiTemplates, DiscoveryUserAccess, testData);
 
         if (searchApiResponse == null) {
             String searchResultPageUrl;
@@ -83,7 +83,7 @@ public class StepSearchTerm extends StepBase {
                                                   CampaignRecord activeCampaignRecord,
                                                   PixelTemplates pixelTemplates,
                                                   ApiTemplates apiTemplates,
-                                                  Dispatcher dispatcher,
+                                                  DiscoveryUserAccess DiscoveryUserAccess,
                                                   boolean testData) throws Exception {
 
         PixelBRData pixelData;
@@ -97,14 +97,14 @@ public class StepSearchTerm extends StepBase {
         if (pixelData == null) {
             MessageLogger.logWarning ("Failed to build search event pixel");
         } else {
-            dispatcher.dispatchPixel (pixelData);
+            DiscoveryUserAccess.dispatchPixel (pixelData);
         }
 
         // api call
         searchApiResponse = collectSearchApiResponse (userRecord, logTime, 
                                                       prevStepResult.getRefUrl (), prevStepResult.getUrl (),
                                                       selectedTerm, activeCampaignRecord,  
-                                                      apiTemplates, dispatcher);
+                                                      apiTemplates, DiscoveryUserAccess);
 
         // SearchResultPage pixel. Even if searchApiResponse is null, conceptually
         // there is a page that shows "0 results" OR some exception message
@@ -115,7 +115,7 @@ public class StepSearchTerm extends StepBase {
         if (pixelData == null) {
             MessageLogger.logWarning ("Failed to build search result page pixel");
         } else {
-            dispatcher.dispatchPixel (pixelData);
+            DiscoveryUserAccess.dispatchPixel (pixelData);
         }
 
         return searchApiResponse;   // may be null
@@ -128,7 +128,7 @@ public class StepSearchTerm extends StepBase {
                                                         String selectedTerm,
                                                         CampaignRecord activeCampaignRecord,
                                                         ApiTemplates apiTemplates,
-                                                        Dispatcher dispatcher) throws Exception {
+                                                        DiscoveryUserAccess DiscoveryUserAccess) throws Exception {
         ApiBRData apiData;
         SearchApiResponse searchApiResponse;
         ArrayList<SearchApiResponseDoc> allResponseDocs;
@@ -142,7 +142,7 @@ public class StepSearchTerm extends StepBase {
             return null;
         }
 
-        searchApiResponse = dispatcher.getSearchApiResponse (apiData); 
+        searchApiResponse = DiscoveryUserAccess.getSearchApiResponse (apiData); 
         if (searchApiResponse == null) {
             MessageLogger.logError ("Keyword search api response is null for search term: " + selectedTerm);
             return null;

@@ -1,6 +1,6 @@
 package com.bloomreach.trafficgenerator.site.journeydata.campaigns;
 
-import com.bloomreach.trafficgenerator.site.journeydata.queryexecutor.*;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.nonuseraccess.*;
 
 import java.io.File;
 import java.io.FileReader;

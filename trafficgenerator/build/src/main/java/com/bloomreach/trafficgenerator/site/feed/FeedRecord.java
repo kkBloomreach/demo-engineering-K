@@ -9,11 +9,11 @@ public class FeedRecord {
         String productName = "";
         String productPrice = "";
         String productSalePrice = "";
-        String productSkuId = "";
-        boolean availability = false;
-        ArrayList<String> views = null;
-        String url = null;
+        boolean productAvailability = false;
+        String productUrl = null;
         String productStyle = null; // currently available only in PacificApparel catalog
+        ArrayList <ProductVariantRecord> productVariants = null;
+        ArrayList <ProductViewRecord> productViews = null;
 
         public FeedRecord () {
         }
@@ -30,17 +30,16 @@ public class FeedRecord {
             this.productName = name;
         }
 
-        public void setAvailability (boolean avail) {
-            this.availability = avail;
+        public void setProductAvailability (boolean avail) {
+            this.productAvailability = avail;
         }
 
-        public void setUrl (String url) {
-            this.url = url;
+        public void setProductUrl (String url) {
+            this.productUrl = url;
         }
 
-        // param is comma-separated list of views
-        public void setViews (ArrayList<String> views) {
-            this.views = views; // used in PacificSupply feed
+        public void setProductViews (ArrayList<ProductViewRecord> views) {
+            this.productViews = views; // used in PacificSupply feed
         }
 
         public String getProductName () {
@@ -63,24 +62,58 @@ public class FeedRecord {
             return this.productSalePrice;
         }
 
-        public void setProductSkuId (String skuId) {
-            this.productSkuId = skuId;
+        public void setProductVariants (ArrayList <ProductVariantRecord> variants) {
+            this.productVariants = variants;
         }
 
+        // select one of the variants at random
+        // if product has no variants, returns null
+        public ProductVariantRecord getProductVariant () {
+            ProductVariantRecord selVariant = null;
+            if ((this.productVariants != null) && (this.productVariants.size() > 0)) {
+                int randomIndx;
+
+                randomIndx = (int) (Math.random () * this.productVariants.size ());
+                selVariant = this.productVariants.get (randomIndx);
+            }
+
+            return selVariant;
+        }
+
+        // select one of the variants at random and return its skuid
+        // if product has no variants, returns null
         public String getProductSkuId () {
-            return this.productSkuId;
+            String skuid = null;
+            ProductVariantRecord selVariant;
+
+            selVariant = this.getProductVariant ();
+            if (selVariant != null)
+                skuid = selVariant.getSkuId ();
+            return skuid;
         }
 
         public boolean isAvailable () {
-            return this.availability;
+            return this.productAvailability;
         }
 
-        public String getUrl () {
-            return this.url;
+        public String getProductUrl () {
+            return this.productUrl;
         }
 
-        public ArrayList<String> getViews () {
-            return this.views;
+        public ArrayList<ProductViewRecord> getProductViews () {
+            return this.productViews;
+        }
+
+        // this method for backward compatibility
+        public ArrayList<String> getProductViewIds () {
+            ArrayList <String> productViewIds = null;
+
+            if ((this.productViews != null) && (this.productViews.size () > 0)) {
+                productViewIds = new ArrayList <String> ();
+                for (ProductViewRecord viewRecord : this.productViews)
+                    productViewIds.add (viewRecord.getViewId ());
+            }
+            return productViewIds;
         }
 
         public void setProductStyle (String style) {

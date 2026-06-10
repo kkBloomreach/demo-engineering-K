@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import com.bloomreach.trafficgenerator.site.journeydata.*;
 import com.bloomreach.trafficgenerator.site.journeydata.customjourney.CustomJourneyData;
 import com.bloomreach.trafficgenerator.site.journeydata.customjourney.LPCCustomJourneyData;
-import com.bloomreach.trafficgenerator.site.journeydata.queryexecutor.CategoryInfo;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.nonuseraccess.CategoryInfo;
 import com.bloomreach.trafficgenerator.site.journeylogs.*;
 import com.bloomreach.trafficgenerator.site.user.*;
 import com.bloomreach.trafficgenerator.MessageLogger;

@@ -1,7 +1,7 @@
 package com.bloomreach.trafficgenerator.site.journey;
 
 import com.bloomreach.trafficgenerator.site.user.UserRecord;
-import com.bloomreach.trafficgenerator.site.dispatch.Dispatcher;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.useraccess.DiscoveryUserAccess;
 import com.bloomreach.trafficgenerator.site.build.pixelparams.*;
 import com.bloomreach.trafficgenerator.site.journeydata.templates.*;
 import com.bloomreach.trafficgenerator.GeneratorConstants;
@@ -18,7 +18,7 @@ public class StepATC extends StepBase {
                                   ProductDetails productDetails,
                                   Cart userCart,
                                   PixelTemplates pixelTemplates,
-                                  Dispatcher dispatcher,
+                                  DiscoveryUserAccess DiscoveryUserAccess,
                                   boolean testData) throws Exception {
         StepResult thisStepResult;
 
@@ -36,7 +36,7 @@ public class StepATC extends StepBase {
         }
 
         handleStepInternal (prevStepResult, userRecord, logTime, productDetails, userCart, 
-                            pixelTemplates, dispatcher, testData);
+                            pixelTemplates, DiscoveryUserAccess, testData);
 
         thisStepResult = new StepResultVoid ();
         super.setUrlHistory (prevStepResult, thisStepResult, null); // null => this.url == prev.url
@@ -53,7 +53,7 @@ public class StepATC extends StepBase {
                                      ProductDetails productDetails,
                                      Cart userCart,
                                      PixelTemplates pixelTemplates,
-                                     Dispatcher dispatcher, 
+                                     DiscoveryUserAccess DiscoveryUserAccess, 
                                      boolean testData)  throws Exception {
 
         PixelBRData pixelData;
@@ -71,7 +71,7 @@ public class StepATC extends StepBase {
         if (pixelData == null) {
             MessageLogger.logWarning ("Failed to build ATC pixel");
         } else {
-            dispatcher.dispatchPixel (pixelData);
+            DiscoveryUserAccess.dispatchPixel (pixelData);
         }
 
         // quantity - 

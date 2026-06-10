@@ -4,7 +4,7 @@ package com.bloomreach.trafficgenerator.site.journeydata;
 
 import java.util.ArrayList;
 
-import com.bloomreach.trafficgenerator.site.journeydata.queryexecutor.*;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.nonuseraccess.*;
 import com.bloomreach.trafficgenerator.MessageLogger;
 import com.bloomreach.trafficgenerator.site.journeydata.templates.ApiBRData;
 

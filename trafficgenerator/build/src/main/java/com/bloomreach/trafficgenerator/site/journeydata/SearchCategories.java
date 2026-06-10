@@ -5,7 +5,7 @@ package com.bloomreach.trafficgenerator.site.journeydata;
 import java.util.ArrayList;
 
 import com.bloomreach.trafficgenerator.MessageLogger;
-import com.bloomreach.trafficgenerator.site.journeydata.queryexecutor.CategoryInfo;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.nonuseraccess.CategoryInfo;
 import com.bloomreach.trafficgenerator.site.build.pixelparams.BuildCategoryPagePixel;
 
 public class SearchCategories {

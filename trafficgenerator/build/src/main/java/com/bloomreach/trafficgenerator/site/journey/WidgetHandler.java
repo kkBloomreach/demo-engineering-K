@@ -9,11 +9,11 @@ import com.bloomreach.trafficgenerator.site.journeydata.templates.PixelBRData;
 import com.bloomreach.trafficgenerator.site.journeydata.templates.ApiBRData;
 import com.bloomreach.trafficgenerator.site.journeydata.templates.ApiTemplates;
 import com.bloomreach.trafficgenerator.site.journeydata.templates.PixelTemplates;
-import com.bloomreach.trafficgenerator.site.dispatch.WidgetApiResponse;
-import com.bloomreach.trafficgenerator.site.dispatch.WidgetResponseMetadata;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.useraccess.WidgetApiResponse;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.useraccess.WidgetResponseMetadata;
 import com.bloomreach.trafficgenerator.site.user.UserRecord;
-import com.bloomreach.trafficgenerator.site.dispatch.SearchApiResponseDoc;
-import com.bloomreach.trafficgenerator.site.dispatch.Dispatcher;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.useraccess.SearchApiResponseDoc;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.useraccess.DiscoveryUserAccess;
 import com.bloomreach.trafficgenerator.site.build.apiparams.BuildWidgetApi;
 import com.bloomreach.trafficgenerator.site.build.pixelparams.BuildWidgetViewEventPixel;
 import com.bloomreach.trafficgenerator.site.build.pixelparams.BuildWidgetClickEventPixel;
@@ -38,7 +38,7 @@ public class WidgetHandler {
                                      CampaignRecord campaignRecord,
                                      ApiTemplates apiTemplates,
                                      PixelTemplates pixelTemplates,
-                                     Dispatcher dispatcher,
+                                     DiscoveryUserAccess DiscoveryUserAccess,
                                      boolean testData,
                                      WidgetLog widgetLog) {
         String currentPageType;
@@ -61,7 +61,7 @@ public class WidgetHandler {
         for (WidgetRecord widgetRecord : widgetsOnPage) {
             try {
                 handleWidgetTraffic (stepResult, userRecord, logTime, widgetRecord,
-                                     campaignRecord, cart, apiTemplates, pixelTemplates, dispatcher, testData, widgetLog);
+                                     campaignRecord, cart, apiTemplates, pixelTemplates, DiscoveryUserAccess, testData, widgetLog);
             } catch (Exception e) {
                 MessageLogger.logError (String.format ("HandleWidget exception: %s", e.getMessage()));
                 // continue to handle other widgets if any
@@ -78,7 +78,7 @@ public class WidgetHandler {
                                       Cart cart,
                                       ApiTemplates apiTemplates,
                                       PixelTemplates pixelTemplates,
-                                      Dispatcher dispatcher,
+                                      DiscoveryUserAccess DiscoveryUserAccess,
                                       boolean testData,
                                       WidgetLog widgetLog) throws Exception {
         WidgetApiResponse widgetApiResponse = null;
@@ -108,7 +108,7 @@ public class WidgetHandler {
                                                       itemId,
                                                       campaignRecord,
                                                       apiTemplates,
-                                                      dispatcher); 
+                                                      DiscoveryUserAccess); 
             // "widget-api" logs not collected here because the log file gets too large. 
             // Actual api calls are written to the api-log-files as usual (in debug mode)
             // widgetLog.addApiRecord (userRecord.getUserId(), stepResult.getUrl(), widgetRecord.getWid(), 
@@ -132,7 +132,7 @@ public class WidgetHandler {
             dispatchWidgetViewPixel (userRecord, logTime, stepResult.getRefUrl (), stepResult.getUrl (),
                                      widgetRecord, widgetApiResponse,
                                      pixelTemplates,
-                                     dispatcher, 
+                                     DiscoveryUserAccess, 
                                      testData);
         } catch (Exception e) {
             exceptionMsg = String.format ("Exception in dispatchWidgetViewPixel, widgetId = %s", widgetRecord.getWid ());
@@ -158,7 +158,7 @@ public class WidgetHandler {
                                               widgetRecord, widgetApiResponse,
                                               selectedResponseDoc.getPid (),
                                               pixelTemplates,
-                                              dispatcher, 
+                                              DiscoveryUserAccess, 
                                               testData);
                     widgetLog.addClickRecord (userRecord.getUserId(), stepResult.getUrl(), widgetRecord.getWid(), 
                                                  selectedResponseDoc.getPid(), widgetApiResponse.getNumFound(), logTime);
@@ -198,7 +198,7 @@ public class WidgetHandler {
                                             selectedResponseDoc.getPid (), selectedResponseDoc.getSkuid (),
                                             cart,
                                             pixelTemplates,
-                                            dispatcher, 
+                                            DiscoveryUserAccess, 
                                             testData);
                     widgetLog.addATCRecord (userRecord.getUserId(), stepResult.getUrl(), widgetRecord.getWid(), 
                                                selectedProductDetails.getPid(), widgetApiResponse.getNumFound(), logTime);
@@ -216,7 +216,7 @@ public class WidgetHandler {
                                                     String itemId,
                                                     CampaignRecord campaignRecord,
                                                     ApiTemplates apiTemplates,
-                                                    Dispatcher dispatcher) throws Exception {
+                                                    DiscoveryUserAccess DiscoveryUserAccess) throws Exception {
         ApiBRData widgetApiData;
         BuildWidgetApi apiBuilder;
         int buildStatus;
@@ -231,7 +231,7 @@ public class WidgetHandler {
                                         campaignRecord);
  
         if (buildStatus == GeneratorConstants.GENERATE_STATUS_OK) {
-            widgetApiResponse = dispatcher.getWidgetApiResponse (widgetApiData, widgetRecord.getWidgetCode ());
+            widgetApiResponse = DiscoveryUserAccess.getWidgetApiResponse (widgetApiData, widgetRecord.getWidgetCode ());
             if (widgetApiResponse == null) {
                 MessageLogger.logError ("Widget api response is null for widgetId: " + widgetRecord.getWid ());
             }
@@ -244,7 +244,7 @@ public class WidgetHandler {
                                         WidgetRecord widgetRecord,
                                         WidgetApiResponse widgetApiResponse,
                                         PixelTemplates pixelTemplates,
-                                        Dispatcher dispatcher, 
+                                        DiscoveryUserAccess DiscoveryUserAccess, 
                                         boolean testData) throws Exception {
         PixelBRData pixelData;
         BuildWidgetViewEventPixel pixelBuilder;
@@ -266,7 +266,7 @@ public class WidgetHandler {
                                           testData);
 
         if (buildStatus == GeneratorConstants.GENERATE_STATUS_OK) {
-            dispatcher.dispatchPixel (pixelData);
+            DiscoveryUserAccess.dispatchPixel (pixelData);
         }
     }
 
@@ -275,7 +275,7 @@ public class WidgetHandler {
                                         WidgetApiResponse widgetApiResponse,
                                         String itemId,
                                         PixelTemplates pixelTemplates,
-                                        Dispatcher dispatcher, 
+                                        DiscoveryUserAccess DiscoveryUserAccess, 
                                         boolean testData) throws Exception {
         PixelBRData pixelData;
         BuildWidgetClickEventPixel pixelBuilder;
@@ -297,7 +297,7 @@ public class WidgetHandler {
                                           testData);
 
         if (buildStatus == GeneratorConstants.GENERATE_STATUS_OK) {
-            dispatcher.dispatchPixel (pixelData);
+            DiscoveryUserAccess.dispatchPixel (pixelData);
         }
     }
 
@@ -307,7 +307,7 @@ public class WidgetHandler {
                                         String itemId, String skuid,
                                         Cart cart,
                                         PixelTemplates pixelTemplates,
-                                        Dispatcher dispatcher, 
+                                        DiscoveryUserAccess DiscoveryUserAccess, 
                                         boolean testData) throws Exception {
         PixelBRData pixelData;
         BuildWidgetATCEventPixel pixelBuilder;
@@ -330,7 +330,7 @@ public class WidgetHandler {
                                           testData);
 
         if (buildStatus == GeneratorConstants.GENERATE_STATUS_OK) {
-            dispatcher.dispatchPixel (pixelData);
+            DiscoveryUserAccess.dispatchPixel (pixelData);
         }
     }
 

@@ -2,7 +2,8 @@
 ## FEED --- FULL (and SMALL for debugging) -- expected to be already converted
 
 #CATALOG_TO_CONVERT = "PacificHome" # OR PacificApparel
-CATALOG_TO_CONVERT = "PUMA"
+#CATALOG_TO_CONVERT = "PUMA"
+CATALOG_TO_CONVERT = "BURBERRY"
 
 # -------------------
 if CATALOG_TO_CONVERT == "PacificHome":
@@ -51,6 +52,20 @@ elif CATALOG_TO_CONVERT == "PUMA":
     FILENAME_UPDATED_JSONL_FEED_OUT = './data/output/puma/puma_en_02242026.jsonl'
 
     PRODUCT_URL_PREFIX_UNUSED = 'https://eu.puma.com/de/en/pd/'
+
+elif CATALOG_TO_CONVERT == "BURBERRY":
+    ''' 
+    ######### BURBERRY #######
+    '''
+
+    FILENAME_JSONL_SOURCE_FEED_IN = './data/input/burberry/burberry_uk_en_full.jsonl'
+    #FILENAME_JSONL_SOURCE_FEED_IN = './data/input/burberry/burberry_uk_en_full_10.jsonl'
+
+    FILENAME_UPDATED_CSV_FEED_OUT = './data/output/burberry/burberry_uk_en_full_06042026.csv'
+
+    # JSONL created for debugging
+    FILENAME_UPDATED_JSONL_FEED_OUT = './data/output/burberry/burberry_uk_en_full_06042026.jsonl'
+
 else:
     print ('@@@ UNKNOWN CATALOG TO CONVERT: %s\n' % CATALOG_TO_CONVERT)
 

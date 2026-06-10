@@ -1,6 +1,6 @@
 package com.bloomreach.trafficgenerator.site.journey;
 
-import com.bloomreach.trafficgenerator.site.dispatch.SearchApiResponse;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.useraccess.SearchApiResponse;
 
 public class StepResultSearchResponse extends StepResult {
 

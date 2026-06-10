@@ -2,7 +2,7 @@ package com.bloomreach.trafficgenerator.site.journey;
 
 import com.bloomreach.trafficgenerator.site.build.pixelparams.BuildPixelBase;
 import com.bloomreach.trafficgenerator.site.build.pixelparams.OrderIdGenerator;
-import com.bloomreach.trafficgenerator.site.dispatch.Dispatcher;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.useraccess.DiscoveryUserAccess;
 import com.bloomreach.trafficgenerator.site.feed.ProductFeed;
 import com.bloomreach.trafficgenerator.site.journeydata.CategoryCollector;
 import com.bloomreach.trafficgenerator.site.journeydata.SearchCategories;
@@ -63,7 +63,7 @@ public class JourneyBuilder {
     private ApiTemplates apiTemplates;
 
     // generator client, instatiated once
-    private Dispatcher dispatcher;
+    private DiscoveryUserAccess DiscoveryUserAccess;
 
     // campaignRecord, if any. Value may be null
     private CampaignRecord activeCampaignRecord;
@@ -81,7 +81,7 @@ public class JourneyBuilder {
     private WidgetLog widgetLog;
 
     // pixelCount and apiCount log - not saved in this class.
-    // provide to PixelBase, Dispatcher class as static object
+    // provide to PixelBase, DiscoveryUserAccess class as static object
     // private PixelCountLog pixelCountLog;
 
     // testData provided via commandLine
@@ -143,8 +143,8 @@ public class JourneyBuilder {
         this.apiTemplates = apiTemplates;
     }
 
-    public void setDispatcher (Dispatcher dispatcher) {
-        this.dispatcher = dispatcher;
+    public void setDispatcher (DiscoveryUserAccess DiscoveryUserAccess) {
+        this.DiscoveryUserAccess = DiscoveryUserAccess;
     }
 
     public void setActiveCampaignRecord (CampaignRecord activeCampaignRecord) {
@@ -179,8 +179,8 @@ public class JourneyBuilder {
 
     public void setApiCountLog (ApiCountLog apiCountLog) {
         // Since apiCountLog is across entire site, unrelated to any specific 'journey'
-        // set this value in Dispatcher class once
-        this.dispatcher.setApiCountLog(apiCountLog);
+        // set this value in DiscoveryUserAccess class once
+        this.DiscoveryUserAccess.setApiCountLog(apiCountLog);
     }
 
     public PredefinedJourneyGenerator buildPredefinedJourneyGenerator () {
@@ -251,7 +251,7 @@ public class JourneyBuilder {
         stepsHandler.setSearchCategories (searchCategories);
         stepsHandler.setCuratedSearchTerms (curatedSearchTerms);
         stepsHandler.setApiTemplates (apiTemplates);
-        stepsHandler.setDispatcher (dispatcher);
+        stepsHandler.setDispatcher (DiscoveryUserAccess);
         stepsHandler.setActiveCampaignRecord (activeCampaignRecord);
         stepsHandler.setCustomJourney (customJourney);
         stepsHandler.setTestData (testData);

@@ -59,7 +59,7 @@ public class BuildSearchResultPagePixel extends BuildPixelBase  {
 
         // example: .../search?_sq=Sectional+Sofa
         searchResultPageUrl = SiteConfig.getUrlConfigParam ("SEARCH_PAGE_URL_PREFIX");
-        searchResultPageUrl = searchResultPageUrl + query; // url-encoded when generating queryParam (see Dispatcher.java)
+        searchResultPageUrl = searchResultPageUrl + query; // url-encoded when generating queryParam (see DiscoveryUserAccess.java)
         return searchResultPageUrl;
     }
 

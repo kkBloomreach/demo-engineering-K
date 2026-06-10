@@ -51,7 +51,7 @@ public class BuildProductPagePixel extends BuildPixelBase  {
             pixelData.setParam (PixelBRData.PARAMNAME_URL, url);
 
             // product name 
-            // productName encoded when generating queryParam (see Dispatcher.java)
+            // productName encoded when generating queryParam (see DiscoveryUserAccess.java)
             pixelData.setParam (PixelBRData.PARAMNAME_PROD_NAME, productName);
 
             // update pixelCount

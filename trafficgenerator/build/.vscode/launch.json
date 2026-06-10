@@ -10,7 +10,7 @@
             "request": "launch",
             "mainClass": "com.bloomreach.trafficgenerator.Generator",
             "projectName": "trafficgenerator",
-            "args": " -d /Users/kirankundargi/tmp/brlab/test/trafficgenerator/data -a sandbox_sales07 -r production -e dev -t true -p false -l debug -c"    
+            "args": " -d /Users/kirankundargi/tmp/brlab/test/trafficgenerator/data -a demo_loomi_shopify_home -r production -e dev -t true -p true -l debug"    
         }
     
     ]

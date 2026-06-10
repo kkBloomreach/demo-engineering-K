@@ -1,7 +1,7 @@
 package com.bloomreach.trafficgenerator.site.journey;
 
 import com.bloomreach.trafficgenerator.site.user.UserRecord;
-import com.bloomreach.trafficgenerator.site.dispatch.Dispatcher;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.useraccess.DiscoveryUserAccess;
 import com.bloomreach.trafficgenerator.site.build.pixelparams.*;
 import com.bloomreach.trafficgenerator.site.journeydata.templates.*;
 import com.bloomreach.trafficgenerator.site.journeylogs.StepLog;
@@ -21,7 +21,7 @@ public class StepConvert extends StepBase {
                                   Cart userCart,
                                   OrderIdGenerator orderIdGenerator,
                                   PixelTemplates pixelTemplates,
-                                  Dispatcher dispatcher,
+                                  DiscoveryUserAccess DiscoveryUserAccess,
                                   boolean testData) throws Exception {
         StepResult thisStepResult;
         StepResultInvalidData inputInvalid;
@@ -47,7 +47,7 @@ public class StepConvert extends StepBase {
         }
         
         handleStepInternal (prevStepResult, userRecord, logTime, stepLog, userCart, 
-                            orderIdGenerator, pixelTemplates, dispatcher, testData);
+                            orderIdGenerator, pixelTemplates, DiscoveryUserAccess, testData);
 
         thisStepResult = new StepResultVoid ();
         // NOTE: final url = 'thankyou'. Internally, a conversion pixel + post-conversion-page pixels are 
@@ -73,7 +73,7 @@ public class StepConvert extends StepBase {
                                      Cart userCart,
                                      OrderIdGenerator orderIdGenerator,
                                      PixelTemplates pixelTemplates,
-                                     Dispatcher dispatcher, 
+                                     DiscoveryUserAccess DiscoveryUserAccess, 
                                      boolean testData) throws Exception {
 
         PixelBRData pixelData;
@@ -92,7 +92,7 @@ public class StepConvert extends StepBase {
         if (pixelData == null) {
             MessageLogger.logWarning ("Failed to build conversion pixel");
         } else {
-            dispatcher.dispatchPixel (pixelData);
+            DiscoveryUserAccess.dispatchPixel (pixelData);
         }
 
         // dispatch 'post-conversion' page pixel. We assume all conversions are always successful
@@ -106,7 +106,7 @@ public class StepConvert extends StepBase {
         if (pixelData == null) {
             MessageLogger.logWarning ("Failed to build post conversion pixel");
         } else {
-            dispatcher.dispatchPixel (pixelData);
+            DiscoveryUserAccess.dispatchPixel (pixelData);
         }
     }
 

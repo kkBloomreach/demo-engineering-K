@@ -24,6 +24,7 @@ public class ApiBRData {
     public final static String PARAMNAME_ROWS = "rows";
     public final static String PARAMNAME_START = "start";
     public final static String PARAMNAME_FL = "fl";
+    public final static String PARAMNAME_FQ = "fq";
     public final static String PARAMNAME_FIELDS = "fields"; // used in widget API call
     public final static String PARAMNAME_Q = "q";
     public final static String PARAMNAME_SEARCH_TYPE  = "search_type";
@@ -41,14 +42,15 @@ public class ApiBRData {
     public final static String PARAMNAME_WIDGET_SKU = "sku"; // sku for product item
 
     public final static String SEGMENT_CUSTOMER_PROFILE = "customer_profile";
-    // fl_list must include all attribs used in building API responseDoc (see Dispatcher.java)
+    // fl_list must include all attribs used in building API responseDoc (see DiscoveryUserAccess.java)
     // 'style' needed for PacificApparel only
     public final static String DEFAULT_FL_LIST = "pid,price,title,sale_price,url,sku_thumb_image,skuid,sku_price,sku_sale_price,style";
     public final static String MAX_ROWS = "120";  // rows in API response; start is 0 by default
     public final static String SEARCH_TYPE_CATEGORY  = "category";
     public final static String SEARCH_TYPE_KEYWORD = "keyword";
+    public final static String REQUEST_TYPE_SEARCH = "search";
+    public final static String REQUEST_TYPE_SUGGEST = "suggest";
     public final static String ATTRIB_NAME_CAMPAIGN = "campaign"; // attrib name in feed
-
     public final static String HEADER_USER_AGENT = "user_agent";
 
     private HashMap <String, String> brData;
@@ -67,7 +69,7 @@ public class ApiBRData {
     }
 
     // given all api params, generate a query string to be
-    // sent in pix.gif API call
+    // sent in API call
     public String constructQueryParams () {
         StringBuffer paramStrBuf = null;
 

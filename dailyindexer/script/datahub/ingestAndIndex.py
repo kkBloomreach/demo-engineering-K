@@ -34,6 +34,7 @@ class IngestAndIndex ():
         api_token_secret = cr.Credentials.getBloomreachDatahubApiTokenSecret (account_config)
         auth = cr.Credentials.getBloomreachDatahubAuth (account_config)
         # need to define this 'params' object in-line
+        # 'update: full' always goes ahead and does discovery-side re-index as well
         params = {
                     "update_mode": "full",
                     "on_success_trigger": ["update-items", "update-destination-items"]

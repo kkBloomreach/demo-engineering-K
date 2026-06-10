@@ -72,7 +72,7 @@ package com.bloomreach.trafficgenerator;
 // 1.9.4.4: Add 'phantom' search after zero search
 // 1.9.4.5: Set different userAgent based on deviceType
 // 1.9.5.0: Change zero-query session logic
-// 1.9.5.1: Removed some dispatcher debug logMessage to keep log file size small
+// 1.9.5.1: Removed some DiscoveryUserAccess debug logMessage to keep log file size small
 // 1.9.5.2: small log fix related to zero-query session termination
 // 1.9.5.3: add skuid in suggest-select-product
 // 1.9.6.0: for Coview (aka Refinement), ATC and Covert first product then do second product
@@ -96,7 +96,7 @@ package com.bloomreach.trafficgenerator;
 // 1.12.1.0: updated suggestEvent pixel to include both aq and q
 // 1.12.2.0: updated buildPixel api params to include ref and url 
 // 1.12.3.0: modified suggest-select-product generator flow
-// 1.12.4.0: slight rearrangement of Dispatcher internal calls
+// 1.12.4.0: slight rearrangement of DiscoveryUserAccess internal calls
 // 1.12.4.1: set url = home in startStep for some cases (otherwise api call has exception)
 // 1.12.4.2: to select random search term (or catId), avoid re-selection of current term (or catId)
 // 1.12.4.3: check currentUrl != selected term/cat page url
@@ -169,9 +169,12 @@ package com.bloomreach.trafficgenerator;
 // 2.4.0.1:  set pixel event version = 17 (from 15)
 // 2.5.0.0:  use CuratedJourney where search-queries have been generated using LLM (for 1:1PZN(V2))
 // 2.5.0.1:  added sanity check for curated journey (curatedSearchTerms must exist for curatedJourney)
+// 2.6.0.0:  added support for datahub catalog - use preIndexed catalog, not localFile
+// 2.6.0.1:  fixed a bug related to curated search terms / curated journey
+// 2.6.0.2:  skip docType=content items in search api response
 
 public class GeneratorVersion {
-    public final static String VERSION = "2.5.0.1-X"; // Make sure to also change pom.xml->"version"
+    public final static String VERSION = "2.6.0.2-X"; // Make sure to also change pom.xml->"version"
 
     private GeneratorVersion () {
     }

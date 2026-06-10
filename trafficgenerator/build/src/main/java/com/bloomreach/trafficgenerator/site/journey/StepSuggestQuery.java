@@ -1,8 +1,8 @@
 package com.bloomreach.trafficgenerator.site.journey;
 
 import com.bloomreach.trafficgenerator.site.user.UserRecord;
-import com.bloomreach.trafficgenerator.site.dispatch.Dispatcher;
-import com.bloomreach.trafficgenerator.site.dispatch.SuggestApiResponse;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.useraccess.DiscoveryUserAccess;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.useraccess.SuggestApiResponse;
 import com.bloomreach.trafficgenerator.site.build.apiparams.*;
 import com.bloomreach.trafficgenerator.site.journeydata.templates.*;
 import com.bloomreach.trafficgenerator.GeneratorConstants;
@@ -19,7 +19,7 @@ public class StepSuggestQuery extends StepBase {
                                   String selectedTerm,  // "aq" param in suggest event
                                   PixelTemplates pixelTemplates,
                                   ApiTemplates apiTemplates,
-                                  Dispatcher dispatcher,
+                                  DiscoveryUserAccess DiscoveryUserAccess,
                                   boolean testData) throws Exception {
 
         StepResultSuggestResponse thisStepResult;
@@ -38,7 +38,7 @@ public class StepSuggestQuery extends StepBase {
         }
 
         suggestApiResponse = handleStepInternal (prevStepResult, userRecord, logTime, selectedTerm,
-                                                pixelTemplates, apiTemplates, dispatcher, testData);
+                                                pixelTemplates, apiTemplates, DiscoveryUserAccess, testData);
 
         if (suggestApiResponse == null) {
             // Note: this step is only-do-a-query; does not change page url 
@@ -67,7 +67,7 @@ public class StepSuggestQuery extends StepBase {
                                                    String selectedTerm,
                                                    PixelTemplates pixelTemplates,
                                                    ApiTemplates apiTemplates,
-                                                   Dispatcher dispatcher,
+                                                   DiscoveryUserAccess DiscoveryUserAccess,
                                                    boolean testData) throws Exception {
 
         SuggestApiResponse suggestApiResponse;
@@ -76,7 +76,7 @@ public class StepSuggestQuery extends StepBase {
         suggestApiResponse = collectSuggestApiResponse (userRecord, logTime, 
                                                         prevStepResult.getRefUrl (),
                                                         prevStepResult.getUrl (),
-                                                        selectedTerm, apiTemplates, dispatcher);
+                                                        selectedTerm, apiTemplates, DiscoveryUserAccess);
 
         return suggestApiResponse;   // may be null
     }
@@ -87,7 +87,7 @@ public class StepSuggestQuery extends StepBase {
                                                           String url, 
                                                           String selectedTerm,
                                                           ApiTemplates apiTemplates,
-                                                          Dispatcher dispatcher) throws Exception {
+                                                          DiscoveryUserAccess DiscoveryUserAccess) throws Exception {
         ApiBRData apiData;
         SuggestApiResponse suggestApiResponse;
 
@@ -98,7 +98,7 @@ public class StepSuggestQuery extends StepBase {
             return null;
         }
 
-        suggestApiResponse = dispatcher.getSuggestApiResponse (apiData); 
+        suggestApiResponse = DiscoveryUserAccess.getSuggestApiResponse (apiData); 
         if (suggestApiResponse == null) {
             MessageLogger.logWarning ("Suggest api response is null for suggest term: " + selectedTerm);
             return null;

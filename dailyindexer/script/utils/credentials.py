@@ -203,7 +203,7 @@ class Credentials ():
 
     @staticmethod
     # currently, 'params' is always the same = 'update: full'
-    # also, always go ahead and do discovery-side re-index as well
+    # 'update: full' always goes ahead and does discovery-side re-index as well
     def getBloomreachDatahubIndexParams_UNUSED (accountConfig):
         params = {
                     "update_mode": "full",

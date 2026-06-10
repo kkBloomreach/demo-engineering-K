@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import com.bloomreach.trafficgenerator.MessageLogger;
 import com.bloomreach.trafficgenerator.site.build.pixelparams.BuildHomePagePixel;
 import com.bloomreach.trafficgenerator.site.build.pixelparams.OrderIdGenerator;
-import com.bloomreach.trafficgenerator.site.dispatch.Dispatcher;
-import com.bloomreach.trafficgenerator.site.dispatch.SearchApiResponse;
-import com.bloomreach.trafficgenerator.site.dispatch.SuggestApiResponse;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.useraccess.DiscoveryUserAccess;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.useraccess.SearchApiResponse;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.useraccess.SuggestApiResponse;
 import com.bloomreach.trafficgenerator.site.feed.FeedRecord;
 import com.bloomreach.trafficgenerator.site.feed.ProductFeed;
 import com.bloomreach.trafficgenerator.site.journeydata.CategoryCollector;
@@ -24,7 +24,7 @@ import com.bloomreach.trafficgenerator.site.journeydata.CuratedSearchTermDetails
 import com.bloomreach.trafficgenerator.site.journeydata.campaigns.CampaignRecord;
 import com.bloomreach.trafficgenerator.site.journeydata.customjourney.CustomJourney;
 import com.bloomreach.trafficgenerator.site.journeydata.customjourney.LPCCustomJourneyData;
-import com.bloomreach.trafficgenerator.site.journeydata.queryexecutor.CategoryInfo;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.nonuseraccess.CategoryInfo;
 import com.bloomreach.trafficgenerator.site.journeydata.templates.ApiTemplates;
 import com.bloomreach.trafficgenerator.site.journeydata.templates.PixelTemplates;
 import com.bloomreach.trafficgenerator.site.journeylogs.SessionLog;
@@ -73,8 +73,8 @@ public class StepsHandler {
     // categoryCollector
     CategoryCollector categoryCollector;
 
-    // Dispatcher - send API calls to server
-    Dispatcher dispatcher;
+    // DiscoveryUserAccess - send API calls to server
+    DiscoveryUserAccess DiscoveryUserAccess;
 
     // current campaign record, may be null
     CampaignRecord activeCampaignRecord;
@@ -150,8 +150,8 @@ public class StepsHandler {
         this.apiTemplates = apiTemplates;
     }
 
-    public void setDispatcher (Dispatcher dispatcher) {
-        this.dispatcher = dispatcher;
+    public void setDispatcher (DiscoveryUserAccess DiscoveryUserAccess) {
+        this.DiscoveryUserAccess = DiscoveryUserAccess;
     }
 
     public void setActiveCampaignRecord (CampaignRecord activeCampaignRecord) {
@@ -189,7 +189,7 @@ public class StepsHandler {
                                                           this.activeCampaignRecord,
                                                           this.apiTemplates,
                                                           this.pixelTemplates,
-                                                          this.dispatcher,
+                                                          this.DiscoveryUserAccess,
                                                           this.testData,
                                                           this.widgetLog); 
         return logTime;
@@ -364,7 +364,7 @@ public class StepsHandler {
                                       logTime,
                                       productDetails,
                                       this.pixelTemplates,
-                                      this.dispatcher,
+                                      this.DiscoveryUserAccess,
                                       this.testData);
 
         return stepResult; 
@@ -386,7 +386,7 @@ public class StepsHandler {
                                       logTime,
                                       urlType,
                                       this.pixelTemplates,
-                                      this.dispatcher,
+                                      this.DiscoveryUserAccess,
                                       this.testData);
         return stepResult; 
     }
@@ -479,7 +479,7 @@ public class StepsHandler {
                                       this.activeCampaignRecord,
                                       this.pixelTemplates,
                                       this.apiTemplates,
-                                      this.dispatcher,
+                                      this.DiscoveryUserAccess,
                                       this.testData);
         return stepResult; 
     }
@@ -502,7 +502,7 @@ public class StepsHandler {
                                       this.activeCampaignRecord,
                                       this.pixelTemplates,
                                       this.apiTemplates,
-                                      this.dispatcher,
+                                      this.DiscoveryUserAccess,
                                       this.testData);
         return stepResult; 
     }
@@ -559,7 +559,7 @@ public class StepsHandler {
                                       this.activeCampaignRecord,
                                       this.pixelTemplates,
                                       this.apiTemplates,
-                                      this.dispatcher,
+                                      this.DiscoveryUserAccess,
                                       this.testData);
                                        
         // category-page pixel is already dispatched (ie, category 'browse' session has started)
@@ -594,7 +594,7 @@ public class StepsHandler {
                                       selectedAqTerm,
                                       this.pixelTemplates,
                                       this.apiTemplates,
-                                      this.dispatcher,
+                                      this.DiscoveryUserAccess,
                                       this.testData);
         return stepResult; 
     }
@@ -643,7 +643,7 @@ public class StepsHandler {
                                               this.activeCampaignRecord,
                                               this.pixelTemplates,
                                               this.apiTemplates,
-                                              this.dispatcher,
+                                              this.DiscoveryUserAccess,
                                               this.testData);
             } else {
                 StepResultInvalidData invalidData;
@@ -700,7 +700,7 @@ public class StepsHandler {
                                               this.activeCampaignRecord,
                                               this.pixelTemplates,
                                               this.apiTemplates,
-                                              this.dispatcher,
+                                              this.DiscoveryUserAccess,
                                               this.categoryCollector,
                                               this.testData);
             } else {
@@ -756,7 +756,7 @@ public class StepsHandler {
                                               this.activeCampaignRecord,
                                               this.pixelTemplates,
                                               this.apiTemplates,
-                                              this.dispatcher,
+                                              this.DiscoveryUserAccess,
                                               this.productFeed,
                                               this.productSelector,
                                               this.testData);
@@ -808,7 +808,7 @@ public class StepsHandler {
 
             step = new StepATC ();
             stepResult = step.handleStep ((StepResultProductDetails) prevStepResult, userRecord, logTime, productDetails,
-                                          userCart, this.pixelTemplates, this.dispatcher, this.testData);
+                                          userCart, this.pixelTemplates, this.DiscoveryUserAccess, this.testData);
             
             debugTotalATCs = debugTotalATCs + 1;
         } else {
@@ -836,7 +836,7 @@ public class StepsHandler {
         step = new StepConvert ();
         try {
             stepResult = step.handleStep (prevStepResult, userRecord, logTime, stepLog, userCart, 
-                                          this.orderIdGenerator, this.pixelTemplates, this.dispatcher, this.testData);
+                                          this.orderIdGenerator, this.pixelTemplates, this.DiscoveryUserAccess, this.testData);
             // helps to quickly check daily conversions
             debugTotalConversions = debugTotalConversions + 1;
         } catch (Exception e) {
@@ -897,7 +897,7 @@ public class StepsHandler {
 
         productDetails = new ProductDetails ();
         productDetails.setPid (feedRecord.getProductId ());
-        productDetails.setUrl (feedRecord.getUrl ());
+        productDetails.setUrl (feedRecord.getProductUrl ());
         try {
             productDetails.setPrice (Double.valueOf (feedRecord.getProductPrice ()));
         } catch (NumberFormatException nfe) {

@@ -1,7 +1,7 @@
 package com.bloomreach.trafficgenerator.site.journey;
 
 import com.bloomreach.trafficgenerator.site.user.UserRecord;
-import com.bloomreach.trafficgenerator.site.dispatch.Dispatcher;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.useraccess.DiscoveryUserAccess;
 import com.bloomreach.trafficgenerator.site.build.pixelparams.*;
 import com.bloomreach.trafficgenerator.site.journeydata.templates.*;
 import com.bloomreach.trafficgenerator.site.journeydata.StartUrlPool;
@@ -20,7 +20,7 @@ public class StepStartUrl extends StepBase {
                                   long logTime,
                                   String urlType,  // defined in startUrlPool
                                   PixelTemplates pixelTemplates,
-                                  Dispatcher dispatcher,
+                                  DiscoveryUserAccess DiscoveryUserAccess,
                                   boolean testData) throws Exception {
 
         StepResult thisStepResult;
@@ -29,7 +29,7 @@ public class StepStartUrl extends StepBase {
         MessageLogger.logDebug ("Handle step start url - 'home', 'other'");
 
         startPageUrl = handleStepInternal (prevStepResult, userRecord, logTime, urlType,
-                                           pixelTemplates, dispatcher, testData);
+                                           pixelTemplates, DiscoveryUserAccess, testData);
 
         thisStepResult = new StepResultVoid ();
         super.setUrlHistory (prevStepResult, thisStepResult, startPageUrl);
@@ -45,7 +45,7 @@ public class StepStartUrl extends StepBase {
                                      long logTime,
                                      String urlType,
                                      PixelTemplates pixelTemplates,
-                                     Dispatcher dispatcher, 
+                                     DiscoveryUserAccess DiscoveryUserAccess, 
                                      boolean testData) throws Exception {
 
         PixelBRData pixelData;
@@ -76,7 +76,7 @@ public class StepStartUrl extends StepBase {
         if (pixelData == null) {
             MessageLogger.logWarning ("Failed to build start page pixel");
         } else {
-            dispatcher.dispatchPixel (pixelData);
+            DiscoveryUserAccess.dispatchPixel (pixelData);
         }
 
         return nxtPageUrl;

@@ -3,15 +3,15 @@ package com.bloomreach.trafficgenerator.site.journey;
 import java.util.ArrayList;
 
 import com.bloomreach.trafficgenerator.site.user.UserRecord;
-import com.bloomreach.trafficgenerator.site.dispatch.Dispatcher;
-import com.bloomreach.trafficgenerator.site.dispatch.SearchApiResponse;
-import com.bloomreach.trafficgenerator.site.dispatch.SearchApiResponseDoc;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.useraccess.DiscoveryUserAccess;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.useraccess.SearchApiResponse;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.useraccess.SearchApiResponseDoc;
 import com.bloomreach.trafficgenerator.site.build.pixelparams.*;
 import com.bloomreach.trafficgenerator.site.build.apiparams.*;
 import com.bloomreach.trafficgenerator.site.journeydata.CategoryCollector;
 import com.bloomreach.trafficgenerator.site.journeydata.campaigns.CampaignRecord;
 import com.bloomreach.trafficgenerator.site.journeydata.templates.*;
-import com.bloomreach.trafficgenerator.site.journeydata.queryexecutor.CategoryInfo;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.nonuseraccess.CategoryInfo;
 import com.bloomreach.trafficgenerator.GeneratorConstants;
 import com.bloomreach.trafficgenerator.MessageLogger;
 
@@ -29,7 +29,7 @@ public class StepSuggestSelectCategory extends StepBase {
                                   CampaignRecord activeCampaignRecord,
                                   PixelTemplates pixelTemplates,
                                   ApiTemplates apiTemplates,
-                                  Dispatcher dispatcher,
+                                  DiscoveryUserAccess DiscoveryUserAccess,
                                   CategoryCollector categoryCollector,
                                   boolean testData) throws Exception {
 
@@ -63,7 +63,7 @@ public class StepSuggestSelectCategory extends StepBase {
         searchApiResponse = handleStepInternal (prevStepResult, userRecord, logTime, 
                                                 selectedAqTerm, selectedCatInfo,
                                                 activeCampaignRecord,
-                                                pixelTemplates, apiTemplates, dispatcher, categoryCollector, testData);
+                                                pixelTemplates, apiTemplates, DiscoveryUserAccess, categoryCollector, testData);
 
         // may be null if we could not find info for selected category
         if (searchApiResponse == null) {
@@ -99,7 +99,7 @@ public class StepSuggestSelectCategory extends StepBase {
                                                   CampaignRecord activeCampaignRecord,
                                                   PixelTemplates pixelTemplates,
                                                   ApiTemplates apiTemplates,
-                                                  Dispatcher dispatcher,
+                                                  DiscoveryUserAccess DiscoveryUserAccess,
                                                   CategoryCollector categoryCollector,
                                                   boolean testData) throws Exception {
         SearchApiResponse searchApiResponse;
@@ -115,7 +115,7 @@ public class StepSuggestSelectCategory extends StepBase {
         if (suggestEventPixelData == null) {
             MessageLogger.logWarning ("Failed to build suggest event pixel");
         } else {
-            dispatcher.dispatchPixel (suggestEventPixelData);
+            DiscoveryUserAccess.dispatchPixel (suggestEventPixelData);
         }
 
         // search api call using the selectedTerm
@@ -124,7 +124,7 @@ public class StepSuggestSelectCategory extends StepBase {
                                                         prevStepResult.getUrl (),
                                                         selectedCatInfo.getCatId(), 
                                                         activeCampaignRecord,  
-                                                        apiTemplates, dispatcher);
+                                                        apiTemplates, DiscoveryUserAccess);
 
         // CategoryPage pixel. Even if searchApiResponse is null, conceptually
         // there is a page that shows "0 results" OR some exception message
@@ -134,7 +134,7 @@ public class StepSuggestSelectCategory extends StepBase {
         if (pixelData == null) {
             MessageLogger.logWarning ("Failed to build category page pixel");
         } else {
-            dispatcher.dispatchPixel (pixelData);
+            DiscoveryUserAccess.dispatchPixel (pixelData);
         } 
 
         return searchApiResponse;
@@ -176,7 +176,7 @@ public class StepSuggestSelectCategory extends StepBase {
                                                         String selectedCatId,
                                                         CampaignRecord activeCampaignRecord,
                                                         ApiTemplates apiTemplates,
-                                                        Dispatcher dispatcher) throws Exception {
+                                                        DiscoveryUserAccess DiscoveryUserAccess) throws Exception {
         ApiBRData apiData;
         SearchApiResponse searchApiResponse;
         ArrayList<SearchApiResponseDoc> allResponseDocs;
@@ -190,7 +190,7 @@ public class StepSuggestSelectCategory extends StepBase {
             return null;
         }
 
-        searchApiResponse = dispatcher.getSearchApiResponse (apiData); 
+        searchApiResponse = DiscoveryUserAccess.getSearchApiResponse (apiData); 
         if (searchApiResponse == null) {
             MessageLogger.logError ("Suggest api response is null for selected category: " + selectedCatId);
             return null;

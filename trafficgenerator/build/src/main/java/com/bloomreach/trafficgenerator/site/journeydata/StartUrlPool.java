@@ -8,7 +8,8 @@ import com.bloomreach.trafficgenerator.site.feed.ProductFeed;
 import com.bloomreach.trafficgenerator.site.feed.FeedRecord;
 import com.bloomreach.trafficgenerator.site.build.pixelparams.BuildSearchResultPagePixel;
 import com.bloomreach.trafficgenerator.site.build.pixelparams.BuildCategoryPagePixel;
-import com.bloomreach.trafficgenerator.site.journeydata.queryexecutor.CategoryInfo;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.nonuseraccess.CategoryInfo;
+
 
 public class StartUrlPool {
 
@@ -56,7 +57,7 @@ public class StartUrlPool {
         startUrlPoolRecordList = new ArrayList <StartUrlPoolRecord> ();
         for (FeedRecord feedRecord : availableProducts) {
             record = new StartUrlPoolRecord (URL_TYPE_PRODUCT, feedRecord.getProductId(), 
-                                             feedRecord.getViews (), feedRecord.getUrl ());
+                                             feedRecord.getProductViewIds (), feedRecord.getProductUrl ());
             startUrlPoolRecordList.add (record);
         }
 

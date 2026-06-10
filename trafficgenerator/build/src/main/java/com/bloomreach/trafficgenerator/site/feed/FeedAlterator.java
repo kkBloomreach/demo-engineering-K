@@ -15,7 +15,6 @@ import com.bloomreach.trafficgenerator.GeneratorConstants;
 import com.bloomreach.trafficgenerator.MessageLogger;
 import com.bloomreach.trafficgenerator.site.journeydata.campaigns.CampaignRecord;
 import com.bloomreach.trafficgenerator.site.config.SiteConfig;
-import com.bloomreach.trafficgenerator.site.dispatch.FeedPublisher;
 import com.bloomreach.trafficgenerator.site.build.pixelparams.BuildProductPagePixel;
 
 public class FeedAlterator {
@@ -50,7 +49,7 @@ public class FeedAlterator {
 
     // param = <rootDir>/accountName
     // alter feed and then publish it
-    public void alterFeed (String accountDirPath, String realm) throws Exception {
+    public void alterAndPublishFeed (String accountDirPath, String realm) throws Exception {
         String originalFeedDir; // original
         File originalFeedFile;
         String dailyFeedDirPath;
@@ -98,7 +97,6 @@ public class FeedAlterator {
                 // throw new Exception (e.getMessage());
             }
         }
-
 
         MessageLogger.logDebug ("End publish feed");
     }

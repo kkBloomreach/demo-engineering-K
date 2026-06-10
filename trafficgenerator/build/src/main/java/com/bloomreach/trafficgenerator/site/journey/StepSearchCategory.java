@@ -3,14 +3,14 @@ package com.bloomreach.trafficgenerator.site.journey;
 import java.util.ArrayList;
 
 import com.bloomreach.trafficgenerator.site.user.UserRecord;
-import com.bloomreach.trafficgenerator.site.dispatch.Dispatcher;
-import com.bloomreach.trafficgenerator.site.dispatch.SearchApiResponse;
-import com.bloomreach.trafficgenerator.site.dispatch.SearchApiResponseDoc;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.useraccess.DiscoveryUserAccess;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.useraccess.SearchApiResponse;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.useraccess.SearchApiResponseDoc;
 import com.bloomreach.trafficgenerator.site.build.pixelparams.*;
 import com.bloomreach.trafficgenerator.site.build.apiparams.*;
 import com.bloomreach.trafficgenerator.site.journeydata.templates.*;
 import com.bloomreach.trafficgenerator.site.journeydata.campaigns.CampaignRecord;
-import com.bloomreach.trafficgenerator.site.journeydata.queryexecutor.CategoryInfo;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.nonuseraccess.CategoryInfo;
 import com.bloomreach.trafficgenerator.GeneratorConstants;
 import com.bloomreach.trafficgenerator.MessageLogger;
 
@@ -26,7 +26,7 @@ public class StepSearchCategory extends StepBase {
                                   CampaignRecord activeCampaignRecord,
                                   PixelTemplates pixelTemplates,
                                   ApiTemplates apiTemplates,
-                                  Dispatcher dispatcher,
+                                  DiscoveryUserAccess DiscoveryUserAccess,
                                   boolean testData) throws Exception {
         StepResultSearchResponse thisStepResult;
         SearchApiResponse searchApiResponse;
@@ -45,7 +45,7 @@ public class StepSearchCategory extends StepBase {
         MessageLogger.logDebug ("Handle step search category response: " + selectedCatInfo.getCatId());
         searchApiResponse = handleStepInternal (prevStepResult, userRecord, logTime, selectedCatInfo,
                                                 activeCampaignRecord,
-                                                pixelTemplates, apiTemplates, dispatcher, testData);
+                                                pixelTemplates, apiTemplates, DiscoveryUserAccess, testData);
 
         if (searchApiResponse == null) {
             inputInvalid = new StepResultInvalidData ();
@@ -75,7 +75,7 @@ public class StepSearchCategory extends StepBase {
                                      CampaignRecord activeCampaignRecord,
                                      PixelTemplates pixelTemplates,
                                      ApiTemplates apiTemplates,
-                                     Dispatcher dispatcher,
+                                     DiscoveryUserAccess DiscoveryUserAccess,
                                      boolean testData) throws Exception {
 
         PixelBRData pixelData;
@@ -85,7 +85,7 @@ public class StepSearchCategory extends StepBase {
         searchApiResponse = collectCategoryApiResponse (userRecord, logTime, 
                                                         prevStepResult.getRefUrl (), prevStepResult.getUrl (),
                                                         selectedCatInfo.getCatId (), activeCampaignRecord,  
-                                                        apiTemplates, dispatcher);
+                                                        apiTemplates, DiscoveryUserAccess);
 
         // pixel
         // NOTE: Prevstep url is this page's refUrl. Even if 'collect' returns
@@ -96,7 +96,7 @@ public class StepSearchCategory extends StepBase {
         if (pixelData == null) {
             MessageLogger.logWarning ("Failed to build category page pixel");
         } else {
-            dispatcher.dispatchPixel (pixelData);
+            DiscoveryUserAccess.dispatchPixel (pixelData);
         }
         return searchApiResponse;   // may be null
     }
@@ -108,7 +108,7 @@ public class StepSearchCategory extends StepBase {
                                                         String selectedCatId,
                                                         CampaignRecord activeCampaignRecord,
                                                         ApiTemplates apiTemplates,
-                                                        Dispatcher dispatcher) throws Exception {
+                                                        DiscoveryUserAccess DiscoveryUserAccess) throws Exception {
         ApiBRData apiData;
         SearchApiResponse searchApiResponse;
         ArrayList<SearchApiResponseDoc> allResponseDocs;
@@ -122,7 +122,7 @@ public class StepSearchCategory extends StepBase {
             return null;
         }
 
-        searchApiResponse = dispatcher.getSearchApiResponse (apiData); 
+        searchApiResponse = DiscoveryUserAccess.getSearchApiResponse (apiData); 
         if (searchApiResponse == null) {
             MessageLogger.logError ("Category api response is null for search category: " + selectedCatId);
             return null;

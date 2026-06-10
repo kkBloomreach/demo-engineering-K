@@ -1,7 +1,7 @@
 
 package com.bloomreach.trafficgenerator.site.journey;
 
-import com.bloomreach.trafficgenerator.site.dispatch.SuggestApiResponse;
+import com.bloomreach.trafficgenerator.site.discoveryconnector.useraccess.SuggestApiResponse;
 
 public class StepResultSuggestResponse extends StepResult {
 

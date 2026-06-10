@@ -133,7 +133,7 @@ public class BuildConversionPixel extends BuildPixelBase  {
         paramBuf.append (productDetails.getSalePrice ());
 
         basketParam = new String (paramBuf);
-        return (basketParam); // url-encoded when generating queryParam (see Dispatcher.java)
+        return (basketParam); // url-encoded when generating queryParam (see DiscoveryUserAccess.java)
     }
 }
 
