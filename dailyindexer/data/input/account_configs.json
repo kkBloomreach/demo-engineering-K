@@ -1,9 +1,12 @@
 {
     "GENERAL_NOTE_1": "Support both dataconnect and datahub.",
     "GENERAL_NOTE_2": "However, SOME parameters are needed only for dataconnect and some other only for datahub",
+    "GENERAL_NOTE_3": "Datahub region us0/us1/... as configured for datahub. Datahub-region not needed for dataconnect",
+    "GENERAL_NOTE_4": "Region-specific datahub api endpoints must be defined in this file (see near end of this file)",
     "accounts": [
         {
             "INDEX_MODE": "datahub",
+            "DATAHUB_REGION": "us3",
             "COMMENT_DATAHUB_INDEX_2": "Assumes destination etc are already configured via datahub dashboard",
             "BR_ACCOUNT_NUMBER": "8192",
             "BR_ACCOUNT_NAME": "br_dev_sandbox01",
@@ -517,11 +520,10 @@
 
     "COMMENT_DATAHUB_1": "Following parameters used for indexing via Datahub/onePlatform",
     "COMMENT_DATAHUB_2": "Destination staging/prod is configured via datahub dashboard",
-    "BR_DATAHUB_INDEX_API_ENDPOINT_EU3": "https://eu3-api.eng.bloomreach.com/api/cde/v1/workspaces/%s/item-collections/%s/item-types/product/records",
-    "BR_DATAHUB_CHECKSTATUS_API_ENDPOINT_PROD_EU3": "https://eu3-api.eng.bloomreach.com/api/cde/v1/workspaces/%s/jobs/%s",
+    "COMMENT_DATAHUB_3": "$DHREGION replaced by datahub-region value specified for each account",
 
-    "BR_DATAHUB_INDEX_API_ENDPOINT": "https://us3-api.eng.bloomreach.com/api/cde/v1/workspaces/%s/item-collections/%s/item-types/product/records",
-    "BR_DATAHUB_CHECKSTATUS_API_ENDPOINT_PROD": "https://us3-api.eng.bloomreach.com/api/cde/v1/workspaces/%s/jobs/%s"
+    "BR_DATAHUB_INDEX_API_ENDPOINT": "https://$DHREGION-api.eng.bloomreach.com/api/cde/v1/workspaces/%s/item-collections/%s/item-types/product/records",
+    "BR_DATAHUB_CHECKSTATUS_API_ENDPOINT_PROD": "https://$DHREGION-api.eng.bloomreach.com/api/cde/v1/workspaces/%s/jobs/%s"
 
 }
 

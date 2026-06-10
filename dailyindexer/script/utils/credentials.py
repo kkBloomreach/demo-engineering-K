@@ -167,23 +167,35 @@ class Credentials ():
     def getBloomreachDatahubWorkspaceId (accountConfig):
         return (accountConfig ['WORKSPACE_ID'])
 
+    @staticmethod
     def getBloomreachDatahubCollectionName (accountConfig):
         return (accountConfig ['COLLECTION_NAME'])
 
+    @staticmethod
     def getBloomreachDatahubApiTokenName (accountConfig):
         return (accountConfig ['API_TOKEN_NAME'])
 
+    @staticmethod
     def getBloomreachDatahubApiTokenSecret (accountConfig):
         return (accountConfig ['API_TOKEN_SECRET'])
 
+    @staticmethod
+    def getBloomreachDatahubRegion (accountConfig):
+        return (accountConfig ['DATAHUB_REGION'])
+    
     @staticmethod
     # realm ignored here. It is configured via datahub dashboard as 'destination'
     def getBloomreachDatahubIndexApiEndpoint (accountConfig):
         brDatahubIndexEndpoint = Credentials._accountConfigs ['BR_DATAHUB_INDEX_API_ENDPOINT']
         if (brDatahubIndexEndpoint != None):
-            brWorkspaceId = Credentials.getBloomreachDatahubWorkspaceId (accountConfig)
-            collectionName = Credentials.getBloomreachDatahubCollectionName (accountConfig)
-            brDatahubIndexEndpoint = brDatahubIndexEndpoint % (brWorkspaceId, collectionName)
+            datahub_region = Credentials.getBloomreachDatahubRegion (accountConfig)
+            if datahub_region != None:
+                brDatahubIndexEndpoint = brDatahubIndexEndpoint.replace ("$DHREGION", datahub_region)
+                brWorkspaceId = Credentials.getBloomreachDatahubWorkspaceId (accountConfig)
+                collectionName = Credentials.getBloomreachDatahubCollectionName (accountConfig)
+                brDatahubIndexEndpoint = brDatahubIndexEndpoint % (brWorkspaceId, collectionName)
+            else:
+                brDatahubIndexEndpoint = None
         return brDatahubIndexEndpoint 
 
     @staticmethod
@@ -216,8 +228,13 @@ class Credentials ():
         brDatahubCheckStatusEndpoint = None
         brDatahubCheckStatusEndpoint = Credentials._accountConfigs ['BR_DATAHUB_CHECKSTATUS_API_ENDPOINT_PROD']
         if (brDatahubCheckStatusEndpoint != None):
-            brWorkspaceId = Credentials.getBloomreachDatahubWorkspaceId (accountConfig)
-            brDatahubCheckStatusEndpoint = brDatahubCheckStatusEndpoint % (brWorkspaceId, jobId)
+            datahub_region = Credentials.getBloomreachDatahubRegion (accountConfig)
+            if datahub_region != None:
+                brDatahubCheckStatusEndpoint = brDatahubCheckStatusEndpoint.replace ("$DHREGION", datahub_region)
+                brWorkspaceId = Credentials.getBloomreachDatahubWorkspaceId (accountConfig)
+                brDatahubCheckStatusEndpoint = brDatahubCheckStatusEndpoint % (brWorkspaceId, jobId)
+            else:
+                brDatahubCheckStatusEndpoint = None
         return brDatahubCheckStatusEndpoint
 
 if __name__ == "__main__":
