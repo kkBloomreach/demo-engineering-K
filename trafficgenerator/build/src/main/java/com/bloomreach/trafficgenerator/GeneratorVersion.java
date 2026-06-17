@@ -172,9 +172,10 @@ package com.bloomreach.trafficgenerator;
 // 2.6.0.0:  added support for datahub catalog - use preIndexed catalog, not localFile
 // 2.6.0.1:  fixed a bug related to curated search terms / curated journey
 // 2.6.0.2:  skip docType=content items in search api response
+// 2.7.0.0:  no code change, just version number for 'production' version
 
 public class GeneratorVersion {
-    public final static String VERSION = "2.6.0.2-X"; // Make sure to also change pom.xml->"version"
+    public final static String VERSION = "2.7.0.0"; // Make sure to also change pom.xml->"version"
 
     private GeneratorVersion () {
     }
