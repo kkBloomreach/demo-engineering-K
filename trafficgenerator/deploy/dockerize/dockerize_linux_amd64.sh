@@ -1,11 +1,13 @@
 #!/bin/bash
+# IMPORTANT: Execute this script from trafficgenerator 'root' (ie, parent of 'build' directory)
+# This is because docker allows / has access only to 'child' directories and its files
 
 # build docker image so it will run in linux/amd64 environment
 # GCP vm has debian / amd64
-docker buildx build --platform linux/amd64  -t trafficgenerator-docker-amd64 .
+docker buildx build -f ./deploy/dockerize/Dockerfile --platform linux/amd64  -t trafficgenerator-docker-amd64-2.7.0.0 .
 
-# create a tar for this image
-docker save -o ~/tmp/misc/trafficgenerator-docker-amd64.tar trafficgenerator-docker-amd64:latest
+# create a tar for this image. Upload the tar file to GCP/vm and load it there
+docker save -o ~/tmp/misc/trafficgenerator-docker-amd64-2.7.0.0.tar trafficgenerator-docker-amd64-2.7.0.0:latest
 
 # upload the tar to GCP then load and run it
 # ON GCP-VM
