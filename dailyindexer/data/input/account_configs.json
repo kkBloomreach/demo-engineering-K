@@ -3,7 +3,7 @@
     "GENERAL_NOTE_2": "However, SOME parameters are needed only for dataconnect and some other only for datahub",
     "GENERAL_NOTE_3": "Datahub region us0/us1/... as configured for datahub. Datahub-region not needed for dataconnect",
     "GENERAL_NOTE_4": "Region-specific datahub api endpoints must be defined in this file (see near end of this file)",
-    "accounts": [
+    "accounts_TEST": [
         {
             "INDEX_MODE": "datahub",
             "DATAHUB_REGION": "us3",
@@ -20,7 +20,7 @@
             "IGNORE": "NO"
         }
     ],
-    "accounts_FULL": [
+    "accounts": [
         {
             "INDEX_MODE": "dataconnect",
             "COMMENT_6413": "pacifichome full english",
