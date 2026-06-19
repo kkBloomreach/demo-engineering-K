@@ -203,4 +203,8 @@ SAVED_IMAGES/
 __pycache__/
 output/
 
+#--------
+# MacOS pages files. Commit .pdf's instead
+#--------
+*.pages
 
