@@ -2,8 +2,7 @@ import logging
 import os
 import sys
 import openai
-
-OPENAI_KEY = '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'
+from dotenv import dotenv_values
 
 OPENAI_MODEL = 'gpt-5.1'
 HTTP_STATUS_OK = 200
@@ -22,6 +21,11 @@ The review text should include information like product rating, complementary pr
 
 class TestOpenAIReviewGenerator ():
     def __init__ (self):
+        self._env_configs = None
+        if os.path.exists (".env"):
+            self._env_configs = dotenv_values (".env")
+        if self._env_configs == None:
+            logging.warning ('Cannot find environment configuration')
         return
 
     def generate_product_review (self):
@@ -56,7 +60,7 @@ class TestOpenAIReviewGenerator ():
         user_message = "%s" % (product_details)
         logging.debug ('User message: %s', user_message)
 
-        client = openai.OpenAI (api_key = OPENAI_KEY)
+        client = openai.OpenAI (api_key = self._env_configs ['OPENAI_KEY'])
         try:
             openai_response = client.chat.completions.create (
                  model = OPENAI_MODEL,

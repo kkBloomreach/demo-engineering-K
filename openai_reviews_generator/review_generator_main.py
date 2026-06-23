@@ -9,6 +9,7 @@ import random
 import time
 import copy
 from pydantic import BaseModel, Field
+from dotenv import dotenv_values
 
 # PacificApparel
 #SOURCE_CATALOG_JSONL_IN = './data/input/pacific_apparel/pa_en_full_03252026.jsonl'
@@ -22,8 +23,6 @@ SOURCE_CATALOG_JSONL_IN = './data/input/pacifichome/ph2_product_en_full_03112026
 REVIEWS_OUTPUT_CSV_DEBUG_OUT = './data/output/pacifichome/ph2_product_en_full_reviews_debug_04032026_2.csv'
 REVIEWS_OUTPUT_CSV_OUT = './data/output/pacifichome/ph2_product_en_full_reviews_04032026_2.csv'
 
-
-OPENAI_KEY = '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'
 OPENAI_MODEL = 'gpt-5.1'
 HTTP_STATUS_OK = 200
 
@@ -49,6 +48,11 @@ class ResponseFormat (BaseModel):
 
 class ReviewGenerator ():
     def __init__ (self):
+        self._env_configs = None
+        if os.path.exists (".env"):
+            self._env_configs = dotenv_values (".env")
+        if self._env_configs == None:
+            logging.warning ('Cannot find environment configuration')
         return
 
     def read_source_catalog (self, filename):
@@ -175,7 +179,7 @@ class ReviewGenerator ():
         user_message = "%s" % (product_details)
         logging.debug ('User message: %s', user_message)
 
-        client = openai.OpenAI (api_key = OPENAI_KEY)
+        client = openai.OpenAI (api_key = self._env_configs ['OPENAI_KEY'])
         try:
             openai_response = client.chat.completions.parse (
                  model = OPENAI_MODEL,
