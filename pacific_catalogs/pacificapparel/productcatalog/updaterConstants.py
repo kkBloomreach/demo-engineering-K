@@ -41,7 +41,7 @@ MAX_ALLOWED_PRICE = 9872.59
 
 # used for generating images
 # image files are downloaded in LOCAL_DIR/data/images
-OPENAI_KEY = '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'
+OPENAI_KEY = 'MOVED-TO-DOT-ENV'
 OPENAI_MODEL = 'gpt-4o' # for description generation
 OPENAI_MODEL_DALL_E = 'dall-e-3' # for image generation
 

@@ -18,7 +18,7 @@ FILENAME_REVIEW_DOC_DE = './data/output/ps_product_de_review_11012023.txt'
 
 SOURCE_CATALOG_LANGUAGE = 'English'
 TARGET_CATALOG_LANGUAGE = 'German'
-OPENAI_KEY = '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'    # should be 'secret' --:)
+OPENAI_KEY = 'SHOULD_BE_IN_DOT_ENV'    # should be 'secret' --:)
 
 PRODUCT_ATTRIBUTES_TO_TRANSLATE = [
     'title',
