@@ -1,4 +1,5 @@
 #!/bin/bash
+#NOTE: this uses large heap space, specifically needed for PacificSupply since its catalog file is large
 
 WORK_DIR="$HOME/projects/trafficgenerator"
 
@@ -31,7 +32,7 @@ echo $CLASSPATH
 # '-p' == pixelDebug (true | false) (for pixel debug via Event manager) (default false)
 
 #java com.bloomreach.trafficgenerator.Generator -d $WORK_DIR/data -a $account -l warn -r prod  -t false -e release -p false
-java com.bloomreach.trafficgenerator.Generator -d $WORK_DIR/data -a $account -r prod -e release -t false -p false -l warn; \
+java -Xms1g -Xms4g com.bloomreach.trafficgenerator.Generator -d $WORK_DIR/data -a $account -r prod -e dev -t false -p false -l debug; \
 $WORK_DIR/dailystats.sh $account 1>$WORK_DIR/cronlog/dailystats_$account.txt 2>&1
 
 # java debug
