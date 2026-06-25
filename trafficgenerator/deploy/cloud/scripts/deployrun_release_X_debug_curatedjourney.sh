@@ -29,9 +29,10 @@ echo $CLASSPATH
 # '-t' == testData (true | false) (for pixel) (default true)
 # '-e' == env type ('dev' | 'qa' | 'release') (default dev)
 # '-p' == pixelDebug (true | false) (for pixel debug via Event manager) (default false)
+# '-c' == use curated_searchterms (defined in journeydata/CuratedSearchterms.tsv - this file must exist)
 
-#java com.bloomreach.trafficgenerator.Generator -d $WORK_DIR/data -a $account -l warn -r prod  -t false -e release -p false
-java com.bloomreach.trafficgenerator.Generator -d $WORK_DIR/data -a $account -r prod -e release -t false -p false -l warn; \
+# "-c" to run curated journey
+java com.bloomreach.trafficgenerator.Generator -d $WORK_DIR/data -a $account -r prod -e release -t false -p false -l debug -c ; \
 $WORK_DIR/dailystats.sh $account 1>$WORK_DIR/cronlog/dailystats_$account.txt 2>&1
 
 # java debug

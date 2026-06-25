@@ -1,6 +1,6 @@
 #!/bin/bash
 
-WORK_DIR="/home/kirankundargi/projects/trafficgenerator"
+WORK_DIR="$HOME/projects/trafficgenerator"
 
 # === NO CHANGES NEEDED BELOW THIS LINE ===
 

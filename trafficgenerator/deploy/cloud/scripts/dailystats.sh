@@ -1,7 +1,7 @@
 #!/bin/bash
 # collect stats for last 24hours (find ... -mtime 0 ...)
 
-WORK_DIR="/home/kirankundargi/projects/trafficgenerator"
+WORK_DIR="$HOME/projects/trafficgenerator"
 
 # === NO CHANGES NEEDED BELOW THIS LINE ===
 
