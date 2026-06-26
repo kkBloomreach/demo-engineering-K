@@ -1,10 +1,10 @@
 #!/bin/bash
 
-TRAFFICGENERATOR_SRC=/Users/kirankundargi/work/brx_demos/projects/demoEngineering/trafficgenerator/demo-engineering-traffic-generator
-WORK_DIR=/Users/kirankundargi/tmp/brlab/test/trafficgenerator/
-LOG4J_CORE_JAR=/Users/kirankundargi/.m2/repository/org/apache/logging/log4j/log4j-core/2.17.1/log4j-core-2.17.1.jar
-LOG4J_API_JAR=/Users/kirankundargi/.m2/repository/org/apache/logging/log4j/log4j-api/2.17.1/log4j-api-2.17.1.jar
-JSON_JAR=/Users/kirankundargi/.m2/repository/org/json/json/20220320/json-20220320.jar
+TRAFFICGENERATOR_SRC=$HOME/work/brx_demos/projects/demoEngineering/trafficgenerator/demo-engineering-traffic-generator
+WORK_DIR=$HOME/tmp/brlab/test/trafficgenerator/
+LOG4J_CORE_JAR=$HOME/.m2/repository/org/apache/logging/log4j/log4j-core/2.17.1/log4j-core-2.17.1.jar
+LOG4J_API_JAR=$HOME/.m2/repository/org/apache/logging/log4j/log4j-api/2.17.1/log4j-api-2.17.1.jar
+JSON_JAR=$HOME/.m2/repository/org/json/json/20220320/json-20220320.jar
 
 # === NO CHANGES NEEDED BELOW THIS LINE ===
 

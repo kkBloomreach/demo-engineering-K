@@ -1,0 +1,30 @@
+{
+    "training_parameters": {
+        "initial_query_list": [
+            "outdoor clothes",
+            "evening dress",
+            "makeup",
+            "summer outfit",
+            "winter jackets"
+        ],
+        "refined_query_count": 5,
+        "account_id": "7529",
+        "auth_key": "5lq6iakwrdluhpvq",
+        "domain_key": "pacific_apparel",
+        "realm": "prod",
+        "max_pids_per_query": 20
+    },
+    "training_constraints": {
+        "categories": "jeans, jewellery, necklaces, pants, purses, rungs, shoes, skirts, sneakers, tops, women, dresses, handbags",
+        "colors": "beige, brown, burgundy, cream, black, brown, gray, magenta, navy, ivory, white",
+        "genders": "female",
+        "brands": ""
+    },
+
+    "COMMENT_CATALOG_CONSTRAINT": "To avoid openAI prompt size limit, reduce full catalog using catalog_constraint",
+    "catalog_constraints": {
+        "attribute": "gender",
+        "value": "female",
+        "max_products_to_include": 200
+    }
+}
