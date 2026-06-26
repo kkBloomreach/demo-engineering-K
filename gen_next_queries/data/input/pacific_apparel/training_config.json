@@ -1,0 +1,41 @@
+{
+    "training_parameters": {
+        "initial_query_list": [
+            "outdoor shirts",
+            "office clothes",
+            "party clothes",
+            "summer outfit",
+            "winter jackets"
+        ],
+        "refined_query_count": 5,
+        "account_id": "7529",
+        "auth_key": "5lq6iakwrdluhpvq",
+        "domain_key": "pacific_apparel",
+        "realm": "prod",
+        "max_pids_per_query": 20
+    },
+
+    "COMMENT_TRAINING_CONSTRAINT": "this should match the way catalog is constrained via catalog_constratins",
+    "training_constraints": {
+        "categories": "jeans, jewellery, necklaces, pants, purses, rungs, shoes, skirts, sneakers, tops, women, dresses, handbags",
+        "colors": "beige, brown, burgundy, cream, black, brown, gray, magenta, navy, ivory, white",
+        "genders": "male",
+        "brands": ""
+    },
+
+    "COMMENT_CATALOG_CONSTRAINT": "To avoid openAI prompt size limit, reduce full catalog using catalog_constraint",
+    "COMMENT_CATALOG_CONSTRAINT_1": "Use only one of the constraints",
+    "catalog_constraints": {
+        "COMMENT_ATTR_CONSTRAINT": "restrict catalog based on specific attribute and its value",
+        "attribute_constraint": {
+            "attribute": "gender",
+            "value": "male",
+            "max_products_to_include": 2000
+        },
+        "COMMENT_SIZE_CONSTRAINT": "restrict catalog based on number of products in it, from start to maxnumber",
+        "size_constraint_UNUSED": {
+            "start": 0,
+            "max_products": 1000
+        }
+    }
+}

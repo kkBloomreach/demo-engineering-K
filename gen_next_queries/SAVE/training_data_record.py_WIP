@@ -1,0 +1,11 @@
+class TrainingDataRecord ():
+    primary_query : str = None
+    generated_query  : str = None
+    num_found : int = -1
+    pids : list [str] = []
+
+    def set_primary_query (query):
+        primary_query = query
+        return
+
+    
